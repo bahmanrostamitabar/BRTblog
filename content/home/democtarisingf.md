@@ -11,18 +11,14 @@ title = "Democratising forecasting"
 subtitle = ""
 
 # Order that this section will appear in.
-weight = 15
+weight = 25
 
 +++
 
-This is an example of using the *custom* widget to create your own homepage section.
+This is an ongoing initiative, sponsored by the [International Institute of Forecasters](https://forecasters.org/) will provide cutting-edge training in the use of forecasting with R in some of the world's least developed countries to transfer knowledge in forecasting and help decision makers use it as an effective tool to support decision-making process. R is an open source programming language and software widely used for data analysis, manipulation, visualisation and modelling.
 
-I am a teaching instructor for the following courses at University X:
+"These workshops aim to provide up-to-date training on the principles of forecasting and create an international network to conduct research on forecasting with social impact for less developed countries."
 
-- CS101: An intro to computer science
-- CS102: An intro to computer science
-- CS103: An intro to computer science
-- CS104: An intro to computer science
-- CS105: An intro to computer science
-- CS106: An intro to computer science
-- CS107: An intro to computer science
+The workshops will be provided by Dr Bahman Rostami-Tabar whose research focuses on forecasting for social good, supply chain forecasting and the interface between forecasting and decision-making. For more information please see [IIF Website](https://forecasters.org/blog/2018/07/10/new-iif-workshop-initiative-democratizing-forecasting/)
+
+To organise a workshop in your country, contact <rostami-tabarb@cardiff.ac.uk>.

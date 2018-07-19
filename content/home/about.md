@@ -7,15 +7,34 @@ date = 2016-04-20T00:00:00
 # Order that this section will appear in.
 weight = 5
 
-  
+# List your academic interests.
+[interests]
+  interests = [
+    "Forecasting for Social Good",
+    "Supply Chain Forecasting",
+    "Forecasting and decision making interface",
+    "Forecasting by Aggregation "
+  ]
+
+# List your qualifications (such as academic degrees).
+[[education.courses]]
+  course = "PhD in Industrial Engineering"
+  institution = "University of Bordeaux, France"
+  year = 2014
+
+[[education.courses]]
+  course = "MSc. in Industrial Engineering"
+  institution = "Tarbiat Modares University, Iran"
+  year = 2007
+
+[[education.courses]]
+  course = "BSc in Industrial Engineering"
+  institution = "K.N.Toosi University of Technology, Iran"
+  year = 2004
+ 
 +++
 
-# About me
 
-My life objective is to help the world becoming a better place by freely offering his skills and developing free resources.
+My life objective is to help the world becoming a better place by freely offering my skills and developing free resources.
 
-In this blog, I am writing about forecasting for social good and democratising forecasting.
-
-1. [**Forecasting for Social Good**](https://www.cardiff.ac.uk/news/view/1123152-forecasting-for-social-good-in-india) investigates various applications of forecasting with social impact- such as health, humanitarian, disaster relief, public governance, education, enviroment and social services- regardless of the financial implications, or optimisations attempted based on economic terms. 
-
-2. [**Democratising Forecasting**](https://www.cardiff.ac.uk/news/view/1043333-democratising-forecasting) aims to make forecasting and data analytics accessible to a wider public through delivering a series of workshops in some of the world's developing to least developed countries to train people and help organizations use it as an effective tool to support decision making. 
+My research goals are directed toward the use of Operations Research (OR) techniques to improve decision making in supply chains and operations management (SCOM), and as such positively contribute to both industrial and societal advancements.
