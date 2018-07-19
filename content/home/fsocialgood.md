@@ -28,5 +28,7 @@ This workshop was  an important step to bring more attention to this extremely i
 
 A new website dedicated to "forecasting for Social Good" is under constraction:
 
-www.forecastingforsocialgppd.com
+www.fforsg.com
+
+
 

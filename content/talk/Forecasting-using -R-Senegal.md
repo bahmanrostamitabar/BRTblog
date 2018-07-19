@@ -1,14 +1,14 @@
 +++
-date = 2017-01-01T00:00:00  # Schedule page publish date.
+date = 2018-07-19T00:00:00  # Schedule page publish date.
 
-title = "Example Talk"
-time_start = 2030-06-01T13:00:00
-time_end = 2030-06-01T15:00:00
+title = "Forecasting using R in Senegal"
+time_start = 2018-06-23T09:00:00
+time_end = 2018-06-25T17:00:00
 abstract = ""
 abstract_short = ""
-event = "Academic Theme Conference"
-event_url = "https://example.org"
-location = "London, United Kingdom"
+event = "Democratising forecasting"
+#event_url = "https://example.org"
+location = "Dakar, Senegal"
 
 # Is this a selected talk? (true/false)
 selected = false
@@ -38,4 +38,4 @@ caption = "My caption :smile:"
 
 +++
 
-Embed your slides or video here using [shortcodes](https://sourcethemes.com/academic/post/writing-markdown-latex/). Further details can easily be added using *Markdown* and $\rm \LaTeX$ math code.
+
