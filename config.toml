@@ -18,6 +18,7 @@ footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 paginate = 10
+rssLimit = 10
 
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
@@ -51,7 +52,7 @@ enableGitInfo = false
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
-  font = "playfair"
+  font = "classic"
 
   # Your details.
   name = "Bahman Rostami-Tabar"
