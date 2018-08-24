@@ -17,7 +17,7 @@ header:
 The 3rd [demcoratising forecasting workshop](https://www.bahmanrt.com/#democtarisingf)  will take place in [Charmo University](http://www.charmouniversity.org/) in October 2018.
 Democratising forecasting is a part of Forecasting4Change intiaitive lead by Bahman Rostami-Tabar. The aim is to share knownoledge on forecasting and influence relevant practices prioritising the need of population and the society.
 
-Register in *[Eventbite](https://www.eventbrite.co.uk/e/data-analytics-and-forecasting-using-r-tickets-49472484533)*
+Register in *[Eventbrite](https://www.eventbrite.co.uk/e/data-analytics-and-forecasting-using-r-tickets-49472484533)*
 
 >Registeration is closed on Thursday 20 September 2018 at 02:30 (UK time).
 
