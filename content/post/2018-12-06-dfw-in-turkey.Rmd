@@ -11,10 +11,10 @@ tags:
   - Workshop
 header:
   caption: ''
-  image: ''
+  image: 'df.JPEG'
 ---
 
-The 4rd [demcoratising forecasting workshop](https://www.bahmanrt.com/#democtarisingf)  will take place in [Ankara University](https://en.ankara.edu.tr/) in January 2019.
+The 4^th^ [demcoratising forecasting workshop](https://www.bahmanrt.com/#democtarisingf)  will take place in [Ankara University](https://en.ankara.edu.tr/) in January 2019.
 Democratising forecasting is an intiaitive lead by Bahman Rostami-Tabar. The aim is to share knownoledge on forecasting and influence relevant practices prioritising the need of population and the society.
 
 Register in *[https://www.eventbrite.co.uk/e/data-analytics-and-forecasting-using-r-tickets-53143658112)*
