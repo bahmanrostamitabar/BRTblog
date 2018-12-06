@@ -11,7 +11,7 @@ tags:
   - Workshop
 header:
   caption: ''
-  image: 'df.JPEG'
+  image: 'df.JPG'
 ---
 
 The 4^th^ [demcoratising forecasting workshop](https://www.bahmanrt.com/#democtarisingf)  will take place in [Ankara University](https://en.ankara.edu.tr/) in January 2019.
