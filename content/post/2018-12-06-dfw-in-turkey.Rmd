@@ -20,12 +20,14 @@ Democratising forecasting is an intiaitive lead by Bahman Rostami-Tabar. The aim
 Register [here](https://www.eventbrite.co.uk/e/data-analytics-and-forecasting-using-r-tickets-53143658112)
 
 >Registeration is closed on Monday 7th January 2019 at 02:30 (UK time).
+>Registeration is confirmed once you attend the webinar. If you can not attend the webinar, please email [me](rostami-tabarb@cardiff.ac.uk) to keep your name. 
 
 # Prerequisites
 
 - Basic knowledge in statistics;
 - No knowledge of forecasting is assumed.
 - No prior knowledge of R is assumed.
+- Attending the webinar.
 
 Participants must bring their own laptop with a recent version of R and RStudio installed, along with the following packages and their dependencies:
 
@@ -34,7 +36,7 @@ Participants must bring their own laptop with a recent version of R and RStudio 
 
 # Program
 
-## Webinar, 
+## Webinar 
   - 07 January 2019
   - Time: 02:30- 03:30 (UK Time)
 
