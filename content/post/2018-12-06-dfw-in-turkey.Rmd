@@ -20,7 +20,8 @@ Democratising forecasting is an intiaitive lead by Bahman Rostami-Tabar. The aim
 Register [here](https://www.eventbrite.co.uk/e/data-analytics-and-forecasting-using-r-tickets-53143658112)
 
 >Registeration is closed on Monday 7th January 2019 at 02:30 (UK time).
->Registeration is confirmed once you attend the webinar. If you can not attend the webinar, please email [me](rostami-tabarb@cardiff.ac.uk) to keep your name. 
+
+>Registeration is confirmed once you attend the webinar. If you can not attend the webinar, please email me: <rostami-tabarb@cardiff.ac.uk>
 
 # Prerequisites
 
