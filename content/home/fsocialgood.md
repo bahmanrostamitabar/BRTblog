@@ -33,7 +33,7 @@ To that end, I have organised the first international workshop dedicated to the 
 
 Please see below for more information about the conference:
 
-1. [24th IIF workshop on Forecasting for Social Good](https://www.cardiff.ac.uk/news/view/1238674-the-need-of-populations-and-society) for more information.
+1. [24th IIF workshop on Forecasting for Social Good](https://www.cardiff.ac.uk/news/view/1238674-the-need-of-populations-and-society) 
 
-2. [Motivation for organising a conference on Forecasting for Social Good](https://www.youtube.com/watch?v=GM3UXeftP_s)
+2. [Short video about the conference on Forecasting for Social Good](https://www.youtube.com/watch?v=GM3UXeftP_s)
 
