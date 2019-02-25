@@ -22,7 +22,6 @@ Register [here](https://www.eventbrite.co.uk/e/forecasting-using-r-tickets-57419
 
 >Registeration is closed on Friday 5th April 2019 at 02:30 (UK time).
 
-
 # Prerequisites
 
 - Basic knowledge in statistics;
