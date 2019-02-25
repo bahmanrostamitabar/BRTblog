@@ -1,0 +1,19 @@
+---
+title: Democratising forecasting workshop in Uganda
+author: Bahman Rostami-Tabar
+date: '2019-02-25'
+slug: dfw_uganda
+categories:
+  - Democratising_forecasting
+tags:
+  - Forecasting
+  - R
+  - Workshop
+header:
+  caption: ''
+  image: ''
+  preview: yes
+---
+
+The 5^th^ [demcoratising forecasting workshop](https://www.bahmanrt.com/#democtarisingf)  will take place in [Makerere University Business School](https://mubs.ac.ug/) in April 2019.
+Democratising forecasting is an intiaitive lead by Bahman Rostami-Tabar. The aim is to share knownoledge on forecasting and influence relevant practices prioritising the need of population and the society.
