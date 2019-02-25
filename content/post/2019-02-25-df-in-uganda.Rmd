@@ -15,7 +15,7 @@ header:
   preview: yes
 ---
 
-The 5^th^ [demcoratising forecasting workshop](https://www.bahmanrt.com/#democtarisingf)  will take place in [Makerere University Business School](https://mubs.ac.ug/) in April 2019.
+The 6^th^ [demcoratising forecasting workshop](https://www.bahmanrt.com/#democtarisingf)  will take place in [Makerere University Business School](https://mubs.ac.ug/) in April 2019.
 Democratising forecasting is an intiaitive lead by Bahman Rostami-Tabar. The aim is to share knownoledge on forecasting and influence relevant practices prioritising the need of population and the society.
 
 Register [here](https://www.eventbrite.co.uk/e/forecasting-using-r-tickets-57419969675)
