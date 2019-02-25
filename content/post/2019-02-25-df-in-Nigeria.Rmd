@@ -1,0 +1,73 @@
+---
+title: Democratising forecasting workshop in Nigeria
+author: Bahman Rostami-Tabar
+date: '2019-02-25'
+slug: df-in-nigeria
+categories:
+  - Democratising_forecasting
+tags:
+  - Forecasting
+  - R
+  - Workshop
+header:
+  caption: ''
+  image: 'df.JPG'
+  preview: yes
+---
+
+The 6^th^ [demcoratising forecasting workshop](https://www.bahmanrt.com/#democtarisingf)  will take place in [University of Maryland](http://www.ihv.org/) in April 2019.
+Democratising forecasting is an intiaitive lead by Bahman Rostami-Tabar. The aim is to share knownoledge on forecasting and influence relevant practices prioritising the need of population and the society.
+
+Register [here](https://www.eventbrite.co.uk/e/forecasting-using-r-tickets-57425773033)
+
+>Registeration is closed on Friday 29 March 2019 at 02:30 (UK time).
+
+# Prerequisites
+
+- Basic knowledge in statistics;
+- No knowledge of forecasting is assumed.
+- No prior knowledge of R is assumed.
+- Attending the webinar.
+
+Participants must bring their own laptop with a recent version of R and RStudio installed, along with the following packages and their dependencies:
+
+- Download and install R: click [here](https://cloud.r-project.org/)
+- Download and install RStudio: click [here](https://www.rstudio.com/products/rstudio/download/#download)
+
+# Program
+
+## Webinar 
+  - 1st April 2019
+  - Time: 02:30- 03:30 (UK Time)
+
+## Day 1: 15 April 2019
+
+  - R and RStudio Essentials
+  - Reports with RMarkdown
+  - Data preparation
+  - Data manipulation
+  - Data visualization
+
+## Day 2: 16 April 2019
+
+  - Forecasting and decision making
+  - Time series patterns
+  - Forecaster's toolbox: time series graphics, simple forecasting methods, residual diagnostics, accuracy measurement
+  
+## Day 3: 17 April 2019
+
+- ARIMA models
+- Exponential smoothing models
+- Regression
+
+# Schedule
+
+- Start: 09:30 a.m.
+- End: 04:45 p.m.
+
+## Refreshment breaks
+
+- Morning: 11:15 - 11:30
+- Afternoon: 03:30 - 03:45 p.m.
+- Lunch: 01:00 p.m. - 02:00 p.m.
+
