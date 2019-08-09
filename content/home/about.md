@@ -12,7 +12,7 @@ weight = 5
   interests = [
     "Forecasting for Social Good",
     "Forecasting in healthcare",
-    Forecasting for humanitarian operations,
+    "Forecasting for humanitarian operations",
     "Forecasting and decision making interface",
     "Forecasting for supply chains"
   ]
