@@ -11,10 +11,8 @@ weight = 5
 [interests]
   interests = [
     "Forecasting for Social Good",
-    "Forecasting in healthcare",
-    "Forecasting for humanitarian operations",
-    "Forecasting and decision making interface",
-    "Forecasting for supply chains"
+    "Forecasting and Decision Making Interface",
+    "Forecasting by aggregation"
   ]
 
 # List your qualifications (such as academic degrees).
