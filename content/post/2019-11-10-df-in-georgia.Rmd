@@ -54,7 +54,7 @@ Participants must bring their own laptop with a recent version of R and RStudio 
 ## Webinar 
   - Date: 9^th^ December 2019
   - Time: 02:30- 03:30 (UK Time)
-  - Title: Essentials for to maximise learning in the workshop
+  - Title: Essentials for learning in the workshop
 
 ## Day 1: 16 December 2019
 
