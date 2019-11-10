@@ -37,3 +37,4 @@ Please see below for more information about the conference:
 
 2. [Short video about the conference on Forecasting for Social Good](https://www.youtube.com/watch?v=GM3UXeftP_s)
 
+We are organising the second international workshop on Forecasting for Social Good on 11-12 June 2020 in France. 
