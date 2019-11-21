@@ -30,10 +30,10 @@ Assuming basic knowledge of statistics, participants will learn:
 - How to use R functions and their packages to use generate forecasts;
 - How to visualize, export and report results for interpretation and insights using RMarkdown.
 
-# This workshop is for you if you are an:
+# This workshop is for you if you are:
 
-- an academic,researcher, professional,  student(UG, MSc., PhD) and want to learn about time series forecasting using R software;
-- professional want to learn how to analyse data and produce forecasts to inform decisions using R in the organisations(I encourage people in healthcare to attend);
+- a academic,researcher, professional,  student(UG, MSc., PhD) and want to learn about time series forecasting using R software;
+- a professional want to learn how to analyse data and produce forecasts to inform decisions using R in the organisations(I encourage people in healthcare to attend);
 - a data scientist who wants to gain in depth understanding of forecasting process;
 - a forecaster who wants to learn how to use R software for forecasting purpose.
 
