@@ -68,17 +68,6 @@ Assuming basic knowledge of statistics, participants will be able to do the foll
 
 # Program
 
-## Schedule 
-
-Start: 09:30 a.m.
-End: 04:30 p.m.
-
-Refreshment breaks: 
-
-- Morning: 11:00 - 11:20
-- Afternoon: 03:00 – 03:20 p.m.
-- Lunch: 12:30 p.m. – 01:30 p.m.
-
 ## Webinar:
 
 - Title: Essentials to do forecasting using R
@@ -100,6 +89,17 @@ Refreshment breaks:
 2.4. Forecasting by aggregation:  How to forecast in a situation where we have a high frequency time series, e.g. daily but we need a low frequency forecast, e.g. monthly?  How do we generate forecast for items with a hierarchical or grouped time series structure? 
 2.5. Forecasting by combination:  how to use an ensemble of forecasting approaches? In which conditions ensemble forecasts are better than individual methods?
 2.6. Forecasting for many time series: what is the best approach to forecast many time series? How to classify items for forecasting? How to forecast them? How to report the accuracy?
+
+## Schedule 
+
+Start: 09:30 a.m.
+End: 04:30 p.m.
+
+Refreshment breaks: 
+
+- Morning: 11:00 - 11:20
+- Afternoon: 03:00 – 03:20 p.m.
+- Lunch: 12:30 p.m. – 01:30 p.m.
 
 ## Reference:
 
