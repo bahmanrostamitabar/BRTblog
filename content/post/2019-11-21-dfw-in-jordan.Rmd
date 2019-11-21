@@ -15,7 +15,7 @@ header:
   preview: yes
 ---
 
-The 9^th^ [demcoratising forecasting workshop](https://www.bahmanrt.com/#democtarisingf)  will take place in [Al-Hussein Technical University](https://www.htu.edu.jo/) on 8-9 and 11^th January 2020 in Amman, Jordan.
+The 9^th^ [demcoratising forecasting workshop](https://www.bahmanrt.com/#democtarisingf)  will take place in [Al-Hussein Technical University](https://www.htu.edu.jo/) on 8-9 and 11^th^ January 2020 in Amman, Jordan.
 
 Democratising forecasting is an intiaitive lead by Bahman Rostami-Tabar ans sponsored by the [International Institute of Forecasters](https://forecasters.org/). The aim is to share knownoledge on forecasting and influence relevant practices prioritising the need of population and the society.
 
