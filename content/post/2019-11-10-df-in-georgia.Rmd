@@ -74,7 +74,7 @@ Participants must bring their own laptop with a recent version of R and RStudio 
 
 - ARIMA models
 - Exponential smoothing models
-- Regression
+- Model selection
 
 ## Schedule
 
