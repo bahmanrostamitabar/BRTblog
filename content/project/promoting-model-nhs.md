@@ -15,7 +15,7 @@ image_preview = "pm.jpg"
 tags = ["Healthcare","Social-Good","Forecasting"]
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://www.health.org.uk/news-and-comment/blogs/better-health-through-analytics-and-data-driven-technology"
+external_link = ""
 
 # Does the project detail page use math formatting?
 math = false
