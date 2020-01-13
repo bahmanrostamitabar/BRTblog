@@ -1,5 +1,5 @@
 ---
-title: Call for submissions: International workshop on Forecasting for Social Good, 11-12 June 2020, Bordeaux, France
+title: Call for submissions
 
 author: Bahman Rostami-Tabar
 date: '2020-01-13'
