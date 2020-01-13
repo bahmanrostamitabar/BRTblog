@@ -1,5 +1,5 @@
 ---
-title: [Call for submissions: 2^nd^ International workshop on Forecasting for Social Good, 11-12 June 2020, Bordeaux, France](https://www.f4sg.org/)
+title: Call for submissions: 2^nd^ International workshop on Forecasting for Social Good, 11-12 June 2020, Bordeaux, France
 
 author: Bahman Rostami-Tabar
 date: '2020-01-13'
