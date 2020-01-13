@@ -16,19 +16,20 @@ header:
   preview: yes
 ---
 
-We are now accepting abstracts for oral and poster presentation at the [2^nd^ International Workshop on Forecasting for Social Good](www.f4sg.org) sponsored by the International Institute of Forecasters. Both abstracts on academic forecasting research and applications in forecasting practice are welcome. If you are interested, submit your in [Easychair](https://easychair.org/my/conference?conf=f4sg#).
+We are now accepting abstracts for oral and poster presentation at the [2^nd^ International Workshop on Forecasting for Social Good](https://www.f4sg.org) sponsored by the International Institute of Forecasters. Both abstracts on academic forecasting research and applications in forecasting practice are welcome. If you are interested, submit your in [Easychair](https://easychair.org/my/conference?conf=f4sg#).
 
-For poster presentations, please upload your poster in PDF format in addition to the abstract. 
+For poster presentation, please upload your poster in PDF format in addition to the abstract. 
  
 If you would like to organise a special session or a panel, please contact: Bahman Rostami-Tabar (<rostami-tabarB@cardiff.ac.uk>).
 
 
-## Important dates
+## Important dates:
 
-- Abstract submission opens: 01 January 2020
-- Abstract Submission closes: 20 March 2020
+- Submission deadline: March 20, 2020 
+- Notification to authors: March 27, 2020
+- Registration deadline: April 15, 2020
 
-## Publications 
+## Publications:
 
 Authors of selected papers will be invited to submit full papers to be published in the following journals:
 
@@ -36,23 +37,23 @@ Authors of selected papers will be invited to submit full papers to be published
 - Supply Chain Forum: an international Journal 
 A call for papers will be issued at a later date by both journals.
 
-## Keynote speakers
+## Keynote speakers:
 
 - Prof. Spyros Makridakis, University of Nicosia
 - Prof. Laura Albert, University of Wisconsin Madison
 - Dr. Nicholas G. Reich, UMass Amherst
 - Dr. Leonardo Milano, Centre for Humanitarian Data, United Nations Office for the Coordination of Humanitarian Affairs (OCHA)
 
-## Organisers
+## Organisers:
 
-General chairs:
+General chairs
 
-- Dr. Bahman Rostami-Tabar(rostami-tabarb@cardiff.ac.uk)
-- Dr. Michael Porter (mdp2u) mdp2u@virginia.edu
+- Dr. Bahman Rostami-Tabar (<rostami-tabarb@cardiff.ac.uk>)
+- Dr. Michael Porter (<mdp2u@virginia.edu>)
 
-Program chair:
+Program chair
 
-- Prof. Zied Babai (mohamed-zied.babai@kedgebs.com)
+- Prof. Zied Babai (<mohamed-zied.babai@kedgebs.com>)
 
 ## About FSG workshop
 
