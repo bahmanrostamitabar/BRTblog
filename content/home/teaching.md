@@ -15,7 +15,7 @@ weight = 60
 
 +++
 
-Subject I am teaching in **2018-2019** at Cardiff University :
+Subject I am teaching in **2019-2020** at Cardiff University :
 
 ## BST832: Forecasting
 
@@ -35,4 +35,11 @@ This module will equip students with:
 *	Critical awareness of strategies, methods, tools and techniques that can be used to identify, analyse and respond to various risks.
 *	Analytical skills in risk management by evaluating real manufacturing and service, public and private sector case studies.
 
+## BST835: Business Data Analytics
 
+This module will equip students with the following skills:
+
+* Manage data to extract information that is useful for addressing business problems and suggesting strategy.
+* Selection and application of appropriate techniques to business problems.
+* Develop proficiency in using appropriate software packages to an advanced level to manage data sets in order to generate insights efficiently and effectively.
+* Communicate findings to both expert and non-expert audiences.
