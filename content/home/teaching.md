@@ -35,7 +35,7 @@ This module will equip students with:
 *	Critical awareness of strategies, methods, tools and techniques that can be used to identify, analyse and respond to various risks.
 *	Analytical skills in risk management by evaluating real manufacturing and service, public and private sector case studies.
 
-## BST835: Business Data Analytics
+## BST811: Business Data Analytics
 
 This module will equip students with the following skills:
 
