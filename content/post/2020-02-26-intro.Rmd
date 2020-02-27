@@ -18,7 +18,7 @@ tags:
 categories: Forecasting using R workshop
 ---
 
-Following the delivery of a series of workshops on forecasting using R in the developing countries and for some other organisations such as NHS in the UK, I am going to publish weekly posts(every Thursday) to make them accessible to a wider audiance. Throughout these posts you can develop skills and knowledge to successfully prepare, visualise, analyse and model time series data and generate forecasts to support planning and decision making process. 
+Following the delivery of a series of workshops on [forecasting using R in the developing countries, please see democratising forecasting,](https://forecasters.org/events/iif-workshops/) and for some other organisations such as NHS in the UK, I am going to publish weekly posts(every Thursday) to make them accessible to a wider audiance. Throughout these posts you can develop skills and knowledge to successfully prepare, visualise, analyse and model time series data and generate forecasts to support planning and decision making process. 
 
 These series of pots might be interested to a learner interested in forecasting but more specifixally those work with high frequency data in the health and care sector.
 
