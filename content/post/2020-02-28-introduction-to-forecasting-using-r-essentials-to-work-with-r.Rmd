@@ -70,7 +70,7 @@ Remember when you started learning a new language, was it easy to speak and comm
 
 R is (programming) languege. You need to learn grammer, volabulary, structure, practice, etc to be able to communicate with R. You can ask R any question (we call it *code*) if it is in the right syntext then R will reply, otherwise it will tell you that there is a mistake (give you an Error)! [Find out reasons to use R](as any languaue it is the same with R)
 
-You can download [r software](https://www.r-project.org/) and install it. Once finished, open it. Do you like the interface to do your work? This is the basic R Graphical User Interface (GUI). Ofcourse, you can work on it if you like, however it is not very user friendly, I DON'T WANT to USE IT!
+You can download [r software](https://www.r-project.org/) and install it. Once finished, open it. Do you like the interface to do your work? This is the basic R Graphical User Interface (GUI). Ofcourse, you can work on it if you like, however it is not user friendly.
 
 ```{r r_friendly, fig.align='center', out.width="50%", echo=FALSE}
 knitr::include_graphics("https://media.giphy.com/media/xT5LMWmZYSGfHcVXQA/giphy.gif")
@@ -81,8 +81,8 @@ Instead, I recommend using Rstudio which is a user friendly interface to work wi
 **Start by creating a project**
 
 Once you install R and Rstudio, you can open Rstudio and create a project. This must be the first thing you do whenever starting a new task/project. 
-To craete a project: 1) open RStudio, 2) click on File -> New project
-You need to choose a Directory name for your project(e.g. forecasting_using_r) and then click on `Browse` and select a location in your computer  which becomes the project directory. Finally click on `Create Project`. 
+To craete a project: 1) open RStudio, 2) click on `File -> New project`
+You need to choose a Directory name for your project(e.g. forecasting_using_r) and then click on `Browse` and select a location in your computer which becomes the project directory. Finally click on `Create Project`. 
 You can find more details [here](https://r4ds.had.co.nz/workflow-projects.html)
 
 > Whenever you want to work on the project, you need to open it by double clicking/choosing `.Rproj` from the project directory
@@ -91,18 +91,18 @@ You can find more details [here](https://r4ds.had.co.nz/workflow-projects.html)
 
 Once you created the project, you are ready to start the project. But, what do you need to do? In any data related project including forecasting in R, you almost do three tasks:
 
-1. You write *codes* which are a set of instruction through which you tell R what you want to do. You write lots of codes for your project and different purposes: to import data, to tidy data, remove missing values, fill gaps, change names, create new variables, produce graphs, apply models, analyse output of models, generate forecasts and more.
+1. You write **codes** which are a set of instruction through which you tell R what you want to do. You write lots of codes for your project and different purposes: to import data, to tidy data, remove missing values, fill gaps, change names, create new variables, produce graphs, apply models, analyse output of models, generate forecasts and more.
 
-2. You will run your codes to get outputs such as tables, graphs, model's fit, forecasts, forecast accuracy table, etc. often you look at these results, try to understand them and see if they make sense, if your happy with them and you can explain them or not, if they are intutive or not, etc and you may go back and change things which happend alot in any project!
+2. You will run your codes to get outputs such as tables, graphs, model's fit, forecasts, forecast accuracy table, etc. often you look at these results, try to understand them and see if they make sense, if your happy with them and you can explain them or not, if they are intutive or not, etc and you may go back and change things which happend alot in any project.
 
-3. Finally, you want to explain in *plain text* what you have done, you want to interpret results produced as tables, graphs and put them together as a report and communicate it with various audiances in different formats such as Pdf, Word, html.
+3. Finally, you want to explain in **plain text** what you have done, you want to interpret results produced as tables, graphs and put them together as a report and communicate it with various audiances in different formats such as Pdf, Word, html.
 
 Now, you can try these three tasks in a variaty of ways such as using Console, R script and RMarkdown. Console is mainly used for quick tests or larning purposes.
 Once you become an expert in R, it is common to write many R scripts and use them in RMarkdown, so both are equally important. 
 
 **R script**
 
-To create an R script, you can use keyboard shortcut Cmd/Ctrl + Shift + N or by clicking on Filte -> New File -> R Script.
+To create an R script, you can use keyboard shortcut Cmd/Ctrl + Shift + N or by clicking on `File -> New File -> R Script`.
 More infromation about R script is available [here](https://r4ds.had.co.nz/workflow-scripts.html)
 
 If you use only R Script, these tasks are not connected, you can not write plain text there except in the form of comments. 
@@ -118,9 +118,9 @@ If you want to share what you have done:
 
 > In Rmarkdown, all three tasks are connected together.
 
-To create a new Rmarkdowm file: click on File -> New File -> R Markdown
+To create a new Rmarkdowm file: click on `File -> New File -> R Markdown`
 
-You need to choose a title(e.g. prepare_data_part1) and then click on OK button. Save the file into your project directory! in the **Save As:** box, type the same title (e.g. prepare_data_part1). Delete everything after `## R Markdown` in the file and click on save button.
+You need to choose a title(e.g. prepare_data_part1) and then click on OK button. Save the file into your project directory! in the `Save As:` box, type the same title (e.g. prepare_data_part1). Delete everything after `## R Markdown` in the file and click on save button.
 
 More information about RMarkdown can be found [here](https://r4ds.had.co.nz/r-markdown.html)
 
@@ -130,10 +130,10 @@ More information about RMarkdown can be found [here](https://r4ds.had.co.nz/r-ma
 
 In R, everything you deal with has a name. You refer to things by their names as you examine, use, or modify them. Named entities include variables (e.g. x, or y), data that you have loaded (e.g. my_data), and functions that you use.
 
-_ Names in R are case sensitive. The object my_data is not the same as the object My_Data. 
+- Names in R are case sensitive. The object `my_data` is not the same as the object `My_Data`. 
 - When choosing names for things, be concise, consistent, and informative. 
-- Follow the style of the tidyverse and name things in lower case, separating words with the underscore character, _, as needed. 
-_ You can combine multiple words in naming, e.g. word1_word2_word3
+- Follow the style of the tidyverse and name things in lower case, separating words with the underscore character, `_`, as needed. 
+- You can combine multiple words in naming, e.g. `word1_word2_word3`
 - Do not use spaces when naming things, including variables in your data.
 
 **Everything is an object**
@@ -149,16 +149,22 @@ To see inside an object, ask for its structure. The `str()` function is sometime
 
 **You do things using functions**
 
-You do almost everything in R using functions. Think of a function as a special kind of object that can perform actions for you. It produces output based on the input that it receives. When we want a function to do something for us, we call it by typing its name, e.g. `read_csv()`. Functions can be recognized by the parentheses at the end of their names. This distinguishes them from other objects, such as single numbers, named vectors, tables of data, and so on. The parentheses are what allow us to send information to the function. We give the function some information, it acts on that information, and some results come out the other side. Information given to functions through `arguments`. Most functions accept one or more named arguments. A function’s arguments are the things it needs to know in order to do something. Functions take inputs via their arguments, do something, and return outputs. we call the output of a function a `value`. The value depends on what the function does.
+You do almost everything in R using functions. Think of a function as a special kind of object that can perform actions for you. It produces output based on the input that it receives. When we want a function to do something for us, we call it by typing its name, e.g. `read_csv()`. 
+
+Functions can be recognized by the parentheses at the end of their names. This distinguishes them from other objects, such as single numbers, named vectors, tables of data, and so on. The parentheses are what allow us to send information to the function. 
+
+We give the function some information, it acts on that information, and some results come out the other side. Information given to functions through `arguments`. Most functions accept one or more named arguments. A function’s arguments are the things it needs to know in order to do something. Functions take inputs via their arguments, do something, and return outputs. we call the output of a function a `value`. The value depends on what the function does.
 
 **How to use functions**
 
 We call functions by typing their names and providing arguments. Functions can return one or many values. The output returned by functions can be a table of data, or a complex object such as the results of a linear model, or the instructions needed to draw a plot on the screen (as we shall see). 
+
 - Use arguments in fucntions:
     - By position
     - By name
 
 When you install R, you get automatically access to some packages and functions. This is `base R`. 
+
 The code you write will be more or less complex depending on the task you want to accomplish. so, functions available in `base R` might not be enough. Therefore, you will probably end up writing your own functions to produce the results that you need. But as with other programming languages, you will not have to do everything yourself. Families of useful functions are bundled into packages that you can install, load into your R project, and make use of as you work. 
 
 # Install and load packages
@@ -173,14 +179,16 @@ The code you write will be more or less complex depending on the task you want t
     * Compiled code
     * Package
 
-Installing a package will bring it from a server into your computer. Once the packages is installed, there is no need to reinstall it. You can update it through Tools -> check for package update.
+Installing a package will bring it from a server into your computer. Once the packages is installed, there is no need to reinstall it. You can update it through `Tools -> check for package update`.
+
 R comes with some standard packages that are installed when you install R. However, many packages do not come with the standard installation of R, so you need to install them yourself. so let's see how to install packages.
 
 **How to install packages**
 
 If the package is stable and available in [CRAN](https://cran.r-project.org/web/packages/), then:
 
-- On the "Packages" tab, click on "Install packages", a new window appears. type the name of packages you need to install and click on the install button(make sure "install dependencies" is checked).
+- On the `Packages` tab, click on `Install packages`, a new window appears. type the name of packages you need to install and click on the install button(make sure `install dependencies` is checked).
+- Go to `Tools-> Install Packages`
 - Install packages using `install packages` function. 
 
 ```{r, eval=FALSE}
