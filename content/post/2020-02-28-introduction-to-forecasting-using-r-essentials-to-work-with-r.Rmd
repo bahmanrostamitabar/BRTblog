@@ -1,5 +1,5 @@
 ---
-title: Introduction to forecasting using R - Essentials to work with R
+title: Week 1: Introduction to forecasting using R - Essentials to work with R
 author: Bahman Rostami-Tabar
 date: '2020-02-28'
 slug: intro-furw
@@ -232,6 +232,10 @@ In this post, I have briefly discussed essentials to start working with R.
 In the next post, we import our dataset into R and start preparing it for more analysis.
 We work with a real data set containing 773,779 attendance from an Emergency departement over 5 years. The data set contains the following information: the arrival time of a visitor, age, gender and the tyep of injury. 
 
+# Github for forecasting using R
+
+ You can clone or download the repository for [forecasting using r](https://github.com/bahmanrostamitabar/forecasting_using_r) and work on it on your own. This will include all weekly analysis.
+ 
 # References
 
 1. [R for data Science](https://r4ds.had.co.nz/)
