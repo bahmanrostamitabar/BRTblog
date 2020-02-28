@@ -9,8 +9,6 @@ tags:
   - Forecasting
   - R
   - Workshop
-header:
-  preview: yes
 output: 
   blogdown::html_page:
   toc: true
