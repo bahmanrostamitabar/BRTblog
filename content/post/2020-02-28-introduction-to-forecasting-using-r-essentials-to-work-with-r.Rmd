@@ -9,11 +9,10 @@ tags:
   - Forecasting
   - R
   - Workshop
-output: 
-  html_document:
+output:
+  blogdown::html_page:
     toc: true
-    toc_float: true
-    smart: false
+
 ---
 
 Following the delivery of a series of workshops on forecasting using R in the developing countries-[please see democratising forecasting section](https://forecasters.org/events/iif-workshops/)-
