@@ -10,8 +10,6 @@ tags:
   - R
   - Workshop
 header:
-  caption: ''
-  image: ''
   preview: yes
 output: 
   blogdown::html_page:
@@ -125,7 +123,7 @@ If you want to share what you have done:
 
 To create a new Rmarkdowm file: click on File -> New File -> R Markdown
 
-You need to choose a title(e.g. prepare_data_part1) and then click on OK button. Save the file into your project directory! in the **Save As:** box, type the same title (e.g. prepare_data_part1). Delete everything after *## R Markdown* in the file and click on save button.
+You need to choose a title(e.g. prepare_data_part1) and then click on OK button. Save the file into your project directory! in the **Save As:** box, type the same title (e.g. prepare_data_part1). Delete everything after `## R Markdown` in the file and click on save button.
 
 More information about RMarkdown can be found [here](https://r4ds.had.co.nz/r-markdown.html)
 
