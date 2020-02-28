@@ -16,7 +16,7 @@ header:
 output: 
   blogdown::html_page:
   number_sections: true
-  toc: true
+  toc: TRUE
 ---
 
 Following the delivery of a series of workshops on forecasting using R in the developing countries-[please see democratising forecasting section](https://forecasters.org/events/iif-workshops/)-
