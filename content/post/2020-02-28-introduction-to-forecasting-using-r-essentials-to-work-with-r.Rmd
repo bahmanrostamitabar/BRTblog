@@ -19,7 +19,9 @@ and some other organisations such as NHS in the UK, I am going to publish series
 
 These series of pots might be interested to learners interested in forecasting, especially those working with sub-daily data in the healthcare sector.
 
-We have also created a new community dedicated to [forecasting in healthcare](https://healthforecastr.trydiscourse.com/). Please join the community and create a topic to start a discussion. The community aims to provide a platform for forecasters, researchers and practitioners to question, discuss, share and debate. The community is not limited to forecasting using R or any particular methodology.
+We have also created a new community dedicated to [forecasting in healthcare](https://healthforecastr.trydiscourse.com/). You can also use this discussion community to ask questions related to these series of posts.
+
+Please join the community and create a topic to start a discussion. The community aims to provide a platform for forecasters, researchers and practitioners to question, discuss, share and debate. The community is not limited to forecasting using R or any particular methodology.
 
 In this post, I present some general information and the dataset. I also provide an introduction to R that covers essentials to work with R which is essential for future posts.
 If you are comfortable or skilled in R, then you can skip this post!
