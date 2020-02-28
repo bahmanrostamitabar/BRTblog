@@ -254,7 +254,7 @@ enableGitInfo = false
   align_right = true
   
 [[menu.main]]
-  name = "BAHblog"
+  name = "Blog"
   url = "#posts"
   weight = 1
   
