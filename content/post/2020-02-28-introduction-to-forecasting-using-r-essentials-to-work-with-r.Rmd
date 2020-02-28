@@ -1,5 +1,5 @@
 ---
-title: Week 1: Introduction to forecasting using R - Essentials to work with R
+title: Week 1- Introduction and Essentials to work with R
 author: Bahman Rostami-Tabar
 date: '2020-02-28'
 slug: intro-furw
@@ -12,7 +12,6 @@ tags:
 output:
   blogdown::html_page:
     toc: true
-
 ---
 
 Following the delivery of a series of workshops on forecasting using R in the developing countries-[please see democratising forecasting section](https://forecasters.org/events/iif-workshops/)-
