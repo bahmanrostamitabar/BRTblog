@@ -169,7 +169,7 @@ The code you write will be more or less complex depending on the task you want t
 
 # Install and load packages
 
-** What is a package?**
+**What is a package?**
 
 - A collection of R objects in a special format that may include:
 
