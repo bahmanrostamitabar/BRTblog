@@ -10,8 +10,9 @@ tags:
   - R
   - Workshop
 output: 
-  blogdown::html_page:
-  toc: true
+  html_document: 
+    number_sections: yes
+    toc: yes
 ---
 
 Following the delivery of a series of workshops on forecasting using R in the developing countries-[please see democratising forecasting section](https://forecasters.org/events/iif-workshops/)-
@@ -51,7 +52,7 @@ These steps are not necessarily accomplished in a serial sequence and could be a
 
 In my forecasting using R workshops, we go through all these steps, however due to the time constraint, we do not go in detail through those steps related to defining what to forecast and gather relevant data/information. However, these are two crucial steps without which any forecasting task is impossible or useless. I will write about these two steps in close feature.
 
-## Case study
+# Case study
 
 Throughout these series of posts, we refer to a scenario from Emergency departement of a hospital using a real dataset.
 
