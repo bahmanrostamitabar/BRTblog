@@ -1,0 +1,197 @@
+---
+title: Introduction to forecasting using R- essentials to work with R
+author: Bahman Rostami-Tabar
+date: '2020-02-28'
+slug: intro-furw
+categories:
+  - Forecasting Using R workshop
+tags:
+  - Forecasting
+  - R
+  - Workshop
+header:
+  caption: ''
+  image: ''
+  preview: yes
+output: 
+  html_document: 
+    number_sections: yes
+    toc: yes
+---
+
+
+
+<p>Following the delivery of a series of workshops on forecasting using R in the developing countries-<a href="https://forecasters.org/events/iif-workshops/">please see democratising forecasting section</a>-
+and some other organisations such as NHS in the UK, I am going to publish series of weekly posts (every Friday) to make them accessible to a wider audiance. Throughout these posts you can develop skills and knowledge to successfully prepare, visualise, analyse and model time series data and generate forecasts to support planning and decision making process.</p>
+<p>These series of pots might be interested to learners interested in forecasting, especially those working with sub-daily data in the healthcare sector.</p>
+<p>We have also created a new community dedicated to <a href="https://healthforecastr.trydiscourse.com/">forecasting in healthcare</a>. Please join the community and create a topic to start a discussion. The community aims to provide a platform for forecasters, researchers and practitioners to question, discuss, share and debate. The community is not limited to forecasting using R or any particular methodology.</p>
+<p>In this post, I present some general information and the dataset. I also provide an introduction to R that covers essentials to work with R which is essential for future posts.
+If you are comfortable or skilled in R, then you can skip this post!</p>
+<p><strong>Learning outcomes</strong></p>
+<p>By the end of this post, you should be able to:</p>
+<ol style="list-style-type: decimal">
+<li>Describe forecasting steps</li>
+<li>Create a project in RStudio and argue why it is important</li>
+<li>Discuss three main tasks in data analysis with R</li>
+<li>Describe important things to know in R</li>
+<li>Create a new R script and RMarkdown file</li>
+<li>Install and load packages</li>
+</ol>
+<div id="forecasting-task" class="section level1">
+<h1>Forecasting task</h1>
+<p>In any given forecasting task, we need to go thorugh the follwing steps:</p>
+<ul>
+<li>Define what to forecast based on the decisions and planning</li>
+<li>Gather relevant data/information</li>
+<li>Prepare data</li>
+<li>Visualise data</li>
+<li>Specify models and estimate parameters</li>
+<li>Evaluate modeling accuracy</li>
+<li>Communicate and use forecast</li>
+</ul>
+<p>These steps are not necessarily accomplished in a serial sequence and could be an iterative process.</p>
+<p>In my forecasting using R workshops, we go through all these steps, however due to the time constraint, we do not go in detail through those steps related to defining what to forecast and gather relevant data/information. However, these are two crucial steps without which any forecasting task is impossible or useless. I will write about these two steps in close feature.</p>
+<div id="case-study" class="section level2">
+<h2>Case study</h2>
+<p>Throughout these series of posts, we refer to a scenario from Emergency departement of a hospital using a real dataset.</p>
+<p><em>Scenario:</em></p>
+<p>A TV news report about the performance of Accident and Emergency units in the National Health Service (NHS) during the winter period has just been broadcast. The report claims that A&amp;E units have recorded their worst performance since current records began. The Department of Health and Social Care says this is in part due to unprecedented demand for services during the period. He adds the forecast for future demand will be also increasing. Is this a fair argument? Can we accurately forecast A&amp;E future attedance to improve the service?
+As a data analyst or forecaster, you have been provided with the A&amp;E attendance from your local informatic service. Your task is to prepare a report to check the validity of this argument by analysing, visualising the past A&amp;E attendance, highlighting key features of past A&amp;E attendance and proposing a forecasting model that forecast future attendance accurately.</p>
+</div>
+</div>
+<div id="essentials-to-work-with-r" class="section level1">
+<h1>Essentials to work with R</h1>
+<p>If you are familiar with R, you can skip this and wait for the upcoming posts. If you are a learner or with a basic knowledge of R, you need to ensure that you are equipped with essentials skills to work with R.</p>
+<p><strong>R and Rstudio</strong></p>
+<p>Remember when you started learning a new language, was it easy to speak and communicate from the first day? I speak few languagues and the answer is NO!</p>
+<p>R is (programming) languege. You need to learn grammer, volabulary, structure, practice, etc to be able to communicate with R. You can ask R any question (we call it <em>code</em>) if it is in the right syntext then R will reply, otherwise it will tell you that there is a mistake (give you an Error)! <a href="as%20any%20languaue%20it%20is%20the%20same%20with%20R">Find out reasons to use R</a></p>
+<p>You can download <a href="https://www.r-project.org/">r software</a> and install it. Once finished, open it. Do you like the interface to do your work? This is the basic R Graphical User Interface (GUI). Ofcourse, you can work on it if you like, however it is not very user friendly, I DON’T WANT to USE IT!</p>
+<p><img src="https://media.giphy.com/media/xT5LMWmZYSGfHcVXQA/giphy.gif" width="50%" style="display: block; margin: auto;" /></p>
+<p>Instead, I recommend using Rstudio which is a user friendly interface to work with. You can download the free version of <a href="https://rstudio.com/products/rstudio/download/">RStudio</a> and install it. Find out more about <a href="https://www.r-bloggers.com/top-6-reasons-you-need-to-be-using-rstudio/">reasons to use RStudio</a>.</p>
+<p><strong>Start by creating a project</strong></p>
+<p>Once you install R and Rstudio, you can open Rstudio and create a project. This must be the first thing you do whenever starting a new task/project.
+To craete a project: 1) open RStudio, 2) click on File -&gt; New project
+You need to choose a Directory name for your project(e.g. forecasting_using_r) and then click on <code>Browse</code> and select a location in your computer which becomes the project directory. Finally click on <code>Create Project</code>.
+You can find more details <a href="https://r4ds.had.co.nz/workflow-projects.html">here</a></p>
+<blockquote>
+<p>Whenever you want to work on the project, you need to open it by double clicking/choosing <code>.Rproj</code> from the project directory</p>
+</blockquote>
+<p><strong>Deciding on how to do things in R</strong></p>
+<p>Once you created the project, you are ready to start the project. But, what do you need to do? In any data related project including forecasting in R, you almost do three tasks:</p>
+<ol style="list-style-type: decimal">
+<li><p>You write <em>codes</em> which are a set of instruction through which you tell R what you want to do. You write lots of codes for your project and different purposes: to import data, to tidy data, remove missing values, fill gaps, change names, create new variables, produce graphs, apply models, analyse output of models, generate forecasts and more.</p></li>
+<li><p>You will run your codes to get outputs such as tables, graphs, model’s fit, forecasts, forecast accuracy table, etc. often you look at these results, try to understand them and see if they make sense, if your happy with them and you can explain them or not, if they are intutive or not, etc and you may go back and change things which happend alot in any project!</p></li>
+<li><p>Finally, you want to explain in <em>plain text</em> what you have done, you want to interpret results produced as tables, graphs and put them together as a report and communicate it with various audiances in different formats such as Pdf, Word, html.</p></li>
+</ol>
+<p>Now, you can try these three tasks in a variaty of ways such as using Console, R script and RMarkdown. Console is mainly used for quick tests or larning purposes.
+Once you become an expert in R, it is common to write many R scripts and use them in RMarkdown, so both are equally important.</p>
+<p><strong>R script</strong></p>
+<p>To create an R script, you can use keyboard shortcut Cmd/Ctrl + Shift + N or by clicking on Filte -&gt; New File -&gt; R Script.
+More infromation about R script is available <a href="https://r4ds.had.co.nz/workflow-scripts.html">here</a></p>
+<p>If you use only R Script, these tasks are not connected, you can not write plain text there except in the form of comments.</p>
+<p><strong>RMarkdown</strong></p>
+<p>My recommendation is to start using <code>RMarkdown</code>. Using RMarkdown helps you to combine the three tasks in one single file. This is crucial for <a href="https://www.sciencedirect.com/science/article/pii/S0169207014001009">reproducibility</a> and transparency. Moreover, you can get many different outputs from the same RMarkdown file such as Pdf, Word, html, presentation and more. later on, you can use it to write your report, paper, book and even write posts in your website such as mine.</p>
+<p>If you want to share what you have done:</p>
+<ul>
+<li>with someone who understands R Codes, share <code>.Rmd</code> file,</li>
+<li>with someone who is only interested in results and not how you done it, get pdf/ Word/html and then share it.</li>
+</ul>
+<blockquote>
+<p>In Rmarkdown, all three tasks are connected together.</p>
+</blockquote>
+<p>To create a new Rmarkdowm file: click on File -&gt; New File -&gt; R Markdown</p>
+<p>You need to choose a title(e.g. prepare_data_part1) and then click on OK button. Save the file into your project directory! in the <strong>Save As:</strong> box, type the same title (e.g. prepare_data_part1). Delete everything after <em>## R Markdown</em> in the file and click on save button.</p>
+<p>More information about RMarkdown can be found <a href="https://r4ds.had.co.nz/r-markdown.html">here</a></p>
+</div>
+<div id="important-things-to-know-about-r" class="section level1">
+<h1>Important things to know about R</h1>
+<p><strong>Everything has a name</strong></p>
+<p>In R, everything you deal with has a name. You refer to things by their names as you examine, use, or modify them. Named entities include variables (e.g. x, or y), data that you have loaded (e.g. my_data), and functions that you use.</p>
+<p>_ Names in R are case sensitive. The object my_data is not the same as the object My_Data.
+- When choosing names for things, be concise, consistent, and informative.
+- Follow the style of the tidyverse and name things in lower case, separating words with the underscore character, <em>, as needed.
+</em> You can combine multiple words in naming, e.g. word1_word2_word3
+- Do not use spaces when naming things, including variables in your data.</p>
+<p><strong>Everything is an object</strong></p>
+<p>Whatever we name in R becomes an object. You create objects by assigning them to names as:<code>Object_name &lt;- value</code>
+When you create objects by assigning things to names, they come into existence in R’s workspace or environment. Some objects are built in to R, some are added via libraries, and some are created by the user. But almost everything is some kind of object. The code you write will create, manipulate, and use named objects as a matter of course.</p>
+<p>If you’re not sure what an object is, ask for its class:</p>
+<ul>
+<li>Every object has a class. This is the sort of object it is, whether a vector, a character string, a function, a list, and so on. Knowing an object’s class tells you a lot about what you can and can’t do with it: <code>class(object)</code></li>
+</ul>
+<p>To see inside an object, ask for its structure. The <code>str()</code> function is sometimes useful. It lets you see what is inside an object.</p>
+<p><strong>You do things using functions</strong></p>
+<p>You do almost everything in R using functions. Think of a function as a special kind of object that can perform actions for you. It produces output based on the input that it receives. When we want a function to do something for us, we call it by typing its name, e.g. <code>read_csv()</code>. Functions can be recognized by the parentheses at the end of their names. This distinguishes them from other objects, such as single numbers, named vectors, tables of data, and so on. The parentheses are what allow us to send information to the function. We give the function some information, it acts on that information, and some results come out the other side. Information given to functions through <code>arguments</code>. Most functions accept one or more named arguments. A function’s arguments are the things it needs to know in order to do something. Functions take inputs via their arguments, do something, and return outputs. we call the output of a function a <code>value</code>. The value depends on what the function does.</p>
+<p><strong>How to use functions</strong></p>
+<p>We call functions by typing their names and providing arguments. Functions can return one or many values. The output returned by functions can be a table of data, or a complex object such as the results of a linear model, or the instructions needed to draw a plot on the screen (as we shall see).
+- Use arguments in fucntions:
+- By position
+- By name</p>
+<p>When you install R, you get automatically access to some packages and functions. This is <code>base R</code>.
+The code you write will be more or less complex depending on the task you want to accomplish. so, functions available in <code>base R</code> might not be enough. Therefore, you will probably end up writing your own functions to produce the results that you need. But as with other programming languages, you will not have to do everything yourself. Families of useful functions are bundled into packages that you can install, load into your R project, and make use of as you work.</p>
+</div>
+<div id="install-and-load-packages" class="section level1">
+<h1>Install and load packages</h1>
+<p>** What is a package?**</p>
+<ul>
+<li><p>A collection of R objects in a special format that may include:</p>
+<ul>
+<li>Functions</li>
+<li>Build-in data set</li>
+<li>Help files</li>
+<li>Compiled code</li>
+<li>Package</li>
+</ul></li>
+</ul>
+<p>Installing a package will bring it from a server into your computer. Once the packages is installed, there is no need to reinstall it. You can update it through Tools -&gt; check for package update.
+R comes with some standard packages that are installed when you install R. However, many packages do not come with the standard installation of R, so you need to install them yourself. so let’s see how to install packages.</p>
+<p><strong>How to install packages</strong></p>
+<p>If the package is stable and available in <a href="https://cran.r-project.org/web/packages/">CRAN</a>, then:</p>
+<ul>
+<li>On the “Packages” tab, click on “Install packages”, a new window appears. type the name of packages you need to install and click on the install button(make sure “install dependencies” is checked).</li>
+<li>Install packages using <code>install packages</code> function.</li>
+</ul>
+<pre class="r"><code># use install.packages()
+install.packages(&quot;tidyverse&quot;, dependencies=TRUE)# install tidyverse package 
+installed.packages()# list of installed packages</code></pre>
+<p>You can also install the development version of a package from from GitHub:</p>
+<ul>
+<li>Install remote package using <code>install.packages(&quot;remotes&quot;)</code></li>
+<li>then use remotes::install_github(“repositoryName/packageName”), e.g. remotes::install_github(“tidyverse/dplyr”)</li>
+</ul>
+<p><strong>Load packages</strong></p>
+<p>Installing a package does not mean that the package is available for use in your project. To make a whatever is in a package available for your project, you need to load it. Each time you quit R and reopen it, you need to load packages. The command to load a package is <code>library(packageName)</code>.</p>
+<pre class="r"><code>library(&quot;tidyverse&quot;)# load a package calles forecast
+search()# List of loaded packages</code></pre>
+</div>
+<div id="getting-help-in-r" class="section level1">
+<h1>Getting help in R</h1>
+<ol style="list-style-type: decimal">
+<li>If you need help about function <code>read_csv</code>, then use <strong>?read_csv</strong> in Console</li>
+<li>If you want to see an example of function mean, then use <strong>example(read_csv)</strong></li>
+<li>If you get stuck and need to search for help, search google but include ‘r help’ before your keywords</li>
+<li>Ask your questions at stackoverflow.com <a href="http://stackoverflow.com/questions/tagged/r">R Community</a></li>
+<li>Ask your questions at <a href="https://community.rstudio.com/">Rstudio community</a></li>
+</ol>
+</div>
+<div id="be-patient-with-r-and-with-yourself" class="section level1">
+<h1>Be patient with R, and with yourself</h1>
+<ul>
+<li>From simple typos to big misunderstandings, mistakes are a standard part of the activity of programming. So, just try to be patient with yourself and with R while you use it.</li>
+<li>Expect to make errors, and don’t worry when that happens. You won’t break anything.</li>
+<li>Each time you figure out why a bit of code has gone wrong you will have learned a new thing about how the language works.</li>
+</ul>
+</div>
+<div id="next-blog" class="section level1">
+<h1>Next blog</h1>
+<p>In this post, I have briefly discussed essentials to start working with R.
+In the next post, we import our dataset into R and start preparing it for more analysis.
+We work with a real data set containing 773,779 attendance from an Emergency departement over 5 years. The data set contains the following information: the arrival time of a visitor, age, gender and the tyep of injury.</p>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<ol style="list-style-type: decimal">
+<li><a href="https://r4ds.had.co.nz/">R for data Science</a></li>
+<li><a href="https://socviz.co/">Data Visualization</a></li>
+</ol>
+</div>
