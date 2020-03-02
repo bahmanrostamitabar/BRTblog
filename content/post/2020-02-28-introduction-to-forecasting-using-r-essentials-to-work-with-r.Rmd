@@ -218,7 +218,7 @@ search()# List of loaded packages
 1. If you need help about function `read_csv`, then use **?read_csv** in Console
 2. If you want to see  an example of function `read_csv()`, then use **example(read_csv)**
 3. If you get stuck and need to search for help, search google but include 'r help' before your keywords
-4. Ask your questions at stackoverflow.com [R Community](http://stackoverflow.com/questions/tagged/r)
+4. Ask your questions at  [stack overflow](http://stackoverflow.com/questions/tagged/r)
 5. Ask your questions at [Rstudio community](https://community.rstudio.com/)
 
 # Be patient with R, and with yourself
