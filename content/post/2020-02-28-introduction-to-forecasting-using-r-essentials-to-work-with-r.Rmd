@@ -68,9 +68,9 @@ If you are familiar with R, you can skip this and wait for the upcoming posts. I
 
 **R and Rstudio**
 
-Remember when you started learning a new language, was it easy to speak and communicate from the first day? I speak few languagues and the answer is  NO! 
+Remember when you started learning a new language, was it easy to speak and communicate from the first day? I speak few languages and the answer is  NO! 
 
-R is (programming) languege. You need to learn grammer, volabulary, structure, practice, etc to be able to communicate with R. You can ask R any question (we call it *code*) if it is in the right syntext then R will reply, otherwise it will tell you that there is a mistake (give you an Error)! [Find out reasons to use R](as any languaue it is the same with R)
+R is a (programming) language You need to learn grammar, voclabulary, structure, practice, etc to be able to communicate with R. You can ask R any question (we call it *code*) if it is in the right syntax then R will reply, otherwise it will tell you that there is a mistake (give you an Error)! [Find out reasons to use R](as any languaue it is the same with R)
 
 You can download [r software](https://www.r-project.org/) and install it. Once finished, open it. Do you like the interface to do your work? This is the basic R Graphical User Interface (GUI). Ofcourse, you can work on it if you like, however it is not user friendly.
 
@@ -216,7 +216,7 @@ search()# List of loaded packages
 # Getting help in R
 
 1. If you need help about function `read_csv`, then use **?read_csv** in Console
-2. If you want to see  an example of function mean, then use **example(read_csv)**
+2. If you want to see  an example of function `read_csv()`, then use **example(read_csv)**
 3. If you get stuck and need to search for help, search google but include 'r help' before your keywords
 4. Ask your questions at stackoverflow.com [R Community](http://stackoverflow.com/questions/tagged/r)
 5. Ask your questions at [Rstudio community](https://community.rstudio.com/)
