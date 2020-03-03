@@ -89,6 +89,15 @@ You can find more details [here](https://r4ds.had.co.nz/workflow-projects.html)
 
 > Whenever you want to work on the project, you need to open it by double clicking/choosing `.Rproj` from the project directory
 
+**Benefits of creating a project**
+
+It:
+* automatically sets the project directory as Working directory 
+      * makes reading files into R and writing outputs into project directory easy 
+      * allows you to use absolute path instead of exact path
+* allows you to work on multiple projects at the same time 
+* helps you to organise all your files in the same directory
+
 **Deciding on how to do things in R**
 
 Once you created the project, you are ready to start the project. But, what do you need to do? In any data related project including forecasting in R, you almost do three tasks:
@@ -123,6 +132,19 @@ If you want to share what you have done:
 To create a new Rmarkdowm file: click on `File -> New File -> R Markdown`
 
 You need to choose a title(e.g. prepare_data_part1) and then click on OK button. Save the file into your project directory! in the `Save As:` box, type the same title (e.g. prepare_data_part1). Delete everything after `## R Markdown` in the file and click on save button.
+
+**Benefit of using RMarkdown**
+
+* Combine three mains tasks in one file 
+* Ultimate tool for reproducible and transparent reports 
+* Produce various outputs such as pdf, html, word and presentation 
+* Avoid using multiple software and tools for data analysis journey 
+
+R Markdown files are designed to be used in three ways: 
+
+* For communicating to decision makers, who want to focus on the conclusions, not the code behind the analysis. 
+* For collaborating with other colleague, who are interested in both your conclusions, and how you reached them ( i.e. the code). 
+* As a modern day lab notebook where you can capture not only what you did, but also what you were thinking. 
 
 More information about RMarkdown can be found [here](https://r4ds.had.co.nz/r-markdown.html)
 
