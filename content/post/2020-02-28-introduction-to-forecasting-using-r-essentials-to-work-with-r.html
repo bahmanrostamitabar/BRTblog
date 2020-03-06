@@ -73,8 +73,8 @@ As a data analyst or forecaster, you have been provided with the A&amp;E attenda
 <h1>Essentials to work with R</h1>
 <p>If you are familiar with R, you can skip this and wait for the upcoming posts. If you are a learner or with a basic knowledge of R, you need to ensure that you are equipped with essentials skills to work with R.</p>
 <p><strong>R and Rstudio</strong></p>
-<p>Remember when you started learning a new language, was it easy to speak and communicate from the first day? I speak few languagues and the answer is NO!</p>
-<p>R is (programming) languege. You need to learn grammer, volabulary, structure, practice, etc to be able to communicate with R. You can ask R any question (we call it <em>code</em>) if it is in the right syntext then R will reply, otherwise it will tell you that there is a mistake (give you an Error)! <a href="as%20any%20languaue%20it%20is%20the%20same%20with%20R">Find out reasons to use R</a></p>
+<p>Remember when you started learning a new language, was it easy to speak and communicate from the first day? I speak few languages and the answer is NO!</p>
+<p>R is a (programming) language You need to learn grammar, voclabulary, structure, practice, etc to be able to communicate with R. You can ask R any question (we call it <em>code</em>) if it is in the right syntax then R will reply, otherwise it will tell you that there is a mistake (give you an Error)! <a href="as%20any%20languaue%20it%20is%20the%20same%20with%20R">Find out reasons to use R</a></p>
 <p>You can download <a href="https://www.r-project.org/">r software</a> and install it. Once finished, open it. Do you like the interface to do your work? This is the basic R Graphical User Interface (GUI). Ofcourse, you can work on it if you like, however it is not user friendly.</p>
 <p><img src="https://media.giphy.com/media/xT5LMWmZYSGfHcVXQA/giphy.gif" width="50%" style="display: block; margin: auto;" /></p>
 <p>Instead, I recommend using Rstudio which is a user friendly interface to work with. You can download the free version of <a href="https://rstudio.com/products/rstudio/download/">RStudio</a> and install it. Find out more about <a href="https://www.r-bloggers.com/top-6-reasons-you-need-to-be-using-rstudio/">reasons to use RStudio</a>.</p>
@@ -86,6 +86,13 @@ You can find more details <a href="https://r4ds.had.co.nz/workflow-projects.html
 <blockquote>
 <p>Whenever you want to work on the project, you need to open it by double clicking/choosing <code>.Rproj</code> from the project directory</p>
 </blockquote>
+<p><strong>Benefits of creating a project</strong></p>
+<p>It:
+* automatically sets the project directory as Working directory
+* makes reading files into R and writing outputs into project directory easy
+* allows you to use absolute path instead of exact path
+* allows you to work on multiple projects at the same time
+* helps you to organise all your files in the same directory</p>
 <p><strong>Deciding on how to do things in R</strong></p>
 <p>Once you created the project, you are ready to start the project. But, what do you need to do? In any data related project including forecasting in R, you almost do three tasks:</p>
 <ol style="list-style-type: decimal">
@@ -111,6 +118,19 @@ More infromation about R script is available <a href="https://r4ds.had.co.nz/wor
 </blockquote>
 <p>To create a new Rmarkdowm file: click on <code>File -&gt; New File -&gt; R Markdown</code></p>
 <p>You need to choose a title(e.g. prepare_data_part1) and then click on OK button. Save the file into your project directory! in the <code>Save As:</code> box, type the same title (e.g. prepare_data_part1). Delete everything after <code>## R Markdown</code> in the file and click on save button.</p>
+<p><strong>Benefit of using RMarkdown</strong></p>
+<ul>
+<li>Combine three mains tasks in one file</li>
+<li>Ultimate tool for reproducible and transparent reports</li>
+<li>Produce various outputs such as pdf, html, word and presentation</li>
+<li>Avoid using multiple software and tools for data analysis journey</li>
+</ul>
+<p>R Markdown files are designed to be used in three ways:</p>
+<ul>
+<li>For communicating to decision makers, who want to focus on the conclusions, not the code behind the analysis.</li>
+<li>For collaborating with other colleague, who are interested in both your conclusions, and how you reached them ( i.e. the code).</li>
+<li>As a modern day lab notebook where you can capture not only what you did, but also what you were thinking.</li>
+</ul>
 <p>More information about RMarkdown can be found <a href="https://r4ds.had.co.nz/r-markdown.html">here</a></p>
 </div>
 <div id="important-things-to-know-about-r" class="section level1">
@@ -187,9 +207,9 @@ search()# List of loaded packages</code></pre>
 <h1>Getting help in R</h1>
 <ol style="list-style-type: decimal">
 <li>If you need help about function <code>read_csv</code>, then use <strong>?read_csv</strong> in Console</li>
-<li>If you want to see an example of function mean, then use <strong>example(read_csv)</strong></li>
+<li>If you want to see an example of function <code>read_csv()</code>, then use <strong>example(read_csv)</strong></li>
 <li>If you get stuck and need to search for help, search google but include ‘r help’ before your keywords</li>
-<li>Ask your questions at stackoverflow.com <a href="http://stackoverflow.com/questions/tagged/r">R Community</a></li>
+<li>Ask your questions at <a href="http://stackoverflow.com/questions/tagged/r">stack overflow</a></li>
 <li>Ask your questions at <a href="https://community.rstudio.com/">Rstudio community</a></li>
 </ol>
 </div>
