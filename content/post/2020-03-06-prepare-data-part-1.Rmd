@@ -29,7 +29,7 @@ By the end of this post, you should be able to:
 5. identify various data type and data structure
 6. describe the tidy data concept and its importance
 
-##  Why do I need to prepare data? 
+#  Why do I need to prepare data? 
 
 The simple answer to this question is: because if the data are wrong, they will give you the wrong insights and results followed by wrong decisions and planning. 
 
@@ -39,7 +39,7 @@ knitr::include_graphics("https://media.giphy.com/media/xT5LMxnlknujYHrBOU/giphy.
 
 The raw data given to you might not be in the right shape to start your analysis right away. The data may contain mistakes, missing values, duplications, outliers, etc. Returning to the A&E data, you need to ensure that the data we use for analysis is a quality dataset. You need to check whether it contains duplications, whether any values is missing, or any unusual values is present due to errors in the system and decide how to fix them. If any of these issues are present, then it’s crucial to fix them before you start analysing the data. You may need to have domaine knowledge to to fix some issues available in yoir dataset.
 
-## Data preperation task
+# Data preperation task
 
 The data preparation involves various steps, such as:
 
@@ -134,7 +134,7 @@ There are three other common types of variables that aren’t used in this datas
 Data structures are made up of different data types. Data structures in R are tools for holding multiple values. The basic data structures used in R include vectors, matrices, `data frames`,`lists` and factors. You can think of a vector as a single column and a data frame as a rectangular table with columns and rows. A data frame is used for storing data tables. It is a list of vectors of equal length.
 
 ```{r data-type-structure, fig.align='center', echo=FALSE}
-knitr::include_graphics("dp1.PNG")
+knitr::include_graphics("../../static/img/dp1.PNG")
 ```
 
 > Question: What is the difference between a data frame, matrix and list?
@@ -184,7 +184,7 @@ These three rules are interrelated because it’s impossible to only satisfy two
 * Put each variable in a column 
 
 ```{r tidy_untidy, fig.align='center', out.width="50%", echo=FALSE, fig.cap="Tidy dataset"}
-knitr::include_graphics("my_img/tidy-1.png")
+knitr::include_graphics("../../static/img/tidy-1.png")
 ```
 
 **What if your data is untidy?**
