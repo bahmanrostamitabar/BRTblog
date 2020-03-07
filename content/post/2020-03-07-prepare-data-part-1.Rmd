@@ -161,8 +161,8 @@ What does it mean for your data to be “tidy”? While “tidy” has a clear E
 The principles of tidy data seem so obvious that you might wonder if you’ll ever encounter a dataset that isn’t tidy. Unfortunately, however, most data that you will encounter in real life will be untidy.
 Most organisations store data in spreadsheets. This is not the only way to store data, however it has been the case for many organisations for many decades. Many spreadsheets are untidy data.
 
-Please look at this presentation, [Get good data out of bad
-spreadsheets](https://www.londonr.org/wp-content/uploads/sites/2/2019/05/Get-good-data-out-of-bad-spreadsheets-with-tidy-tools.pdf), for examples of untidy/messy spreadsheets quite common in many organisations.
+Check out this presentation, [Get good data out of bad
+spreadsheets](https://www.londonr.org/wp-content/uploads/sites/2/2019/05/Get-good-data-out-of-bad-spreadsheets-with-tidy-tools.pdf), for examples of untidy/messy spreadsheets which are quite common in many organisations.
 
 So, if data are untidy, it means for most real analyses, you’ll need to do some tidying. Tidy data is a specific way of organizing data into a consistent format which plugs into the tidyverse set of packages for R. It is not the only way to store data and there are reasons why you might not store data in this format, but eventually you will probably need to convert your data to a tidy format in order to efficiently analyze it.
 
