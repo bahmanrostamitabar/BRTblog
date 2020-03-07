@@ -136,7 +136,7 @@ There are three other common types of variables that aren’t used in this datas
 
 Data structures are made up of different data types. Data structures in R are tools for holding multiple values. The basic data structures used in R include vectors, matrices, `data frames`,`lists` and factors. You can think of a vector as a single column and a data frame as a rectangular table with columns and rows. A data frame is used for storing data tables. It is a list of vectors of equal length.
 
-![Data structure in R](/img/dp1.PNG)
+![Data structure in R](/img/tidy-1.png)
 
 
 > Question: What is the difference between a data frame, matrix and list?
