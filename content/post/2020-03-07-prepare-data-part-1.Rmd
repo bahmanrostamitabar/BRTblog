@@ -206,6 +206,23 @@ The simple answer is it makes data analysis easier with tidyverse packages in R.
 
 2. Easier to exploit R's vectorised nature that makes the thinking process much easier in data manipulation, visualisatin and modeling/forecasting.
 
+# Dataset description
+
+```{r data, eval=FALSE}
+nrow(ae_original)#773,779  attendnace
+ncol(ae_original)# 5 variables
+names(ae_original)# names of variables
+```
+
+The dataset we use for these series of posts is a real dataset containing 773,779 attendance from an Emergency Departement over 5 years. For each patient visiting the emergency unit, the following data is recorded:
+
+- age
+- gender
+- injury type
+- arrival time
+
+This is a very rich data set that allows you to do many interesting analysis. 
+
 # Summary of week 2 
 
 1. Find an appropriate function dpending on your your file extension to import your datset into R.
