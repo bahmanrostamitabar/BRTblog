@@ -113,55 +113,14 @@ summary(ae_original)# summary of each column/variable of the data</code></pre>
 <h2><span class="header-section-number">4.1</span> Data type</h2>
 <p>Every individual data value in R has a data type that tells us what sort of value it is. The most common data types are numbers, which R calls numeric, double or integer values, and text, which R calls character values and time which R calls datetime values. A data type defines what kind of data is held in a value. The number 23 has a numeric data type that is integer, for example, the word “twenty-three” has a character type and the time 2020-04-01 11:20 has a date and time data type.</p>
 <p>You can know observe the dataset you imported! You can check what type of object it is and what type of variables you have.</p>
-<pre class="r"><code>knitr::kable(head(ae_original))# head() prints the first 6 rows</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="right">age</th>
-<th align="left">gender</th>
-<th align="left">injury_type</th>
-<th align="left">arrival_time</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">20</td>
-<td align="left">male</td>
-<td align="left">minor</td>
-<td align="left">2010-01-01 00:35:00</td>
-</tr>
-<tr class="even">
-<td align="right">16</td>
-<td align="left">male</td>
-<td align="left">minor</td>
-<td align="left">2010-01-01 00:57:00</td>
-</tr>
-<tr class="odd">
-<td align="right">39</td>
-<td align="left">male</td>
-<td align="left">minor</td>
-<td align="left">2010-01-01 00:42:00</td>
-</tr>
-<tr class="even">
-<td align="right">35</td>
-<td align="left">male</td>
-<td align="left">minor</td>
-<td align="left">2010-01-01 00:02:00</td>
-</tr>
-<tr class="odd">
-<td align="right">38</td>
-<td align="left">male</td>
-<td align="left">minor</td>
-<td align="left">2010-01-01 00:24:00</td>
-</tr>
-<tr class="even">
-<td align="right">31</td>
-<td align="left">female</td>
-<td align="left">major</td>
-<td align="left">2010-01-01 00:48:00</td>
-</tr>
-</tbody>
-</table>
+<pre class="r"><code>(head(ae_original))# head() prints the first 6 rows</code></pre>
+<pre><code>##   age gender injury_type        arrival_time
+## 1  20   male       minor 2010-01-01 00:35:00
+## 2  16   male       minor 2010-01-01 00:57:00
+## 3  39   male       minor 2010-01-01 00:42:00
+## 4  35   male       minor 2010-01-01 00:02:00
+## 5  38   male       minor 2010-01-01 00:24:00
+## 6  31 female       major 2010-01-01 00:48:00</code></pre>
 <p>If you type <code>ae_origin</code> and run it in Console or in your R chunk and look at the first row, you may notice the row of four-letter abbreviations under the column names. These describe the type of each variable:</p>
 <ul>
 <li>dbl stands for doubles, or real numbers.</li>
@@ -179,8 +138,10 @@ summary(ae_original)# summary of each column/variable of the data</code></pre>
 <div id="data-structure-data-frame-list-and-more" class="section level2">
 <h2><span class="header-section-number">4.2</span> Data structure: Data frame, list and more</h2>
 <p>Data structures are made up of different data types. Data structures in R are tools for holding multiple values. The basic data structures used in R include vectors, matrices, <code>data frames</code>,<code>lists</code> and factors. You can think of a vector as a single column and a data frame as a rectangular table with columns and rows. A data frame is used for storing data tables. It is a list of vectors of equal length.</p>
-<pre class="r"><code>knitr::include_graphics(&quot;../../static/img/dp1.PNG&quot;)</code></pre>
-<p><img src="../../static/img/dp1.PNG" width="316" /></p>
+<div class="figure">
+<img src="img/dp1.PNG" alt="Data structure in R" />
+<p class="caption">Data structure in R</p>
+</div>
 <blockquote>
 <p>Question: What is the difference between a data frame, matrix and list?</p>
 </blockquote>
@@ -218,7 +179,10 @@ spreadsheets</a>, for examples of untidy/messy spreadsheets quite common in many
 <li>Put each dataset in a tibble.</li>
 <li>Put each variable in a column</li>
 </ul>
-<p><img src="/img/tidy-1.png" /></p>
+<div class="figure">
+<img src="/img/tidy-1.png" alt="Tidy data" />
+<p class="caption">Tidy data</p>
+</div>
 <p><strong>What if your data is untidy?</strong></p>
 <p>If the dataset does not satisfy these conditions, then it is untidy. We then need to use functions available in <code>tidyr</code> package-part of <code>tidyverse</code>- to tidy data.</p>
 <p>More information about tidy data and how to make untidy data tidy can be found in
