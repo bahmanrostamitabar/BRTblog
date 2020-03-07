@@ -137,7 +137,7 @@ There are three other common types of variables that aren’t used in this datas
 Data structures are made up of different data types. Data structures in R are tools for holding multiple values. The basic data structures used in R include vectors, matrices, `data frames`,`lists` and factors. You can think of a vector as a single column and a data frame as a rectangular table with columns and rows. A data frame is used for storing data tables. It is a list of vectors of equal length.
 
 ```{r data-type-structure}
-knitr::include_graphics("../../img/dp1.PNG")
+knitr::include_graphics("../../static/img/dp1.PNG")
 ```
 
 > Question: What is the difference between a data frame, matrix and list?
@@ -187,7 +187,7 @@ These three rules are interrelated because it’s impossible to only satisfy two
 * Put each variable in a column 
 
 ```{r tidy_untidy}
-knitr::include_graphics("../../img/tidy-1.png")
+knitr::include_graphics("../../static/img/tidy-1.png")
 ```
 
 **What if your data is untidy?**
@@ -225,7 +225,6 @@ In the next post, Week 3, you will learn how to:
 * Create a tsibble
 * Check for duplicated observations 
 * Check for explicit and implicit missing values 
-
 
 # References
 
