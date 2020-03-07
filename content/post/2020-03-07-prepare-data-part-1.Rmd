@@ -116,7 +116,7 @@ Every individual data value in R has a data type that tells us what sort of valu
 You can know observe the dataset you imported! You can check what type of object it is and what type of variables you have.
 
 ```{r import-data2,dependson='import-data'}
-(head(ae_original))# head() prints the first 6 rows
+print(ae_original,n=6)# prints the first 6 rows
 ```
 
 If you type `ae_origin` and run it in Console or in your R chunk and look at the first row, you may notice the row of four-letter abbreviations under the column names. These describe the type of each variable: 
@@ -136,7 +136,7 @@ There are three other common types of variables that aren’t used in this datas
 
 Data structures are made up of different data types. Data structures in R are tools for holding multiple values. The basic data structures used in R include vectors, matrices, `data frames`,`lists` and factors. You can think of a vector as a single column and a data frame as a rectangular table with columns and rows. A data frame is used for storing data tables. It is a list of vectors of equal length.
 
-![Data structure in R](img/dp1.PNG)
+![Data structure in R](/img/dp1.png)
 
 > Question: What is the difference between a data frame, matrix and list?
 
