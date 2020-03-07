@@ -208,7 +208,7 @@ The simple answer is it makes data analysis easier with tidyverse packages in R.
 
 2. Easier to exploit R's vectorised nature that makes the thinking process much easier in data manipulation, visualisatin and modeling/forecasting.
 
-## Summary of this post
+# Summary of week2 
 
 1. Find an appropriate function dpending on your your file extenstion to import your datset into R.
 2. Use functions in R to make yourself familair with the dataset. Among many available funcions you can check: `class()`, `str()`, `glimpse()`, `names()`, `nrow()`, `ncol()` and `summary()`
