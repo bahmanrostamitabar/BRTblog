@@ -28,7 +28,7 @@ By the end of this post, you should be able to:
 2. articulate the need to prepare data
 3. import data into R
 4. explore raw data using R functions
-5. identify various data type and data structure
+5. recongnise various data type and data structure
 6. describe the tidy data concept and its importance
 
 # Why do I need to prepare data? 
@@ -39,7 +39,7 @@ The simple answer to this question is: because if the data are wrong, they will 
 knitr::include_graphics("https://media.giphy.com/media/xT5LMxnlknujYHrBOU/giphy.gif")
 ```
 
-The raw data given to you might not be in the right shape to start your analysis right away. The data may contain mistakes, missing values, duplications, outliers, etc. Returning to the A&E data, you need to ensure that the data we use for analysis is a quality dataset. You need to check whether it contains duplications, whether any values is missing, or any unusual values is present due to errors in the system and decide how to fix them. If any of these issues are present, then it’s crucial to fix them before you start analysing the data. You may need to have domaine knowledge to to fix some issues available in yoir dataset.
+The raw data given to you might not be in the right shape to start your analysis right away. The data may contain mistakes, missing values, duplications, outliers, etc. Returning to the A&E data, you need to ensure that the data we use for analysis is a quality dataset. You need to check whether it contains duplications, whether any value is missing, or any unusual values is present due to errors in the system and decide how to fix them. If any of these issues are present, then it’s crucial to fix them before you start analysing the data. You may need to have domaine knowledge to to fix some issues available in yoir dataset.
 
 # Data preperation task
 
