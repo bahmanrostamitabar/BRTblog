@@ -1,0 +1,265 @@
+---
+title: Week2- Prepare data - part 1
+author: Bahman Rostami-Tabar
+date: '2020-03-07'
+slug: prepare-data-part-1
+categories:
+  - Forecasting using R workshop
+tags:
+  - Forecasting
+  - R
+  - Workshop
+output:
+  blogdown::html_page:
+    toc: true
+    number_sections: yes
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#why-do-i-need-to-prepare-data"><span class="toc-section-number">1</span> Why do I need to prepare data?</a></li>
+<li><a href="#data-preperation-task"><span class="toc-section-number">2</span> Data preperation task</a></li>
+<li><a href="#import-data-into-r"><span class="toc-section-number">3</span> Import data into R</a></li>
+<li><a href="#explore-raw-data"><span class="toc-section-number">4</span> Explore raw data</a><ul>
+<li><a href="#data-type"><span class="toc-section-number">4.1</span> Data type</a></li>
+<li><a href="#data-structure-data-frame-list-and-more"><span class="toc-section-number">4.2</span> Data structure: Data frame, list and more</a></li>
+</ul></li>
+<li><a href="#check-if-you-data-is-tidy"><span class="toc-section-number">5</span> Check if you data is tidy</a></li>
+<li><a href="#summary-of-week-2"><span class="toc-section-number">6</span> Summary of week 2</a></li>
+<li><a href="#next-post-friday-13th-of-march"><span class="toc-section-number">7</span> Next post (Friday 13<sup>th</sup> of March)</a></li>
+<li><a href="#references"><span class="toc-section-number">8</span> References</a></li>
+</ul>
+</div>
+
+<p>In the <a href="https://www.bahmanrt.com/post/intro-furw/">previous post</a>, you learned essentials to work with R and RStudio. You are all set to start your data analysis journey. In R there are always multiple ways to achieve the same goal, in general we will try to follow the <a href="https://www.tidyverse.org/">tidyverse</a> and <a href="https://tidyverts.org/">tidyverts</a> approaches. You have installed and loade the tidyverse packages in the previous section. Having done that, all of the tidyverse packages will be at your disposal (i.e. you don’t need to install them individually).</p>
+<p>You can download the project from the repository for <a href="https://github.com/bahmanrostamitabar/forecasting_using_r">forecasting using r</a> and work on it on your own. This includes all weekly analysis.</p>
+<p><strong>Learning outcomes</strong></p>
+<p>In this post, we start at looking at how to prepare data for analysis.
+By the end of this post, you should be able to:</p>
+<ol style="list-style-type: decimal">
+<li>describe data preperation task</li>
+<li>articulate the need to prepare data</li>
+<li>import data into R</li>
+<li>explore raw data using R functions</li>
+<li>identify various data type and data structure</li>
+<li>describe the tidy data concept and its importance</li>
+</ol>
+<div id="why-do-i-need-to-prepare-data" class="section level1">
+<h1><span class="header-section-number">1</span> Why do I need to prepare data?</h1>
+<p>The simple answer to this question is: because if the data are wrong, they will give you the wrong insights and results followed by wrong decisions and planning.</p>
+<p><img src="https://media.giphy.com/media/xT5LMxnlknujYHrBOU/giphy.gif" width="50%" style="display: block; margin: auto;" /></p>
+<pre><code>## [1] &quot;2020-03-07-prepare-data-part-1_files/figure-html/&quot;</code></pre>
+<p>The raw data given to you might not be in the right shape to start your analysis right away. The data may contain mistakes, missing values, duplications, outliers, etc. Returning to the A&amp;E data, you need to ensure that the data we use for analysis is a quality dataset. You need to check whether it contains duplications, whether any values is missing, or any unusual values is present due to errors in the system and decide how to fix them. If any of these issues are present, then it’s crucial to fix them before you start analysing the data. You may need to have domaine knowledge to to fix some issues available in yoir dataset.</p>
+</div>
+<div id="data-preperation-task" class="section level1">
+<h1><span class="header-section-number">2</span> Data preperation task</h1>
+<p>The data preparation involves various steps, such as:</p>
+<ul>
+<li>Import your data into R</li>
+<li>Explore raw data</li>
+<li>Check wether data is tidy</li>
+<li>Create a tsibble</li>
+<li>Check for duplicated observations</li>
+<li>Check for explicit and implicit missing values</li>
+<li>Remove unwanted variables</li>
+<li>Change data type, structure</li>
+<li>Check for unusual observations</li>
+</ul>
+<p>I cover the most important aspects of data preparation in three seperate posts. In the this post, I will discuss how to import data, ensuate it is in a tidy form and explore it.</p>
+</div>
+<div id="import-data-into-r" class="section level1">
+<h1><span class="header-section-number">3</span> Import data into R</h1>
+<p>One of the most common ways you’ll want to work with data is by importing it from a file. In order to import the dataset into R, you need to know which function you should use.</p>
+<p>The function you use to import your dataset depends on the extension of your file. You can import data into R with any extension such as <code>.xlsx</code>, <code>.csv</code>, <code>.txt</code> and more. Different extensions need different R functions.</p>
+<p>If you look at the <code>ae.csv</code> file, you realise that it is a <code>.csv</code> file, therefore you need a function that import <code>.csv</code> files into R. You can use <code>read_csv()</code> from <code>readr</code> package.</p>
+<pre class="r"><code>library(readr)
+ae_original &lt;- readr::read_csv(&quot;my_data/ae.csv&quot;,col_types = cols(  
+ arrival_time=col_datetime(format = &quot;%d/%m/%Y %H:%M&quot;))) </code></pre>
+<p>This assumes that you have created a subdirectory <code>data</code> where your <code>ae.csv</code> is located. Thta is why I use relative path to readt the data. (remember this is why we created a project).
+We provide col_types argument to prevent the arrival_time from being a character. We need to have it as a data-time object. The argument <code>format = &quot;%d/%m/%Y %H:%M&quot;</code> corresponds to the format of <code>arrival_time</code> column in the <code>ae.csv</code> file.</p>
+<p>To store data to work on it later, you need to create a new data object. You create objects by assigning them to names. The assignment operator is <code>&lt;-</code>. Think of assignment as the verb “gets”, reading left to right. So, the bit of code above can be read as “The object ae_original gets the result of importing <code>ae.csv</code> file located in subdirectory <code>data</code> using <code>read_csv()</code> function given that the type of data for column <code>arrival_time</code> must be a <code>datetime</code>. The function will guess the data type for the rest of columns.</p>
+<blockquote>
+<p><strong>Note:</strong> Option+minus on MacOS and Alt+minus on Windows and avois typing the assignment operator</p>
+</blockquote>
+</div>
+<div id="explore-raw-data" class="section level1">
+<h1><span class="header-section-number">4</span> Explore raw data</h1>
+<p>Once you imported dataset into R, the first step in data preperation is to explore the data. There are many fucntion in R to help you explore your data. Try the following fucntions to know moe about the data:</p>
+<pre class="r"><code>library(dplyr) # load package dplyr, here is for the function glimpse
+
+str(ae_original) # what is the structure of ae_original?What isinside?
+
+class(ae_original) # what kind of object is it?
+
+head(ae_original,n=3) # show first n rows/observations
+
+tail(ae_original,n=5) # show last n rows/observations
+
+dim(ae_original) # dimensional of object
+
+length(ae_original) # returns the number of columns/variables
+
+nrow(ae_original) # number of rows
+
+ncol(ae_original) # number of columns
+
+names(ae_original) # shows the names attribute for a data frame, which gives the column names
+
+glimpse(ae_original)# structure of the object, similar to str but slightly different
+
+summary(ae_original)# summary of each column/variable of the data</code></pre>
+<div id="data-type" class="section level2">
+<h2><span class="header-section-number">4.1</span> Data type</h2>
+<p>Every individual data value in R has a data type that tells us what sort of value it is. The most common data types are numbers, which R calls numeric, double or integer values, and text, which R calls character values and time which R calls datetime values. A data type defines what kind of data is held in a value. The number 23 has a numeric data type that is integer, for example, the word “twenty-three” has a character type and the time 2020-04-01 11:20 has a date and time data type.</p>
+<p>You can know observe the dataset you imported! You can check what type of object it is and what type of variables you have.</p>
+<pre class="r"><code>knitr::kable(head(ae_original))# head() prints the first 6 rows</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">age</th>
+<th align="left">gender</th>
+<th align="left">injury_type</th>
+<th align="left">arrival_time</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">20</td>
+<td align="left">male</td>
+<td align="left">minor</td>
+<td align="left">2010-01-01 00:35:00</td>
+</tr>
+<tr class="even">
+<td align="right">16</td>
+<td align="left">male</td>
+<td align="left">minor</td>
+<td align="left">2010-01-01 00:57:00</td>
+</tr>
+<tr class="odd">
+<td align="right">39</td>
+<td align="left">male</td>
+<td align="left">minor</td>
+<td align="left">2010-01-01 00:42:00</td>
+</tr>
+<tr class="even">
+<td align="right">35</td>
+<td align="left">male</td>
+<td align="left">minor</td>
+<td align="left">2010-01-01 00:02:00</td>
+</tr>
+<tr class="odd">
+<td align="right">38</td>
+<td align="left">male</td>
+<td align="left">minor</td>
+<td align="left">2010-01-01 00:24:00</td>
+</tr>
+<tr class="even">
+<td align="right">31</td>
+<td align="left">female</td>
+<td align="left">major</td>
+<td align="left">2010-01-01 00:48:00</td>
+</tr>
+</tbody>
+</table>
+<p>If you type <code>ae_origin</code> and run it in Console or in your R chunk and look at the first row, you may notice the row of four-letter abbreviations under the column names. These describe the type of each variable:</p>
+<ul>
+<li>dbl stands for doubles, or real numbers.</li>
+<li>chr stands for character vectors, or strings.</li>
+<li>POSIXct which is date-times (a date + a time). I don’t know why they call it this, you may see <code>dttm</code> later which is a better name I guess.</li>
+</ul>
+<p>There are three other common types of variables that aren’t used in this dataset but you may encounter later:</p>
+<ul>
+<li>int stands for integers.</li>
+<li>lgl stands for logical, vectors that contain only TRUE or FALSE.</li>
+<li>fctr stands for factors, which R uses to represent categorical variables with fixed possible values, e.g. male, female.</li>
+<li>date stands for dates.</li>
+</ul>
+</div>
+<div id="data-structure-data-frame-list-and-more" class="section level2">
+<h2><span class="header-section-number">4.2</span> Data structure: Data frame, list and more</h2>
+<p>Data structures are made up of different data types. Data structures in R are tools for holding multiple values. The basic data structures used in R include vectors, matrices, <code>data frames</code>,<code>lists</code> and factors. You can think of a vector as a single column and a data frame as a rectangular table with columns and rows. A data frame is used for storing data tables. It is a list of vectors of equal length.</p>
+<pre class="r"><code>knitr::include_graphics(&quot;../../static/img/dp1.PNG&quot;)</code></pre>
+<p><img src="../../static/img/dp1.PNG" width="316" /></p>
+<blockquote>
+<p>Question: What is the difference between a data frame, matrix and list?</p>
+</blockquote>
+<p>If you’re not sure what an object is, ask for its class. Every object has a class. This is the sort of object it is, whether a vector, a character string, a function, a list, and so on. Knowing an object’s class tells you a lot about what you can and can’t do with it,</p>
+<p>Type <code>class(ae_original)</code> in Console or R chunk and run it. It tells you <code>ae_original</code> is a tibble or data frame.</p>
+<pre class="r"><code>class(ae_original)</code></pre>
+<pre><code>## [1] &quot;spec_tbl_df&quot; &quot;tbl_df&quot;      &quot;tbl&quot;         &quot;data.frame&quot;</code></pre>
+<p>The most common data structure you work with in R is the data frame. As you work with tidyverse, you will see a modern take on data frames called <code>tibble</code>. Tibbles are data frames, but they tweak some older behaviours to make life a little easier.
+Data type and structure are important concepts in R because all functions you will use need data in one of the discussed types or structures as input and will return the value in a particular type and structure as output.</p>
+</div>
+</div>
+<div id="check-if-you-data-is-tidy" class="section level1">
+<h1><span class="header-section-number">5</span> Check if you data is tidy</h1>
+<p><strong>What is a tidy data?</strong></p>
+<p>What does it mean for your data to be “tidy”? While “tidy” has a clear English meaning of “organized,” the word “tidy” in data science using R means that your data follows a standardized format.</p>
+<p>The principles of tidy data seem so obvious that you might wonder if you’ll ever encounter a dataset that isn’t tidy. Unfortunately, however, most data that you will encounter in real life will be untidy.
+Most organisations store data in spreadsheets. This is not the only way to store data, however it has been the case for many organisations for many decades. Many spreadsheets are untidy data.</p>
+<p>Please look at this presentation, <a href="https://www.londonr.org/wp-content/uploads/sites/2/2019/05/Get-good-data-out-of-bad-spreadsheets-with-tidy-tools.pdf">Get good data out of bad
+spreadsheets</a>, for examples of untidy/messy spreadsheets quite common in many organisations.</p>
+<p>So, if data are untidy, it means for most real analyses, you’ll need to do some tidying. Tidy data is a specific way of organizing data into a consistent format which plugs into the tidyverse set of packages for R. It is not the only way to store data and there are reasons why you might not store data in this format, but eventually you will probably need to convert your data to a tidy format in order to efficiently analyze it.</p>
+<p><strong>How do I know if my data is tidy or not?</strong></p>
+<p>The first step is always to figure out what the <strong>variables</strong> and <strong>observations</strong> are. Sometimes this is easy; other times you’ll need to consult with the people who originally generated the data. The second step is to resolve one of two common problems:</p>
+<ul>
+<li>One variable might be spread across multiple columns.</li>
+<li>One observation might be scattered across multiple rows.</li>
+</ul>
+<p>“Tidy” data is a standard way of mapping the meaning of a dataset to its structure. A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. In tidy data:</p>
+<ul>
+<li>Each variable forms a column.</li>
+<li>Each observation forms a row.</li>
+<li>Each type of observational unit forms a table.</li>
+</ul>
+<p>These three rules are interrelated because it’s impossible to only satisfy two of the three. That interrelationship leads to an even simpler set of practical instructions:</p>
+<ul>
+<li>Put each dataset in a tibble.</li>
+<li>Put each variable in a column</li>
+</ul>
+<pre class="r"><code>knitr::include_graphics(&quot;../../static/img/tidy-1.png&quot;)</code></pre>
+<p><img src="../../static/img/tidy-1.png" width="960" /></p>
+<p><strong>What if your data is untidy?</strong></p>
+<p>If the dataset does not satisfy these conditions, then it is untidy. We then need to use functions available in <code>tidyr</code> package-part of <code>tidyverse</code>- to tidy data.</p>
+<p>More information about tidy data and how to make untidy data tidy can be found in
+in R for Data Science book, <a href="https://r4ds.had.co.nz/tidy-data.html">chapter 12</a>.</p>
+<p>Please refer to the following link for more <a href="http://garrettgman.github.io/tidying/">examples</a>.</p>
+<blockquote>
+<p>Question: Is the ae_original dataset tidy?</p>
+</blockquote>
+<p>If you look at the data <code>ae_original</code>, you see that it is a data frame with each variable in a column. So, yes it is tidy.</p>
+<p><strong>Why would you put efforts in making your data tidy?</strong></p>
+<p>The simple answer is it makes data analysis easier with tidyverse packages in R.</p>
+<ol style="list-style-type: decimal">
+<li><p>It helps to have a consistent data structure. That means you will focus more on the problem you want to solve and less on the structure of your data and also help developers to create tools that work on a uniform ways, tools that are easy to use and that means easier data manipulation, visualisatin and modeling/forecasting.</p></li>
+<li><p>Easier to exploit R’s vectorised nature that makes the thinking process much easier in data manipulation, visualisatin and modeling/forecasting.</p></li>
+</ol>
+</div>
+<div id="summary-of-week-2" class="section level1">
+<h1><span class="header-section-number">6</span> Summary of week 2</h1>
+<ol style="list-style-type: decimal">
+<li>Find an appropriate function dpending on your your file extenstion to import your datset into R.</li>
+<li>Use functions in R to make yourself familair with the dataset. Among many available funcions you can check: <code>class()</code>, <code>str()</code>, <code>glimpse()</code>, <code>names()</code>, <code>nrow()</code>, <code>ncol()</code> and <code>summary()</code></li>
+<li>Check the data type and data structure of your data! Ensure you(data analyst) and R have the same understanding of data type (e.g. I think the variable age must be numeric and R says is numeric)</li>
+<li>Figure out what the <strong>variables</strong> and <strong>observations</strong> are in your data set and Check if your data is tidy. If not, make it tidy</li>
+</ol>
+</div>
+<div id="next-post-friday-13th-of-march" class="section level1">
+<h1><span class="header-section-number">7</span> Next post (Friday 13<sup>th</sup> of March)</h1>
+<p>In the next post, Week 3, you will learn how to:</p>
+<ul>
+<li>Create a tsibble</li>
+<li>Check for duplicated observations</li>
+<li>Check for explicit and implicit missing values</li>
+</ul>
+</div>
+<div id="references" class="section level1">
+<h1><span class="header-section-number">8</span> References</h1>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://www.londonr.org/wp-content/uploads/sites/2/2019/05/Get-good-data-out-of-bad-spreadsheets-with-tidy-tools.pdf">Get good data out of bad spreadsheets with tidy tools</a></p></li>
+<li><p><a href="https://r4ds.had.co.nz/data-import.html">R for data Science, chapter 11</a></p></li>
+<li><p><a href="https://r4ds.had.co.nz/tidy-data.html">R for data Science, chapter 12</a></p></li>
+<li><p><a href="https://moderndive.com/4-tidy.html">Statistical Inference via Data Science: A ModernDive into R and the tidyverse, chapter 4</a></p></li>
+</ol>
+</div>
