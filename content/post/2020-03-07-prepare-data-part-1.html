@@ -23,7 +23,7 @@ output:
 <li><a href="#data-preperation-task"><span class="toc-section-number">2</span> Data preperation task</a></li>
 <li><a href="#import-data-into-r"><span class="toc-section-number">3</span> Import data into R</a></li>
 <li><a href="#explore-raw-data"><span class="toc-section-number">4</span> Explore raw data</a></li>
-<li><a href="#check-if-you-data-is-tidy"><span class="toc-section-number">5</span> Check if you data is tidy</a></li>
+<li><a href="#check-if-your-data-is-tidy"><span class="toc-section-number">5</span> Check if your data is tidy</a></li>
 <li><a href="#summary-of-week-2"><span class="toc-section-number">6</span> Summary of week 2</a></li>
 <li><a href="#next-post-friday-13th-of-march"><span class="toc-section-number">7</span> Next post (Friday 13<sup>th</sup> of March)</a></li>
 <li><a href="#references"><span class="toc-section-number">8</span> References</a></li>
@@ -31,10 +31,9 @@ output:
 </div>
 
 <p>In the <a href="https://www.bahmanrt.com/post/intro-furw/">previous post</a>, you learned essentials to work with R and RStudio. You are all set to start your data analysis journey. In R there are always multiple ways to achieve the same goal, in general we will try to follow the <a href="https://www.tidyverse.org/">tidyverse</a> and <a href="https://tidyverts.org/">tidyverts</a> approaches. You have installed and loade the tidyverse packages in the previous section. Having done that, all of the tidyverse packages will be at your disposal (i.e. you don’t need to install them individually).</p>
-<p>You can download the project from the repository for <a href="https://github.com/bahmanrostamitabar/forecasting_using_r">forecasting using r</a> and work on it on your own. This includes all weekly analysis.</p>
+<p>You can download the project from the repository for <a href="https://github.com/bahmanrostamitabar/forecasting_using_r">forecasting using r</a> and work on it on your own. This includes all weekly r chunks.</p>
 <p><strong>Learning outcomes</strong></p>
-<p>In this post, we start at looking at how to prepare data for analysis.
-By the end of this post, you should be able to:</p>
+<p>By the end of this post, you should be able to:</p>
 <ol style="list-style-type: decimal">
 <li>describe data preperation task</li>
 <li>articulate the need to prepare data</li>
@@ -47,12 +46,11 @@ By the end of this post, you should be able to:</p>
 <h1><span class="header-section-number">1</span> Why do I need to prepare data?</h1>
 <p>The simple answer to this question is: because if the data are wrong, they will give you the wrong insights and results followed by wrong decisions and planning.</p>
 <p><img src="https://media.giphy.com/media/xT5LMxnlknujYHrBOU/giphy.gif" width="50%" style="display: block; margin: auto;" /></p>
-<pre><code>## [1] &quot;2020-03-07-prepare-data-part-1_files/figure-html/&quot;</code></pre>
 <p>The raw data given to you might not be in the right shape to start your analysis right away. The data may contain mistakes, missing values, duplications, outliers, etc. Returning to the A&amp;E data, you need to ensure that the data we use for analysis is a quality dataset. You need to check whether it contains duplications, whether any values is missing, or any unusual values is present due to errors in the system and decide how to fix them. If any of these issues are present, then it’s crucial to fix them before you start analysing the data. You may need to have domaine knowledge to to fix some issues available in yoir dataset.</p>
 </div>
 <div id="data-preperation-task" class="section level1">
 <h1><span class="header-section-number">2</span> Data preperation task</h1>
-<p>The data preparation involves various steps, such as:</p>
+<p>The data preparation involves various steps such as:</p>
 <ul>
 <li>Import your data into R</li>
 <li>Explore raw data</li>
@@ -64,7 +62,7 @@ By the end of this post, you should be able to:</p>
 <li>Change data type, structure</li>
 <li>Check for unusual observations</li>
 </ul>
-<p>I cover the most important aspects of data preparation in three seperate posts. In the this post, I will discuss how to import data, ensuate it is in a tidy form and explore it.</p>
+<p>I cover the most important aspects of data preparation in three seperate posts. In this post, I will discuss how to import data, check if it is in a tidy format and explore it.</p>
 </div>
 <div id="import-data-into-r" class="section level1">
 <h1><span class="header-section-number">3</span> Import data into R</h1>
@@ -78,12 +76,12 @@ ae_original &lt;- readr::read_csv(&quot;my_data/ae.csv&quot;,col_types = cols(
 We provide col_types argument to prevent the arrival_time from being a character. We need to have it as a data-time object. The argument <code>format = &quot;%d/%m/%Y %H:%M&quot;</code> corresponds to the format of <code>arrival_time</code> column in the <code>ae.csv</code> file.</p>
 <p>To store data to work on it later, you need to create a new data object. You create objects by assigning them to names. The assignment operator is <code>&lt;-</code>. Think of assignment as the verb “gets”, reading left to right. So, the bit of code above can be read as “The object ae_original gets the result of importing <code>ae.csv</code> file located in subdirectory <code>data</code> using <code>read_csv()</code> function given that the type of data for column <code>arrival_time</code> must be a <code>datetime</code>. The function will guess the data type for the rest of columns.</p>
 <blockquote>
-<p><strong>Note:</strong> Option+minus on MacOS and Alt+minus on Windows and avois typing the assignment operator</p>
+<p><strong>Note:</strong> use<code>Option -</code> on MacOS and <code>Alt -</code> on Windows and avois typing the assignment operator</p>
 </blockquote>
 </div>
 <div id="explore-raw-data" class="section level1">
 <h1><span class="header-section-number">4</span> Explore raw data</h1>
-<p>Once you imported dataset into R, the first step in data preperation is to explore the data. There are many fucntion in R to help you explore your data. Try the following fucntions to know moe about the data:</p>
+<p>Once you imported the dataset into R, the first step in data preperation is to explore the data. There are many fucntion in R to help you explore your data. Try the following fucntions to know more about the dataset:</p>
 <pre class="r"><code>library(dplyr) # load package dplyr, here is for the function glimpse
 
 str(ae_original) # what is the structure of ae_original?What isinside?
@@ -134,8 +132,8 @@ summary(ae_original)# summary of each column/variable of the data</code></pre>
 <h2><span class="header-section-number">4.2</span> Data structure: Data frame, list and more</h2>
 <p>Data structures are made up of different data types. Data structures in R are tools for holding multiple values. The basic data structures used in R include vectors, matrices, <code>data frames</code>,<code>lists</code> and factors. You can think of a vector as a single column and a data frame as a rectangular table with columns and rows. A data frame is used for storing data tables. It is a list of vectors of equal length.</p>
 <div class="figure">
-<img src="/img/dp1.png" alt="Data structure in R" />
-<p class="caption">Data structure in R</p>
+<img src="/img/dp1.png" alt="Data structure in R " />
+<p class="caption">Data structure in R </p>
 </div>
 <blockquote>
 <p>Question: What is the difference between a data frame, matrix and list?</p>
@@ -148,8 +146,8 @@ summary(ae_original)# summary of each column/variable of the data</code></pre>
 Data type and structure are important concepts in R because all functions you will use need data in one of the discussed types or structures as input and will return the value in a particular type and structure as output.</p>
 </div>
 </div>
-<div id="check-if-you-data-is-tidy" class="section level1">
-<h1><span class="header-section-number">5</span> Check if you data is tidy</h1>
+<div id="check-if-your-data-is-tidy" class="section level1">
+<h1><span class="header-section-number">5</span> Check if your data is tidy</h1>
 <p><strong>What is a tidy data?</strong></p>
 <p>What does it mean for your data to be “tidy”? While “tidy” has a clear English meaning of “organized,” the word “tidy” in data science using R means that your data follows a standardized format.</p>
 <p>The principles of tidy data seem so obvious that you might wonder if you’ll ever encounter a dataset that isn’t tidy. Unfortunately, however, most data that you will encounter in real life will be untidy.
@@ -173,8 +171,8 @@ spreadsheets</a>, for examples of untidy/messy spreadsheets quite common in many
 <li>Put each variable in a column</li>
 </ul>
 <div class="figure">
-<img src="/img/tidy-1.png" alt="Tidy data" />
-<p class="caption">Tidy data</p>
+<img src="/img/tidy-1.png" alt="Tidy data " />
+<p class="caption">Tidy data </p>
 </div>
 <p><strong>What if your data is untidy?</strong></p>
 <p>If the dataset does not satisfy these conditions, then it is untidy. We then need to use functions available in <code>tidyr</code> package-part of <code>tidyverse</code>- to tidy data.</p>
@@ -195,7 +193,7 @@ in R for Data Science book, <a href="https://r4ds.had.co.nz/tidy-data.html">chap
 <div id="summary-of-week-2" class="section level1">
 <h1><span class="header-section-number">6</span> Summary of week 2</h1>
 <ol style="list-style-type: decimal">
-<li>Find an appropriate function dpending on your your file extenstion to import your datset into R.</li>
+<li>Find an appropriate function dpending on your your file extension to import your datset into R.</li>
 <li>Use functions in R to make yourself familair with the dataset. Among many available funcions you can check: <code>class()</code>, <code>str()</code>, <code>glimpse()</code>, <code>names()</code>, <code>nrow()</code>, <code>ncol()</code> and <code>summary()</code></li>
 <li>Check the data type and data structure of your data! Ensure you(data analyst) and R have the same understanding of data type (e.g. I think the variable age must be numeric and R says is numeric)</li>
 <li>Figure out what the <strong>variables</strong> and <strong>observations</strong> are in your data set and Check if your data is tidy. If not, make it tidy</li>
