@@ -183,7 +183,7 @@ These three rules are interrelated because it’s impossible to only satisfy two
 * Put each dataset in a tibble. 
 * Put each variable in a column 
 
-```{r tidy_untidy, fig.align='center', out.width="50%", echo=FALSE, fig.cap="Tidy dataset"}
+```{r tidy_untidy, fig.align='center', out.width="50%", eval=TRUE, echo=TRUE}
 knitr::include_graphics("../../static/img/tidy-1.png")
 ```
 
