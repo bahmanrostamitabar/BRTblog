@@ -12,22 +12,23 @@ tags:
 output:
   blogdown::html_page:
     toc: true
+    number_sections: yes
 ---
 
 
 <div id="TOC">
 <ul>
-<li><a href="#why-do-i-need-to-prepare-data">Why do I need to prepare data?</a></li>
-<li><a href="#data-preperation-task">Data preperation task</a></li>
-<li><a href="#import-data-into-r">Import data into R</a></li>
-<li><a href="#explore-raw-data">Explore raw data</a><ul>
-<li><a href="#data-type">Data type</a></li>
-<li><a href="#data-structure-data-frame-list-and-more">Data structure: Data frame, list and more</a></li>
+<li><a href="#why-do-i-need-to-prepare-data"><span class="toc-section-number">1</span> Why do I need to prepare data?</a></li>
+<li><a href="#data-preperation-task"><span class="toc-section-number">2</span> Data preperation task</a></li>
+<li><a href="#import-data-into-r"><span class="toc-section-number">3</span> Import data into R</a></li>
+<li><a href="#explore-raw-data"><span class="toc-section-number">4</span> Explore raw data</a><ul>
+<li><a href="#data-type"><span class="toc-section-number">4.1</span> Data type</a></li>
+<li><a href="#data-structure-data-frame-list-and-more"><span class="toc-section-number">4.2</span> Data structure: Data frame, list and more</a></li>
 </ul></li>
-<li><a href="#check-if-you-data-is-tidy">Check if you data is tidy</a></li>
-<li><a href="#summary-of-week-2">Summary of week 2</a></li>
-<li><a href="#next-post-friday-13th-of-march">Next post (Friday 13<sup>th</sup> of March)</a></li>
-<li><a href="#references">References</a></li>
+<li><a href="#check-if-you-data-is-tidy"><span class="toc-section-number">5</span> Check if you data is tidy</a></li>
+<li><a href="#summary-of-week-2"><span class="toc-section-number">6</span> Summary of week 2</a></li>
+<li><a href="#next-post-friday-13th-of-march"><span class="toc-section-number">7</span> Next post (Friday 13<sup>th</sup> of March)</a></li>
+<li><a href="#references"><span class="toc-section-number">8</span> References</a></li>
 </ul>
 </div>
 
@@ -45,13 +46,13 @@ By the end of this post, you should be able to:</p>
 <li>describe the tidy data concept and its importance</li>
 </ol>
 <div id="why-do-i-need-to-prepare-data" class="section level1">
-<h1>Why do I need to prepare data?</h1>
+<h1><span class="header-section-number">1</span> Why do I need to prepare data?</h1>
 <p>The simple answer to this question is: because if the data are wrong, they will give you the wrong insights and results followed by wrong decisions and planning.</p>
 <p><img src="https://media.giphy.com/media/xT5LMxnlknujYHrBOU/giphy.gif" width="50%" style="display: block; margin: auto;" /></p>
 <p>The raw data given to you might not be in the right shape to start your analysis right away. The data may contain mistakes, missing values, duplications, outliers, etc. Returning to the A&amp;E data, you need to ensure that the data we use for analysis is a quality dataset. You need to check whether it contains duplications, whether any values is missing, or any unusual values is present due to errors in the system and decide how to fix them. If any of these issues are present, then it’s crucial to fix them before you start analysing the data. You may need to have domaine knowledge to to fix some issues available in yoir dataset.</p>
 </div>
 <div id="data-preperation-task" class="section level1">
-<h1>Data preperation task</h1>
+<h1><span class="header-section-number">2</span> Data preperation task</h1>
 <p>The data preparation involves various steps, such as:</p>
 <ul>
 <li>Import your data into R</li>
@@ -67,7 +68,7 @@ By the end of this post, you should be able to:</p>
 <p>I cover the most important aspects of data preparation in three seperate posts. In the this post, I will discuss how to import data, ensuate it is in a tidy form and explore it.</p>
 </div>
 <div id="import-data-into-r" class="section level1">
-<h1>Import data into R</h1>
+<h1><span class="header-section-number">3</span> Import data into R</h1>
 <p>One of the most common ways you’ll want to work with data is by importing it from a file. In order to import the dataset into R, you need to know which function you should use.</p>
 <p>The function you use to import your dataset depends on the extension of your file. You can import data into R with any extension such as <code>.xlsx</code>, <code>.csv</code>, <code>.txt</code> and more. Different extensions need different R functions.</p>
 <p>If you look at the <code>ae.csv</code> file, you realise that it is a <code>.csv</code> file, therefore you need a function that import <code>.csv</code> files into R. You can use <code>read_csv()</code> from <code>readr</code> package.</p>
@@ -82,7 +83,7 @@ We provide col_types argument to prevent the arrival_time from being a character
 </blockquote>
 </div>
 <div id="explore-raw-data" class="section level1">
-<h1>Explore raw data</h1>
+<h1><span class="header-section-number">4</span> Explore raw data</h1>
 <p>Once you imported dataset into R, the first step in data preperation is to explore the data. There are many fucntion in R to help you explore your data. Try the following fucntions to know moe about the data:</p>
 <pre class="r"><code>library(dplyr) # load package dplyr, here is for the function glimpse
 
@@ -108,7 +109,7 @@ glimpse(ae_original)# structure of the object, similar to str but slightly diffe
 
 summary(ae_original)# summary of each column/variable of the data</code></pre>
 <div id="data-type" class="section level2">
-<h2>Data type</h2>
+<h2><span class="header-section-number">4.1</span> Data type</h2>
 <p>Every individual data value in R has a data type that tells us what sort of value it is. The most common data types are numbers, which R calls numeric, double or integer values, and text, which R calls character values and time which R calls datetime values. A data type defines what kind of data is held in a value. The number 23 has a numeric data type that is integer, for example, the word “twenty-three” has a character type and the time 2020-04-01 11:20 has a date and time data type.</p>
 <p>You can know observe the dataset you imported! You can check what type of object it is and what type of variables you have.</p>
 <pre class="r"><code>knitr::kable(head(ae_original))# head() prints the first 6 rows</code></pre>
@@ -175,7 +176,7 @@ summary(ae_original)# summary of each column/variable of the data</code></pre>
 </ul>
 </div>
 <div id="data-structure-data-frame-list-and-more" class="section level2">
-<h2>Data structure: Data frame, list and more</h2>
+<h2><span class="header-section-number">4.2</span> Data structure: Data frame, list and more</h2>
 <p>Data structures are made up of different data types. Data structures in R are tools for holding multiple values. The basic data structures used in R include vectors, matrices, <code>data frames</code>,<code>lists</code> and factors. You can think of a vector as a single column and a data frame as a rectangular table with columns and rows. A data frame is used for storing data tables. It is a list of vectors of equal length.</p>
 <pre class="r"><code>knitr::include_graphics(&quot;../../static/img/dp1.PNG&quot;)</code></pre>
 <p><img src="../../static/img/dp1.PNG" width="316" /></p>
@@ -191,7 +192,7 @@ Data type and structure are important concepts in R because all functions you wi
 </div>
 </div>
 <div id="check-if-you-data-is-tidy" class="section level1">
-<h1>Check if you data is tidy</h1>
+<h1><span class="header-section-number">5</span> Check if you data is tidy</h1>
 <p><strong>What is a tidy data?</strong></p>
 <p>What does it mean for your data to be “tidy”? While “tidy” has a clear English meaning of “organized,” the word “tidy” in data science using R means that your data follows a standardized format.</p>
 <p>The principles of tidy data seem so obvious that you might wonder if you’ll ever encounter a dataset that isn’t tidy. Unfortunately, however, most data that you will encounter in real life will be untidy.
@@ -235,7 +236,7 @@ in R for Data Science book, <a href="https://r4ds.had.co.nz/tidy-data.html">chap
 </ol>
 </div>
 <div id="summary-of-week-2" class="section level1">
-<h1>Summary of week 2</h1>
+<h1><span class="header-section-number">6</span> Summary of week 2</h1>
 <ol style="list-style-type: decimal">
 <li>Find an appropriate function dpending on your your file extenstion to import your datset into R.</li>
 <li>Use functions in R to make yourself familair with the dataset. Among many available funcions you can check: <code>class()</code>, <code>str()</code>, <code>glimpse()</code>, <code>names()</code>, <code>nrow()</code>, <code>ncol()</code> and <code>summary()</code></li>
@@ -244,7 +245,7 @@ in R for Data Science book, <a href="https://r4ds.had.co.nz/tidy-data.html">chap
 </ol>
 </div>
 <div id="next-post-friday-13th-of-march" class="section level1">
-<h1>Next post (Friday 13<sup>th</sup> of March)</h1>
+<h1><span class="header-section-number">7</span> Next post (Friday 13<sup>th</sup> of March)</h1>
 <p>In the next post, Week 3, you will learn how to:</p>
 <ul>
 <li>Create a tsibble</li>
@@ -253,7 +254,7 @@ in R for Data Science book, <a href="https://r4ds.had.co.nz/tidy-data.html">chap
 </ul>
 </div>
 <div id="references" class="section level1">
-<h1>References</h1>
+<h1><span class="header-section-number">8</span> References</h1>
 <ol style="list-style-type: decimal">
 <li><p><a href="https://www.londonr.org/wp-content/uploads/sites/2/2019/05/Get-good-data-out-of-bad-spreadsheets-with-tidy-tools.pdf">Get good data out of bad spreadsheets with tidy tools</a></p></li>
 <li><p><a href="https://r4ds.had.co.nz/data-import.html">R for data Science, chapter 11</a></p></li>

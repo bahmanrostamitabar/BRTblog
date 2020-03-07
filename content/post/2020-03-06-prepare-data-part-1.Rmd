@@ -12,6 +12,7 @@ tags:
 output:
   blogdown::html_page:
     toc: true
+    number_sections: yes
 ---
 
 In the [previous post](https://www.bahmanrt.com/post/intro-furw/), you learned essentials to work with R and RStudio. You are all set to start your data analysis journey. In R there are always multiple ways to achieve the same goal, in general we will try to follow the [tidyverse](https://www.tidyverse.org/) and [tidyverts](https://tidyverts.org/) approaches. You have installed and loade the tidyverse packages in the previous section. Having done that, all of the tidyverse packages will be at your disposal (i.e. you don’t need to install them individually).
@@ -36,6 +37,7 @@ The simple answer to this question is: because if the data are wrong, they will 
 
 ```{r garbage, fig.align='center', out.width="50%", echo=FALSE}
 knitr::include_graphics("https://media.giphy.com/media/xT5LMxnlknujYHrBOU/giphy.gif")
+knitr::opts_chunk$get('fig.path')
 ```
 
 The raw data given to you might not be in the right shape to start your analysis right away. The data may contain mistakes, missing values, duplications, outliers, etc. Returning to the A&E data, you need to ensure that the data we use for analysis is a quality dataset. You need to check whether it contains duplications, whether any values is missing, or any unusual values is present due to errors in the system and decide how to fix them. If any of these issues are present, then it’s crucial to fix them before you start analysing the data. You may need to have domaine knowledge to to fix some issues available in yoir dataset.
@@ -135,7 +137,7 @@ There are three other common types of variables that aren’t used in this datas
 Data structures are made up of different data types. Data structures in R are tools for holding multiple values. The basic data structures used in R include vectors, matrices, `data frames`,`lists` and factors. You can think of a vector as a single column and a data frame as a rectangular table with columns and rows. A data frame is used for storing data tables. It is a list of vectors of equal length.
 
 ```{r data-type-structure}
-knitr::include_graphics("../../static/img/dp1.PNG")
+knitr::include_graphics("../../img/dp1.PNG")
 ```
 
 > Question: What is the difference between a data frame, matrix and list?
@@ -185,7 +187,7 @@ These three rules are interrelated because it’s impossible to only satisfy two
 * Put each variable in a column 
 
 ```{r tidy_untidy}
-knitr::include_graphics("../../static/img/tidy-1.png")
+knitr::include_graphics("../../img/tidy-1.png")
 ```
 
 **What if your data is untidy?**
