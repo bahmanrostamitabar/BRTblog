@@ -16,10 +16,12 @@ output:
 ---
 
 In the [previous post](https://www.bahmanrt.com/post/intro-furw/), you learned essentials to work with R and RStudio. You are all set to start your data analysis journey. In R there are always multiple ways to achieve the same goal, in general we will try to follow the [tidyverse](https://www.tidyverse.org/) and [tidyverts](https://tidyverts.org/) approaches. You have installed and loade the tidyverse packages in the previous section. Having done that, all of the tidyverse packages will be at your disposal (i.e. you don’t need to install them individually).
-In this post, we 
+
+You can download the project from the repository for [forecasting using r](https://github.com/bahmanrostamitabar/forecasting_using_r) and work on it on your own. This includes all weekly analysis.
 
 **Learning outcomes**
 
+In this post, we start at looking at how to prepare data for analysis. 
 By the end of this post, you should be able to:
 
 1. describe data preperation task
@@ -133,7 +135,7 @@ There are three other common types of variables that aren’t used in this datas
 
 Data structures are made up of different data types. Data structures in R are tools for holding multiple values. The basic data structures used in R include vectors, matrices, `data frames`,`lists` and factors. You can think of a vector as a single column and a data frame as a rectangular table with columns and rows. A data frame is used for storing data tables. It is a list of vectors of equal length.
 
-```{r data-type-structure, fig.align='center', echo=FALSE}
+```{r data-type-structure}
 knitr::include_graphics("../../static/img/dp1.PNG")
 ```
 
@@ -183,7 +185,7 @@ These three rules are interrelated because it’s impossible to only satisfy two
 * Put each dataset in a tibble. 
 * Put each variable in a column 
 
-```{r tidy_untidy, fig.align='center', out.width="50%", eval=TRUE, echo=TRUE}
+```{r tidy_untidy}
 knitr::include_graphics("../../static/img/tidy-1.png")
 ```
 
@@ -208,7 +210,7 @@ The simple answer is it makes data analysis easier with tidyverse packages in R.
 
 2. Easier to exploit R's vectorised nature that makes the thinking process much easier in data manipulation, visualisatin and modeling/forecasting.
 
-# Summary of week2 
+# Summary of week 2 
 
 1. Find an appropriate function dpending on your your file extenstion to import your datset into R.
 2. Use functions in R to make yourself familair with the dataset. Among many available funcions you can check: `class()`, `str()`, `glimpse()`, `names()`, `nrow()`, `ncol()` and `summary()`
@@ -223,9 +225,6 @@ In the next post, Week 3, you will learn how to:
 * Check for duplicated observations 
 * Check for explicit and implicit missing values 
 
-# Github for forecasting using R
-
-You can clone or download the repository for [forecasting using r]() and work on it on your own. This will include all weekly analysis.
 
 # References
 
