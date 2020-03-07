@@ -66,7 +66,7 @@ The function you use to import your dataset depends on the extension of your fil
 
 If you look at the `ae.csv` file, you realise that it is a `.csv` file, therefore you need a function that import `.csv` files into R. You can use `read_csv()` from `readr` package.
 
-```{r import-data, echo=TRUE, eval=TRUE, echo=TRUE}
+```{r import-data, echo=TRUE, eval=TRUE, cache=TRUE}
 library(readr)
 ae_original <- readr::read_csv("my_data/ae.csv",col_types = cols(  
  arrival_time=col_datetime(format = "%d/%m/%Y %H:%M"))) 
