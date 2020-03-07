@@ -186,7 +186,7 @@ These three rules are interrelated because it’s impossible to only satisfy two
 * Put each dataset in a tibble. 
 * Put each variable in a column 
 
-![](img/tidy-1.png)
+![](/img/tidy-1.png)
 
 **What if your data is untidy?**
 
