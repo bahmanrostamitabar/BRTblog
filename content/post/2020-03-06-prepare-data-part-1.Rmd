@@ -82,16 +82,27 @@ Once you imported dataset into R, the first step in data preperation is to explo
 
 ```{r explore-data, echo=TRUE, eval=FALSE}
 library(dplyr) # load package dplyr, here is for the function glimpse
+
 str(ae_original) # what is the structure of ae_original?What isinside?
+
 class(ae_original) # what kind of object is it?
+
 head(ae_original,n=3) # show first n rows/observations
+
 tail(ae_original,n=5) # show last n rows/observations
+
 dim(ae_original) # dimensional of object
+
 length(ae_original) # returns the number of columns/variables
+
 nrow(ae_original) # number of rows
+
 ncol(ae_original) # number of columns
-names(ae_original) # shows the names attribute for a data frame, which gives the column names.
+
+names(ae_original) # shows the names attribute for a data frame, which gives the column names
+
 glimpse(ae_original)# structure of the object, similar to str but slightly different
+
 summary(ae_original)# summary of each column/variable of the data
 ```
 
@@ -136,7 +147,6 @@ Type `class(ae_original)` in Console or R chunk and run it. It tells you `ae_ori
 ```{r import-data1,dependson='import-data'}
 class(ae_original)
 ```
-
 
 The most common data structure you work with in R is the data frame. As you work with tidyverse, you will see a modern take on data frames called `tibble`. Tibbles are data frames, but they tweak some older behaviours to make life a little easier. 
 Data type and structure are important concepts in R because all functions you will use need data in one of the discussed types or structures as input and will return the value in a particular type and structure as output.
@@ -205,7 +215,7 @@ The simple answer is it makes data analysis easier with tidyverse packages in R.
 3. Check the data type and data structure of your data! Ensure you(data analyst) and R have the same understanding of data type (e.g. I think the variable age must be numeric and R says is numeric)
 4. Figure out what the **variables** and **observations** are in your data set and Check if your data is tidy. If not, make it tidy
 
-## Next post (Friday 13^th^ of March)
+# Next post (Friday 13^th^ of March)
 
 In the next post, Week 3, you will learn how to:
 
@@ -213,11 +223,11 @@ In the next post, Week 3, you will learn how to:
 * Check for duplicated observations 
 * Check for explicit and implicit missing values 
 
-## Github for forecasting using R
+# Github for forecasting using R
 
 You can clone or download the repository for [forecasting using r]() and work on it on your own. This will include all weekly analysis.
 
-## References
+# References
 
 1. [Get good data out of bad spreadsheets with tidy tools ](https://www.londonr.org/wp-content/uploads/sites/2/2019/05/Get-good-data-out-of-bad-spreadsheets-with-tidy-tools.pdf)
 

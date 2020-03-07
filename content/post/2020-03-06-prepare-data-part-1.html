@@ -27,10 +27,10 @@ output:
 </ul></li>
 <li><a href="#check-if-you-data-is-tidy"><span class="toc-section-number">3</span> Check if you data is tidy</a><ul>
 <li><a href="#summary-of-this-post"><span class="toc-section-number">3.1</span> Summary of this post</a></li>
-<li><a href="#next-post-friday-13th-of-march"><span class="toc-section-number">3.2</span> Next post (Friday 13<sup>th</sup> of March)</a></li>
-<li><a href="#github-for-forecasting-using-r"><span class="toc-section-number">3.3</span> Github for forecasting using R</a></li>
-<li><a href="#references"><span class="toc-section-number">3.4</span> References</a></li>
 </ul></li>
+<li><a href="#next-post-friday-13th-of-march"><span class="toc-section-number">4</span> Next post (Friday 13<sup>th</sup> of March)</a></li>
+<li><a href="#github-for-forecasting-using-r"><span class="toc-section-number">5</span> Github for forecasting using R</a></li>
+<li><a href="#references"><span class="toc-section-number">6</span> References</a></li>
 </ul>
 </div>
 
@@ -87,16 +87,27 @@ We provide col_types argument to prevent the arrival_time from being a character
 <h1><span class="header-section-number">2</span> Explore raw data</h1>
 <p>Once you imported dataset into R, the first step in data preperation is to explore the data. There are many fucntion in R to help you explore your data. Try the following fucntions to know moe about the data:</p>
 <pre class="r"><code>library(dplyr) # load package dplyr, here is for the function glimpse
+
 str(ae_original) # what is the structure of ae_original?What isinside?
+
 class(ae_original) # what kind of object is it?
+
 head(ae_original,n=3) # show first n rows/observations
+
 tail(ae_original,n=5) # show last n rows/observations
+
 dim(ae_original) # dimensional of object
+
 length(ae_original) # returns the number of columns/variables
+
 nrow(ae_original) # number of rows
+
 ncol(ae_original) # number of columns
-names(ae_original) # shows the names attribute for a data frame, which gives the column names.
+
+names(ae_original) # shows the names attribute for a data frame, which gives the column names
+
 glimpse(ae_original)# structure of the object, similar to str but slightly different
+
 summary(ae_original)# summary of each column/variable of the data</code></pre>
 <div id="data-type" class="section level2">
 <h2><span class="header-section-number">2.1</span> Data type</h2>
@@ -236,8 +247,9 @@ in R for Data Science book, <a href="https://r4ds.had.co.nz/tidy-data.html">chap
 <li>Figure out what the <strong>variables</strong> and <strong>observations</strong> are in your data set and Check if your data is tidy. If not, make it tidy</li>
 </ol>
 </div>
-<div id="next-post-friday-13th-of-march" class="section level2">
-<h2><span class="header-section-number">3.2</span> Next post (Friday 13<sup>th</sup> of March)</h2>
+</div>
+<div id="next-post-friday-13th-of-march" class="section level1">
+<h1><span class="header-section-number">4</span> Next post (Friday 13<sup>th</sup> of March)</h1>
 <p>In the next post, Week 3, you will learn how to:</p>
 <ul>
 <li>Create a tsibble</li>
@@ -245,17 +257,16 @@ in R for Data Science book, <a href="https://r4ds.had.co.nz/tidy-data.html">chap
 <li>Check for explicit and implicit missing values</li>
 </ul>
 </div>
-<div id="github-for-forecasting-using-r" class="section level2">
-<h2><span class="header-section-number">3.3</span> Github for forecasting using R</h2>
+<div id="github-for-forecasting-using-r" class="section level1">
+<h1><span class="header-section-number">5</span> Github for forecasting using R</h1>
 <p>You can clone or download the repository for <a href="">forecasting using r</a> and work on it on your own. This will include all weekly analysis.</p>
 </div>
-<div id="references" class="section level2">
-<h2><span class="header-section-number">3.4</span> References</h2>
+<div id="references" class="section level1">
+<h1><span class="header-section-number">6</span> References</h1>
 <ol style="list-style-type: decimal">
 <li><p><a href="https://www.londonr.org/wp-content/uploads/sites/2/2019/05/Get-good-data-out-of-bad-spreadsheets-with-tidy-tools.pdf">Get good data out of bad spreadsheets with tidy tools</a></p></li>
 <li><p><a href="https://r4ds.had.co.nz/data-import.html">R for data Science, chapter 11</a></p></li>
 <li><p><a href="https://r4ds.had.co.nz/tidy-data.html">R for data Science, chapter 12</a></p></li>
 <li><p><a href="https://moderndive.com/4-tidy.html">Statistical Inference via Data Science: A ModernDive into R and the tidyverse, chapter 4</a></p></li>
 </ol>
-</div>
 </div>
