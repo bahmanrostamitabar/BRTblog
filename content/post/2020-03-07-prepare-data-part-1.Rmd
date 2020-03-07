@@ -55,7 +55,7 @@ The data preparation involves various steps such as:
 * Change data type, structure
 * Check for unusual observations
 
-I cover the most important aspects of data preparation in three seperate posts. In this post, I will discuss how to import data, check if it is in a tidy format and explore it.
+I some most important aspects of data preparation in three seperate posts. In this post, I will discuss how to import data, check if it is in a tidy format and explore it.
 
 # Import data into R
 
@@ -124,7 +124,7 @@ If you type `ae_origin` and run it in Console or in your R chunk and look at the
 * chr stands for character vectors, or strings. 
 * POSIXct which is date-times (a date + a time). I don't know why they call it this, you may see `dttm` later which is a better name I guess.
 
-There are three other common types of variables that aren’t used in this dataset but you may encounter later: 
+There are some other common types of variables that aren’t used in this dataset but you may encounter later: 
 
 * int stands for integers.
 * lgl stands for logical, vectors that contain only TRUE or FALSE. 
