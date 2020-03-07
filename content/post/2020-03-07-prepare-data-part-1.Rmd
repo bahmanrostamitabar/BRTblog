@@ -76,7 +76,7 @@ We provide col_types argument to prevent the arrival_time from being a character
 
 To store data to work on it later, you need to create a new data object. You create objects by assigning them to names. The assignment operator is `<-`. Think of assignment as the verb “gets”, reading left to right. So, the bit of code above can be read as “The object ae_original gets the result of importing `ae.csv` file located in subdirectory `data` using `read_csv()` function given that the type of data for column `arrival_time` must be a `datetime`. The function will guess the data type for the rest of columns. 
 
-> **Note:** use`Option -` on MacOS and `Alt -` on Windows and avois typing the assignment operator
+> **Note:** use`Option -` on MacOS and `Alt -` on Windows to avoid typing the assignment operator
 
 # Explore raw data
 
