@@ -12,6 +12,7 @@ tags:
 output:
   blogdown::html_page:
     toc: true
+    toc_depth: 1
     number_sections: yes
 ---
 
@@ -116,7 +117,7 @@ Every individual data value in R has a data type that tells us what sort of valu
 You can know observe the dataset you imported! You can check what type of object it is and what type of variables you have.
 
 ```{r import-data2,dependson='import-data'}
-ae_original
+head(ae_original,n=3)
 ```
 
 If you type `ae_origin` and run it in Console or in your R chunk and look at the first row, you may notice the row of four-letter abbreviations under the column names. These describe the type of each variable: 
