@@ -24,9 +24,10 @@ output:
 <li><a href="#import-data-into-r"><span class="toc-section-number">3</span> Import data into R</a></li>
 <li><a href="#explore-raw-data"><span class="toc-section-number">4</span> Explore raw data</a></li>
 <li><a href="#check-if-your-data-is-tidy"><span class="toc-section-number">5</span> Check if your data is tidy</a></li>
-<li><a href="#summary-of-week-2"><span class="toc-section-number">6</span> Summary of week 2</a></li>
-<li><a href="#next-post-friday-13th-of-march"><span class="toc-section-number">7</span> Next post (Friday 13<sup>th</sup> of March)</a></li>
-<li><a href="#references"><span class="toc-section-number">8</span> References</a></li>
+<li><a href="#dataset-description"><span class="toc-section-number">6</span> Dataset description</a></li>
+<li><a href="#summary-of-week-2"><span class="toc-section-number">7</span> Summary of week 2</a></li>
+<li><a href="#next-post-friday-13th-of-march"><span class="toc-section-number">8</span> Next post (Friday 13<sup>th</sup> of March)</a></li>
+<li><a href="#references"><span class="toc-section-number">9</span> References</a></li>
 </ul>
 </div>
 
@@ -39,14 +40,14 @@ output:
 <li>articulate the need to prepare data</li>
 <li>import data into R</li>
 <li>explore raw data using R functions</li>
-<li>identify various data type and data structure</li>
+<li>recongnise various data type and data structure</li>
 <li>describe the tidy data concept and its importance</li>
 </ol>
 <div id="why-do-i-need-to-prepare-data" class="section level1">
 <h1><span class="header-section-number">1</span> Why do I need to prepare data?</h1>
 <p>The simple answer to this question is: because if the data are wrong, they will give you the wrong insights and results followed by wrong decisions and planning.</p>
 <p><img src="https://media.giphy.com/media/xT5LMxnlknujYHrBOU/giphy.gif" width="50%" style="display: block; margin: auto;" /></p>
-<p>The raw data given to you might not be in the right shape to start your analysis right away. The data may contain mistakes, missing values, duplications, outliers, etc. Returning to the A&amp;E data, you need to ensure that the data we use for analysis is a quality dataset. You need to check whether it contains duplications, whether any values is missing, or any unusual values is present due to errors in the system and decide how to fix them. If any of these issues are present, then it’s crucial to fix them before you start analysing the data. You may need to have domaine knowledge to to fix some issues available in yoir dataset.</p>
+<p>The raw data given to you might not be in the right shape to start your analysis right away. The data may contain mistakes, missing values, duplications, outliers, etc. Returning to the A&amp;E data, you need to ensure that the data we use for analysis is a quality dataset. You need to check whether it contains duplications, whether any value is missing, or any unusual values is present due to errors in the system and decide how to fix them. If any of these issues are present, then it’s crucial to fix them before you start analysing the data. You may need to have domaine knowledge to to fix some issues available in yoir dataset.</p>
 </div>
 <div id="data-preperation-task" class="section level1">
 <h1><span class="header-section-number">2</span> Data preperation task</h1>
@@ -76,7 +77,7 @@ ae_original &lt;- readr::read_csv(&quot;my_data/ae.csv&quot;,col_types = cols(
 We provide col_types argument to prevent the arrival_time from being a character. We need to have it as a data-time object. The argument <code>format = &quot;%d/%m/%Y %H:%M&quot;</code> corresponds to the format of <code>arrival_time</code> column in the <code>ae.csv</code> file.</p>
 <p>To store data to work on it later, you need to create a new data object. You create objects by assigning them to names. The assignment operator is <code>&lt;-</code>. Think of assignment as the verb “gets”, reading left to right. So, the bit of code above can be read as “The object ae_original gets the result of importing <code>ae.csv</code> file located in subdirectory <code>data</code> using <code>read_csv()</code> function given that the type of data for column <code>arrival_time</code> must be a <code>datetime</code>. The function will guess the data type for the rest of columns.</p>
 <blockquote>
-<p><strong>Note:</strong> use<code>Option -</code> on MacOS and <code>Alt -</code> on Windows and avois typing the assignment operator</p>
+<p><strong>Note:</strong> use<code>Option -</code> on MacOS and <code>Alt -</code> on Windows to avoid typing the assignment operator</p>
 </blockquote>
 </div>
 <div id="explore-raw-data" class="section level1">
@@ -190,8 +191,22 @@ in R for Data Science book, <a href="https://r4ds.had.co.nz/tidy-data.html">chap
 <li><p>Easier to exploit R’s vectorised nature that makes the thinking process much easier in data manipulation, visualisatin and modeling/forecasting.</p></li>
 </ol>
 </div>
+<div id="dataset-description" class="section level1">
+<h1><span class="header-section-number">6</span> Dataset description</h1>
+<pre class="r"><code>nrow(ae_original)#773,779  attendnace
+ncol(ae_original)# 5 variables
+names(ae_original)# names of variables</code></pre>
+<p>The dataset we use for these series of posts is a real dataset containing 773,779 attendance from an Emergency Departement over 5 years. For each patient visiting the emergency unit, the following data is recorded:</p>
+<ul>
+<li>age</li>
+<li>gender</li>
+<li>injury type</li>
+<li>arrival time</li>
+</ul>
+<p>This is a very rich data set that allows you to do many interesting analysis.</p>
+</div>
 <div id="summary-of-week-2" class="section level1">
-<h1><span class="header-section-number">6</span> Summary of week 2</h1>
+<h1><span class="header-section-number">7</span> Summary of week 2</h1>
 <ol style="list-style-type: decimal">
 <li>Find an appropriate function dpending on your your file extension to import your datset into R.</li>
 <li>Use functions in R to make yourself familair with the dataset. Among many available funcions you can check: <code>class()</code>, <code>str()</code>, <code>glimpse()</code>, <code>names()</code>, <code>nrow()</code>, <code>ncol()</code> and <code>summary()</code></li>
@@ -200,7 +215,7 @@ in R for Data Science book, <a href="https://r4ds.had.co.nz/tidy-data.html">chap
 </ol>
 </div>
 <div id="next-post-friday-13th-of-march" class="section level1">
-<h1><span class="header-section-number">7</span> Next post (Friday 13<sup>th</sup> of March)</h1>
+<h1><span class="header-section-number">8</span> Next post (Friday 13<sup>th</sup> of March)</h1>
 <p>In the next post, Week 3, you will learn how to:</p>
 <ul>
 <li>Create a tsibble</li>
@@ -209,7 +224,7 @@ in R for Data Science book, <a href="https://r4ds.had.co.nz/tidy-data.html">chap
 </ul>
 </div>
 <div id="references" class="section level1">
-<h1><span class="header-section-number">8</span> References</h1>
+<h1><span class="header-section-number">9</span> References</h1>
 <ol style="list-style-type: decimal">
 <li><p><a href="https://www.londonr.org/wp-content/uploads/sites/2/2019/05/Get-good-data-out-of-bad-spreadsheets-with-tidy-tools.pdf">Get good data out of bad spreadsheets with tidy tools</a></p></li>
 <li><p><a href="https://r4ds.had.co.nz/data-import.html">R for data Science, chapter 11</a></p></li>
