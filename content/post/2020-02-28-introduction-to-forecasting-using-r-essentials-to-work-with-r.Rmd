@@ -70,7 +70,7 @@ If you are familiar with R, you can skip this and wait for the upcoming posts. I
 
 Remember when you started learning a new language, was it easy to speak and communicate from the first day? I speak few languages and the answer is  NO! 
 
-R is a (programming) language You need to learn grammar, voclabulary, structure, practice, etc to be able to communicate with R. You can ask R any question (we call it *code*) if it is in the right syntax then R will reply, otherwise it will tell you that there is a mistake (give you an Error)! [Find out reasons to use R](as any languaue it is the same with R)
+R is a (programming) language You need to learn grammar, voclabulary, structure, practice, etc to be able to communicate with R. You can ask R any question (we call it *code*) if it is in the right syntax then R will reply, otherwise it will tell you that there is a mistake (give you an Error)! [Find out reasons to use R](https://www.r-bloggers.com/why-use-r-five-reasons/)
 
 You can download [r software](https://www.r-project.org/) and install it. Once finished, open it. Do you like the interface to do your work? This is the basic R Graphical User Interface (GUI). Ofcourse, you can work on it if you like, however it is not user friendly.
 
