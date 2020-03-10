@@ -10,10 +10,11 @@ tags:
   - R
   - Workshop
 output:
-  blogdown::html_page:
-    toc: true
-    toc_depth: 1
+  html_document: 
+    df_print: tibble
     number_sections: yes
+    toc: yes
+    toc_depth: 1
 ---
 
 In the [previous post](https://www.bahmanrt.com/post/intro-furw/), you learned essentials to work with R and RStudio. You are all set to start your data analysis journey. In R there are always multiple ways to achieve the same goal, in general we will try to follow the [tidyverse](https://www.tidyverse.org/) and [tidyverts](https://tidyverts.org/) approaches. You have installed and loade the tidyverse packages in the previous section. Having done that, all of the tidyverse packages will be at your disposal (i.e. you don’t need to install them individually).
