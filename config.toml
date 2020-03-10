@@ -36,9 +36,6 @@ enableGitInfo = false
 #   See: https://gohugo.io/readfiles/bfconfig/
 [blackfriday]
   hrefTargetBlank = true  # `true` opens external links in a new tab. See https://github.com/gohugoio/hugo/issues/2424
-	angledQuotes = false
-	latexDashes = true
-  extensions = ["backslashLineBreak"]
 
 [imaging]
   resampleFilter = "lanczos"
@@ -151,10 +148,10 @@ enableGitInfo = false
   #
   #   For more info on the highlighting options, see:
   #   https://sourcethemes.com/academic/post/writing-markdown-latex/#highlighting-options
-  highlight = true
-  highlight_languages = ["r", "yaml"]
-  highlight_style = "atelier-cave-light"
-  highlight_version = "9.12.0"
+  #highlight = true
+  #highlight_languages = ["r", "yaml"]
+  #highlight_style = "atelier-cave-light"
+  #highlight_version = "9.12.0"
   # Enable native social sharing buttons?
   sharing = true
 
@@ -166,7 +163,7 @@ enableGitInfo = false
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
   #custom_css = ["alison.css"]
-  plugins_css = ["alison"]
+  #plugins_css = ["alison"]
   custom_js  = []
 
   # Publication types.
@@ -291,18 +288,17 @@ enableGitInfo = false
   url = "#about"
   weight = 7
 
-[search]
+#[search]
   # Search provider:
   #   0: No search engine
   #   1: Academic (built-in)
   #   2: Algolia (https://www.algolia.com)
-  engine = 1
+ # engine = 1
 # Taxonomies. 
 [taxonomies]
   tag = "tags"
   category = "categories"
   publication_type = "publication_types"
-  author = "authors"
 
 # Languages
 #   Create a [languages.X] block for each language you want, where X is the language ID.
