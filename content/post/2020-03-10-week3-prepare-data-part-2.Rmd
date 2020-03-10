@@ -1,0 +1,27 @@
+---
+title: Week3- prepare data - part 2
+author: Bahman Rostami-Tabar
+date: '2020-03-10'
+slug: week3-prepare-data-part-2
+categories:
+  - Forecasting using R workshop
+tags:
+  - Forecasting
+  - R
+  - Workshop
+output: 
+  html_document: 
+    number_sections: yes
+    toc: yes
+---
+
+# Why do I need to prepare data? 
+
+The simple answer to this question is: because if the data are wrong, they will give you the wrong insights and results followed by wrong decisions and planning. 
+
+# Data preperation task
+
+The data preparation involves various steps such as:
+
+* Import your data into R
+* Explore raw data
