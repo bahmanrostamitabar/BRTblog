@@ -157,7 +157,7 @@ enableGitInfo = false
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  #custom_css = ["alison.css"]
+  custom_css = ["green.css"]
   #plugins_css = ["alison.css"]
   #custom_js  = []
 
