@@ -52,7 +52,7 @@ enableGitInfo = false
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
-  #font = "classic"
+  font = "alison"
 # Enable users to switch between day and night mode?
 day_night = true
 
@@ -165,8 +165,8 @@ day_night = true
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  #custom_css = ["alison.css"]
-  plugins_css = ["alison.css"]
+  custom_css = ["alison.css"]
+  #plugins_css = ["alison.css"]
   custom_js  = []
 
   # Publication types.
