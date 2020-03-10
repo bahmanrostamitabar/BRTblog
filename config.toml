@@ -2,7 +2,6 @@
 # Documentation: https://sourcethemes.com/academic/
 
 # The URL of your website.
-# End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 baseurl = "https://www.bahmanrt.com/"
 
 # Title of your site
