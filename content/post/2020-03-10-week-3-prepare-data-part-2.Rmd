@@ -20,4 +20,8 @@ In the [previous post](https://www.bahmanrt.com/post/intro-furw/), you learned t
 
 # Temporal data
 
+In the [previous post](https://www.bahmanrt.com/post/intro-furw/), you learned the concept of tidy data and how to make sure tor data is in a tidy form.
+
 # Why do we use tsibble
+
+In the [previous post](https://www.bahmanrt.com/post/intro-furw/), you learned the concept of tidy data and how to make sure tor data is in a tidy form.
