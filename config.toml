@@ -48,11 +48,13 @@ enableGitInfo = false
 [params]
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, `coffee`, `dark`, or `1950s`.
-  #color_theme = "ocean"
+  color_theme = "alison"
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
   #font = "classic"
+# Enable users to switch between day and night mode?
+day_night = true
 
   # Your details.
   name = "Bahman Rostami-Tabar"
@@ -163,7 +165,8 @@ enableGitInfo = false
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = ["alison.css"]
+  #custom_css = ["alison.css"]
+  plugins_css = ["alison"]
   custom_js  = []
 
   # Publication types.
@@ -287,7 +290,13 @@ enableGitInfo = false
   name = "Home"
   url = "#about"
   weight = 7
-  
+
+[search]
+  # Search provider:
+  #   0: No search engine
+  #   1: Academic (built-in)
+  #   2: Algolia (https://www.algolia.com)
+  engine = 1
 # Taxonomies. 
 [taxonomies]
   tag = "tags"
