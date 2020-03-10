@@ -1,0 +1,23 @@
+---
+title: Week 3 - prepare data - part 2
+author: Bahman Rostami-Tabar
+date: '2020-03-10'
+slug: week-3-prepare-data-part-2
+categories:
+  - Forecasting using R workshop
+tags:
+  - Forecasting
+  - R
+  - Workshop
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 1
+    number_sections: yes
+---
+
+In the [previous post](https://www.bahmanrt.com/post/intro-furw/), you learned the concept of tidy data and how to make sure tor data is in a tidy form.
+
+# Temporal data
+
+# Why do we use tsibble
