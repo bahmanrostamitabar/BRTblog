@@ -1,23 +1,17 @@
-# Configuration of Academic
-# Documentation: https://sourcethemes.com/academic/
-
 # The URL of your website.
 baseurl = "https://www.bahmanrt.com/"
 
 # Title of your site
 #title = "Bahman Rostami-Tabar"
-
-# Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
 copyright = "&copy; 2018 Bahman Rostami-Tabar"
-
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
-paginate = 10
-rssLimit = 10
+#paginate = 10
+#rssLimit = 10
 
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
@@ -33,25 +27,18 @@ defaultContentLanguageInSubdir = false
 # Get last modified date for content from Git?
 enableGitInfo = false
 
-[outputs]
-  home = [ "HTML", "CSS", "RSS" ]
-  section = [ "HTML", "RSS" ]
-
 # Configure BlackFriday Markdown rendering.
 #   See: https://gohugo.io/readfiles/bfconfig/
 [blackfriday]
   hrefTargetBlank = true  # `true` opens external links in a new tab.
-  fractions = true  # `false` disables smart fractions (e.g. 5/12 formatted as a fraction).
-  smartypants = true  # `false` disables all smart punctuation substitutions (e.g. smart quotes, dashes, fractions).
-
 [params]
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, `coffee`, `dark`, or `1950s`.
-  color_theme = "ocean"
+  #color_theme = "ocean"
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
-  font = "classic"
+  #font = "classic"
 
   # Your details.
   name = "Bahman Rostami-Tabar"
@@ -68,7 +55,7 @@ enableGitInfo = false
   office_hours = "Friday 11:00 to 12:30 or email for appointment"
   phone = "+44 (0)29 2087 0723"
   skype = "trostamit"
-  telegram = ""
+  github = "bahmanrostamitabar"
 
   # Enable Keybase in Contact widget by entering your keybase.io username.
   keybase = ""
@@ -104,9 +91,9 @@ enableGitInfo = false
   
   # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-  date_format = "Jan 2, 2006"
+  date_format = "Mon, Jan 2, 2006"
   #   Examples: "3:04 pm" or "15:04"
-  time_format = "3:04 PM"
+  #time_format = "3:04 PM"
 
   # Show estimated reading time for posts?
   reading_time = true
@@ -149,9 +136,9 @@ enableGitInfo = false
   #   For more info on the highlighting options, see:
   #   https://sourcethemes.com/academic/post/writing-markdown-latex/#highlighting-options
   highlight = true
-  highlight_languages = []
-  # highlight_style = "github"
-
+  highlight_languages = ["r", "yaml"]
+  highlight_style = atelier-cave-light"
+  highlight_version = "9.12.0"
   # Enable native social sharing buttons?
   sharing = true
 
@@ -191,7 +178,7 @@ enableGitInfo = false
   [params.publications]
     # Date format (refer to Go's date format: http://fuckinggodateformat.com )
     #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-    date_format = "January, 2006"
+    date_format = "Mon, Jan 2, 2006"
 
   # Configuration of project pages.
   [params.projects]
@@ -299,3 +286,9 @@ enableGitInfo = false
 # Configure the English version of the website.
 [Languages.en]
   languageCode = "en-us"
+
+[outputs]
+  home = [ "HTML", "CSS", "RSS" ]
+  section = [ "HTML", "RSS" ]
+  taxonomy = [ "HTML", "RSS" ]
+  taxonomyTerm = [ "HTML", "RSS" ]
