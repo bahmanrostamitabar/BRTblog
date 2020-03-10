@@ -1,0 +1,18 @@
+---
+title: week3
+author: Bahman Rostami-Tabar
+date: '2020-03-10'
+slug: week3
+categories:
+  - Forecasting using R workshop
+tags: []
+header:
+  caption: ''
+  image: ''
+  preview: yes
+---
+
+Following the delivery of a series of workshops on forecasting using R in the developing countries-[please see democratising forecasting section](https://forecasters.org/events/iif-workshops/)-
+and some other organisations such as NHS in the UK, I am going to publish series of weekly posts (every Friday) to make them accessible to a wider audiance. Thro
+
+# prepare
