@@ -1,0 +1,30 @@
+---
+title: week 3 part 3
+author: bahman rostami tabar
+date: '2020-03-10'
+slug: week-3-part-3
+categories:
+  - Forecasting for Social Good
+tags:
+  - R
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 1
+    number_sections: yes
+---
+
+# Learning outcomes
+
+By the end of this post, you should be able to:
+
+1. describe data preperation task
+2. articulate the need to prepare data
+3. import data into R
+4. explore raw data using R functions
+5. recongnise various data type and data structure
+6. describe the tidy data concept and its importance
+
+# Why do I need to prepare data? 
+
+The simple answer to this question is: because if the data are wrong, they will give you the wrong insights and results followed by wrong decisions and planning.
