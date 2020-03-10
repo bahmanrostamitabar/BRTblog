@@ -9,11 +9,14 @@ tags:
   - Forecasting
   - R
   - Workshop
+
 output: 
   html_document: 
     number_sections: yes
     toc: yes
 ---
+
+The raw data given to you might not be in the right shape to start your analysis right away. The data may contain mistakes, missing values, duplications, outliers, etc. Returning to the A&E data, you need to ensure that the data we use for analysis is a quality dataset. You need to check whether it contains duplications, whether any value is missing, or any unu
 
 # Why do I need to prepare data? 
 
