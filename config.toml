@@ -167,7 +167,7 @@ enableGitInfo = false
   #   (relative to /static/css and /static/js respectively)
   custom_css = ["alison.css"]
   #plugins_css = ["alison.css"]
-  custom_js  = []
+  #custom_js  = []
 
   # Publication types.
   #   Used to categorize publications.
@@ -254,7 +254,7 @@ enableGitInfo = false
 #   The weight parameter defines the order that the links will appear in.
 #[params.menus]
   # Align the main menu to the right of the page? (true/false)
-  #align_right = true
+  align_right = true
   
 [[menu.main]]
   name = "Blog"
