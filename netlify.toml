@@ -18,4 +18,3 @@
 
 [context.branch-deploy]
   command = "hugo -b $DEPLOY_PRIME_URL --buildFuture"
-  
