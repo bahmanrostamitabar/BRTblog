@@ -1,5 +1,5 @@
 # The URL of your website.
-baseURL = "https://www.bahmanrt.com/"
+baseurl = "https://www.bahmanrt.com/"
 
 # Title of your site
 #title = "Bahman Rostami-Tabar"
