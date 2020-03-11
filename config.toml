@@ -135,17 +135,17 @@ enableGitInfo = false
   #
   #   For more info on the highlighting options, see:
   #   https://sourcethemes.com/academic/post/writing-markdown-latex/#highlighting-options
-  #highlight = true
-  #highlight_languages = ["r", "yaml"]
-  #highlight_style = "atelier-cave-light"
-  #highlight_version = "9.12.0"
+  highlight = true
+  highlight_languages = ["r", "yaml"]
+  highlight_style = "atelier-cave-light"
+  highlight_version = "9.12.0"
   # Enable native social sharing buttons?
   sharing = true
 
   # Privacy pack
   #   Show a cookie consent message to visitors
   #   Anonymize IP in Google Analytics (if enabled)
-  #privacy_pack = false
+  privacy_pack = false
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
