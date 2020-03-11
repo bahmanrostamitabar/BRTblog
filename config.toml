@@ -34,11 +34,11 @@ enableGitInfo = false
 [params]
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, `coffee`, `dark`, or `1950s`.
-  #color_theme = "ocean"
+  color_theme = "alison"
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
-  #font = "classic"
+  font = "alison"
 
   # Your details.
   name = "Bahman Rostami-Tabar"
@@ -149,7 +149,7 @@ enableGitInfo = false
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = ["green.css"]
+  custom_css = ["alison.css"]
   custom_js  = []
 
   # Publication types.
