@@ -20,9 +20,8 @@ Based on feedback I received, it is fair to conclude that the workshop was a gre
 We have had a very interesting group activity to come up with a unified definition of Forecasting for Social Good.  I am going to share it with other experts in the area and then publish what we think could be a precise and comprehensive definition for forecasting for social good.
 
 ```{r echo=FALSE, fig.cap = "Group activity on what is forecasting for social good", out.width = '90%'}
-knitr::include_graphics("/img/ga.jpg")
+knitr::include_graphics("../../static/img/ga.jpg")
 ```
-
 
 I believe we have made an incredible start to give more attention to societal aspects of forecasting and we should continue doing it.
 
@@ -39,8 +38,8 @@ This is my roadmap for the near future. Very happy to listen to any ideas you mi
 More photos are available [here](https://www.dropbox.com/sh/csm96lqav3p6zd2/AADyECWVsiHCZ6yUNM2LaXJva?dl=0)
 
 ```{r echo=FALSE,out.width = '90%'}
-knitr::include_graphics("/img/1.jpg")
-knitr::include_graphics("/img/2.jpg")
+knitr::include_graphics("../../static/img/1.jpg")
+knitr::include_graphics("../../static/img/2.jpg")
 ```
 
 

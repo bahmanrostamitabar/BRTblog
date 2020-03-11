@@ -111,10 +111,12 @@ summary(ae_original)# summary of each column/variable of the data</code></pre>
 <p>Every individual data value in R has a data type that tells us what sort of value it is. The most common data types are numbers, which R calls numeric, double or integer values, and text, which R calls character values and time which R calls datetime values. A data type defines what kind of data is held in a value. The number 23 has a numeric data type that is integer, for example, the word “twenty-three” has a character type and the time 2020-04-01 11:20 has a date and time data type.</p>
 <p>You can know observe the dataset you imported! You can check what type of object it is and what type of variables you have.</p>
 <pre class="r"><code>head(ae_original,n=3)</code></pre>
-<pre><code>##   age gender injury_type        arrival_time
-## 1  20   male       minor 2010-01-01 00:35:00
-## 2  16   male       minor 2010-01-01 00:57:00
-## 3  39   male       minor 2010-01-01 00:42:00</code></pre>
+<pre><code>## # A tibble: 3 x 4
+##     age gender injury_type arrival_time       
+##   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;       &lt;dttm&gt;             
+## 1    20 male   minor       2010-01-01 00:35:00
+## 2    16 male   minor       2010-01-01 00:57:00
+## 3    39 male   minor       2010-01-01 00:42:00</code></pre>
 <p>If you type <code>ae_origin</code> and run it in Console or in your R chunk and look at the first row, you may notice the row of four-letter abbreviations under the column names. These describe the type of each variable:</p>
 <ul>
 <li>dbl stands for doubles, or real numbers.</li>
