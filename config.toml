@@ -44,7 +44,7 @@ enableGitInfo = false
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
-  font = "alison"
+  font = "default"
 # Enable users to switch between day and night mode?
 #day_night = true
 
