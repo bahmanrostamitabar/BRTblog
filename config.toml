@@ -12,7 +12,7 @@ footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 paginate = 7
-#rssLimit = 10
+rssLimit = 10
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]
@@ -28,7 +28,8 @@ googleAnalytics = "UA-122837305-1"
 defaultContentLanguage = "en"
 hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = false
-
+[Languages.en]
+  languageCode = "en-us"
 # Get last modified date for content from Git?
 enableGitInfo = false
 
@@ -36,9 +37,6 @@ enableGitInfo = false
 #   See: https://gohugo.io/readfiles/bfconfig/
 [blackfriday]
   hrefTargetBlank = true  # `true` opens external links in a new tab. See https://github.com/gohugoio/hugo/issues/2424
-	angledQuotes = false
-	latexDashes = true
-  extensions = ["backslashLineBreak"]
 
 [params]
   # Color theme.
@@ -146,10 +144,6 @@ enableGitInfo = false
   #
   #   For more info on the highlighting options, see:
   #   https://sourcethemes.com/academic/post/writing-markdown-latex/#highlighting-options
-  highlight = true
-  highlight_languages = ["r", "yaml"]
-  highlight_style = "atelier-cave-light"
-  highlight_version = "9.12.0"
   # Enable native social sharing buttons?
   sharing = true
 
@@ -295,5 +289,4 @@ enableGitInfo = false
 #   Create a [languages.X] block for each language you want, where X is the language ID.
 
 # Configure the English version of the website.
-[Languages.en]
-  languageCode = "en-us"
+
