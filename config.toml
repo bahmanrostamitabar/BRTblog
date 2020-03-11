@@ -55,7 +55,7 @@ enableGitInfo = false
   office_hours = "Friday 11:00 to 12:30 or email for appointment"
   phone = "+44 (0)29 2087 0723"
   skype = "trostamit"
-  github = "bahmanrostamitabar"
+  #github = "bahmanrostamitabar"
 
   # Enable Keybase in Contact widget by entering your keybase.io username.
   keybase = ""
@@ -91,7 +91,7 @@ enableGitInfo = false
   
   # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-  date_format = "Mon, Jan 2, 2006"
+  date_format = "2006-01-02"
   #   Examples: "3:04 pm" or "15:04"
   #time_format = "3:04 PM"
 
@@ -145,7 +145,7 @@ enableGitInfo = false
   # Privacy pack
   #   Show a cookie consent message to visitors
   #   Anonymize IP in Google Analytics (if enabled)
-  privacy_pack = false
+  #privacy_pack = false
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
@@ -178,7 +178,7 @@ enableGitInfo = false
   [params.publications]
     # Date format (refer to Go's date format: http://fuckinggodateformat.com )
     #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-    date_format = "Mon, Jan 2, 2006"
+    date_format = "2006-01-02"
 
   # Configuration of project pages.
   [params.projects]
@@ -290,5 +290,3 @@ enableGitInfo = false
 [outputs]
   home = [ "HTML", "CSS", "RSS" ]
   section = [ "HTML", "RSS" ]
-  taxonomy = [ "HTML", "RSS" ]
-  taxonomyTerm = [ "HTML", "RSS" ]
