@@ -3,7 +3,7 @@
 # This section displays recent blog posts from `content/post/`.
 
 widget = "pages"  # See https://sourcethemes.com/academic/docs/page-builder/
-headless = false  # This file represents a page section.
+headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
@@ -15,7 +15,7 @@ subtitle = "From my blog"
   page_type = "post"
   
   # Choose how much pages you would like to display (0 = all pages)
-  count = 0
+  count = 1
   
   # Choose how many pages you would like to offset by
   offset = 0
@@ -52,10 +52,8 @@ subtitle = "From my blog"
   # gradient_end = "SkyBlue"
   
   # Background image.
- #image = "background.jpg"  
- # Name of image in `static/img/`.
-  # image_darken = 0.5  # Darken the image? 
-  #Range 0-1 where 0 is transparent and 1 is opaque.
+  # image = "background.jpg"  # Name of image in `static/img/`.
+  # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
 
   # Text color (true=light or false=dark).
   # text_color_light = true  
