@@ -52,7 +52,7 @@ I have a Kurdish heritage, born and raised in the small gorgeous valley of Bayan
 <img src="maps.jpg" class="center-block" alt="OHSU Research Week Poster" style="width:60%;height:60%;">
 
 After high school, I moved to Tehran and studied Industrial Engineering, receiving my BSc. from [K.N.Toosi University of Technology](https://en.kntu.ac.ir/) (2004). Following my graduation, I have worked in various companies in different industries as planning engineer in Tehran and South of Iran. 
-I then decided to contin uie my studies and recieved my MSc in Industrial Engineering from [Tarabiat Modares University](https://www.modares.ac.ir/en)(2008). After working in the project managemt filed for two years, I decided to pursue my PhD in France. I moved to France in 209 and recieved my PhD from the [University of Bordeuax](https://www.u-bordeaux.com/), France in 2014.
+I then decided to continue my studies and recieved my MSc in Industrial Engineering from [Tarabiat Modares University](https://www.modares.ac.ir/en)(2008). After working in the project managemt filed for two years, I decided to pursue my PhD in France. I moved to France in 2009 and recieved my PhD from the [University of Bordeuax](https://www.u-bordeaux.com/), France in 2014.
 Following that, I have spent two years at [Ecole Central-Supelec](https://www.centralesupelec.fr/) for my post doctoral reserach.
 
 I am now an Associate Professor in Management Science at [Cardiff University](https://www.cardiff.ac.uk/people/view/598316-rostami-tabar-bahman). Prior to that, I was an Assistant Professor at [Coventry University](https://www.coventry.ac.uk/).
