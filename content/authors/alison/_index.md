@@ -20,9 +20,9 @@ education:
 email: "rostami-tabarb/@cardiff.ac.uk"
 interests:
 - Forecasting for Social Good
-- Univarate, multivariate and judgemental forecasting
-- Forecasting and decision making interface
+- Forecasting and decision making
 - Forecasting by aggregation
+- Time series forecasting
 
 
 name: Bahman Rostami-Tabar
