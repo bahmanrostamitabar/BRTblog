@@ -11,6 +11,9 @@ day_night = true
 #   Choose from `default`, `classic`, or `playfair`.
 font = "alison"
 
+# Abstract length (characters) in the Compact and Portfolio Card list views. Also, see `summaryLength` in `config.toml`.
+abstract_length = 135
+
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
 description = "Personal website of Bahman Rostami-Tabar where I blog about forecasting, social good, education, and R."
 
