@@ -1,22 +1,44 @@
 +++
-# Custom widget.
-# An example of using the custom widget to create your own homepage section.
-# To create more sections, duplicate this file and edit the values below as desired.
-widget = "custom"
-active = true
-date = 2016-04-20T00:00:00
+# A Recent Blog Posts section created with the Pages widget.
+# This section displays recent blog posts from `content/post/`.
 
-# Note: a full width section format can be enabled by commenting out the `title` and `subtitle` with a `#`.
+widget = "pages"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless = true  # This file represents a page section.
+active = true  # Activate this widget? true/false
+weight = 60  # Order that this section will appear.
+
 title = "Forecasting for Social Good"
 subtitle = ""
 
-# Order that this section will appear in.
-weight = 15
+[content]
+  # Page type to display. E.g. post, talk, or publication.
+  page_type = "fsg"
+  
+  # Choose how much pages you would like to display (0 = all pages)
+  count = 3
+  
+  # Choose how many pages you would like to offset by
+  offset = 0
 
+  # Page order. Descending (desc) or ascending (asc) date.
+  order = "desc"
+
+  
 [design]
-  # Choose how many columns the section has. Valid values: 1 or 2.
-  columns = "1"
-
+  # Toggle between the various page layout types.
+  #   1 = List
+  #   2 = Compact
+  #   3 = Card
+  #   4 = Citation (publication only)
+  view = 2
+  
+  
+[advanced]
+ # Custom CSS. 
+ css_style = ""
+ 
+ # CSS class.
+ css_class = ""
 +++
 
 One of the key objectives of my research is to use Operational Research techniques to improve decision making in organizations with social missions, thereby positively contributing to advancing knowledge in the field of forecasting practice for social good.
