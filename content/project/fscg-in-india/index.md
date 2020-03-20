@@ -13,6 +13,7 @@ tags:
 - GCRF
 - social-good
 - forecasting
+- funded project
 
 url_code: ""
 url_pdf: ""

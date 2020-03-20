@@ -59,7 +59,7 @@ social:
 superuser: true
 ---
 
-My life objective is to help the world becoming a better place by freely offering my skills and developing free resources. To that end, I have established two main initiatives that put the society/people in the heart of my research, teaching and engagement activities: 1) Democratising Forecasting; 2) Forecasting for Social Good.
+My life objective is to help the world becoming a better place by freely offering my skills and developing free resources. To that end, I have established two main initiatives that put the society/people in the heart of my research, teaching and engagement activities: 1) Democratising Forecasting (DF); 2) Forecasting for Social Good (FSG).
 
 My research goals are directed toward the use of Operations Research (OR) techniques such as forecasting to improve decision making in health and humanitarian sectors, and as such positively contribute to societal advancements. 
 

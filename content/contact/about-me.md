@@ -47,9 +47,10 @@ subtitle = ""
  css_class = "mini"
 +++
 
-I have a Kurdish heritage, born and raised in the small gorgeous valley of Bayangan, a tidy towon in the West part of Iran and half-an hour drive to Kurdish Iraqi border. I spent  most of my time hiking in mountains, proud of all my pleasant experiences as a child.
+I have a Kurdish heritage, born and raised in a small town in the West part of Iran, just half-an hour drive to Kurdish Iraqi border. 
 
-<img src="maps.jpg" class="center-block" alt="OHSU Research Week Poster" style="width:60%;height:60%;">
+<img src="students.jpg" class="center-block" alt="Bozin and Marakhil Protected Area" style="width:60%;height:60%;">
+
 
 After high school, I moved to Tehran and studied Industrial Engineering, receiving my BSc. from [K.N.Toosi University of Technology](https://en.kntu.ac.ir/) (2004). Following my graduation, I have worked in various companies in different industries as planning engineer in Tehran and South of Iran. 
 I then decided to continue my studies and recieved my MSc in Industrial Engineering from [Tarabiat Modares University](https://www.modares.ac.ir/en)(2008). After working in the project managemt filed for two years, I decided to pursue my PhD in France. I moved to France in 2009 and recieved my PhD from the [University of Bordeuax](https://www.u-bordeaux.com/), France in 2014.

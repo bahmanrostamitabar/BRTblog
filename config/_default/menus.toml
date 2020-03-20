@@ -15,7 +15,7 @@
 
 [[main]]
   name = "Projects"
-  url = "/project"
+  url = "#projects"
   weight = 30
 
 [[main]]
@@ -28,6 +28,16 @@
   url = "/publication"
   weight = 50
   
+
+[[main]]
+  name = "FSG"
+  url = "#fsgood"
+  weight = 60
+
+[[main]]
+  name = "DF"
+  url = "#dforecasting"
+  weight = 70
   
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.

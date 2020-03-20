@@ -7,12 +7,13 @@ external_link: ""
 image:
   focal_point: Smart
 categories:
-- Student project
+- MSc. student project
+
 tags:
 - forecasting
 - healthcare
 - social good
-- CARBS MSc project
+- student project
 
 url_code: ""
 url_pdf: ""
