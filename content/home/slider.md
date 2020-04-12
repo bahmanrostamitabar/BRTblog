@@ -17,7 +17,7 @@ height = "325px"
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
   title = "Workshop/Teaching Feedback"
-  content = "\"Bahman was knowledgeable but at the same time very approachable. She had a sense of humor and very engaging style that gave me confidence that I can do this.\""
+  content = "\"Bahman was knowledgeable but at the same time very approachable. He had a very engaging style that gave me confidence that I can do this.\""
   align = "center"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
@@ -36,7 +36,7 @@ height = "325px"
 
 [[item]]
   title = "Workshop/Teaching Feedback"
-  content = "\"Bahman is a phenomenal teacher, and her enthusiasm for the subject matter is palpable.\""
+  content = "\"Bahman is a phenomenal teacher, and his enthusiasm for the subject matter is palpable.\""
   align = "left"
 
   overlay_color = "#404040"  # An HTML color value.
@@ -76,33 +76,7 @@ height = "325px"
  # cta_icon_pack = "fas"
  # cta_icon = "binoculars"
   
-[[item]]
-  title = "Workshop Feedback"
-  content = "\"Alison was great - very knowledgeable, accessible and good sense of humor.\""
-  align = "left"
-
-  overlay_color = "#404040"  # An HTML color value.
-  overlay_img = "headers/supplies-yellow.jpg"  # Image path relative to your `static/img/` folder.
-  overlay_filter = 0.1  # Darken the image. Value in range 0-1.
-
- # cta_label = "see my workshops"
- # cta_url = "categories/workshop/"
- # cta_icon_pack = "fas"
- # cta_icon = "binoculars"
   
-[[item]]
-  title = "Workshop Feedback"
-  content = "\"Alison Hill was a patient instructor who listened to questions and carefully answered them. Clearly, the content had a LOT of thought put into it. Even the timing of the workshop was pretty perfect.\""
-  align = "right"
-
-  overlay_color = "#404040"  # An HTML color value.
-  overlay_img = "headers/supplies-maroon.jpg"  # Image path relative to your `static/img/` folder.
-  overlay_filter = 0.1  # Darken the image. Value in range 0-1.
-
- # cta_label = "see my workshops"
- # cta_url = "categories/workshop/"
- # cta_icon_pack = "fas"
- # cta_icon = "binoculars"
   
 # [[item]]
 #   title = "Workshop Feedback"
