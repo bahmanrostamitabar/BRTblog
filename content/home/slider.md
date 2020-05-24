@@ -17,7 +17,7 @@ height = "325px"
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
   title = "Workshop/Teaching Feedback"
-  content = "\"Bahman was knowledgeable but at the same time very approachable. He had a very engaging style that gave me confidence that I can do this.\""
+  content = "\"Bahman was knowledgeable, the workshop was really informative and very well presented.\""
   align = "center"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
@@ -36,7 +36,7 @@ height = "325px"
 
 [[item]]
   title = "Workshop/Teaching Feedback"
-  content = "\"Bahman is a phenomenal teacher, and his enthusiasm for the subject matter is palpable.\""
+  content = "\"Bahman is a phenomenal teacher, and his enthusiasm for the subject matter is remarkable.\""
   align = "left"
 
   overlay_color = "#404040"  # An HTML color value.
@@ -50,7 +50,7 @@ height = "325px"
 
 [[item]]
   title = "Workshop/Teaching Feedback"
-  content = "\"Bahman is an incredible instructor! Also the content and exercises were very well thought-out and cultivated. Everything ran smoothly.\""
+  content = "\"I really appreciate the effort you are making  to share your knowledge, and most importantly your dedication and determination to contribute in making the world a better place for everyone, using your own expertise and knowledge.\""
   align = "right"
 
   overlay_color = "#404040"  # An HTML color value.
