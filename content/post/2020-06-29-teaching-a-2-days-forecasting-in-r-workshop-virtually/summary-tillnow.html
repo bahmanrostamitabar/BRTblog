@@ -1,0 +1,92 @@
+---
+title: "Summary of practical steps"
+subtitle: "<br><br>FORECASTING IN R"
+author: "Bahman Rostami-Tabar | NHS-R | 29 June 2020"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["default","hygge","middlebury-fonts"]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+      ratio: "16:9"
+    seal: false  
+params:
+  name1: "Alison" 
+  name2: "Alliso"
+---
+
+
+
+<p>layout: true</p>
+<p>background-image: url(img/carbs.jpg)
+background-position: 0% 100%
+background-size: 10%</p>
+<hr />
+<p>class: inverse, center, middle</p>
+<p>background-image: url(<a href="http://bit.ly/arm-greens" class="uri">http://bit.ly/arm-greens</a>)
+background-size: cover</p>
+<div id="summary-of-practical-steps" class="section level1">
+<h1>Summary of practical steps</h1>
+<p><img src="https://github.com/bahmanrostamitabar.png" width="150px"/></p>
+<div id="forecasting-in-r" class="section level3">
+<h3>FORECASTING IN R</h3>
+<p>.large[Bahman Rostami-Tabar | NHS-R | 29 June 2020]</p>
+<hr />
+</div>
+</div>
+<div id="prepare-data-for-forecasting" class="section level1">
+<h1>Prepare data for forecasting</h1>
+<p>.rotate-left[
+.polaroid[&lt;img src=“tsibble_step.jpg”, width=“50%”,align=“center”/&gt;]]</p>
+<hr />
+</div>
+<div id="understand-your-data" class="section level1">
+<h1>Understand your data</h1>
+<p>.pull-left[
+- Time plot
+- Seasonplot
+- Autocorrelation plot
+- anyother plot in ggplot2]</p>
+<p>.pull-right[
+- <code>autoplot()</code>
+- <code>gg_season()</code> and <code>gg_subserries()</code>
+- <code>ACF() %&gt;% autoplot()</code>
+- look at <code>geom_functions</code> in ggplot2]</p>
+</div>
+<div id="specify-method-and-fitting" class="section level1">
+<h1>specify method and fitting</h1>
+<p>.pull-left[
+- Split data into <code>train</code> and <code>test</code> set
+- Create rolling origin time series using <code>train</code>
+- Specfy methods
+- train data on each rolling origin]</p>
+<p>.pull-right[
+- <code>slice()</code>
+- <code>stretch_tsibble(.init = , .step = )</code>
+- <code>MEHTODNAME(response ~ term1+term2+...)</code>
+- <code>model()</code>]</p>
+</div>
+<div id="forecast-and-evaluate-the-performance" class="section level1">
+<h1>Forecast and evaluate the performance</h1>
+<p>.pull-left[
+- forecast for each time series
+- calculate the accuracy performance
+- extract prediction intervals
+- check residuals]</p>
+<p>.pull-right[
+- <code>forecast()</code>
+- <code>accuracy()</code>
+- <code>hilo()</code>
+- <code>gg_tsresiduals()</code>]</p>
+</div>
+<div id="forecast-for-the-future" class="section level1">
+<h1>Forecast for the future</h1>
+<ul>
+<li>use all the available data and forecast for the future</li>
+</ul>
+<p>ae_daily %&gt;%</p>
+<p>model(ets1=.green<a href="n_attendance">ETS</a>)</p>
+<p>%&gt;% .green<a href="h=%2242%20days%22">forecast</a></p>
+</div>

@@ -1,0 +1,174 @@
+---
+title: "Summary of practical steps"
+subtitle: "<br><br>FORECASTING IN R"
+author: "Bahman Rostami-Tabar | NHS-R | 29 June 2020"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["default","hygge","middlebury-fonts"]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+      ratio: "16:9"
+    seal: false  
+params:
+  name1: "Alison" 
+  name2: "Alliso"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, fig.retina = 3)
+library(tidyverse) # load tidyverse package
+library(babynames) # load babynames package
+library(leaflet) # uncomment to use if you install
+```
+
+
+layout: true
+
+background-image: url(img/carbs.jpg)
+background-position: 0% 100%
+background-size: 10%
+
+---
+
+class: inverse, center, middle
+
+background-image: url(http://bit.ly/arm-greens)
+background-size: cover
+
+
+# Summary of practical steps
+
+<img src="https://github.com/bahmanrostamitabar.png" width="150px"/>
+
+### FORECASTING IN R
+
+.large[Bahman Rostami-Tabar | NHS-R | 29 June 2020]
+
+---
+
+# Prepare data for forecasting
+
+.rotate-left[
+.polaroid[<img src="tsibble_step.jpg", width="50%",align="center"/>]]
+
+---
+
+# Understand your data
+
+.pull-left[
+- Time plot
+- Seasonplot
+- Autocorrelation plot
+- anyother plot in ggplot2
+]
+
+.pull-right[
+- `autoplot()`
+- `gg_season()` and `gg_subserries()`
+- `ACF() %>% autoplot()`
+- look at `geom_functions` in ggplot2
+]
+
+---
+# Example: Understand your data
+
+ae_daily %>% .green[autoplot](n_attendance)
+
+ae_daily %>% .green[gg_season](n_attendance) 
+
+ae_daily %>% .green[gg_subseries](n_attendance)
+
+ae_daily %>% .green[ACF](n_attendance, lag_max = 14) %>% .green[autoplot]()
+
+
+---
+# specify method and fitting
+
+.pull-left[
+- Split data into `train` and `test` set
+- Create rolling origin time series using `train`
+- Specfy methods
+- train data on each rolling origin
+]
+
+.pull-right[
+- `slice()`
+- `stretch_tsibble(.init = , .step = )`
+- `MEHTODNAME(response ~ term1+term2+...)`
+- `model()`
+]
+
+--- 
+# Example: specify method and fitting
+
+f_horizon <- 6
+
+test <- ae_monthly %>% .green[slice]((n()-(f_horizon-1)):n())
+
+train <- ae_monthly %>% .green[slice](1:(n()-f_horizon))
+
+train_tr <- train %>% .green[slice](1:(n()-f_horizon)) %>% 
+  .green[stretch_tsibble](.init = 4*12, .step = 1)
+
+ae_fit <- train_tr %>% 
+  .green[model](ets1=.green[ETS](n_attendance ~ .green[error]("A")+.green[trend]("N")+.green[season]("A")))
+
+ae_fit %>% [report]()
+
+ae_fit %>% .green[components]() 
+
+ae_fit %>% .green[glance]()
+
+ae_fit %>% .green[glance]()
+---
+# Forecast and evaluate the performance
+
+.pull-left[
+- forecast for each time series
+- calculate the accuracy performance
+- extract prediction intervals
+- check residuals
+]
+
+.pull-right[
+- `forecast()`
+- `accuracy()`
+- `hilo()`
+- `gg_tsresiduals()`
+]
+
+---
+# Example: Forecast and evaluate the performance
+
+ae_fct <- ae_fit %>% .green[forecast](h="test"42 days)
+
+fc_accuracy <- ae_fct %>% .green[accuracy](train,measures = list(
+  point_accuracy_measures,
+  .blue[interval_accuracy_measures]
+)) 
+
+ae_fct %>% .green[hilo](level=c(90,99))
+
+
+train %>% 
+
+  .green[model](ets1=.green[ETS](n_attendance) %>% 
+  
+  .green[gg_tsresiduals]()
+---
+
+# Forecast for the future
+
+- use all the available data and forecast for the future
+
+
+ae_daily %>% 
+
+model(ets1=.green[ETS](n_attendance))
+
+%>% .green[forecast](h="42 days")
+
