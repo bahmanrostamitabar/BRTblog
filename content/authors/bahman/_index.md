@@ -29,7 +29,7 @@ name: Bahman Rostami-Tabar
 organizations:
 - name: Cardiff University
   url: https://www.cardiff.ac.uk/people/view/598316-rostami-tabar-bahman
-role: Associate Professor in Management Science
+role: Senior Lecturer (Associate Professor) in Management Science
 social:
 - icon: paper-plane
   icon_pack: fas

@@ -1,7 +1,7 @@
 ---
 title: A reflection on the transition of a forecasting in R workshop from face-to-face into an online format
 author: 'Bahman Rostami-Tabar '
-date: '2020-06-29'
+date: '2020-06-30T13:49:54+01:00'
 slug: f2ftovirtual
 categories:
   - Forecasting using R workshop
@@ -13,7 +13,7 @@ tags:
 subtitle: ''
 summary: ''
 authors: []
-lastmod: '2020-06-29T13:49:54+01:00'
+lastmod: '2020-06-30T13:49:54+01:00'
 featured: no
 image:
   caption: ''
@@ -30,7 +30,7 @@ output:
 <div id="TOC">
 <ul>
 <li><a href="#forecasting-in-r-workshop"><span class="toc-section-number">1</span> Forecasting in R workshop</a></li>
-<li><a href="#pre-workshop-planning"><span class="toc-section-number">2</span> Pre-workshop Planning</a></li>
+<li><a href="#pre-workshop-decisions-and-planning"><span class="toc-section-number">2</span> Pre-workshop decisions and planning</a></li>
 <li><a href="#tools-i-had-to-learn"><span class="toc-section-number">3</span> Tools I had to learn</a></li>
 <li><a href="#delivering-the-workshop"><span class="toc-section-number">4</span> Delivering the workshop</a><ul>
 <li><a href="#pre-workshop-session"><span class="toc-section-number">4.1</span> Pre-workshop session</a></li>
@@ -39,60 +39,107 @@ output:
 </ul></li>
 <li><a href="#what-worked-well"><span class="toc-section-number">5</span> What worked well</a></li>
 <li><a href="#what-could-be-done-better-and-future-plans"><span class="toc-section-number">6</span> What could be done better and future plans</a></li>
-<li><a href="#pros-and-cons-of-virtual-training-from-this-experience"><span class="toc-section-number">7</span> Pros and Cons of virtual training from this experience</a><ul>
+<li><a href="#pros-and-cons-based-on-this-experience"><span class="toc-section-number">7</span> Pros and cons based on this experience</a><ul>
 <li><a href="#pros"><span class="toc-section-number">7.1</span> Pros</a></li>
 <li><a href="#cons"><span class="toc-section-number">7.2</span> Cons</a></li>
 </ul></li>
+<li><a href="#what-participants-said-about-the-workshop"><span class="toc-section-number">8</span> What participants said about the workshop</a></li>
+<li><a href="#thank-you"><span class="toc-section-number">9</span> Thank you</a></li>
 </ul>
 </div>
 
 <div id="forecasting-in-r-workshop" class="section level1">
 <h1><span class="header-section-number">1</span> Forecasting in R workshop</h1>
-<p>This is a free workshop to support the learning and application of forecasting using R in the NHS across the U.K. in collaboration with NHS-R community. The workshop is designed for 2 days, 90:00- 16:30.</p>
+<p>This is a free workshop to support the learning and application of forecasting using R in the NHS across the U.K. in collaboration with <a href="https://nhsrcommunity.com/about/">NHS-R community</a>. The workshop is initially designed for 2 days, 09:00- 16:30.</p>
 <p>We are offering five workshops in 2020 as per below:</p>
-<ol style="list-style-type: decimal">
-<li>Monday 24th &amp; Tuesday 25th February 2020 – Nottinghamshire (done face to face)</li>
-<li>Monday 22nd June 2020 – Huddersfield (virtually)</li>
-<li>Thursday 13th &amp; Friday 14th August 2020 – Gloucestershire</li>
-<li>Wednesday 13th &amp; Thursday 14th October 2020 – West Midlands</li>
-<li>Thursday 12th &amp; Friday 13th November 2020 – Cardiff</li>
-</ol>
-<p>I taught the first one in February 2020 in nottinghamshire NHS trust as a 2-day workshop. Following the pandemic and a discussion with organisers, I have decided to deliver it virtually. This was my first experience delivering 2 days content (lectures and tutorials) online.</p>
-<p><img src="https://media.giphy.com/media/cEOG7nGA7448M/giphy.gif" width="30%" /></p>
+<table style="width:89%;">
+<colgroup>
+<col width="26%" />
+<col width="40%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Date</strong></th>
+<th><strong>Host organisation</strong></th>
+<th><strong>Format</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Monday 24<sup>th</sup> &amp;
+Tuesday 25<sup>th</sup>
+February 2020</td>
+<td>Nottinghamshire Healthcare
+NHS Foundation Trust</td>
+<td>In person</td>
+</tr>
+<tr class="even">
+<td>22<sup>nd</sup>-29<sup>th</sup>
+June 2020</td>
+<td>Calderdale and Huddersfield
+NHS Foundation Trust</td>
+<td>Online</td>
+</tr>
+<tr class="odd">
+<td>Thursday 13<sup>th</sup> &amp;
+Friday 14<sup>th</sup>
+August 2020</td>
+<td>Gloucestershire Hospitals
+NHS Foundation Trust</td>
+<td>To be confirmed</td>
+</tr>
+<tr class="even">
+<td>Wednesday 13<sup>th</sup> &amp;
+Thursday 14<sup>th</sup>
+October 2020</td>
+<td>West Midlands
+NHS Foundation Trust</td>
+<td>To be confirmed</td>
+</tr>
+<tr class="odd">
+<td>Thursday 12<sup>th</sup> &amp;
+Friday 13<sup>th</sup>
+November 2020</td>
+<td>NHS Wales</td>
+<td>To be confirmed</td>
+</tr>
+</tbody>
+</table>
+<p>I taught the first one in February 2020 in Nottinghamshire NHS Foundation Trust in person. Following the pandemic and a discussion with organisers, I have decided to deliver the next one virtually. This was my first experience delivering a 2-day workshop (lectures and tutorials) online.</p>
+<p><img src="https://media.giphy.com/media/cEOG7nGA7448M/giphy.gif" width="50%" style="display: block; margin: auto;" /></p>
 <p>To deliver the workshop virtually, we had to make couple of decisions and plan accordingly.</p>
 </div>
-<div id="pre-workshop-planning" class="section level1">
-<h1><span class="header-section-number">2</span> Pre-workshop Planning</h1>
-<p>I had only four weeks to prepare for the workshop with a lot to adopt and also learn new tools. I briefly discuss decisions made and planning tasks as following:</p>
+<div id="pre-workshop-decisions-and-planning" class="section level1">
+<h1><span class="header-section-number">2</span> Pre-workshop decisions and planning</h1>
+<p>I had only four weeks to prepare for the workshop with a lot to adopt. Furthermorew, I needed to learn new tools and technologies for online teaching. I briefly discuss the decisions made and the tasks planned as following:</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>Number of sessions and time slot:</strong> We decided to deliver six 2-hour sessions, 10:00-12:00 a.m. (BST) each day starting from Monday 22<sup>nd</sup> of June.</p></li>
-<li><p><strong>Socialising:</strong> We decided to start tge MS Teams meeting at 09:30 a.m. to give half-an hour for socialising.</p></li>
-<li><p><strong>Video calls:</strong> NHS-R comminuty advised to use <a href="https://www.microsoft.com/en-gb/microsoft-365/microsoft-teams/group-chat-software">MS Teams</a> platform for video communication. The video was not recorded.</p></li>
+<li><p><strong>Number of sessions and time slots:</strong> We decided to deliver six 2-hour sessions, 10:00-12:00 a.m. (BST) each day starting from Monday 22<sup>nd</sup> of June.</p></li>
+<li><p><strong>Socialising:</strong> We decided to start the MS Teams meeting at 09:30 A.M. to give half-an hour for socialising.</p></li>
+<li><p><strong>Video calls:</strong> NHS-R community advised us to use <a href="https://www.microsoft.com/en-gb/microsoft-365/microsoft-teams/group-chat-software">MS Teams</a> platform for video communication. The video calls were not recorded.</p></li>
 <li><p><strong>Q&amp;A and communication with participants:</strong> We used <a href="https://slack.com/intl/en-gb/">Slack</a> to communicate with participants during the workshop. It helped to with Q/A and discussing any issues participants were facing. See a brief introduction to Slack <a href="https://www.youtube.com/watch?v=pUZzBoAbAOs&amp;t=482s">here</a></p></li>
-<li><p><strong>Workshop website</strong>: We had to create a central hub for the workshop where participants can access anything they need at anytime. I have created a <a href="http://127.0.0.1:4321/">website</a> for that purpose, this was again the first experince. This allowed participants to access syllabus, slides, lab sessions, data, reading list, etc in one place.</p></li>
-<li><p><strong>R Software</strong>: We needed R to work on lab exercises. Before attending the workshop, participants are asked to install <a href="https://www.r-project.org/">R</a>, <a href="https://rstudio.com/">RStudio</a> and all packages required in the workshop. There are always few that show up unprepared. <a href="https://rstudio.cloud/">RStudio Cloud</a> is very helpful to avoid any software related issues. It is a cloud-based platform provided and maintained by RStudio that is accessible through a web browser and we can preinstall required packages for all participants.</p></li>
-<li><p>Organisers emailed everyone with a calendar invite that includes i) the MS Teams link ii) link to RStudio Cloud iii) Link to Slack iv) Link to the website and v) a shared Google Doc (be sure it is editable for anyone!) asking participants to discuss a planning/decisions and how forecasting can inform it in their organisation.</p></li>
+<li><p><strong>Workshop website</strong>: We had to create a central hub for the workshop where participants can access anything they need at anytime. I have created a <a href="https://nhs-forecasting.netlify.app/">website</a> for that purpose, which was again a new experience. It allowed participants to access syllabus, slides, lab sessions, data, reading list, etc in one place.</p></li>
+<li><p><strong>R Software</strong>: We used R to work on lab exercises. Before attending the workshop, participants are asked to install <a href="https://www.r-project.org/">R</a>, <a href="https://rstudio.com/">RStudio</a> and all packages required in the workshop. There are always few that show up unprepared. <a href="https://rstudio.cloud/">RStudio Cloud</a> is very helpful to avoid any software related issues. It is a cloud-based platform provided and maintained by RStudio which is accessible through a web browser and we can preinstall required packages for all participants.</p></li>
+<li><p>Organisers emailed everyone with a calendar invite that included i) the MS Teams link ii) link to RStudio Cloud iii) Link to Slack iv) Link to the website and v) A Google Doc. (be sure it is editable for anyone!) for the pre-workshop task.</p></li>
 </ol>
 <p><img src="email.png" width="1280" /></p>
 <p>Apart from the initial email and calendar invite, all communications were in Slack and MS Teams.</p>
-<p>That seems like lots of preparation and har work</p>
-<p><img src="https://media.giphy.com/media/Vzk5PFo9iH5AEustmv/giphy.gif" width="30%" /></p>
 </div>
 <div id="tools-i-had-to-learn" class="section level1">
 <h1><span class="header-section-number">3</span> Tools I had to learn</h1>
 <p>I had to learn few new tools to be able to prepare the workshop and deliver it virtually, herte is the list of tools and some online resources that I used to lean them:</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>Blogdown:</strong> I have created a personal website using <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> in the past which gave confidence in creating the website for this workshop. But, I still had to learn what are different ways to share materials and which one I have to choose. Another great resource from RStudio helped me to get an overview of potential options and how to do it: <a href="https://rstudio.com/resources/webinars/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown/">Sharing on Short Notice: How to Get Your Materials Online With R Markdown</a>.</p></li>
+<li><p><strong>Blogdown:</strong> I have created a personal website using <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> in the past which gave me confidence in creating the website for this workshop. But, I still had to learn what are the different ways to share materials and which one I have to choose. Another great resource from RStudio which helped me to get an overview of potential options and how to do it can be found here: <a href="https://rstudio.com/resources/webinars/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown/">Sharing on Short Notice: How to Get Your Materials Online With R Markdown</a>.</p></li>
 <li><p><strong><a href="https://rstudio.cloud/">RStudio Cloud</a>:</strong> Learning RStudio Cloud was pretty easy, I had to create a base project and install all packages required in the workshop and then share the link with participants. Then, they could get a copy of the project I created and work on it. This was a relief as I was not worried whether they have already installed the software and packages! This was a real hassle in my previous workshop! Thank you RStudio! I watched a webinar to learn how to work with RStudio: <a href="https://rstudio.com/resources/webinars/teaching-r-online-with-rstudio-cloud/">Teaching R online with RStudio Cloud</a></p></li>
 <li><p><strong>Slack:</strong> This was my first experience using Slack, so I had to learn how to use its features! You can find plenty of good blogs written by Slack team in <a href="https://slack.com/intl/en-gb/resources/slack-101">Slack 101</a>.</p></li>
 </ol>
 </div>
 <div id="delivering-the-workshop" class="section level1">
 <h1><span class="header-section-number">4</span> Delivering the workshop</h1>
-<p>We have divided each session into three block of 60 minutes- 10 minutes break - 50 minutes, which included both lectures and labs to apply the concepts discussed in leactures using R.</p>
+<p>We have divided each session into three block of 60 minutes- 10 minutes break - 50 minutes, which included both lectures and labs to apply the concepts discussed in lectures using R.</p>
 <div id="pre-workshop-session" class="section level2">
 <h2><span class="header-section-number">4.1</span> Pre-workshop session</h2>
-<p>It is crucial to hold a meeting one week before the workshop. The main idea is to ensure participants know what will be covered during the workshop, the format of the workshop, what they need to do before coming to the training, e.g. which tools to use and know each other. Below, you see and agenda for our first meeting:</p>
+<p>It is crucial to hold a meeting one week before the workshop. The main idea is to ensure participants know what will be covered during the workshop, the format of the workshop, what they need to do before coming to the training, e.g. which tools to use and know each other. Below, you see the agenda for our first meeting:</p>
 <ol style="list-style-type: decimal">
 <li>Introduction (Alysia)</li>
 <li>Map icebreaker (Tom)</li>
@@ -114,15 +161,15 @@ output:
 </div>
 <div id="lectures" class="section level2">
 <h2><span class="header-section-number">4.2</span> Lectures</h2>
-<p>The most challenging part of the workshop was delivering live lectures(synchronous). Apart from a pre-session which was recorded prior to the workshop and uploaded in the website, all six sessions were delivered live. For each lecture, I talked through slides to explain the concept and explicitly asked students to take notes of some sepecifc parts of the lecture which are important. Students clould also submit questions in the Slack and the chat room of MS teams.</p>
-<p>A crucial aspect of any online teaching is the learner engagement and the success of it depends how effectively you ineract with the learner. To interact with participants during the lectures, we have used the following tools and strategies:</p>
+<p>The most challenging part of the workshop was delivering live lectures(synchronous). Apart from one session that was recorded prior to the workshop and uploaded in the website, all other six sessions were delivered live. For each lecture, I talked through slides to explain the concept and explicitly asked students to take notes of some specific parts of the lecture which are important. Students could also ask questions in the Slack and the chat room of MS Teams.</p>
+<p>An important aspect of any online teaching is the learner engagement and the success of it depends on how effectively you interact with the learner. To interact with participants during the lectures, we have used the following tools and strategies:</p>
 <ol style="list-style-type: decimal">
-<li><strong>Opening</strong>: Openning is used to prepare learners for the workshop, connect them to each other and bring the learner’s attention into the workshop. This could happen in many different ways, I asked participants how forecasting can be used to inform the decision making process in their organisation and what they need to learn to produce that forecast. This helped to set the learneing objectives. I have sent this question in a Google Doc. link to all participants before the workshop to ensure they have enough time to reflect on it and complete the document and then discussed it during the openning.</li>
+<li><strong>Opening</strong>: Opening is used to prepare learners for the workshop, connect them to each other and bring the learner’s attention into the workshop. This could happen in many different ways. I asked participants to i) identify a planning/decision task in their organisation ii) reflect on how forecasting can be helpful in supporting that particular task iii) determine what to forecast and iv) what they need to learn to produce that forecast. Participants were asked to share their thoughts in a Google Doc. that have been discussed in the first live session. This helped to set the learneing objectives.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:googledoc"></span>
-<img src="googledoc.png" alt="Google Doc. used for a pre-workshop task and openning" width="1280" />
+<img src="googledoc.png" alt="Google Doc. used for a pre-workshop task and opening" width="1280" />
 <p class="caption">
-Figure 4.1: Google Doc. used for a pre-workshop task and openning
+Figure 4.1: Google Doc. used for a pre-workshop task and opening
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
@@ -138,7 +185,7 @@ Figure 4.2:  Multiple choice question with Mentimeter
 </p>
 </div>
 <ul>
-<li>Use padlet to review content by learner. below you can see two examples where i ask participants to write the most three important thing they learnt in each session and I also provided key summaries of what I covered till session 4.</li>
+<li>Use <a href="https://en-gb.padlet.com/">Padlet</a> to review content by learner. Below you can see two examples where I asked participants to write the most three important thing they learnt in each session and I also provided key summaries of what I covered till session 4.</li>
 </ul>
 <div class="figure" style="text-align: center"><span id="fig:padlet1"></span>
 <img src="pdlet/padlet2.png" alt="Using a Padlet wall to write the most three important things" width="1280" />
@@ -147,28 +194,28 @@ Figure 4.3: Using a Padlet wall to write the most three important things
 </p>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:padlet2"></span>
-<img src="pdlet/padlet1.png" alt="Using a Padlet shelf to summarises the pratical steps in forecasting task in R" width="1280" />
+<img src="pdlet/padlet1.png" alt="Using a Padlet shelf to summarises the practical steps in forecasting task in R" width="1280" />
 <p class="caption">
-Figure 4.4: Using a Padlet shelf to summarises the pratical steps in forecasting task in R
+Figure 4.4: Using a Padlet shelf to summarises the practical steps in forecasting task in R
 </p>
 </div>
 <ul>
-<li>I also askd participants to create a mindmap to summarise what they have learnt in the workshop and share it with others. They could use various platforms such as <a href="https://www.draw.io/">Draw</a>, <a href="https://www.mindmeister.com/">Mind master</a> or <a href="https://coggle.it/">Coggle</a>.</li>
+<li>I also asked participants to create a mind map to summarise what they have learnt in the workshop and share it with others. They could use various platforms such as <a href="https://www.draw.io/">Draw</a>, <a href="https://www.mindmeister.com/">Mind master</a> or <a href="https://coggle.it/">Coggle</a>.</li>
 </ul>
 <div class="figure" style="text-align: center"><span id="fig:mindmap"></span>
-<img src="mind-map2.jpeg" alt="Using mindmap to review the whole content" width="808" />
+<img src="mind-map2.jpeg" alt="Using mind map to review the whole content" width="808" />
 <p class="caption">
-Figure 4.5: Using mindmap to review the whole content
+Figure 4.5: Using mind map to review the whole content
 </p>
 </div>
 <ul>
 <li><p>Moreover, I created a summary of key points after six sessions and share it with participants! this may work best after you finish half of the sessions. You can see the summary <a href="summary-tillnow.html">here</a>.</p></li>
-<li><p>I have also provided incomplete piece of R code (with mistakes to correct) with blanks to complete for a particula task in forecasting.</p></li>
+<li><p>I have also provided incomplete piece of R code (with mistakes to correct) with blanks to complete for a particular task in forecasting.</p></li>
 </ul>
 <div class="figure" style="text-align: center"><span id="fig:code"></span>
-<img src="code.png" alt="Using mindmap to review the whole content" width="1280" />
+<img src="code.png" alt="R code to complete" width="1280" />
 <p class="caption">
-Figure 4.6: Using mindmap to review the whole content
+Figure 4.6: R code to complete
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
@@ -183,18 +230,18 @@ Figure 4.7: Using white board to explain time series cross validation concept
 </div>
 <div id="labs" class="section level2">
 <h2><span class="header-section-number">4.3</span> Labs</h2>
-<p>The structure of labs remained similar to the face to face sessions, the only difference was using RStudio Cloud. Participants had access to Rscripts in the website and RStudio Cloud for each lab prior to the session. I then explain the code written for each lab and they practiced their skills in R.</p>
+<p>The structure of labs remained similar to the face to face sessions, the only difference was using RStudio Cloud. Participants had access to Rscripts in the website and RStudio Cloud for each lab prior to the session. I then explained the code written for each lab and they practiced their skills in R.</p>
 </div>
 </div>
 <div id="what-worked-well" class="section level1">
 <h1><span class="header-section-number">5</span> What worked well</h1>
 <ul>
-<li><p>Creating the <a href="https://nhs-forecasting.netlify.app/">website</a> as a central hub for the workshop was a brilliant choice. Participants could access all required information and materials during the workshop. I am going to improve it over time and it remains accessible for everyone.</p></li>
-<li><p>It is crucial to avoid multiple communication channels! Slacks was a great choice to that end. We use it for Q/A, announcements, sharing links, creating polls! I found it very structured and easy to use! It has many features which I have not yet used!</p></li>
-<li><p>Using the <a href="https://openboard.ch/index.en.html">whiteboard</a> was extremely helpful to convey ideas effectively and I recommed using it in online teaching whenever appropriate!</p></li>
-<li><p>Using <a href="https://en-gb.padlet.com/dashboard">Padlet</a>, <a href="http://directpoll.com/">Direct Pool</a> and <a href="https://www.mentimeter.com/">Mentimeter</a> worked very wekk to interact with audiance.</p></li>
+<li><p>Creating the <a href="https://nhs-forecasting.netlify.app/">website</a> as a central hub for the workshop was a brilliant choice. Participants could access all required information and materials during the workshop. I am going to improve it over time, and it will remain accessible for participants.</p></li>
+<li><p>It is crucial to avoid multiple communication channels! Slacks was a great choice to that end. We used it for Q/A, announcements, sharing links, creating polls! I found it very structured and easy to use! It has many features which I have not yet used!</p></li>
+<li><p>Using the <a href="https://openboard.ch/index.en.html">whiteboard</a> was extremely helpful to convey ideas effectively and I recommend using it in online teaching whenever appropriate!</p></li>
+<li><p>Using <a href="https://en-gb.padlet.com/dashboard">Padlet</a>, <a href="http://directpoll.com/">Direct Pool</a> and <a href="https://www.mentimeter.com/">Mentimeter</a> worked very well to interact with the audience.</p></li>
 <li><p><a href="https://rstudio.cloud/">RStudio Cloud</a> helped to overcome many issues I have been facing in forecasting workshops. With RStudio Cloud I don’t need to be worried about attendees showing up without installing the software and required packages.</p></li>
-<li><p>I was fortunate to have the support of Thomas Jemmett and Alysia Dyke (NHS MIDLANDS AND LANCASHIRE COMMISSIONING SUPPORT UNIT) before and during the workshop. I think having a knowledgeable facilitator in the subject area will help alot, it does not necessarily need to be an expert in the field. It can help with the platform, technological enviroment, handling Q/A sessiosns, etc.</p></li>
+<li><p>I was fortunate to have get the support from Thomas Jemmett and Alysia Dyke (The Strategy Unit.) before and during the workshop. I think having a knowledgeable facilitator in the subject area would help alot, who does not necessarily need to be an expert in the field. It can help with the platform, technological environment, handling Q/A sessions.</p></li>
 </ul>
 <p><img src="https://media.giphy.com/media/3o7abGQa0aRJUurpII/giphy.gif" width="50%" style="display: block; margin: auto;" /></p>
 </div>
@@ -204,41 +251,58 @@ Figure 4.7: Using white board to explain time series cross validation concept
 <ol style="list-style-type: decimal">
 <li><p>Avoiding too much content</p>
 <p>I had too much content to cover for the online session. I could prioritise my content for each topic and each task based on four criteria: i) How frequently the task is used/performed in real life? ii) How easy it is to learn how to do it? iii) How important is the task to the effectiveness of the job? and iv) What is the current level of skills and knowledge of learners?
-Following these criteria, I am going to divide my content into **Must to Know&quot; which will be covered in the workshop and “Good to Know” which will not be coverd but materials will be shared with participants. you can download this <a href="%22priority.xlsx%22">Excel file</a> and use it as a template.</p></li>
-<li><p>Using a teaching lesson plan for each session</p>
-<p>It is extremely important to start prepare each session at least 12 weeks before the start day of the teaching. I have created a template which I am going to use to prepare a detail plan for each session. The template can be downloaded <a href="sessionplan.docx">here</a>.</p></li>
-<li><p>Including more lecture content videos (asynchronous)</p>
-<p>I could include more pre-recorded videos to cover the main content of each session for participants to watch before each session. These videos should cover lecture slides but also it should include some questions to help students think about the content and reflect on it. Moreover, students should be encouraged to note any questions. Both types of questions should be discussed/answered during the live sessions.</p></li>
+Following these criteria, I am going to divide my content into <strong>Must to Know</strong> which will be covered in the workshop and <strong>Good to Know</strong> which will not be covered but materials will be shared with participants. You can download this <a href="priority.xlsx">Excel file</a> and use it as a template.</p></li>
+<li><p>Using a teaching plan for each session</p>
+<p>It is extremely important to start preparing each session at least 12 weeks before the start day of the teaching. I have created a template which I am going to use to prepare a detail plan for each session. The template can be downloaded <a href="sessionplan.docx">here</a>.</p></li>
+</ol>
+<blockquote>
+<p>As I reflect more on session plan, I find it extremely useful to allocate time to each, figuring out what you and leaners do during each task and which feature(e.g. Google Doc., Mentimeter, Padlet, etc) is the best to evaluate the learning outcome for that particular task.</p>
+</blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Including more pre-recorded videos (asynchronous)</p>
+<p>I could include more pre-recorded videos to cover the main content of each session for participants to watch before each session. These videos should cover lecture slides but also it should include some questions to help students think about the content and reflect on it. Moreover, students should be encouraged to write down any question they have about the content. Both types of questions should be discussed/answered during the live session.</p></li>
 <li><p>Including interactive R sessions</p>
-<p>For the lab sessions, I could improve the interaction with learners by creating interactive excercises with <a href="https://rstudio.github.io/learnr/">learnr package</a> and/or fill in the blank with the <a href="https://education.rstudio.com/blog/2020/05/flair/#example-3--mask-code-for-easy-practice-activities">flair package</a>. This is going to happen for the next workshop.</p></li>
+<p>For the lab sessions, I could improve the interaction with learners by creating interactive exercises with <a href="https://rstudio.github.io/learnr/">learnr package</a> and/or fill in the blank with the <a href="https://education.rstudio.com/blog/2020/05/flair/#example-3--mask-code-for-easy-practice-activities">flair package</a>. I will consider this for the next workshop.</p></li>
 <li><p>Introducing scenarios for each session</p>
-<p>Scenarios put learners in realistic situations and allow learners to practice the new acquired skills to solve a challenge. I am going to include at least one scenario for each session. Another practice could be asking participants to find a public available data or their own data and define scenarios based on that which could be</p></li>
-<li><p>Use group discussion and collaboration among learners</p>
-<p>We use MS Teams for video calls. Although it has Breakout rooms featute but we were not allowed to use it in order to divide learners into smaller groups to work together either to answer a question or review contents. I need to be sure the platform we use will allow the Breakout room feature for the future workshops.</p></li>
-<li><p>Using an aditional monitor</p>
-<p>During the online session, I was juggling between different screens on my laptop. Having an addional (or two) monitor could give me a dedicated space for things like Slack to see studnts questions easier.</p></li>
+<p>Scenarios put learners in realistic situations and allow learners to practice the new acquired skills to address a challenge. I am going to include at least one scenario for each session in the future. Another practice could be asking participants to find a public available data set or use their own data set and then define a scenario based on that. This will help participants to practice their skills on a problem they are interested in.</p></li>
+<li><p>Using group discussion and collaboration among learners</p>
+<p>We use MS Teams for video calls. Although it has Breakout rooms feature but we were not able to use it in order to divide learners into smaller groups to work together either to answer a question or review contents. I need to be sure the platform we use will allow the Breakout room feature for the future workshops.</p></li>
+<li><p>Using an additional monitor</p>
+<p>During the online session, I was juggling between different screens on my laptop. Having an additional (or two) monitor could give me a dedicated space for things like Slack to see students questions easier.</p></li>
 </ol>
 <p><img src="https://media.giphy.com/media/WRp3ZviucNjV5bB8op/giphy.gif" width="50%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="pros-and-cons-of-virtual-training-from-this-experience" class="section level1">
-<h1><span class="header-section-number">7</span> Pros and Cons of virtual training from this experience</h1>
-<p>It is challenging task to transform a face-to-face training into a virtual format, but it can be done effectively with a good prepare preperation and heart. Both online and face-to-face teaching have their own and pros and cons.</p>
+<div id="pros-and-cons-based-on-this-experience" class="section level1">
+<h1><span class="header-section-number">7</span> Pros and cons based on this experience</h1>
+<p>It is a challenging task to transform a face-to-face training into a virtual format, but it can be done effectively with a good preparation and heart. Both online and face-to-face teaching have their own and pros and cons.</p>
 <div id="pros" class="section level2">
 <h2><span class="header-section-number">7.1</span> Pros</h2>
 <ul>
-<li><p>It is great to recognise participant’s names and faces, otherwise nearly impossible for me to remember and pronoune names correctly in the face to face session.</p></li>
-<li><p>It brings great opprtunities to learn new tools and ways of teaching which could be very helpful even in face-to-face teaching.</p></li>
+<li><p>It is great to recognise participants’ names and faces, otherwise it is nearly impossible for me to remember and pronounce names correctly in a face to face session;</p></li>
+<li><p>It brings great opportunities to learn new tools and ways of teaching which could be very helpful even in face-to-face teaching;</p></li>
 <li><p>Resources created for the virtual workshop could remain accessible after the online sessions and even to enhance face-to-face sessions.</p></li>
 </ul>
 </div>
 <div id="cons" class="section level2">
 <h2><span class="header-section-number">7.2</span> Cons</h2>
 <ul>
-<li><p>I was very happy after the workshop but I felt exhausted. Althoug we had each session between 2-3 (min-max) hours but it was not easy to focus on anything important after the session;</p></li>
-<li><p>I miss the coffe breaks, this can not be replaced by any mean. <strong>Often the most interesting and important things happen during breaks where you have face to face training</strong>, with virtual there is no break;</p></li>
-<li><p>I could not really see/feel participant’s mood during the workshop, wether they follow what I am talking about or not! Facial expressions aren’t as noticeable as in person delivery.</p></li>
+<li><p>I was very happy after the workshop but I felt exhausted. Although we had each session between 2-3 (min-max) hours but it was not easy to focus on anything important after the session;</p></li>
+<li><p>I miss the coffee breaks, this can not be replaced by any mean. <strong>Often the most interesting and important things happen during breaks where you have face to face training</strong>, with virtual there is no break, I mean it is not the same;</p></li>
+<li><p>I could not really see/feel participant’s mood during the workshop, whether they follow what I am talking about or not! Facial expressions aren’t as noticeable as in person delivery.</p></li>
 </ul>
-<p><strong><code>I think the best way to go forward is to combine both in person and online teaching.</code></strong></p>
-<p>This post will be updated once I recieve the feedback from participants.</p>
+<blockquote>
+<p>I think the best way to go forward is to combine both in person and online teaching.</p>
+</blockquote>
 </div>
+</div>
+<div id="what-participants-said-about-the-workshop" class="section level1">
+<h1><span class="header-section-number">8</span> What participants said about the workshop</h1>
+<p>This section will be updated once I receive the feedback from participants.</p>
+</div>
+<div id="thank-you" class="section level1">
+<h1><span class="header-section-number">9</span> Thank you</h1>
+<p>I have to say this would not have been possible without having the support from <a href="https://www.strategyunitwm.nhs.uk/author/thomas-jemmett">Thomas Jemmett</a> and <a href="https://www.strategyunitwm.nhs.uk/author/alysia-dyke">Alysia Dyke</a>, thank you both for your support in planning the workshop and helping with the technical aspects during the workshop. Thomas is an expert in R and he also helped answering R related questions.</p>
+<p>I had <a href="https://forecasting.svetunkov.ru/en/">Ivan Svetunkov</a> from Centre for Marketing Analytics and Forecasting, Lancaster University as a guest speaker on Exponential Smoothing model (ETS). He delivered a fantastic session, Thank you Ivan for your contribution!</p>
+<p>Thank you <a href="https://nhsrcommunity.com/about/">NHS-R community</a> for organising these workshops and looking forward to the upcoming ones.</p>
+<p><img src="https://media.giphy.com/media/3ohhwi25ISXC7Z4tMs/giphy.gif" width="70%" style="display: block; margin: auto;" /></p>
 </div>
