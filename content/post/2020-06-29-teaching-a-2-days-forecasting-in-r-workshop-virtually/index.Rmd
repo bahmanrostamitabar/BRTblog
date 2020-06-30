@@ -76,7 +76,7 @@ I had only four weeks to prepare for the workshop with a lot to adopt. Furthermo
 
 4. **Q&A and communication with participants:** We used [Slack](https://slack.com/intl/en-gb/) to communicate with participants during the workshop. It helped to with Q/A and discussing any issues participants were facing. See a brief introduction to Slack [here](https://www.youtube.com/watch?v=pUZzBoAbAOs&t=482s)
 
-5. **Workshop website**: We had to create a central hub for the workshop where participants can access anything they need at anytime. I have created a [website](https://nhs-forecasting.netlify.app/) for that purpose, which was again a new experience. It allowed participants to access syllabus, slides, lab sessions, data, reading list, etc in one place.
+5. **[Workshop website](https://nhs-forecasting.netlify.app/)**: We had to create a central hub for the workshop where participants can access anything they need at anytime. I have created a [website](https://nhs-forecasting.netlify.app/) for that purpose, which was again a new experience. It allowed participants to access syllabus, slides, lab sessions, data, reading list, etc in one place.
 
 6. **R Software**: We used R to work on lab exercises. Before attending the workshop, participants are asked to install [R](https://www.r-project.org/), [RStudio](https://rstudio.com/) and all packages required in the workshop. There are always few that show up unprepared. [RStudio Cloud](https://rstudio.cloud/) is very helpful to avoid any software related issues. It is a cloud-based platform provided and maintained by RStudio which is accessible through a web browser and we can preinstall required packages for all participants.
 
@@ -92,11 +92,11 @@ Apart from the initial email and calendar invite, all communications were in Sla
 
 I had to learn few new tools to be able to prepare the workshop and deliver it virtually, herte is the list of tools and some online resources that I used to lean them:
 
-1. **Blogdown:** I have created a personal website using [Blogdown](https://bookdown.org/yihui/blogdown/) in the past which gave me confidence in creating the website for this workshop. But, I still had to learn what are the different ways to share materials and which one I have to choose. Another great resource from RStudio which helped me to get an overview of potential options and how to do it can be found here: [Sharing on Short Notice: How to Get Your Materials Online With R Markdown](https://rstudio.com/resources/webinars/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown/).
+1. **[Blogdown](https://bookdown.org/yihui/blogdown/):** I have created a personal website using Blogdown in the past which gave me confidence in creating the website for this workshop. But, I still had to learn what are the different ways to share materials and which one I have to choose. Another great resource from RStudio which helped me to get an overview of potential options and how to do it can be found here: [Sharing on Short Notice: How to Get Your Materials Online With R Markdown](https://rstudio.com/resources/webinars/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown/).
 
 2. **[RStudio Cloud](https://rstudio.cloud/):** Learning RStudio Cloud was pretty easy, I had to create a base project and install all packages required in the workshop and then share the link with participants. Then, they could get a copy of the project I created and work on it. This was a relief as I was not worried whether they have already installed the software and packages! This was a real hassle in my previous workshop! Thank you RStudio! I watched a webinar to learn how to work with RStudio: [Teaching R online with RStudio Cloud](https://rstudio.com/resources/webinars/teaching-r-online-with-rstudio-cloud/)
 
-3. **Slack:** This was my first experience using Slack, so I had to learn how to use its features! You can find plenty of good blogs written by Slack team in [Slack 101](https://slack.com/intl/en-gb/resources/slack-101).
+3. **[Slack](https://slack.com/intl/en-gb/):** This was my first experience using Slack, so I had to learn how to use its features! You can find plenty of good blogs written by Slack team in [Slack 101](https://slack.com/intl/en-gb/resources/slack-101).
 
 
 # Delivering the workshop
