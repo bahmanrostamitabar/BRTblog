@@ -55,10 +55,12 @@ Forecasting for Social Good Initiative aims to explore and expose how (where) fo
 
 To that end, I have organised the first international workshop dedicated to the use of forecasting for social good in Cardiff University on Thursday and Friday 12-13 July 2018. This workshop was  an important step to bring more attention to this extremely important topic. It brings together researchers and practitioners across 10 countries to discuss research agenda in this area, whilst helping me broaden my network and introduce important research collaborations with academics as well as build solid partnerships with organizations. 
 
-Please see below for more information about the conference:
+
+We are organising the second International workshop on Forecasting for Social Good on June 30<sup>th</sup> & July 1<sup>st</sup> 2021 at Kedge Business School, France. Please follow the link to learn more: [https://www.f4sg.org/](https://www.f4sg.org/)
+
+Please see below for more information about the first workshop organised at Cardiff Business School in july 2018:
 
 1. [24th IIF workshop on Forecasting for Social Good](https://www.cardiff.ac.uk/news/view/1238674-the-need-of-populations-and-society) 
 
 2. [Short video about the conference on Forecasting for Social Good](https://www.youtube.com/watch?v=GM3UXeftP_s)
 
-We are organising the second international workshop on Forecasting for Social Good on 11-12 June 2020 in France. 

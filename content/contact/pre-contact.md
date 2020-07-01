@@ -9,7 +9,7 @@ active = true # Activate this widget? true/false
 weight = 45  # Order that this section will appear.
 
 title = "Get in touch"
-subtitle = ""
+subtitle = "This form is for contacting me about speaking engagements, organising workshops, opportunities to work together, or mentorship requests. This is *NOT* a form for requesting help."
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.

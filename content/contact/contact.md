@@ -3,9 +3,9 @@ active: true
 autolink: false
 email_form: 2
 headless: true
-subtitle: ""
+subtitle: "This form is for contacting me about speaking engagements, organising workshops, opportunities to work together, or mentorship requests. This is *NOT* a form for requesting help."
 title: Hi there!
-weight: 50
+weight: 100
 widget: contact
 ---
 

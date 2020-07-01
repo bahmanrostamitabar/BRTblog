@@ -8,13 +8,13 @@ image:
   focal_point: Smart
 
 categories:
-- funded project
+- research
 tags:
 - GCRF
 - social-good
 - forecasting
 - NHS
-- funded project
+- research
 
 url_code: ""
 url_pdf: ""

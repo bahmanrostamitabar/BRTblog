@@ -49,7 +49,7 @@ subtitle = ""
 
 I have a Kurdish heritage, born and raised in a small town in the West part of Iran, just half-an hour drive to Kurdish Iraqi border. 
 
-<img src="students.jpg" class="center-block" alt="Bozin and Marakhil Protected Area" style="width:60%;height:60%;">
+<img src="maps.jpg" class="center-block" alt="Bozin and Marakhil Protected Area" style="width:50%;height:20%;">
 
 
 After high school, I moved to Tehran and studied Industrial Engineering, receiving my BSc. from [K.N.Toosi University of Technology](https://en.kntu.ac.ir/) (2004). Following my graduation, I have worked in various companies in different industries as planning engineer in Tehran and South of Iran. 
@@ -60,7 +60,7 @@ I am now an Associate Professor in Management Science at [Cardiff University](ht
 
 I am very passinoate about forecasting, data analytics and knowledge sharing. I have created [Democratising forecasting](/democtarisingf) inittiative sponsered by the [International Institute of forecasters](https://forecasters.org/events/iif-workshops/) that aims at training students, academics and professionals in develipng countries and share the latest knowledfe and best practices on forecasting using R. Moreover, I delive five workshops per year for NHS in collaboration with [NHS-R Community](https://nhsrcommunity.com/blog/forecasting-r/).
 
-My [research] focuses on forecasting/modeling and its link to decision making. I am interested in [forecasting for social good](/) which investigate how and where forecasting can be used to create societal impact. I have launched this initiative in 2018, sponsered by [Cardiff Business School](https://www.cardiff.ac.uk/business-school) and [IIF](International Institute of forecasters) which aims at bringing academics, researchers and practitioners to advance forecasting for social good. I organise the [second Workshop on forecasting for social good](https://www.f4sg.org/) in Bordeaux, France , following by the [first workshop](https://www.cardiff.ac.uk/news/view/1082016-forecasting-for-social-good) in July 2018 in Cardiff. 
+My research focuses on forecasting/modeling and its link to decision making. I am interested in [forecasting for social good](/) which investigate how and where forecasting can be used to create societal impact. I have launched this initiative in 2018, sponsered by [Cardiff Business School](https://www.cardiff.ac.uk/business-school) and [IIF](International Institute of forecasters) which aims at bringing academics, researchers and practitioners to advance forecasting for social good. I organise the [second Workshop on forecasting for social good](https://www.f4sg.org/) in Bordeaux, France , following by the [first workshop](https://www.cardiff.ac.uk/news/view/1082016-forecasting-for-social-good) in July 2018 in Cardiff. 
 
 In my resaerch, I have also conduted reserch on forecasting by aggregation which could be considered as a data transformation approach that links forecasting ro decision making. I have written numerous scientific [publications](/publication) on forecasting and presented my research at over 20 international conferences.
 

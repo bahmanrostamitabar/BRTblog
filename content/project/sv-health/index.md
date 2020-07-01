@@ -7,13 +7,13 @@ external_link: ""
 image:
   focal_point: Smart
 categories:
-- MSc. student project
+- research
 
 tags:
 - forecasting
 - healthcare
 - social good
-- student project
+- research
 
 url_code: ""
 url_pdf: ""

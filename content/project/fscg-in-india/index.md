@@ -8,12 +8,12 @@ image:
   focal_point: Smart
 
 categories:
-- funded project
+- workshop
 tags:
 - GCRF
 - social-good
 - forecasting
-- funded project
+- workshop
 
 url_code: ""
 url_pdf: ""
