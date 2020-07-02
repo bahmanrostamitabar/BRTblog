@@ -210,7 +210,7 @@ In this section, I will briefly describe what I could have done better and what 
 
     After prioritising your content and allocate your topics into "Must to know " and Good to know", you can start the planning for each session. It is extremely important to start the preperation at least 8 weeks before the start day of the teaching. I have created a template which I am going to use to prepare a detail plan for each session. The template can be downloaded [here](sessionplan.docx).
 
-> As I reflect more on session plan, I find it extremely useful to allocate time to each TASK, figuring out what you and leaners do during each task and which feature(e.g. Google Doc., Mentimeter, Padlet, etc) is the best to evaluate the learning outcome for that particular task.
+> As I reflect more on session plan, I find it extremely useful to allocate time to each task, figuring out what you and leaners do during each task and which feature(e.g. Google Doc., Mentimeter, Padlet, etc) is the best to evaluate the learning outcome for that particular task.
 
 3. Including more pre-recorded videos  (asynchronous)
 
