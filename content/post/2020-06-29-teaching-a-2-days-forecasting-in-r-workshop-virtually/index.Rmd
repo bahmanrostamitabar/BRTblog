@@ -9,7 +9,7 @@ tags:
   - NHS
   - workshop
   - forecasting
-  - R
+  - r
   - online teaching
 subtitle: ''
 summary: ''
@@ -252,7 +252,7 @@ It is a challenging task to transform a face-to-face training into a virtual for
 
 - I was very happy after the workshop but I felt exhausted. Although we had each session between 2-3 (min-max) hours but it was not easy to focus on anything important after the session;
 
-- I miss the coffee breaks, this can not be replaced by any mean. **Often the most interesting and important things happen during breaks where you have face to face training**, with virtual there is no break, I mean it is not the same;
+- I miss the coffee breaks, this can not be replaced by any mean. <span style="color:red">**Often the most interesting and important things happen during breaks where you have face to face training**</span>, with virtual there is no break, I mean it is not the same;
 
 - I could not really see/feel participant's mood during the workshop, whether they follow what I am talking about or not! Facial expressions aren’t as noticeable as in person delivery.
 
