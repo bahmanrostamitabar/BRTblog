@@ -2,16 +2,13 @@
 title: Forecasting Book Club
 date: 2020-09-12T00:00:00
 authors: [bahman]
-summary: 
-
-Forecasting Book Club is an online learning community dedicated to sharing knowledge in the area of forecasting. We read and discuss forecasting related books every weekly. In each session, we have a contributor who presents a chapter/s of a book following by questions/answers.
-
-external_link: ""
+summary: Forecasting Book Club is an online learning community dedicated to sharing knowledge in the area of forecasting. We read and discuss forecasting related books every weekly. In each session, we have a contributor who presents a chapter/s of a book following by questions/answers.
+external_link: "https://github.com/Forecasting-for-Social-Good/Forecasting_Book_Club"
 image:
   focal_point: Smart
+  
 categories:
 - engagement
-
 tags:
 - forecasting
 - social good
@@ -21,12 +18,11 @@ url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
-
 ---
 
 ## What is the Forecasting Book club for?
 
-We would like to create an online learning enviroment dedicated to sharing knowledge in the area of forecasting to be inclusive to the largest number of learners and contributors. We will read and discuss forecasting related books in weekly online meetings. 
+We would like to create an online learning enviroment dedicated to sharing knowledge in the area of forecasting to be inclusive to the largest number of learners and contributors. I belive nothing can compare to the knowledge you gain through reading books. Therefore, we created this community to read and discuss forecasting related books in weekly online meetings. 
 
 If you are a learner, this is a platform to learn and develop your knowledge and skills in the area of forecasting. If you are a knowledgeable forecaster and woulk like to contribute to the creation of a positive online learning community, this is a platform to share your knowledge, skills and experiences! Please get in touch if you would like to present in a session.
 
