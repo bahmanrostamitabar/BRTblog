@@ -5,6 +5,7 @@ authors: [bahman]
 summary: 
 
 Forecasting Book Club is an online learning community dedicated to sharing knowledge in the area of forecasting. We read and discuss forecasting related books every weekly. In each session, we have a contributor who presents a chapter/s of a book following by questions/answers.
+
 external_link: ""
 image:
   focal_point: Smart
@@ -14,7 +15,7 @@ categories:
 tags:
 - forecasting
 - social good
-- book
+- engagement
 
 url_code: ""
 url_pdf: ""

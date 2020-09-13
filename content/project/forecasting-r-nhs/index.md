@@ -16,10 +16,12 @@ links:
 
 categories:
 - workshop
+- engagement
 tags:
 - R
 - forecasting
 - workshop
+- engagement
 
 url_code: ""
 url_pdf: ""

@@ -2,7 +2,7 @@
 title: Impact of special events on Accident and Emergency attendance in NHS Wales
 date: 2018-04-27T00:00:00
 authors: [bahman]
-summary: he goals of this study is to explore and evaluate the impact of special events such as holidays, weather, festivals and sport events in using several statistical forecasting methods to predict A&E patient volumes. A new model will be developed considering special events and will be compared to a benchmark and existing time series forecasting methods.
+summary: The goals of this study is to explore and evaluate the impact of special events such as holidays, weather, festivals and sport events in using several statistical forecasting methods to predict A&E patient volumes. A new model will be developed considering special events and will be compared to a benchmark and existing time series forecasting methods.
 external_link: ""
 image:
   focal_point: Smart
