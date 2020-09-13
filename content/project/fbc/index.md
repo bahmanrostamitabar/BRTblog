@@ -56,7 +56,7 @@ All sessions are also recorded and would be uploaded after each session on [YouT
 
 ## Video call platform
 
-We use Zoom for video calls. You will get the link to join the meeting in the Slack channel. Please [dowlnolad]((https://zoom.us/)) ans insntall Zoom before joining the meeting..
+We use Zoom for video calls. You will get the link to join the meeting in the Slack channel. Please [dowlnolad]((https://zoom.us/)) and install Zoom before joining the meeting.
 
 ## Admin team
 
