@@ -36,7 +36,7 @@ To start with, we have selected two books: i) [Profit From Your Forecasting Soft
  
 ## What is the schedule?
 
-### [Profit From Your Forecasting Software: A Best Practice Guide for Sales Forecasters](https://www.amazon.co.uk/Profit-Your-Forecasting-Software-Forecasters/dp/1119414571)
+### Book 1: [Profit From Your Forecasting Software](https://www.amazon.co.uk/Profit-Your-Forecasting-Software-Forecasters/dp/1119414571)
 
 - Every Tuesday, 12:30 p.m. - 13:30 p.m. (Europe/London)
 - Start date: 15 Sep. 2020
