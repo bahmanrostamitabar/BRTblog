@@ -3,9 +3,11 @@ title: Forecasting Book Club
 date: 2020-09-12T00:00:00
 authors: [bahman]
 summary: Forecasting Book Club is an online learning community dedicated to sharing knowledge in the area of forecasting. We read and discuss forecasting related books every weekly. In each session, we have a contributor who presents a chapter/s of a book following by questions/answers.
-external_link: "https://github.com/Forecasting-for-Social-Good/Forecasting_Book_Club"
+external_link: ""
 image:
   focal_point: Smart
+  caption: 'Photo by [Eugenio Mazzone on Unsplash
+](https://unsplash.com/photos/6ywyo2qtaZ8)'
   
 categories:
 - engagement
