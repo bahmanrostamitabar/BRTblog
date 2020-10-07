@@ -1,28 +1,23 @@
 ---
-title: Enablers and barriers of model implementations in the healthcare sector
-draft: false
-event: 'Health & Humanitarian Logistics Conference, 2020'
+title: "Enablers and barriers of model implementations in the healthcare sector"
+draft: no
+date: '2020-09-29T09:00:00Z'
 event_url: https://chhs.gatech.edu/conference/
 location: Virtual
-summary: "A 2-day workshop on forecasting using R."
-
-# Talk start and end times.
-#   End time can optionally be hidden by prefixing the line with `#`.
-date: "2020-09-29T09:00:00Z"
-date_end: "2020-10-01T16:30:00Z"
-all_day: false
-publishdate: "2020-09-28"
-
-categories:
-  - conference
+summary: A 2-day workshop on forecasting using R.
+event: Health & Humanitarian Logistics Conference, 2020
+date_end: '2020-10-01T16:30:00Z'
+all_day: no
+publishdate: '2020-09-28'
+categories: conference
 tags:
-  - healthcare
-  - modeling
+- healthcare
+- modeling
 lastmod: '2020-09-28T15:00:00Z'
 featured: no
 image:
   caption: ''
-  focal_point: 'center'
+  focal_point: center
   preview_only: no
-projects: [promoting-model-nhs]
+projects: promoting-model-nhs
 ---
