@@ -18,7 +18,7 @@ categories:
 tags:
   - healthcare
   - modeling
-lastmod: '2020-10-0615:00:00Z'
+lastmod: '2020-10-06T15:00:00Z'
 featured: no
 image:
   caption: ''
