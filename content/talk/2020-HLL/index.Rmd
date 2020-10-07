@@ -1,31 +1,32 @@
 ---
-title: Forecasting using R
+title: Enablers and barriers of model implementations in the healthcare sector
 draft: false
-event: 'R / Medicine 2020'
-event_url: https://events.linuxfoundation.org/r-medicine/
-url_pdf: "/papers/covid.pdf"
-location: Gloucestershire Hospitals NHS Foundation Trust, U.K.
+event: 'Health & Humanitarian Logistics 2020'
+event_url: https://chhs.gatech.edu/conference/
+url_pdf: "/talk/VSarma_HLL_poster"
+location: Virtual
 summary: "To explore and understand the enablers and barriers of OR model implementations within the National Health Service."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2020-08-13T09:00:00Z"
-date_end: "2020-08-14T16:30:00Z"
+date: "2020-09-29T09:00:00Z"
+date_end: "2020-10-01T16:30:00Z"
 all_day: false
-publishdate: "2020-06-30"
+publishdate: "2020-09-27"
 
 categories:
   - conference
 tags:
-  - tidymodels
-  - machine learning
+  - healthcare
+  - modelling
+  - operations research
 lastmod: '2020-06-30T02:20:01-07:00'
 featured: no
 image:
-  caption: '[Illustration by Joseph August Knip on RawPixel](https://www.rawpixel.com/image/2370064/free-illustration-image-flower-vintage-watercolor)'
+  caption: ''
   focal_point: 'center'
   preview_only: no
-projects: [forecasting-r-nhs]
+projects: [promoting-model-nhs]
 ---
 A gap is found between the modelling process and its implementation by decision-makers in the healthcare sector.
 A structured literature review helps build two frameworks with key factors, one for enablers and another for barriers of model implementations.
