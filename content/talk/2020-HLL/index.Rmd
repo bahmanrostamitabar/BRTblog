@@ -11,14 +11,14 @@ summary: "A 2-day workshop on forecasting using R."
 date: "2020-09-29T09:00:00Z"
 date_end: "2020-10-01T16:30:00Z"
 all_day: false
-publishdate: "2020-10-06"
+publishdate: "2020-09-28"
 
 categories:
   - conference
 tags:
   - healthcare
   - modeling
-lastmod: '2020-10-06T15:00:00Z'
+lastmod: '2020-09-28T15:00:00Z'
 featured: no
 image:
   caption: ''
