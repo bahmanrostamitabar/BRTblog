@@ -1,24 +1,37 @@
 ---
-title: "Enablers and barriers of model implementations in the healthcare sector"
-draft: no
-date: '2020-09-29T09:00:00Z'
-event_url: https://chhs.gatech.edu/conference/
-location: Virtual
-summary: "A gap is found between the modelling process and its implementation by decision-makers in the healthcare sector. A structured literature review helps build two frameworks with key factors, one for enablers and another for barriers of model implementations. Using empirical data, these frameworks are cross-validated to improve and motivate the use of OR models in healthcare."
+title: Forecasting using R
+draft: false
+event: 'R / Medicine 2020'
+event_url: https://events.linuxfoundation.org/r-medicine/
+location: Gloucestershire Hospitals NHS Foundation Trust, U.K.
+summary: "A 2-day workshop on forecasting using R."
 
-event: "Health & Humanitarian Logistics Conference, 2020"
-date_end: '2020-10-01T16:30:00Z'
-all_day: no
-publishdate: '2020-09-28'
-categories: conference
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: "2020-08-13T09:00:00Z"
+date_end: "2020-08-14T16:30:00Z"
+all_day: false
+publishdate: "2020-06-30"
+
+categories:
+  - workshop
 tags:
-- healthcare
-- modeling
-lastmod: '2020-09-28T15:00:00Z'
+  - tidymodels
+  - machine learning
+lastmod: '2020-06-30T02:20:01-07:00'
 featured: no
 image:
-  caption: ''
-  focal_point: center
+  caption: '[Illustration by Joseph August Knip on RawPixel](https://www.rawpixel.com/image/2370064/free-illustration-image-flower-vintage-watercolor)'
+  focal_point: 'center'
   preview_only: no
-projects: promoting-model-nhs
+projects: [forecasting-r-nhs]
 ---
+
+Assuming basic knowledge of statistics, participants will be able to do the following tasks when using forecasting to support decision making process in real World:
+
+- Determine what to forecast according to a forecasting process framework;
+- Prepare and manipulate data using functions in basic R, tidyverse and lubridate packages in R;
+- Identify systematic patterns using time series toolbox in ggplot2 and forecasting related packages in R such as forecast package;
+- Produce point forecasts and prediction intervals using R functions in forecasting related packages such as forecast and fable and user defined functions;
+- Determine the accuracy of forecasting models using statistical accuracy performance measures for point and prediction intervals;
+- Visualize, export and report result for interpretation and insights using RMarkdown.
