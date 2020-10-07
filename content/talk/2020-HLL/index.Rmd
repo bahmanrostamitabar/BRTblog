@@ -4,7 +4,7 @@ draft: no
 date: '2020-09-29T09:00:00Z'
 event_url: https://chhs.gatech.edu/conference/
 location: Virtual
-summary: A gap is found between the modelling process and its implementation by decision-makers in the healthcare sector. A structured literature review helps build two frameworks with key factors, one for enablers and another for barriers of model implementations. Using empirical data, these frameworks are cross-validated to improve and motivate the use of OR models in healthcare.
+summary: "A gap is found between the modelling process and its implementation by decision-makers in the healthcare sector. A structured literature review helps build two frameworks with key factors, one for enablers and another for barriers of model implementations. Using empirical data, these frameworks are cross-validated to improve and motivate the use of OR models in healthcare."
 
 event: Health & Humanitarian Logistics Conference, 2020
 date_end: '2020-10-01T16:30:00Z'
