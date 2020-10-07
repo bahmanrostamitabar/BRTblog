@@ -3,7 +3,6 @@ title: Enablers and barriers of model implementations in the healthcare sector
 draft: false
 event: 'Health & Humanitarian Logistics Conference, 2020'
 event_url: https://chhs.gatech.edu/conference/
-pdf_url: "VSarma_HLL_poster.pdf"
 location: Virtual
 summary: "A 2-day workshop on forecasting using R."
 
@@ -19,7 +18,7 @@ categories:
 tags:
   - healthcare
   - modeling
-lastmod: '2020-10-01T16:30:00Z'
+lastmod: '2020-10-0615:00:00Z'
 featured: no
 image:
   caption: ''
