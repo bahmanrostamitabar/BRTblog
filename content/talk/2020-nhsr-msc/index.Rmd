@@ -20,7 +20,7 @@ tags:
   - forecasting
   - R
   - multiple seasonality
-lastmod: '2020-11-19T02:20:01-07:00'
+lastmod: '2020-11-19T01:20:01-07:00'
 featured: no
 image:
   caption: ''
