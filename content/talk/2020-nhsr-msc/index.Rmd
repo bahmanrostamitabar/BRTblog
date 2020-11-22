@@ -1,10 +1,10 @@
 ---
 title: Forecasting with Multiple Seasonality
 draft: false
-#event: 'R / Medicine 2020'
-event_url: https://www.eventbrite.co.uk/e/nhs-r-webinar-forecasting-with-multiple-seasonality-tickets-126532230307
+#event: 'NHS-R community webinars'
+event_url: https://nhsrcommunity.com/home/webinars/
 
-location: NHS-R Virtual
+location: Virtual
 summary: "We will be running a webinar on ‘Forecasting with Multiple Seasonality’. We cover various forecasting models using A&E data."
 
 # Talk start and end times.
