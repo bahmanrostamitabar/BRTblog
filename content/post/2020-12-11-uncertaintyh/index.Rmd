@@ -1,0 +1,108 @@
+---
+title: Embracing Uncertainty in Healthcare
+author: Bahman
+date: '2020-12-11'
+slug: uncertaintyh
+categories:
+  - conference
+tags:
+  - conference
+  - Forecasting
+  - NHS
+  - healthcare
+  - uncertainty
+  - decision-making
+subtitle: 'Using probabilistic forecasting and planning to make better decisions'
+summary: 'Do you always set plans and rarely achieve them because by the time they are published things changed? Do you generate a forecast and it’s always wrong? If these questions are familiar, this workshop is for you. It’s not your fault if your forecast is wrong and your plan fails – traditional deterministic forecasting and planning is seriously incomplete because it ignores uncertainties.'
+authors: []
+lastmod: '2020-12-11T16:45:04Z'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 2
+    number_sections: no
+---
+
+## About the Event
+
+We invited six distinguished academics and practitioners to discuss the topic on Tuesday 17^th^ of November 2020.
+
+### Why did we organise this event?
+
+Do you always set plans and rarely achieve them because by the time they are published things changed? Do you generate a forecast and it’s always wrong? It’s not your fault if your forecast is wrong and your plan fails – traditional deterministic forecasting and planning is seriously incomplete because it ignores uncertainties. 
+
+At present, healthcare planning and forecasting is primarily deterministic. Decision making based on deterministic analysis are made based on exact numbers (average) and generally follows a “go-no go” framework. If we forecast and plan too low, we cause shortages and plan disruption, if we forecast and plan too high, we create waste and inefficiency. Therefore, decision making based on deterministic analysis may result in aggressive or conservative cases which may lead to suboptimal plans. Moreover, changes in patients’ needs, demography, regulatory framework, health services triggered and driven by crisis, innovation in treatments, technologies and care models introduce new uncertainties that cannot be solely addresses by deterministic forecasting and planning.
+
+Healthcare planers are looking for approaches to address challenges related to uncertainties in the sector. Probabilistic forecasting and planning techniques have the potential to address these concerns and consider various type of uncertainties facing planners in more rigorous manner. There is a clear need in the healthcare to highlight how probabilistic forecasting and planning can be used to address uncertainty challenges facing the sector.
+
+
+##  Benefits for researchers and practitioners
+
+- Hear from three unique commercial software leaders in the World that use probabilistic forecasting and planning in their solution
+- Have a greater appreciation and understanding of healthcare uncertainty and its consequences
+- Better understanding of approaches to quantify uncertainty
+- Gain insights from successful cases in using probabilistic planning and forecasting in healthcare
+- Gain knowledge on how to include probabilistic planning and forecasting in the current processes of your organisation
+
+## Agenda of the event
+
+```{r agenda, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(kableExtra)
+text_tbl <- data.frame(
+  Time = c("10:15", "10:50", "11:45", "12:20", "13:45", "14:20"),
+  Speaker = c("Peter Spilsbury, Director, The Strategy Unit", "Kieran Chandler, Solution Specialist, Lokad", "James Triggs, Chief Operating Officer of Brookes SCS", "Stefan de Kok, Founding CEO of Wahupa", "John Watkins, Consultant Epidemiologist  Cardiff University/ Public Health Wales", "Siddharth Arora, Fellow in Management Science, University of Oxford"),
+  Country = c("UK", "France", "UK", "USA", "UK", "UK"),
+  Title = c("Uncertainty in healthcare and its challenges and consequences for planning", "Quantifying Uncertainty in Healthcare", "An application of probabilistic forecasting to plan and optimise the NHS England Blood & Transplant supply chain", "Including probabilistic forecasting and planning in current processes", "Modelling in the age of COVID-19", "Role of Probabilistic Forecasting and Machine Learning in Emergency Healthcare"))
+
+kbl(text_tbl) %>%
+   kable_paper(bootstrap_options = "striped", full_width = F, font_size = 14)
+
+```
+
+## Recordings and presentations
+
+Presentations are available [here](https://www.dropbox.com/sh/z0c76kr95eudcr0/AACgNFQmCXURQ33sli8uwi5Ha?dl=0) to download. You can also access the whole recording here: [Main Recording](https://cardiff.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ed117e9f-980f-43b1-9582-ac8300a9c3c5). 
+
+The individual recordings are accessible below:
+
+1.	Speaker: Mr. Peter Spilsbury, Director, The Strategy Unit, UK
+
+
+    Title: [Uncertainty in healthcare and its challenges and consequences for planning](https://cardiff.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=10601e62-d4ba-4a50-980a-ac8300a9c2e8)
+
+2.	Speaker: Mr. Kieran Chandler, Solution Specialist, Lokad, France
+
+
+    Title: [Quantifying Uncertainty in Healthcare](https://cardiff.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ced4e8cc-0756-4794-8c9f-ac8300a9c480)
+
+
+3.	Speaker: Mr. James Triggs, Chief Operating Officer of Brookes SCS (ToolsGroup’s UK partner, formerly known as ToolsGroup UK), UK
+
+
+    Title: [An application of probabilistic forecasting to plan and optimise the NHS England Blood & Transplant supply chain.](https://cardiff.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=12ed4c91-01e9-41bc-aff9-ac8300a9c6c0)
+
+4.	Speaker: Mr. Stefan de Kok, Founding CEO of Wahupa, USA
+
+    Title: [Including probabilistic forecasting and planning in current processes.](https://cardiff.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=18c95cc3-4027-4c1e-877c-ac8300a9c099)
+
+5.	Speaker: Professor John Watkins, Consultant Epidemiologist with Public Health Wales, UK
+
+
+    Title: [Modelling in the age of COVID-19](https://cardiff.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=5b3fa24f-5414-4368-ac42-ac8300a9c5cc)
+
+
+6.	Speaker: Dr. Siddharth Arora, Fellow in Management Science, Said Business School, University of Oxford
+
+
+
+    Title: Role of Probabilistic Forecasting and Machine Learning in Emergency Healthcare
+
+    - [Recording Part 1](https://cardiff.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=063b6cd2-0b71-40c6-9d03-ac8300a9c222)
+    - [Recording Part 2](https://cardiff.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=cfc54bb0-09c5-417a-b579-ac8300a9bfe7)
