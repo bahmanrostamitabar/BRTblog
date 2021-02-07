@@ -41,15 +41,9 @@ subtitle = ""
  css_class = ""
 +++
 
+You can access the preprint version of my paper on [Forecasting for Social Good](https://arxiv.org/abs/2009.11669) on Arxiv.
+
 One of the key objectives of my research is to use Operational Research techniques to improve decision making in organizations with social missions, thereby positively contributing to advancing knowledge in the field of forecasting practice for social good.
-
-Forecasting for Social Good incorporates the need of society rather than emphasising a pure financial performance with two main elements: i) decisions are not directly driven by profit and ii) gives priority to those who are generally external to the organisation. Topic may include but not limited to: 
-
-* Health
-* Humanitarian and disaster relief
-* Education
-* Goverments
-* Social services
 
 Forecasting for Social Good Initiative aims to explore and expose how (where) forecasting can have positive societal impact. The objective is threefold: i) expose the importance of forecasting for social good, ii) capture the otherwise dispersed current state of knowledge, and set the agenda to drive developments iii) create and establish research collaboration and partnership at the national and international level.
 
@@ -60,7 +54,7 @@ We are organising the second International workshop on Forecasting for Social Go
 
 Please see below for more information about the first workshop organised at Cardiff Business School in july 2018:
 
-1. [24th IIF workshop on Forecasting for Social Good](https://www.cardiff.ac.uk/news/view/1238674-the-need-of-populations-and-society) 
+1. [Forecasting for Social Good](https://arxiv.org/abs/2009.11669)
 
-2. [Short video about the conference on Forecasting for Social Good](https://www.youtube.com/watch?v=GM3UXeftP_s)
+2. [24th IIF workshop on Forecasting for Social Good](https://www.cardiff.ac.uk/news/view/1238674-the-need-of-populations-and-society) 
 
