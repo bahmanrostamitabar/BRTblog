@@ -1,5 +1,5 @@
 ---
-title: Value of Forecasting in Emergency Departement Planning
+title: Value of Forecasting in Healthcare Planning
 draft: false
 event: 'IIF-Quarterly Forecasting Forum'
 event_url: ""
