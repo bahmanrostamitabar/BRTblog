@@ -1,5 +1,5 @@
 ---
-title: "Value of Forecasting in Emergency Service Operational Planning"
+title: "Value of Forecasting in Healthcare Planning"
 subtitle: ""
 author: "Bahman Rostami-Tabar"
 #date: '25/11/2020'xaringan::inf_mr()
@@ -89,8 +89,6 @@ mp4_vid <- function(src){
 .bottom[
 ## Bahman Rostami-Tabar (`r fa("twitter", fill="#1da1f2")`[@Bahman_R_T](https://twitter.com/Bahman_R_T)) 
 ### Website [www.bahmanrt.com](https://www.bahmanrt.com/)
-## Daniel Gartner (`r fa("twitter", fill="#1da1f2")`[@drdanielgartner](https://twitter.com/drdanielgartner)) 
-<!-- ### Slides @ [slides.mitchelloharawild.com/nhs2020](https://slides.mitchelloharawild.com/nhs2020) -->
 ### Quarterly Forecasting Forum
 ### 21 May 2021
 ]
