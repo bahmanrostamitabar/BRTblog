@@ -1,0 +1,28 @@
+IncidentID,TimeCallAccepted,Type,Priority,InitialNature,Outcome
+P3930852,13/05/2019 11:30,C3CLINDESK,AMB,HCP Admission,Clinical Desk Aborted
+P3931133,13/05/2019 16:33,C3CLINDESK,AMB,CALL FROM OTHER AMBULANCE SERVICE,Clinical Desk Aborted
+P3931261,13/05/2019 16:10,C3CLINDESK,AMB,Abdominal Pains/Problems,Clinical Desk Aborted
+P3931441,14/05/2019 06:22,C3CLINDESK,AMB,Falls,Clinical Desk Aborted
+N3930796,13/05/2019 11:14,C3CLINDESK,AMB,Falls,Clinical Desk Aborted
+C3930634,13/05/2019 08:43,C3CLINDESK,AMB,Abdominal Pains/Problems,Clinical Desk Aborted
+C3931486,13/05/2019 21:57,C3CLINDESK,AMB,FAILED CONTACT,Clinical Desk Aborted
+C3930492,13/05/2019 08:26,C3CLINDESK,AMB,Breathing Problems,Clinical Desk Aborted
+C3930538,13/05/2019 06:35,C3CLINDESK,AMB,Assault/Sexual Assault/Stun Gun,Clinical Desk Aborted
+C3930594,13/05/2019 08:47,C3CLINDESK,AMB,Chest Pain,Clinical Desk Aborted
+C3930641,13/05/2019 10:14,C3CLINDESK,AMB,Psychiatric/Suicide Attempt,Clinical Desk Aborted
+C3931240,13/05/2019 17:32,C3CLINDESK,AMB,NULL,Clinical Desk Aborted
+N3930752,13/05/2019 14:21,C3CLINDESK,AMB,Falls,Clinical Desk Aborted
+N3930354,13/05/2019 01:51,C3CLINDESK,AMB,Psychiatric/Suicide Attempt,Clinical Desk Aborted
+N3930478,13/05/2019 04:58,C3CLINDESK,AMB,Psychiatric/Suicide Attempt,Clinical Desk Aborted
+C3930688,13/05/2019 09:20,C3CLINDESK,AMB,Psychiatric/Suicide Attempt,Clinical Desk Aborted
+P3930873,13/05/2019 12:40,C3CLINDESK,AMB,Unconscious/Fainting (near),Clinical Desk Aborted
+P3931218,13/05/2019 16:54,C3CLINDESK,AMB,"Traumatic Injuries, Specific",Clinical Desk Aborted
+P3931252,13/05/2019 16:44,C3CLINDESK,AMB,Haemorrhage/Lacerations,Clinical Desk Aborted
+C3930859,13/05/2019 13:10,C3CLINDESK,AMB,Psychiatric/Suicide Attempt,Clinical Desk Aborted
+C3931483,14/05/2019 00:41,C3CLINDESK,AMB,Sick Person (Specific Diagnosis),Clinical Desk Aborted
+P3930505,13/05/2019 07:23,C3CLINDESK,AMB,Back Pains (Non-Traumatic),Clinical Desk Aborted
+P3931189,13/05/2019 17:06,C3CLINDESK,AMB,Falls,Clinical Desk Aborted
+P3931207,13/05/2019 15:46,C3CLINDESK,AMB,HCP Admission,Clinical Desk Aborted
+N3930547,13/05/2019 06:42,C3CLINDESK,AMB,Falls,Clinical Desk Aborted
+N3930617,13/05/2019 08:08,C3CLINDESK,AMB,FAILED CONTACT,Clinical Desk Aborted
+C3930523,13/05/2019 05:56,C3CLINDESK,AMB,Sick Person (Specific Diagnosis),Clinical Desk Aborted

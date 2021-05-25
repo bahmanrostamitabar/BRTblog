@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Forecasting for Social Good</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Bahman Rostami Tabar" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./libs/slides.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: inverse
+background-image:  url("resources/outline3.jpg")
+background-size: cover
+
+
+
+
+
+&lt;style type="text/css"&gt;
+/* custom.css */
+.left-code {
+  color: #777;
+  width: 42%;
+  height: 92%;
+  float: left;
+}
+.right-plot {
+  width: 56%;
+  float: right;
+  padding-left: 1%;
+}
+&lt;/style&gt;
+
+
+.title[Forecasting for Social Good (FSG)]
+&lt;!-- .sticker-float[![fable](resources/fable.svg)] --&gt;
+
+
+
+.bottom[
+### Bahman Rostami-Tabar (&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#1da1f2;" viewBox="0 0 512 512"&gt;&lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/&gt;&lt;/svg&gt;[@Bahman_R_T](https://twitter.com/Bahman_R_T)) 
+### Website [www.bahmanrt.com](https://www.bahmanrt.com/)
+&lt;!-- ### Slides @ [slides.mitchelloharawild.com/nhs2020](https://slides.mitchelloharawild.com/nhs2020) --&gt;
+### LSDG Meeting
+### 18 May 2021
+]
+
+---
+class: inverse, center
+background-image:  url("resources/fsg_beer.jpg")
+background-size: contain
+
+.larger[Que demander de mieux?]
+
+---
+class: center, middle
+
+## What is Forecasting for Social Good?
+
+---
+
+##  What is Forecasting for Social Good?
+### An annual workshop: [www.f4sg.org](www.f4sg.org)
+
+.center[
+&lt;iframe src="https://www.f4sg.org/" width="100%" height="500px"&gt;&lt;/iframe&gt;
+]
+
+---
+
+##  What is Forecasting for Social Good?
+### A Research Grant
+
+.center[
+&lt;iframe src="https://forecasters.org/programs/research-awards/forecasting-for-social-good-research-grant//" width="100%" height="500px"&gt;&lt;/iframe&gt;
+]
+
+---
+
+##  What is Forecasting for Social Good?
+
+### A Research Network
+
+.center[
+&lt;iframe src="https://fsgrn.netlify.app/" width="100%" height="500px"&gt;&lt;/iframe&gt;
+]
+
+---
+
+##  What is Forecasting for Social Good?
+
+### A Research area
+
+.center[
+&lt;img src="figure/lomsac/fsg-ijf.png" width="70%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+class: inverse, middle
+background-image: linear-gradient(to right, rgba(50, 50, 50, .5), rgba(50, 50, 50, .4)), url("resources/questions.jpg")
+background-size: cover
+
+.larger[.larger[1.] What is meant by FSG?]
+
+--
+
+.larger[.larger[2.]What attributes make a forecasting process aligned with FSG?]
+
+---
+class: middle
+
+## Why forecasting?
+
+.pull-left[
+
+- You do not forecast for the .remember[sake of forecasting]. 
+
+- You do it because you want to base .remember[decisions] on it.
+
+- Ideally, make .remember[better decisions] in the .remember[light of forecast].
+
+]
+
+.pull-right[
+&lt;iframe src="https://giphy.com/embed/l3vR0GgCQnpxS7s3e" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/southparkgifs-l3vR0GgCQnpxS7s3e"&gt;&lt;/a&gt;&lt;/p&gt;
+]
+
+
+---
+
+## Make better decisions to ...
+
+- Increase profit
+
+- Increase economic growth
+
+- Increase resource utilisation
+
+- Increase customer satisfaction
+
+- Reduce Co2 emissions
+
+- To not blow up the business
+
+- ...
+
+--
+
+&gt;.larger[With better decisions, we make something to .remember[THRIVE] .]
+
+
+
+---
+background-image: url(resources/doughnut.jpg)
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right[.larger[Doughnut time]]
+
+---
+background-image: url(resources/classic_Doughnut.jpg)
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right[.larger[Doughnut theory]]
+
+---
+background-image: url(resources/classic_Doughnut.jpg)
+background-size: contain
+background-position: left
+class: middle
+
+
+.pull-right[
+&gt;‘‘Instead of economies that need to grow, whether or not they make us thrive, we need economies that make us .remember[THRIVE], whether or not they grow’’. -- Raworth (2017) 
+
+]
+
+
+.footnote[Raworth, K. (2017). Doughnut economics: seven ways to think like a 21st century economist. Chelsea Green Publishing.]
+
+---
+background-image: url(resources/classic_Doughnut.jpg)
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right[
+
+- The theory combines the concept of .remember[**social foundation**] with that of the .remember[**ecological ceiling**] in a single framework.
+
+- .remember[**Social foundation:**] to ensure that no one falls short on life’s essentials.
+
+- .remember[**Ecological ceiling:**] ensure we do not overshoot the planet’s capacity for critical life-supporting systems.
+
+]
+
+---
+background-image: url(resources/classic_Doughnut.jpg)
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right[
+## Where do we want to be?
+
+Between the .remember[social foundation] and the .remember[ecological ceiling] lies a space in which it is possible to .remember[meet the needs of all people] within the .remember[means of the living planet] — **an ecologically safe and socially just space in which humanity can .remember[THRIVE]**.
+]
+
+---
+background-image: url(resources/classic_Doughnut.jpg)
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right[
+## Inform decisions that brings us into the space
+
+- The forecasting and the decision-making process needs to support all activities that bring us into the Doughnut space — an environmentally safe and socially just space — in which humanity thrives. 
+
+- This is where forecasting plays a role: .remember[inform those decisions].
+]
+
+---
+class: middle, center
+
+## FSG process
+
+&lt;img src="figure/lomsac/fig_process.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle, center
+
+## Attributes of FSG
+
+&lt;img src="figure/lomsac/FSG_attr2.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle, center
+
+## Are there research opprtunities?
+### FSG research maturity framework
+
+&lt;img src="figure/lomsac/quad.png" width="45%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle
+
+**The purpose of FSG initiative is to:**
+
+- .remember[Increase awareness and interest] from academics and practitioners in the potential impact of FSG;
+
+
+- .remember[Encourage] interested academics and practitioners .remember[to engage] in the FSG agenda;
+
+
+- .remember[Inspire] the development of new forecasting methodologies tailored to social good applications.
+
+---
+class: middle
+
+**The intention of FSG is to:**
+
+- .remember[Motivate engagement] with important issues that our world and society face, 
+
+- Allow best (forecasting) practices to emerge. 
+
+---
+class: middle
+
+.alert[.larger[Qualifying what constitutes FSG should permit academics and practitioners to appreciate the opportunity cost of not engaging with its scalable agenda.]]
+
+
+---
+class: inverse, top
+background-image: linear-gradient(to right, rgba(300, 300, 300, .4), rgba(300, 300, 300, .5)), url("resources/questions.jpg")
+background-size: cover
+
+.hand-large[Thank you]
+
+.remember[.larger[Question?]]
+
+&lt;svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"&gt;&lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/&gt;&lt;/svg&gt; Say hello: [@Bahman_R_T](https://twitter.com/Bahman_R_T)
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="./libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLanguage": ["r", "markdown", "yaml"],
+"ratio": "16:9",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

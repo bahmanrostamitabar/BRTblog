@@ -1,26 +1,27 @@
 ---
-title: Forecasting with Multiple Seasonality
+title: Value of Forecasting in Emergency Departement Forecasting
 draft: false
-event: 'NHS-R community webinars'
-event_url: https://nhsrcommunity.com/home/webinars/
+event: 'IIF-Quarterly Forecasting Forum'
+event_url: /talk/qff_final_may_2021.html
+url_pdf: "/talk/qff_final_may_2021.html"
 
 location: Virtual
-summary: "We will be running a webinar on ‘Forecasting with Multiple Seasonality’. We cover various forecasting models using A&E data."
+summary: "A quarterly forecasting forum in the UK chapter of the International Institute of Forecasters."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2020-11-25T13:00:00Z"
-date_end: "2020-11-25T14:30:00Z"
+date: "2021-05-21T14:00:00Z"
+date_end: "2021-05-21T16:30:00Z"
 all_day: false
-publishdate: "2020-11-19"
+publishdate: "2021-05-24"
 
 categories:
-  - webinar
+  - conference
 tags:
   - forecasting
   - R
-  - multiple seasonality
-lastmod: '2020-11-19T01:20:01-07:00'
+  - healthcare
+lastmod: '2021-05-24T01:20:01-07:00'
 featured: no
 image:
   caption: ''
@@ -29,9 +30,11 @@ image:
 projects: []
 ---
 
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
-<p>With the advances in digital technologies, data is recorded more frequently in many sectors including healthcare. For instance, hospitals collect the arrival time for each admission that contains a detail level of temporal granularity. This often results in time series that exhibit multiple seasonality of different lengths.</p>
-<p>Traditional approaches such as simple methods, exponential smoothing or ARIMA models are not appropriate for series with multiple seasonal cycles. Forecasting problems involving such series have been increasingly drawing the attention of researchers leading to the development of several approaches.</p>
-<p>In this webinar, we demonstrate how to implement these approaches using fable package in R with a real dataset from a hospital.</p>
-<p>The <a href="https://www.eventbrite.co.uk/e/nhs-r-webinar-forecasting-with-multiple-seasonality-tickets-126532230307">registration</a> is open.</p>
+<p>The performance of forecasting models have traditionally been evaluated based on the statistical accuracy of the forecasts. However, forecasting practitioners are mostly concerned with the empirical utility of these methods paying attention, for example, to the resulting trade-off between resource allocation costs and achieved patient service levels.
+Decisions made for planning are generally based on an estimated demand distribution, obtained from the results of the forecast procedure.
+These two stages of practical operational staffing (i.e. forecasting and staffing) are traditionally treated as independent of each other. The majority of studies look at forecasting as if this were an end in itself, or at staffing and capacity planning as if there were no preceding stages of computation. Nevertheless, it is very important to understand the interaction between ED demand forecasting and operational staffing, since the performance of the operational planning system is determined by the two components in combination.
+As forecasting is the driving force of all planning activities in an organization, it may be reasonably expected that an improvement in forecast accuracy will enhance operational performance. Many studies have been concerned with health forecasting and capacity planning separately and the interactions between these two areas have not been well studied and still not completely understood.
+The goal of this study is to investigate the link between forecast accuracy performance and operational staffing/planning in at Accident and Emergency department.</p>
