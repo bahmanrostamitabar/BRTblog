@@ -2,7 +2,7 @@
 title: Value of Forecasting in Emergency Departement Forecasting
 draft: false
 event: 'IIF-Quarterly Forecasting Forum'
-event_url: ""
+event_url: "/talk/qff_final_may_2021.html"
 url_pdf: "/talk/qff_final_may_2021.html"
 
 location: Virtual
