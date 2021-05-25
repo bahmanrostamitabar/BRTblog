@@ -7,7 +7,7 @@ url_slides: "/slides/qff_final_may_2021.html"
 url_pdf: "/slides/qff_final_may_2021.pdf"
 
 location: Virtual
-summary: "A quarterly forecasting forum in the UK chapter of the International Institute of Forecasters."
+summary: "The goal of this study is to investigate the link between forecast accuracy performance and operational staffing/planning in at Accident and Emergency department."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
