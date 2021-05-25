@@ -82,7 +82,7 @@ mp4_vid <- function(src){
 ```
 
 
-.title[Value of Forecasting in Emergency Service Operational Planning]
+.title[Value of Forecasting in Healthcare Planning]
 <!-- .sticker-float[![fable](resources/fable.svg)] -->
 
 
