@@ -95,8 +95,8 @@ theme_set(
 ### Bahman Rostami-Tabar (`r fa("twitter", fill="#1da1f2")`[@Bahman_R_T](https://twitter.com/Bahman_R_T)) 
 ### Website [www.bahmanrt.com](https://www.bahmanrt.com/)
 <!-- ### Slides @ [slides.mitchelloharawild.com/nhs2020](https://slides.mitchelloharawild.com/nhs2020) -->
-### LSDG Meeting
-### 18 May 2021
+### e-LOMSAC 2021
+### 25 March 2021
 ]
 
 ---
