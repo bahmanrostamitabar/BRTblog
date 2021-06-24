@@ -3,7 +3,7 @@ title: Value of Forecasting in Healthcare Planning
 draft: false
 event: 'NHS Wales Modelling Collaborative: Whole System & Flow'
 event_url: ""
-url_slides: "/slides/qff_final_may_2021.html"
+url_slides: "/slides/wmc_june_2021.html"
 #url_pdf: "/slides/qff_final_may_2021.pdf"
 
 location: Virtual
