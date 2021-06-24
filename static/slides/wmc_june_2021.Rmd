@@ -1,0 +1,407 @@
+---
+title: "Value of Forecasting in healthcare Planning"
+subtitle: ""
+author: "Bahman Rostami-Tabar"
+#date: '25/11/2020'xaringan::inf_mr()
+output:
+  xaringan::moon_reader:
+    chakra: ./libs/remark-latest.min.js
+    css: ["default","././libs/slides.css"]
+    lib_dir: ./libs
+    seal: false
+    anchor_sections: false
+    nature:
+      highlightStyle: github
+      highlightLanguage: ["r","markdown","yaml"]
+      ratio: '16:9'
+      highlightLines: true
+      countIncrementalSlides: false
+      navigation:
+        scroll: false 
+---
+class: inverse
+background-image:  linear-gradient(to right, rgba(50, 50, 50, .5), rgba(50, 50, 50, .4)),url("resources/titlepage.png")
+background-size: cover
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE, width = 120)
+
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(flair)
+library(DT)
+library(gapminder)
+library(ggthemes)
+library(countdown)
+
+opts_chunk$set(
+  echo = FALSE, warning = FALSE, message = FALSE, comment = "#>",
+  fig.path = 'figure/', cache.path = 'cache/', fig.align = 'center',
+  out.width = "80%", fig.show = 'hold',
+  cache = TRUE, external = TRUE, dev = 'svglite', dev.args = list(bg = "transparent")
+)
+
+#fig.width = 12, fig.height = 4
+
+mp4_vid <- function(src){
+  HTML(
+    paste0(
+      '<video autoplay>
+        <source src="', src, '" type="video/mp4">
+      </video>'
+    )
+  )
+}
+
+
+# theme_set(
+#   theme_grey(base_size = 16) +
+#   theme(
+#     legend.position = "bottom",
+#     plot.background = element_rect(fill = "transparent"),
+#     legend.background = element_rect(fill = "transparent")
+#   )
+# )
+```
+
+```{css, echo=FALSE}
+/* custom.css */
+.left-code {
+  color: #777;
+  width: 42%;
+  height: 92%;
+  float: left;
+}
+.right-plot {
+  width: 56%;
+  float: right;
+  padding-left: 1%;
+}
+```
+
+
+.title[Value of Forecasting in healthcare Planning]
+<!-- .sticker-float[![fable](resources/fable.svg)] -->
+
+
+.bottom[
+### Bahman Rostami-Tabar (`r fa("twitter", fill="#1da1f2")`[@Bahman_R_T](https://twitter.com/Bahman_R_T)) 
+### Daniel Gartner (`r fa("twitter", fill="#1da1f2")`[@drdanielgartner](https://twitter.com/drdanielgartner)) 
+<!-- ### Slides @ [slides.mitchelloharawild.com/nhs2020](https://slides.mitchelloharawild.com/nhs2020) -->
+
+]
+
+---
+
+## Outline
+<hr>
+
+- How forecasts can be used to inform planning?
+
+- Data & forecasting models
+
+- Scheduling scheduling and utility measures
+
+- Evaluate forecast accuracy
+
+- .grey[What if we don't  bother with forecasting methods?]
+
+---
+## Outline
+<hr>
+
+- .remember[How forecast can be used to inform planning?]
+
+- Data & forecasting models
+
+- Scheduling scheduling and utility measures
+
+- Evaluate forecast accuracy
+
+- What would be the performance of planning if we plan based on forecasts?
+
+- .grey[What if we don't  bother with forecasting methods?]
+
+---
+class: inverse, middle
+background-image: linear-gradient(to right, rgba(50, 50, 50, .6), rgba(50, 50, 50, .6)), url("resources/as-staff.jpg")
+background-size: cover
+
+.title[How many nurses/doctors and When?]
+
+--
+
+- .title[Demand/capacity planning]
+- .title[Staffing]
+- .title[Scheduling]
+
+---
+## Forcasts can inform various planning horizons
+
+Decision needs to be made to absorb demand uncertainty by providing effective and efficient staffing
+
+- 6 months
+
+- 42 days
+
+- 48 hours
+
+---
+class: center middle
+
+## Barriers in using forecasting
+
+
+- Among other factors, .remember[disconnection] between forecasting and decision-making plays a role
+
+--
+
+- The vale/quality of a forecast should be determined by a decision it supports, something actionable
+
+--
+
+- Presenting both forecast accuracy and its impact can help to use forecasting to improve decision making
+
+---
+class: inverse center middle
+
+.title[Forecasts are worthless until they lead to actions
+]
+---
+## Aim of this project
+
+- Evaluate the impact of forecasting on utility measure such as cost, overtime  staff, using emergency resources and waiting time
+
+- Evaluate the use of probabilistic forecasting in planning
+
+- What happens if you don't bother with forecasting methods
+
+---
+## Outline
+<hr>
+
+- How forecast can be used to inform planning?
+
+- .remember[Data & forecasting models]
+
+- Scheduling scheduling and utility measures
+
+- Evaluate forecast accuracy 
+
+- What would be the performance of planning if we plan based on forecasts?
+
+- .grey[What if we don't  bother with forecasting methods?]
+
+---
+
+```{r hospital-flow}
+knitr::include_graphics("figure/IHIFlowWhitePaper_Figure1_SystemMapHospitalFlow.png")
+```
+
+---
+## Data
+
+- Data is hospital admissions/arrivals 
+- 5 years of arrival time
+- Public holidays, school holidays and rugby
+- We use 365 days to test the performance of models
+- We forecast for 48 hours ahead
+
+---
+```{r half-an-hour}
+knitr::include_graphics("p_hafhour.png")
+```
+
+---
+
+```{r day-of-week-data}
+knitr::include_graphics("p_dayofw.png")
+```
+
+---
+
+```{r daily-data}
+knitr::include_graphics("p_date.png")
+```
+
+---
+## Forecasting methods
+
+- Poisson Regression
+    - Autoregressive lags, daily, weekly and yearly seasonality, Trend 
+    
+- Prophet
+    -  daily, weekly and yearly seasonality, Trend
+    
+- ARIMA
+
+- Exponential Smoothing 
+
+- Seasonal Naive
+
+---
+## Outline
+<hr>
+
+- How forecast can be used to inform planning ?
+
+- Data & forecasting models
+
+- .remember[Shift scheduling and utility measures]
+
+- Evaluate forecast accuracy using statistical measures
+
+- What would be the performance of planning if we plan based on forecasts?
+
+- What if we don't  bother with forecasting methods?
+
+---
+
+```{r one_day-data}
+knitr::include_graphics("p_one_day.png")
+```
+
+---
+
+```{r shift-schedule}
+knitr::include_graphics("shift_schedule.png")
+```
+
+---
+
+```{r one-day-forecast}
+knitr::include_graphics("p_one_day_forecast.png")
+```
+
+
+---
+
+```{r one-day-schedule-forecast}
+knitr::include_graphics("p_one_day_schedule_forecast.png")
+```
+
+
+---
+## Mathematical model
+
+```{r math-model, out.width= "50%"}
+knitr::include_graphics("figure/or_model.png")
+```
+
+
+---
+## Outline
+<hr>
+
+- How forecast can be used to inform planning?
+
+- Data & forecasting models
+
+- Shift scheduling and utility measures]
+
+- .remember[Evaluate forecast accuracy using statistical measures]
+
+- What would be the performance of planning if we plan based on forecasts?
+
+- What if we don't  bother with forecasting methods?
+
+---
+
+```{r point-accuracy-error"}
+knitr::include_graphics("plot_point_accuracy.png")
+```
+
+---
+
+```{r quantile-accuracy-error"}
+knitr::include_graphics("p_quantile_forecast.png")
+```
+
+---
+
+```{r utility-nurse"}
+knitr::include_graphics("utility_nurse_value.png")
+```
+
+
+---
+```{r nurse-value-distribution"}
+knitr::include_graphics("p_nurse_distribution.png")
+```
+
+---
+```{r over-time"}
+knitr::include_graphics("utility_over_time.png")
+```
+
+---
+```{r over-time-distribution"}
+knitr::include_graphics("utility_over_time_distribution.png")
+```
+
+---
+```{r cost"}
+knitr::include_graphics("cost_point_forecast.png")
+```
+
+---
+```{r distribution-cost"}
+knitr::include_graphics("p_cost_distribution.png")
+```
+
+---
+.center[
+.pull-left[
+### Planning based on point forecast
+```{r console1, out.width= "100%"}
+include_graphics("utility_over_time_distribution.png")
+```
+]
+
+.pull-right[
+### Planning based on 90% quantile
+```{r console2, out.width= "100%"}
+include_graphics("utility_over_time_distribution_90.png")
+```
+]
+]
+---
+
+.center[
+.pull-left[
+### Planning based on point forecast
+
+```{r console3, out.width= "100%"}
+include_graphics("p_cost_distribution.png")
+```
+]
+
+.pull-right[
+### Planning based on 90% quantile
+```{r console4, out.width= "100%"}
+include_graphics("p_cost_distribution_90.png")
+```
+]
+]
+
+---
+## Next steps
+
+- Include waiting time in the utility measure
+- Evaluate the value for staffing (forecast for 42 days ahead)
+
+---
+class: inverse, top
+background-image: linear-gradient(to right, rgba(300, 300, 300, .4), rgba(300, 300, 300, .5)), url("resources/questions.jpg")
+background-size: cover
+
+.hand-large[Thank you]
+
+.remember[.larger[Question?]]
+
+`r fa("twitter", fill = "white")` Say hello: [@Bahman_R_T](https://twitter.com/Bahman_R_T)
+
+
+

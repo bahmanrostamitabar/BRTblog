@@ -1,0 +1,37 @@
+---
+title: Value of Forecasting in Healthcare Planning
+draft: false
+event: 'NHS Wales Modelling Collaborative: Whole System & Flow'
+event_url: ""
+url_slides: "/slides/qff_final_may_2021.html"
+#url_pdf: "/slides/qff_final_may_2021.pdf"
+
+location: Virtual
+summary: "The goal of this study is to investigate the link between forecast accuracy performance and operational staffing/planning in healthcare planning. Moreover, we examine the use probabilistic forecast and its impact on planning performance"
+
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: "2021-06-24T10:00:00Z"
+date_end: "2021-06-24T11:30:00Z"
+all_day: false
+publishdate: "2021-06-24"
+
+categories:
+  - conference
+tags:
+  - forecasting
+  - healthcare
+lastmod: '2021-06-23T12:30:00Z'
+featured: no
+image:
+  caption: ''
+  focal_point: 'center'
+  preview_only: no
+projects: []
+---
+
+The performance of forecasting models have traditionally been evaluated based on the statistical accuracy of the forecasts. However, forecasting practitioners are mostly concerned with the empirical utility of these methods paying attention, for example, to the resulting trade-off between resource allocation costs and achieved patient service levels.
+Decisions made for planning are generally based on an estimated demand distribution, obtained from the results of the forecast procedure.
+These two stages of practical operational staffing (i.e. forecasting and staffing) are traditionally treated as independent of each other. The majority of studies look at forecasting as if this were an end in itself, or at staffing and capacity planning as if there were no preceding stages of computation. Nevertheless, it is very important to understand the interaction between ED demand forecasting and operational staffing, since the performance of the operational planning system is determined by the two components in combination.
+As forecasting is the driving force of all planning activities in an organization, it may be reasonably expected that an improvement in forecast accuracy will enhance operational performance. Many studies have been concerned with health forecasting and capacity planning separately and the interactions between these two areas have not been well studied and still not completely understood.
+ The goal of this study is to investigate the link between forecast accuracy performance and operational staffing/planning in healthcare.
