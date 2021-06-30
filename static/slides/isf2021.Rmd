@@ -305,9 +305,9 @@ knitr::include_graphics("figure/lomsac/FSG_attr2.png")
 ---
 class: middle
 
-## F4SG versus other area pf forecasting
+## F4SG versus other area of forecasting
 
-.center[<img src="figure/forecast_process.png" height=500>]
+.center[<img src="figure/forecast_process.png" height=400>]
 
 ---
 
