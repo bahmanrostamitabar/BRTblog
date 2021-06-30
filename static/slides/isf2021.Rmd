@@ -364,8 +364,8 @@ class: middle
 
 ### Resources:
 ### [Forecasting for Social Good conference](www.f4sg.org)
-### [Forecasting for Social Good Reseqarch Grant](https://r4ds.had.co.nz/data-visualisation.html)
-### [Forecasting for Social Good Paper](https://r4ds.had.co.nz/data-visualisation.html)
+### [Forecasting for Social Good Reseqarch Grant](https://forecasters.org/programs/research-awards/forecasting-for-social-good-research-grant/#:~:text=The%20Forecasting%20for%20Social%20Good,good%20practices%20and%20drive%20developments)
+### [Forecasting for Social Good Paper](https://doi.org/10.1016/j.ijforecast.2021.02.010)
 ### [Democratising Forecasting](https://forecasters.org/blog/2018/07/10/new-iif-workshop-initiative-democratizing-forecasting/)
 
 ]
