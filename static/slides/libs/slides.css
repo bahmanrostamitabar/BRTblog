@@ -246,7 +246,7 @@ a, a > code {
 }
 
 .sticker-float img{
-	height: 150px;
+	height: 120px;
 	position: absolute;
 	top: 1em;
 	right: 1em;
@@ -258,8 +258,11 @@ a, a > code {
 }
 
 .sticker-left img{
-	height: 150px;
+	height: 120px;
 	padding-right: 20px;
+	position: absolute;
+  top: 5%;
+  left: 5%;
 }
 
 .flex-col {
@@ -397,7 +400,7 @@ code {
 }
 
 .pull-right2 {
-  width: 70%;
+  width: 60%;
   float: right;
 }
 
@@ -488,8 +491,8 @@ blockquote {
 }
 .hand-large{
   font-family: 'Gochi Hand', cursive;
-  color: var(--strong-blue);
-  font-size: 400%;
+  color: var(--redtidy);
+  font-size: 250%;
 }
 
 /* Font colors */
@@ -508,7 +511,7 @@ blockquote {
 .purple{ color: #c077af; }
 .red { color: #ef342a; }
 .orange { color: #f57125; }
-.blue { color: #22b6ed; }
+.blue { color: #3dc3f5; }
 .green { color: #1fb27f; }
 .yellow { color: #faca07; }
 .brown {color: #a84d18; }
@@ -593,7 +596,7 @@ Three column layout
   border-right-style: none;
   border-top-style: none;
   border-left-style: none;
-  padding: 23px 10px 21px 10px;
+  padding: 23px 10px 1px 10px;
 }
 
 .alert-note {
