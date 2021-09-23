@@ -56,5 +56,5 @@ social:
 superuser: true
 ---
 
-My life objective is to help the world becoming a better place by offering my skills and passion for research and education. To that end, I have created Forecasting for Social good initiatives that put the society/people in the heart of my research, teaching and engagement activities, check out [www.f4sg.org](https://www.f4sg.org/).
+My life objective is to help the world becoming a better place by offering my skills and passion for research and education. To that end, I have created Forecasting for Social Good (F4SG) initiatives that put the society/people in the heart of my research, teaching and engagement activities, check out [www.f4sg.org](https://www.f4sg.org/).
 
