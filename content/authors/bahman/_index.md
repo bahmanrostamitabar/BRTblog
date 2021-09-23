@@ -22,7 +22,7 @@ interests:
 - Forecasting for Social Good
 - Forecasting and decision making
 - Forecasting by aggregation
-- Forecasting
+- Time Series Forecasting
 
 
 name: Bahman Rostami-Tabar
