@@ -43,6 +43,8 @@ subtitle = ""
 
 You can access the preprint version of my paper on [Forecasting for Social Good](https://arxiv.org/abs/2009.11669) on Arxiv.
 
+You can also check out [www.f4sg.org](https://www.f4sg.org/) for more related projects.
+
 One of the key objectives of my research is to use Operational Research techniques to improve decision making in organizations with social missions, thereby positively contributing to advancing knowledge in the field of forecasting practice for social good.
 
 Forecasting for Social Good Initiative aims to explore and expose how (where) forecasting can have positive societal impact. The objective is threefold: i) expose the importance of forecasting for social good, ii) capture the otherwise dispersed current state of knowledge, and set the agenda to drive developments iii) create and establish research collaboration and partnership at the national and international level.
