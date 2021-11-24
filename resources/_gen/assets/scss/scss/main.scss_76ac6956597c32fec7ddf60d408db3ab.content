@@ -9163,7 +9163,8 @@ html[dir="rtl"] body {
 /* Whole document: */
 body {
   margin-top: 80px !important;
-  color: #172A3A; }
+  color: #172A3A;
+  text-align: justify; }
 
 .navbar {
   min-height: 100px !important; }
