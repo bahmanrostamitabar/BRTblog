@@ -70,6 +70,7 @@ I don't expect that you have studied some topics such as time series analysis, f
 Cardiff Business School is one of the leading business schools in the UK and has a global reputation for research, teaching and learning. Staff occupy key positions in world-wide academic networks and conduct research which influences a wide audience in Britain and abroad. [Cardiff Business School was ranked sixth across the UK in the 2014 REF](https://www.cardiff.ac.uk/research/impact-and-innovation/quality-and-performance/ref-2014/units-of-assessment/business-and-management-studies).
 
 We help you to :
+
 - become a highly critical scholar
 - learn how to conduct research independently 
 - publish important studies, making discoveries and create impact
