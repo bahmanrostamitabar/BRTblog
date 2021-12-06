@@ -16,3 +16,14 @@ DT
 gapminder
 ggthemes
 countdown
+fpp3
+lubridate
+tsibble
+tsibbledata
+fabletools
+feasts
+fable
+patchwork
+collapsibleTree
+sf
+dygraphs

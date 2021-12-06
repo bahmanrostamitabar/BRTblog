@@ -1,0 +1,36 @@
+---
+title: Demand Forecasting in Supply Chains- Aggregation and Hierarchical Approaches
+draft: false
+event: ""
+event_url: ""
+url_slides: "/slides/kedge_aggregation.html"
+url_pdf: "/slides/kedge_aggregation.pdf"
+
+location: Kedge Business School, Bordeaux, France
+summary: "This seminar provides an overview of the research dealing with aggregation and hierarchical forecasting"
+
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: "2021-12-03T11:15:00Z"
+date_end: "2021-12-03T12:15:00Z"
+all_day: false
+publishdate: "2021-12-05T11:30:00"
+
+categories:
+  - seminar
+tags:
+  - supply chain
+  - aggregation
+  - forecasting
+lastmod: '2021-12-05T12:30:00'
+featured: no
+image:
+  caption: ''
+  focal_point: 'center'
+  preview_only: no
+projects: []
+---
+
+Demand forecasts are the basis of most decisions in supply chain management. The granularity of these decisions, either at the time level or the product level, lead to different forecast requirements. For example, inventory replenishment decisions require forecasts at the individual SKU level over lead time, whereas forecasts at higher levels, over longer horizons, are required for supply chain strategic decisions, such as the location of new distribution or production centres. The most accurate forecasts are not always obtained from data at the 'natural' level of aggregation. In some cases, forecast accuracy may be improved by aggregating data or forecasts at lower levels, or disaggregating data or forecasts at higher levels, or by combining forecasts at multiple levels of aggregation. Temporal and cross-sectional aggregation approaches are well established in the academic literature. More recently, it has been argued that these two approaches do not make the fullest use of data available at the different hierarchical levels of the supply chain. Therefore, consideration of forecasting hierarchies (over time and other dimensions), and combinations of forecasts across hierarchical levels, have been recommended.
+
+This seminar provides an overview of the research dealing with aggregation and hierarchical forecasting in supply chains. Moreover, it presents the results of an empirical investigation of some temporal aggregation approaches and their combinations using quarterly, monthly and daily M4 competition dataset. 
