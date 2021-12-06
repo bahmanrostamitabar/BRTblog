@@ -67,7 +67,7 @@ class: middle
 
 - What is a hierarchical and grouped time series, and why they are essential in forecasting?
 
-- What are common approaches to forecast hierarchical/groupoed time series?
+- What are common approaches to forecast hierarchical/grouped time series?
 
 - What is temporal aggregation, what are different TA approaches and how it may affect time series features?
 
@@ -101,7 +101,7 @@ class: middle
 
 - .remember[What is a hierarchical and grouped time series, and why they are essential in forecasting?]
 
-- What are common approaches to forecast hierarchical/groupoed time series?
+- What are common approaches to forecast hierarchical/grouped time series?
 
 - What is temporal aggregation, what are different TA approaches and how it may affect time series features?
 
@@ -116,7 +116,7 @@ class: middle
 - Multiple decisions
 - Multiple level of forecasting requirements
 - Coherency between different levels
-- Using information avaialble at multiple levels
+- Using information available at multiple levels
 ]
 
 .pull-right2[
@@ -472,7 +472,7 @@ class: middle
 
 - What is a hierarchical and grouped time series, and why they are essential in forecasting?
 
-- .remember[What are common approaches to forecast hierarchical/groupoed time series?]
+- .remember[What are common approaches to forecast hierarchical/grouped time series?]
 
 - What is temporal aggregation, what are different TA approaches and how it may affect time series features?
 
@@ -526,7 +526,7 @@ class: middle
 
 - What is a hierarchical and grouped time series, and why they are essential in forecasting?
 
-- What are common approaches to forecast hierarchical/groupoed time series?
+- What are common approaches to forecast hierarchical/grouped time series?
 
 - .remember[What is temporal aggregation, what are different TA approaches and how TA may affect time series features?]
 
@@ -667,7 +667,7 @@ class: middle
 
 - What is a hierarchical and grouped time series, and why they are essential in forecasting?
 
-- What are common approaches to forecast hierarchical/groupoed time series?
+- What are common approaches to forecast hierarchical/grouped time series?
 
 - What is temporal aggregation, what are different TA approaches and how TA may affect time series features?
 
