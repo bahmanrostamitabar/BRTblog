@@ -1,0 +1,37 @@
+---
+title: On performance of temporal aggregation in time series forecasting
+draft: false
+event: ""
+event_url: ""
+url_slides: "/slides/cmafftt.html"
+url_pdf: "/slides/cmafftt.pdf"
+
+location: Centre for Marketing Analytics and Forecasting
+summary: "We discuss the perfromance of temporal aggregation approaches. We assess the forecast combination of temporal aggregation and investigate how temporal aggregation affects time series features. We examine the association between the original time series features and the performance of approaches using machine learning"
+
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: "2022-02-25T14:00:00Z"
+date_end: "2022-02-25T15:10:00Z"
+all_day: false
+publishdate: "2020-02-25T19:30:00"
+
+categories:
+  - seminar
+tags:
+  - time series feature
+  - aggregation
+  - forecasting
+lastmod: '2022-02-25T19:30:00'
+featured: no
+image:
+  caption: ''
+  focal_point: 'center'
+  preview_only: no
+projects: []
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>When forecasts are required over the lead-time period, forecasters are presented with three distinct time series to select from: i) the original, ii) the non-overlapping and iii) the overlapping temporally aggregated time series. For the former, the forecast is first generated for h-step ahead and then aggregated to get the total value over the lead-time, however for the latter cases, the time series is first aggregated to match the lead-time period and then 1-atep ahead forecast is produced. Very often, practitioners are encouraged to aggregate the time series to a frequency relevant to the decisions the eventual forecasts will support, using non-overlapping temporal aggregation. Using M4 competition data, we design and execute a full factorial experiment exploring the forecast accuracy of three approaches by varying the lead-time. We then develop an approach to combine forecasts generated from the three-time series that results in more accurate forecast. Moreover, we investigate how temporal aggregation affects time series features and examine the association between the original time series features and the performance of approaches using machine learning.</p>
