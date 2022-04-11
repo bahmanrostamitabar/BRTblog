@@ -13,23 +13,25 @@ education:
     year: 2010
   - course: MSc. in Industrial Engineering
     institution: Tarbiat Modares University
-    year: 2007
+    year: 2008
   - course: BSc. in Industrial Engineering
     institution: K.N.Toosi University of Technology
     year: 2004
 email: "rostami-tabarb/@cardiff.ac.uk"
 interests:
 - Forecasting for Social Good
-- Forecasting and decision making
 - Forecasting by aggregation
 - Time Series Forecasting
-
+- Prediction Modelling
+- Business Analytics
+- Forecasting and decision making
+- Analytics in health and humanitarian operations
 
 name: Bahman Rostami-Tabar
 organizations:
 - name: Cardiff University
   url: https://www.cardiff.ac.uk/people/view/598316-rostami-tabar-bahman
-role: Senior Lecturer (Associate Professor) in Management Science
+role: Reader (Associate Professor) in Management Science
 social:
 - icon: paper-plane
   icon_pack: fas
@@ -56,5 +58,8 @@ social:
 superuser: true
 ---
 
-My life objective is to help the world becoming a better place by offering my skills and passion for research and education. To that end, I have created Forecasting for Social Good (F4SG) initiatives that put the society/people in the heart of my research, teaching and engagement activities, check out [www.f4sg.org](https://www.f4sg.org/).
+My life objective is to help the world becoming a better place by offering my skills and passion for research and education. To that end, I have created Forecasting for Social Good (F4SG) initiatives that put the society/people in the heart of my research, teaching and engagement activities, check out [www.f4sg.org](https://www.f4sg.org/) and [F4SG-IIF](https://forecasters.org/programs/communities/forecasting-for-social-good-f4sg/).
 
+<br>
+
+Download my [resumé](/pdf/bahmanrostamitabarCV.pdf).
