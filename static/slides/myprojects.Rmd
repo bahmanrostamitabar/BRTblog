@@ -61,7 +61,7 @@ Forecasting, machine learning & modelling
 .bottom[
 ### Bahman Rostami-Tabar (`r fa("twitter", fill="#1da1f2")`[@Bahman_R_T](https://twitter.com/Bahman_R_T)) <br>
 ### .remember[Website] [www.bahmanrt.com](https://www.bahmanrt.com/)
-### .remember[Slides] [bahmanrt.com/talk/myresearch](https://www.bahmanrt.com/talk/isf2021)
+### .remember[Slides] [bahmanrt.com/talk/myresearch](https://www.bahmanrt.com/slides/myprojects.html)
 ]
 
 ---
