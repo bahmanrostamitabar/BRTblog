@@ -1,0 +1,31 @@
+---
+title: Hierarchical forecasting of vaccine supply chain
+draft: false
+event: ""
+event_url: ""
+url_slides: "/slides/f4sg2022_vaccine.html"
+#url_pdf: "/slides/cmafftt.pdf"
+
+location: SWS
+summary: "Forecasting for vaccine supply chain, a presentation in the Forecasting for Social Good workship at University of Oxford"
+
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: "2022-07-10T09:00:00Z"
+date_end: "2022-07-10T09:30:00Z"
+all_day: false
+publishdate: "2022-07-10T08:00:00"
+
+categories:
+  - seminar
+tags:
+  - research
+  - forecasting
+lastmod: '2022-07-10T04:01:00'
+featured: no
+image:
+  caption: ''
+  focal_point: 'center'
+  preview_only: no
+projects: []
+---
