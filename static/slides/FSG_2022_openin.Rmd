@@ -38,7 +38,6 @@ opts_chunk$set(
 
 
 .sticker-left[![isf](resources/stickeriff.jpeg)]
-.sticker-float[![logo](resources/F4SG.png)]
 
 .center[.title[Forecasting for Social Good(F4SG)]]
 

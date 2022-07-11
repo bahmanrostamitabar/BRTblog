@@ -1,0 +1,30 @@
+---
+title: Probabilistic Forecasting of hourly Emergency Departement arrivals
+draft: false
+event: "42st International Symposium on Forecasting"
+event_url: "https://isf.forecasters.org/"
+url_slides: "/slides/isf2022.html"
+
+location: Oxford, UK
+summary: ""
+
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: "2022-07-11T15:10:00Z"
+date_end: "2022-07-11T15:30:00Z"
+all_day: false
+publishdate: "2022-07-10T11:30:00"
+
+categories:
+  - conference
+tags:
+  - forecasting for social good
+  - forecasting
+lastmod: '2022-07-10T11:30:00'
+featured: no
+image:
+  caption: ''
+  focal_point: 'center'
+  preview_only: no
+projects: []
+---
