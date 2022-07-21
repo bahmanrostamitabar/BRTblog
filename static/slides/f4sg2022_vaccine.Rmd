@@ -68,7 +68,7 @@ class: middle
 
 - Forecasting problem
 
-- Data of vaccine consumption in Kenya & forecasting setup
+- Data of vaccine consumption in  & forecasting setup
 
 - Forecast accuracy evaluation
 
@@ -88,7 +88,7 @@ class: middle
 
 - .gray[Forecasting problem]
 
-- .gray[Data of vaccine consumption in Kenya & forecasting setup]
+- .gray[Data of vaccine consumption in  & forecasting setup]
 
 - .gray[Forecast accuracy evaluation]
 
@@ -156,7 +156,7 @@ class: inverse, center, middle
 
 <img src="img/f4sg2022_vaccine/vaccine_supply_chain.png" height="540px">
 
-.footnote[Source: Effective Vaccine Management Assessment (EVM) in Kenya, 2021]
+.footnote[Source: Effective Vaccine Management Assessment (EVM), 2021]
 
 ---
 ## What do we want to achieve?
@@ -201,7 +201,7 @@ class: middle
 
 - .remember[Forecasting problem]
 
-- .gray[Data of vaccine consumption in Kenya & forecasting setup]
+- .gray[Data of vaccine consumption in  & forecasting setup]
 
 - .gray[Forecast accuracy evaluation]
 
@@ -211,15 +211,9 @@ class: middle
 
 ---
 ## Hierarchical structure
-.pull-left2[
-<img src="img/f4sg2022_vaccine/map_kenya.png" height="500px">
-]
 
---
-
-.pull-right2[
+.center[
 <img src="img/f4sg2022_vaccine/hierarchy.png" height="380px">
-
 ]
 
 ---
@@ -301,7 +295,7 @@ class: middle
 
 - .gray[Forecasting problem]
 
-- .remember[Data of vaccine consumption in Kenya & forecasting setup]
+- .remember[Data of vaccine consumption in  & forecasting setup]
 
 - .gray[Forecast accuracy evaluation]
 
@@ -312,7 +306,7 @@ class: middle
 ---
 ## Data
 
-- Vaccine consumption in Kenya from January 2013 until December 2021
+- Vaccine consumption in an African country from January 2013 until December 2021
 
 - Four type of vaccines
     - Measles
@@ -323,34 +317,34 @@ class: middle
 - 306 sub-county, 47 county & 9 regions
 - Total of 1452 time series
 
----
-## Data: vaccine consumption in Kenya
+<!-- --- -->
+<!-- ## Data: vaccine consumption in  -->
 
-.center[
-.xsmall[
-```{r nviddata, echo=FALSE, out.width="70%"}
-data_forecast1 <- data_forecast[,2:8]
-head(data_forecast1,5) %>%
-  kbl() %>%
-  kable_classic(full_width = F, html_font = "Cambria")
-```
-]
-]
+<!-- .center[ -->
+<!-- .xsmall[ -->
+<!-- ```{r nviddata, echo=FALSE, out.width="70%"} -->
+<!-- data_forecast1 <- data_forecast[,2:8] -->
+<!-- head(data_forecast1,5) %>% -->
+<!--   kbl() %>% -->
+<!--   kable_classic(full_width = F, html_font = "Cambria") -->
+<!-- ``` -->
+<!-- ] -->
+<!-- ] -->
 
-<br>
+<!-- <br> -->
 
-.center[
-.xsmall[
-```{r nviddata1, echo=FALSE, out.width="70%"}
+<!-- .center[ -->
+<!-- .xsmall[ -->
+<!-- ```{r nviddata1, echo=FALSE, out.width="70%"} -->
 
-data_forecast1 <- data_forecast[,2:8]
+<!-- data_forecast1 <- data_forecast[,2:8] -->
 
-tail(data_forecast1,5) %>%
-  kbl() %>%
-  kable_classic(full_width = F, html_font = "Cambria")
-```
-]
-]
+<!-- tail(data_forecast1,5) %>% -->
+<!--   kbl() %>% -->
+<!--   kable_classic(full_width = F, html_font = "Cambria") -->
+<!-- ``` -->
+<!-- ] -->
+<!-- ] -->
 
 ---
 ## Doses administrated: National & regions
@@ -419,7 +413,7 @@ class: middle
 
 - .gray[Forecasting problem]
 
-- .gray[Data of vaccine consumption in Kenya & forecasting setup]
+- .gray[Data of vaccine consumption in  & forecasting setup]
 
 - .remember[Forecast accuracy evaluation]
 
@@ -508,7 +502,7 @@ class: middle
 
 - .gray[Forecasting problem]
 
-- .gray[Data of vaccine consumption in Kenya & forecasting setup]
+- .gray[Data of vaccine consumption in  & forecasting setup]
 
 - .gray[Forecast accuracy evaluation]
 
@@ -537,37 +531,30 @@ knitr::include_url("https://ucdp.uu.se/country/501", height = "500px")
 ```
 ]
 
----
-## Potential useful predictors
+<!-- --- -->
+<!-- ## Potential useful predictors -->
 
-.center[
-.tiny[
-```{r predictor1, echo=FALSE}
-predictor1 <- data_forecast[,-c(6,7,8,9)]
-predictor1 %>% select(month,region,county,sub_county,Total_Population,child_pop,state_base_violence,one_sided_violence,non_state_violence,MAM_rainfall_season,OND_rainfall_season,flooding_events,everything(),-`...1`) %>% 
-head(5) %>%
-  kable() %>%
-  column_spec(column=5:8, width = "1in") %>% 
-  kable_styling(c("bordered", "condensed"), full_width = F)
+<!-- .center[ -->
+<!-- .tiny[ -->
+<!-- ```{r predictor1, echo=FALSE} -->
+<!-- predictor1 <- data_forecast[,-c(6,7,8,9)] -->
+<!-- predictor1 %>% select(month,region,county,sub_county,Total_Population,child_pop,state_base_violence,one_sided_violence,non_state_violence,MAM_rainfall_season,OND_rainfall_season,flooding_events,everything(),-`...1`) %>%  -->
+<!-- head(5) %>% -->
+<!--   kable() %>% -->
+<!--   column_spec(column=5:8, width = "1in") %>%  -->
+<!--   kable_styling(c("bordered", "condensed"), full_width = F) -->
 
-```
-]
-]
+<!-- ``` -->
+<!-- ] -->
+<!-- ] -->
 
----
-## Related talk in ISF
-
-- Title: On the Inventory performance of hierarchical forecasting approaches
-
-- Authors: M. Zied Babai & Bahman Rostami-Tabar
-
-- Location: Room 9
-- Time: .remember[Tuesday, Room 9, 10:10-10:30]
 ---
 
 ## Acknowledgement
 
-- JSI team (Laila Akhlaghi, Wendy Prosser, Gurmeet Philora and Amos Chweya)
+- John and Snow Inc team (Laila Akhlaghi, Wendy Prosser, Gurmeet Philora)
+
+- The African country government
 
 - [Developers of Tidyverts](https://tidyverts.org/) and [Tidyverse](https://www.tidyverse.org/) packages
 
@@ -576,7 +563,7 @@ head(5) %>%
 ---
 ## References
 
-- Effective Vaccine Management (EVM 2.0) Assessment Report – Kenya 2021, WHO
+- Effective Vaccine Management (EVM 2.0) Assessment Report –  2021, WHO
 
 - Vaccine Logistics, WHO training manual
 
@@ -602,7 +589,7 @@ Slides @ [www.bahmanrt.com](www.bahmanrt.com)
 
 - Forecasting problem
 
-- Data of vaccine consumption in Kenya & forecasting setup
+- Data of vaccine consumption in  & forecasting setup
 
 - Forecast accuracy evaluation
 

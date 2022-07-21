@@ -43,7 +43,7 @@ class: middle
 
 - Forecasting problem
 
-- Data of vaccine consumption in Kenya &amp; forecasting setup
+- Data of vaccine consumption in  &amp; forecasting setup
 
 - Forecast accuracy evaluation
 
@@ -63,7 +63,7 @@ class: middle
 
 - .gray[Forecasting problem]
 
-- .gray[Data of vaccine consumption in Kenya &amp; forecasting setup]
+- .gray[Data of vaccine consumption in  &amp; forecasting setup]
 
 - .gray[Forecast accuracy evaluation]
 
@@ -131,7 +131,7 @@ class: inverse, center, middle
 
 &lt;img src="img/f4sg2022_vaccine/vaccine_supply_chain.png" height="540px"&gt;
 
-.footnote[Source: Effective Vaccine Management Assessment (EVM) in Kenya, 2021]
+.footnote[Source: Effective Vaccine Management Assessment (EVM), 2021]
 
 ---
 ## What do we want to achieve?
@@ -176,7 +176,7 @@ class: middle
 
 - .remember[Forecasting problem]
 
-- .gray[Data of vaccine consumption in Kenya &amp; forecasting setup]
+- .gray[Data of vaccine consumption in  &amp; forecasting setup]
 
 - .gray[Forecast accuracy evaluation]
 
@@ -186,15 +186,9 @@ class: middle
 
 ---
 ## Hierarchical structure
-.pull-left2[
-&lt;img src="img/f4sg2022_vaccine/map_kenya.png" height="500px"&gt;
-]
 
---
-
-.pull-right2[
+.center[
 &lt;img src="img/f4sg2022_vaccine/hierarchy.png" height="380px"&gt;
-
 ]
 
 ---
@@ -274,7 +268,7 @@ class: middle
 
 - .gray[Forecasting problem]
 
-- .remember[Data of vaccine consumption in Kenya &amp; forecasting setup]
+- .remember[Data of vaccine consumption in  &amp; forecasting setup]
 
 - .gray[Forecast accuracy evaluation]
 
@@ -285,7 +279,7 @@ class: middle
 ---
 ## Data
 
-- Vaccine consumption in Kenya from January 2013 until December 2021
+- Vaccine consumption in an African country from January 2013 until December 2021
 
 - Four type of vaccines
     - Measles
@@ -296,140 +290,34 @@ class: middle
 - 306 sub-county, 47 county &amp; 9 regions
 - Total of 1452 time series
 
----
-## Data: vaccine consumption in Kenya
+&lt;!-- --- --&gt;
+&lt;!-- ## Data: vaccine consumption in  --&gt;
 
-.center[
-.xsmall[
-&lt;table class=" lightable-classic" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; month &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; region &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; county &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; sub_county &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; vaccine &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; dose_adminstrated &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; dose_used &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2013 Jan &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ELDORET RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Elgeyo Marakwet County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Keiyo North Sub County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; bcg &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 303 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 840 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2013 Feb &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ELDORET RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Elgeyo Marakwet County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Keiyo North Sub County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; bcg &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 232 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 560 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2013 Mar &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ELDORET RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Elgeyo Marakwet County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Keiyo North Sub County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; bcg &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 206 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 540 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2013 Apr &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ELDORET RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Elgeyo Marakwet County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Keiyo North Sub County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; bcg &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 261 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 820 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2013 May &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ELDORET RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Elgeyo Marakwet County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Keiyo North Sub County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; bcg &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 296 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 560 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-]
-]
+&lt;!-- .center[ --&gt;
+&lt;!-- .xsmall[ --&gt;
+&lt;!-- ```{r nviddata, echo=FALSE, out.width="70%"} --&gt;
+&lt;!-- data_forecast1 &lt;- data_forecast[,2:8] --&gt;
+&lt;!-- head(data_forecast1,5) %&gt;% --&gt;
+&lt;!--   kbl() %&gt;% --&gt;
+&lt;!--   kable_classic(full_width = F, html_font = "Cambria") --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
 
-&lt;br&gt;
+&lt;!-- &lt;br&gt; --&gt;
 
-.center[
-.xsmall[
-&lt;table class=" lightable-classic" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; month &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; region &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; county &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; sub_county &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; vaccine &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; dose_adminstrated &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; dose_used &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2021 Aug &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NYERI RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Nyeri County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Tetu Sub County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; opv &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 329 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 467 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2021 Sep &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NYERI RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Nyeri County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Tetu Sub County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; opv &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 322 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 449 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2021 Oct &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NYERI RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Nyeri County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Tetu Sub County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; opv &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 296 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 591 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2021 Nov &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NYERI RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Nyeri County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Tetu Sub County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; opv &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 299 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 424 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2021 Dec &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NYERI RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Nyeri County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Tetu Sub County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; opv &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 316 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 383 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-]
-]
+&lt;!-- .center[ --&gt;
+&lt;!-- .xsmall[ --&gt;
+&lt;!-- ```{r nviddata1, echo=FALSE, out.width="70%"} --&gt;
+
+&lt;!-- data_forecast1 &lt;- data_forecast[,2:8] --&gt;
+
+&lt;!-- tail(data_forecast1,5) %&gt;% --&gt;
+&lt;!--   kbl() %&gt;% --&gt;
+&lt;!--   kable_classic(full_width = F, html_font = "Cambria") --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
 
 ---
 ## Doses administrated: National &amp; regions
@@ -498,7 +386,7 @@ class: middle
 
 - .gray[Forecasting problem]
 
-- .gray[Data of vaccine consumption in Kenya &amp; forecasting setup]
+- .gray[Data of vaccine consumption in  &amp; forecasting setup]
 
 - .remember[Forecast accuracy evaluation]
 
@@ -703,7 +591,7 @@ class: middle
 
 - .gray[Forecasting problem]
 
-- .gray[Data of vaccine consumption in Kenya &amp; forecasting setup]
+- .gray[Data of vaccine consumption in  &amp; forecasting setup]
 
 - .gray[Forecast accuracy evaluation]
 
@@ -730,172 +618,30 @@ class: middle
 &lt;iframe src="https://ucdp.uu.se/country/501" width="100%" height="500px" data-external="1"&gt;&lt;/iframe&gt;
 ]
 
----
-## Potential useful predictors
+&lt;!-- --- --&gt;
+&lt;!-- ## Potential useful predictors --&gt;
 
-.center[
-.tiny[
-&lt;table class="table table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; month &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; region &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; county &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; sub_county &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Total_Population &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; child_pop &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; state_base_violence &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; one_sided_violence &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; non_state_violence &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; MAM_rainfall_season &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; OND_rainfall_season &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; flooding_events &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Boxing_Day &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Jamhuri_Day &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; New_Years_Day &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Good_Friday &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Easter_Monday &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Labour_Day &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Madaraka_Day &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Mashujaa_Day &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Christmas_Day &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2013 Jan &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ELDORET RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Elgeyo Marakwet County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Keiyo North Sub County &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 117139 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 16939 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2013 Feb &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ELDORET RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Elgeyo Marakwet County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Keiyo North Sub County &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 118716 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 16618 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2013 Mar &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ELDORET RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Elgeyo Marakwet County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Keiyo North Sub County &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 120219 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 16286 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2013 Apr &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ELDORET RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Elgeyo Marakwet County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Keiyo North Sub County &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 121476 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 15922 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; 2013 May &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ELDORET RVS &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Elgeyo Marakwet County &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Keiyo North Sub County &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 122638 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 15606 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-]
-]
+&lt;!-- .center[ --&gt;
+&lt;!-- .tiny[ --&gt;
+&lt;!-- ```{r predictor1, echo=FALSE} --&gt;
+&lt;!-- predictor1 &lt;- data_forecast[,-c(6,7,8,9)] --&gt;
+&lt;!-- predictor1 %&gt;% select(month,region,county,sub_county,Total_Population,child_pop,state_base_violence,one_sided_violence,non_state_violence,MAM_rainfall_season,OND_rainfall_season,flooding_events,everything(),-`...1`) %&gt;%  --&gt;
+&lt;!-- head(5) %&gt;% --&gt;
+&lt;!--   kable() %&gt;% --&gt;
+&lt;!--   column_spec(column=5:8, width = "1in") %&gt;%  --&gt;
+&lt;!--   kable_styling(c("bordered", "condensed"), full_width = F) --&gt;
 
----
-## Related talk in ISF
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
 
-- Title: On the Inventory performance of hierarchical forecasting approaches
-
-- Authors: M. Zied Babai &amp; Bahman Rostami-Tabar
-
-- Location: Room 9
-- Time: .remember[Tuesday, Room 9, 10:10-10:30]
 ---
 
 ## Acknowledgement
 
-- JSI team (Laila Akhlaghi, Wendy Prosser, Gurmeet Philora and Amos Chweya)
+- John and Snow Inc team (Laila Akhlaghi, Wendy Prosser, Gurmeet Philora)
+
+- The African country government
 
 - [Developers of Tidyverts](https://tidyverts.org/) and [Tidyverse](https://www.tidyverse.org/) packages
 
@@ -904,7 +650,7 @@ class: middle
 ---
 ## References
 
-- Effective Vaccine Management (EVM 2.0) Assessment Report – Kenya 2021, WHO
+- Effective Vaccine Management (EVM 2.0) Assessment Report –  2021, WHO
 
 - Vaccine Logistics, WHO training manual
 
@@ -930,7 +676,7 @@ Slides @ [www.bahmanrt.com](www.bahmanrt.com)
 
 - Forecasting problem
 
-- Data of vaccine consumption in Kenya &amp; forecasting setup
+- Data of vaccine consumption in  &amp; forecasting setup
 
 - Forecast accuracy evaluation
 

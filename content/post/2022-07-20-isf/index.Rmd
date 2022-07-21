@@ -1,0 +1,37 @@
+---
+title: International Symposium of Forecasting, University of Oxford
+
+author: Bahman Rostami-Tabar
+date: '2022-01-13'
+slug: isf2022
+summary: Summary of talks I have delivered or co-authored.
+categories:
+  - conference
+tags:
+  - conference
+  - forecasting
+  - social good
+output:
+  blogdown::html_page:
+    toc: true
+    number_sections: true
+    toc_depth: 1
+---
+
+Last week I attended the [42^nd^ International Symposium of Forecasting](https://isf.forecasters.org/) at the University of Oxford. This was my first in-person conference since the beginning of the Covid-19 pandemic. I met many colleagues and friends and listened to many inspiring talks.
+
+I presented two papers myself and co-authored four others presented by my colleagues and Ph.D. students.
+
+Below you can access these presentations:
+
+1. [Probabilistic Forecasting of hourly Emergency Departement arrivals](https://www.bahmanrt.com/slides/isf2022.html#1) in collaboration with With [Jethro Browell](http://www.jethrobrowell.com/about-me.html) & [Ivan Svetunkov](https://www.lancaster.ac.uk/lums/people/ivan-svetunkov)
+
+2. [Hierarchical forecasting of vaccine supply chain](https://www.bahmanrt.com/slides/f4sg2022_vaccine.html) In collaboration with [John Snow, Inc](https://www.jsi.com/)
+
+3. [Forecasting for unplanned care: a literature review](/pdf/conference/2022/isf2022ming.pdf) In collaboration with [Mingzhe Shi](https://mingzheshi.com/) and [Daniel Gartner](https://www.cardiff.ac.uk/people/view/192714-gartner-daniel)
+
+4. [Revisiting forecasting for Emergency Department staffing](/pdf/conference/2022/isf2022shixuan.pdf) In collaboration with [Shixuan Wang](https://www.reading.ac.uk/economics/our-staff/shixuan-wang) and [Stephen Disney](http://business-school.exeter.ac.uk/about/people/profile/index.php?web_id=Stephen_Disney)
+
+5. [Forecasting length of stay in trauma network](/pdf/conference/2022/isf2022zihao.pdf) In collaboration with [Zihao Wang](https://www.cardiff.ac.uk/people/research-students/view/2480106-wang-zihao), [Jane Haider](https://www.cardiff.ac.uk/people/view/598275-haider-jane) and [Mohamed Naim](https://www.cardiff.ac.uk/people/view/598297-naim-mohamed)
+
+6. [Forecasting for lead-time period by temporal aggregation: Whether to combine and how](/pdf/conference/2022/isf2022thanos.pdf) In collaboration with [Thanos Goltsos](https://www.cardiff.ac.uk/people/view/598273-goltsos-thanos) and [Shixuan Wang](https://www.reading.ac.uk/economics/our-staff/shixuan-wang)
