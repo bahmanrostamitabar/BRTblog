@@ -552,9 +552,9 @@ knitr::include_url("https://ucdp.uu.se/country/501", height = "500px")
 
 ## Acknowledgement
 
-- John and Snow Inc team (Laila Akhlaghi, Wendy Prosser, Gurmeet Philora)
+- John and Snow Inc team
 
-- The African country government
+- The representative of the National Vaccine Immunization Program for the African country 
 
 - [Developers of Tidyverts](https://tidyverts.org/) and [Tidyverse](https://www.tidyverse.org/) packages
 
