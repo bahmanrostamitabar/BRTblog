@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Hierarchical Time Series Forecasting of ambulance demand</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Bahman Rostami Tabar" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./libs/slides.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+.sticker-left[![isf](resources/carbs_logo1.jpg)]
+
+.center[.title[Probabilistic Forecast Reconciliation For Emergency Services Demand]]
+
+.bottom[
+**_Presenter:_** Dr. Bahman Rostami-Tabar (<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#1da1f2;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>[@Bahman_R_T](https://twitter.com/Bahman_R_T)), Cardiff University, UK. &lt;br&gt;
+**_Co-author:_** Prof. Rob J Hyndman (<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#1da1f2;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>[@robjhyndman](https://twitter.com/robjhyndman)), Monash University, Australia.
+
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M0 256C0 209.4 12.47 165.6 34.27 127.1L144.1 318.3C166 357.5 207.9 384 256 384C270.3 384 283.1 381.7 296.8 377.4L220.5 509.6C95.9 492.3 0 385.3 0 256zM365.1 321.6C377.4 302.4 384 279.1 384 256C384 217.8 367.2 183.5 340.7 160H493.4C505.4 189.6 512 222.1 512 256C512 397.4 397.4 511.1 256 512L365.1 321.6zM477.8 128H256C193.1 128 142.3 172.1 130.5 230.7L54.19 98.47C101 38.53 174 0 256 0C350.8 0 433.5 51.48 477.8 128V128zM168 256C168 207.4 207.4 168 256 168C304.6 168 344 207.4 344 256C344 304.6 304.6 344 256 344C207.4 344 168 304.6 168 256z"/></svg>[www.bahmanrt.com](https://www.bahmanrt.com/)
+]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- Hierarchical and grouped time series structures
+
+- Hierarchical forecasting approaches
+
+- Forecasting experiment setup
+
+- Forecasting performance evaluation
+
+- Conclusion
+ 
+]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- .remember[Hierarchical and grouped time series structures]
+
+- .gray[Hierarchical forecasting approaches]
+
+- .gray[Forecasting experiment setup]
+
+- .gray[Forecasting performance evaluation]
+
+- .gray[Conclusion]
+
+]
+
+---
+## Verified incidents in Wales 
+
+.center[
+&lt;img src="figure/wast_hiararchy/wales_roll_out.png" height="550px"&gt;
+]
+
+---
+## Hierarchical structure
+
+&lt;img src="figure/hierarchy1-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+## Hierarchical structure
+
+A .remember[hierarchical time series] is a collection of several time series that are linked together in a hierarchical structure (attributes naturally disaggregate in a unique hierarchical manner).
+
+&lt;img src="figure/hierarchy1-repeat-1.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+## Grouped structure
+
+&lt;img src="figure/hierarchy2-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+## Grouped structure
+
+&lt;img src="figure/hierarchy3-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+## Grouped structure
+
+A .remember[grouped time series] is a collection of time series that can be grouped together in a number of non-uniquely hierarchical ways (attributes do not naturally disaggregate in a unique hierarchical manner).
+
+.pull-left[
+&lt;img src="figure/hierarchy3-definition-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="figure/hierarchy2-definition-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+class: centre
+## Hierarchical and grouped structure
+
+.pull-left[
+&lt;img src="figure/hierarchy12-1.png" width="120%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="figure/wast_hiararchy/group.png" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+## Incident data
+
+.remark-code[
+
+```
+#&gt; # A tsibble: 967,400 x 6 [1D]
+#&gt; # Key:       control, lhb_code, priority, nature [691]
+#&gt;   date       control lhb_code priority nature                   incidents
+#&gt;   &lt;date&gt;     &lt;chr&gt;   &lt;fct&gt;    &lt;fct&gt;    &lt;fct&gt;                        &lt;dbl&gt;
+#&gt; 1 2017-12-26 N       BC       AMBER    BREATHING PROBLEMS              62
+#&gt; 2 2017-01-01 N       BC       AMBER    FALLS                           58
+#&gt; 3 2016-03-28 N       BC       AMBER    CHEST PAIN                      55
+#&gt; 4 2016-04-14 N       BC       GREEN    HEALTH CARE PROFESSIONAL        53
+#&gt; 5 2016-07-22 N       BC       GREEN    HEALTH CARE PROFESSIONAL        53
+#&gt; 6 2016-07-29 N       BC       GREEN    HEALTH CARE PROFESSIONAL        53
+#&gt; 7 2017-01-03 N       BC       AMBER    BREATHING PROBLEMS              52
+#&gt; 8 2018-01-14 N       BC       AMBER    BREATHING PROBLEMS              52
+#&gt; # … with 967,392 more rows
+```
+]
+
+---
+## Hierarchically aggregated incident data
+
+
+```
+#&gt; # A tsibble: 2,142,000 x 6 [1D]
+#&gt; # Key:       control, priority, nature, lhb [1,530]
+#&gt;   date       control      lhb          priority     nature       incident
+#&gt;   &lt;date&gt;     &lt;chr*&gt;       &lt;chr*&gt;       &lt;chr*&gt;       &lt;chr*&gt;          &lt;dbl&gt;
+#&gt; 1 2015-10-01 &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt;     1020
+#&gt; 2 2015-10-02 &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt;     1021
+#&gt; 3 2015-10-03 &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt;     1025
+#&gt; 4 2015-10-04 &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt;     1043
+#&gt; 5 2015-10-05 &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt;     1067
+#&gt; 6 2015-10-06 &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt;     1063
+#&gt; 7 2015-10-07 &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt;      973
+#&gt; 8 2015-10-08 &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt; &lt;aggregated&gt;     1057
+#&gt; # … with 2,141,992 more rows
+```
+
+
+
+---
+## Total number of series
+
+&lt;table class="table table-striped" style="font-size: 20px; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Level &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Number of series &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; All country (Total) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Control &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Health board &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Priority &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Priority * Control &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Priority * Health board &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 21 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Nature of incident &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 35 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Nature of incident * Control &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 105 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Nature of incident * Health board &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 245 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Priority * Nature of incident &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 104 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Control * Priority * Nature of incident &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 306 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Control * Health board * Priority * Nature of incident (Bottom level) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 691 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Total &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1530 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+## Forecasts are often required at all levels
+
+How to produce a coherent forecast for a large collections of related time series
+
+.pull-left[
+### Hierarchical levels
+- National or area level (strategic and long-term) such as workforce resource planning and budgeting; 
+- Health board level (tactical and medium-term) such as temporary capacity expansions, resource sharing, and staffing;
+- hospital or station level (operational and short-term) such as planning rosters.]
+
+.pull-right[
+### Grouped levels
+
+Forecasts might also be required at different levels for a specific area of interest:
+
+  - nature of incidents 
+  - priority levels
+  - gender
+  - age group
+  - etc
+]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- .gray[Hierarchical and grouped time series structures]
+
+- .remember[Hierarchical forecasting approaches]
+
+- .gray[Forecasting experiment setup]
+
+- .gray[Forecasting performance evaluation]
+
+- .gray[Conclusion]
+
+]
+
+---
+
+.pull-left[
+.smalll[
+&lt;table class="table table-striped" style="font-size: 20px; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Level &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Number of series &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; All country &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Control &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Health board &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Priority &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Priority * Control &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Priority * Health board &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 21 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Nature of incident &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 35 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Nature of incident * Control &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 105 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Nature of incident * Health board &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 245 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Priority * Nature of incident &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 104 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Control * Priority * Nature of incident &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 306 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Control * Health board * Priority * Nature of incident (Bottom level) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 691 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Total &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1530 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+]
+
+.pull-right[
+---
+## Base forecast
+
+- Producing independent forecasts, also refereed to as base forecasts, typically by different teams as the need for such forecasts arise.
+
+- Same or different forecasting model could be used in each level.
+
+- Forecasts are not coherent, the would not add up as time series does.
+]
+
+---
+class: middle
+.pull-left[
+### Hierarchical series
+&lt;img src="figure/wast_hiararchy/fig-dataviz2-1.png" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+### Hierarchical forecasting approaches
+&lt;img src="figure/wast_hiararchy/pyramid.png" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+## Reconciled forecasts
+
+--
+
+- This approach involves first generating independently  base forecast for each series in the hierarchy (they will not add up according to the hierarchical structure). 
+- Reconciliation is a post-forecasting process aimed at improving the accuracy of the base forecasts (however obtained) 
+- The Reconciliation approach combines the base forecasts and generates a set of revised forecasts that aggregate consistently with the hierarchical structure (they are coherent).
+
+---
+## Reconciled forecasts-notations
+
+- Let `\(\large {b}_t\)` be a vector of `\(\large n_b\)` _bottom-level_ time series at time `\(\large t\)`, and let `\(\large {a}_t\)` be a corresponding vector of `\(\large n_a = n-n_b\)` aggregated time series, where `\(\large a_t = {A}{b}_t,\)`
+
+--
+
+- `\(\large A\)` is the `\(\large n_a\times n_b\)` "aggregation" matrix specifying how the bottom-level series `\({b}_t\)` are to be aggregated to form `\(\large {a}_t\)`. 
+
+--
+
+- The full vector of time series is given by `\(\large y_t = \begin{bmatrix}{a}_t \\{b}_t\end{bmatrix}.\)`
+
+--
+
+- This leads to the `\(\large n\times n_b\)` "summing" or "structural" matrix given by
+`\(\large S = \begin{bmatrix}{A} \\ {I}_{n_b}\end{bmatrix}\)`, such that `\(\large {y}_t = {S}{b}_t\)`.
+
+---
+class: middle, center
+
+.pull-left[
+&lt;img src="figure/simple-hierarchy1-1.png" width="120%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="figure/wast_hiararchy/hierarchy_matrix.png" height="400px"&gt;
+]
+
+---
+## Hierarchical, and linearly constrained time series
+.pull-left[
+&lt;img src="figure/hierarchy1-linear-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- Total = Central &amp; West + North South &amp; East
+- Central &amp; West = HD + SB + PO
+- North = BC
+- South &amp; East = CV + CT + AB
+]
+
+.remember[Coherent forecast] satisfies these aggregation constraints.
+
+---
+##  Linear reconciliation methods, Bottom-up and others
+
+Forecast reconciliation approaches combine and reconcile all the base forecasts in order to produce coherent forecasts. 
+
+--
+
+Linear reconciliation methods (Wickramasuriya, Athanasopoulos, and Hyndman 2019) can be written as
+
+`$$\large \tilde{{y}}_h = {S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h ={S}{G}\hat{{y}}_h = {M}\hat{{y}}_h,$$`
+
+where `\({W}\)` is an `\(n \times n\)` positive definite matrix, and `\(\hat{{y}}_h\)` contains the `\(h\)`-step forecasts of `\({y}_{T+h}\)` given data to time `\(T\)`. 
+
+--
+
+.small[
+- Different choices for `\({W}\)` lead to different solutions such as Ordinary Least Squares (OLS), Weighted Least Squares (WLS) and Minimum Trace (MinT). 
+- We use the implementation of these methods in the `hts` package in R in the experiment.
+]
+
+---
+## Producing probabilistic forecasts
+
+- We use bootstrapping to generate probabilistic forecasts:
+
+    - Suppose that `\((\hat{{y}}_h^{[1]},\dots,\hat{{y}}_h^{[B]})\)` are a set of `\(B\)` simulated sample paths, generated independently from the models used to produce the base forecasts. 
+    - Then `\(({S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h^{[1]},\dots,{S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h^{[B]})\)` provides a set of reconciled sample paths, from which percentiles can be calculated.
+
+---
+class: center
+## Probabilistic forecast
+
+.center[
+&lt;img src="figure/wast_hiararchy/daily_probabilistic_forecast.png" height="550px"&gt;
+]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- .gray[Hierarchical and grouped time series structures]
+
+- .gray[Hierarchical forecasting approaches]
+
+- .remember[Forecasting experiment setup]
+
+- .gray[Forecasting performance evaluation]
+
+- .gray[Conclusion]
+
+]
+
+---
+## Time series of ambulance demand
+
+**An inherent hierarchical and grouped structure**
+
+- Historical daily demand for over 5 years
+- Demand for ambulance services at the country level can be disaggregated into:
+
+    - a geographical hierarchy into control, health boards
+    - groups (attributes) such as the nature of incidents and priority. 
+
+
+---
+## Strength of trend and seasonality
+
+.center[
+&lt;img src="figure/wast_hiararchy/fig-feature-1.png" height="550px"&gt;
+]
+
+---
+## Time plots: few examples
+
+.center[
+&lt;img src="figure/wast_hiararchy/fig-dataviz2-1.png" height="600px"&gt;
+]
+
+---
+## Forecasting setup
+
+- Forecasting to inform a planning horizon of 42 days
+- The forecast horizon is 84 days ahead
+- Point and probabilistic forecasts are generated and evaluated for the entire hierarchy
+- Forecasts are evaluated using time series cross validation tested on the last year of data
+
+.center[
+&lt;img src="figure/wast_hiararchy/planning_horizon.png" height="400px"&gt;
+]
+
+---
+## Forecasting models
+
+- **Naive:** Assuming that the future days will be similar to past days. We use the empirical distribution of the past daily demand
+- **Exponential Smoothing State Space model (ETS):** ETS models can combine trend, seasonality, and error components in a time series
+- **Generalized Linear Model (GLM):** GLMs are a family of models developed to extend the concept of linear regression models to non-Gaussian distributions 
+- **Poisson Regression using tscount (TSGLM):** We also consider another Poisson regression model that takes into account serial dependence
+- **Ensemble method:** Finally, we use an ensemble method that combines the forecasts generated from the Naive, ETS, GLM and TSGLM models to form a mixture distribution
+
+---
+## Forecasting performance metrics- point forecast
+
+.pull-left[
+`$$\large \text{MASE} = \text{mean}(|q_{j}|),$$`
+
+where
+
+`$$q_{j} = \frac{ e_{j}}
+ {\displaystyle\frac{1}{T-m}\sum_{t=m+1}^T |y_{t}-y_{t-m}|},$$`
+]
+
+.pull-right[
+`$$\large \text{MSSE} = \text{mean}(q_{j}^2),$$` 
+
+where,
+
+`$$q^2_{j} = \frac{ e^2_{j}}
+ {\displaystyle\frac{1}{T-m}\sum_{t=m+1}^T (y_{t}-y_{t-m})^2},$$`
+]
+
+---
+## Forecasting performance metrics- probabilistic forecast
+
+.pull-left[
+`$$\large \text{CRPS} = \text{mean}(p_j),$$` 
+
+where
+
+`$$p_j = \int_{-\infty}^{\infty} \left(G_j(x) - F_j(x)\right)^2dx,$$`
+]
+
+.pull-right[
+&lt;img src="img/BI_DW_NHS_wales/crps.jpg" height="450px"&gt;
+]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- .gray[Hierarchical and grouped time series structures]
+
+- .gray[Hierarchical forecasting approaches]
+
+- .gray[Forecasting experiment setup]
+
+- .remember[Forecasting performance evaluation]
+
+- .gray[Conclusion]
+
+]
+
+---
+## Forecast accuracy result
+
+.center[
+&lt;img src="figure/wast_hiararchy/result.png" height="550px"&gt;
+]
+
+---
+## Forecast accuracy result- optimal reconciliation
+
+.center[
+&lt;img src="figure/wast_hiararchy/fig-accuracy-1.png" height="550px"&gt;
+]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- .gray[Hierarchical and group time series structure]
+
+- .gray[Time series of ambulance demand &amp; forecasting setup]
+
+- .gray[Forecasting models]
+
+- .gray[Hierarchical and grouped time series forecasting approaches]
+
+- .gray[Forecasting performance]
+
+- .remember[Conclusion]
+
+]
+
+---
+## What if hierarchies are ignored
+
+❌  Forecasts are not consistent , no  coherency
+
+❌  Base forecasts can result in lack of consistency and coordination, leading to less effective planning and decision making. 
+
+❌  Teams operating in isolation leading to conflicts, duplication work, rework, or work that runs counter to the overall goal to improve the quality of delivery service.
+
+❌ Not using all information available at the other levels of hierarchy to improve your forecast
+
+---
+## Benefit of hierarchical/grouped time series forecasting
+
+✅  Plans at any level are based on .remember[coherent forecasts] and therefore can be aligned. 
+
+✅  Hierarchical forecasting framework can be used as a tool to .remember[improve coordination] between teams across the care services at the national, sub-national, regional and local levels.
+
+✅  Result in .remember[more accurate than the independent (base) forecasts].
+
+✅  Hierarchical forecasting can be used to create coherent forecast, regardless of how base forecasts are created, even with judgmental forecasts.
+
+---
+## Temporal and cross-temporal hierarchies
+
+- Here we discussed hierarchical and grouped time series, which deals with these structure at a one time granularity.
+
+- The same issues arise when you need to forecast across different temporal granularities. You have an hourly time series, you want to forecast future daily, weekly, monthly, quarterly demand
+
+- It is also possible to combine hierarchical and temporal hierarchies together
+
+---
+## Potential topics for research
+
+- High dimensional hierarchical forecasting
+- Forecasting with high frequency data
+- Probabilistic hierarchical forecasting for discrete distributions
+- Machine learning and AI approaches to hierarchical forecasting
+- Hierarchical forecasting with explanatory variables
+- Applications of hierarchical forecasting to other services in healthcare
+
+---
+## My new book
+### [https://dfep.netlify.app/](https://dfep.netlify.app/)
+
+.center[
+&lt;img src="img/book_cover.png" height="550px"&gt;
+]
+
+---
+
+.pull-left[
+Presenter: Dr. Bahman Rostami-Tabar (<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#1da1f2;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>[@Bahman_R_T](https://twitter.com/Bahman_R_T)), Cardiff University, UK. &lt;br&gt;
+Co-author: Prof. Rob J Hyndman (<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#1da1f2;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>[@robjhyndman](https://twitter.com/robjhyndman)), Monash University, Australia.
+
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M0 256C0 209.4 12.47 165.6 34.27 127.1L144.1 318.3C166 357.5 207.9 384 256 384C270.3 384 283.1 381.7 296.8 377.4L220.5 509.6C95.9 492.3 0 385.3 0 256zM365.1 321.6C377.4 302.4 384 279.1 384 256C384 217.8 367.2 183.5 340.7 160H493.4C505.4 189.6 512 222.1 512 256C512 397.4 397.4 511.1 256 512L365.1 321.6zM477.8 128H256C193.1 128 142.3 172.1 130.5 230.7L54.19 98.47C101 38.53 174 0 256 0C350.8 0 433.5 51.48 477.8 128V128zM168 256C168 207.4 207.4 168 256 168C304.6 168 344 207.4 344 256C344 304.6 304.6 344 256 344C207.4 344 168 304.6 168 256z"/></svg>[www.bahmanrt.com](https://www.bahmanrt.com/)
+
+]
+
+.pull-right[
+## Outline
+
+- Hierarchical and grouped time series structures
+
+- Hierarchical forecasting approaches
+
+- Forecasting experiment setup
+
+- Forecasting performance evaluation
+
+- Conclusion
+
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="./libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLanguage": ["r", "markdown", "yaml"],
+"ratio": "16:9",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

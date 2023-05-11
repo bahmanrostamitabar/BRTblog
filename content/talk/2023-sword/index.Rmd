@@ -1,0 +1,30 @@
+---
+title: Probabilistic Forecast Reconciliation For Emergency Services Demand
+draft: false
+event: "SWORDS meeting"
+event_url: "https://mailchi.mp/theorsociety/swordsdec2021-271869?e=ebb2036da9"
+url_slides: "slides/sword2023.html"
+
+location: Cardiff, UK
+summary: ""
+
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: "2023-05-03T12:00:00Z"
+date_end: "2023-05-03T14:00:00Z"
+all_day: false
+publishdate: "2023-05-03T11:30:00"
+
+categories:
+  - seminar
+tags:
+  - forecasting in healthcare
+  - forecasting
+lastmod: '2023-05-03T11:30:00'
+featured: no
+image:
+  caption: ''
+  focal_point: 'center'
+  preview_only: no
+projects: []
+---

@@ -1,4 +1,3 @@
-base
 tidyverse
 ggplot2
 tibble
@@ -27,3 +26,5 @@ patchwork
 collapsibleTree
 sf
 dygraphs
+readxl
+timechange
