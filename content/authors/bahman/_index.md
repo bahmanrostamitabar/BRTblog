@@ -22,16 +22,14 @@ interests:
 - Forecasting for Social Good
 - Forecasting by aggregation
 - Time Series Forecasting
-- Prediction Modelling
-- Business Analytics
-- Forecasting and decision making
-- Analytics in health and humanitarian operations
+- Health care operations
+- Global health and humanitarian supply chain
 
 name: Bahman Rostami-Tabar
 organizations:
 - name: Cardiff University
   url: https://www.cardiff.ac.uk/people/view/598316-rostami-tabar-bahman
-role: Reader (Associate Professor) in Management Science and Business Analytics
+role: Reader (Associate Professor) in Data-Driven Decision Science
 social:
 - icon: paper-plane
   icon_pack: fas
