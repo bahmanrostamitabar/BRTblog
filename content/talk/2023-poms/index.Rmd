@@ -1,0 +1,24 @@
+---
+title: "Improving Vaccine Forecasts to Increase Coverage"
+draft: no
+date: "2023-07-18T15:50:00Z"
+event_url: https://isf.forecasters.org/
+url_slides: /slides/pominternational2023_vaccine.html
+location: Paris, France
+summary: ''
+event: POMS International
+date_end: "2023-07-18T16:30:00Z"
+all_day: no
+publishdate: "2023-07-18T15:00:00"
+categories: conference
+tags:
+- forecasting for social good
+- forecasting
+lastmod: "2023-07-18T15:00:00"
+featured: no
+image:
+  caption: ''
+  focal_point: center
+  preview_only: no
+projects: []
+---

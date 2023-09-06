@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Improving Vaccine Forecasts to Increase Coverage: A Hierarchical Forecasting</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Bahman Rostami Tabar" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./libs/slides.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+
+.sticker-float[![logo](resources/carbs_logo1.jpg)]
+
+&lt;br&gt;&lt;br&gt;
+.center[.title[Hierarchical forecast reconciliation for vaccine demand]]
+
+.bottom[
+Collaboration with JSI &lt;br&gt;
+Bahman Rostami-Tabar, Reader in Data &amp; Management Science
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>[rostami-tabarb@cardiff.ac.uk](rostami-tabarb@cardiff.ac.uk)
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M0 256C0 209.4 12.47 165.6 34.27 127.1L144.1 318.3C166 357.5 207.9 384 256 384C270.3 384 283.1 381.7 296.8 377.4L220.5 509.6C95.9 492.3 0 385.3 0 256zM365.1 321.6C377.4 302.4 384 279.1 384 256C384 217.8 367.2 183.5 340.7 160H493.4C505.4 189.6 512 222.1 512 256C512 397.4 397.4 511.1 256 512L365.1 321.6zM477.8 128H256C193.1 128 142.3 172.1 130.5 230.7L54.19 98.47C101 38.53 174 0 256 0C350.8 0 433.5 51.48 477.8 128V128zM168 256C168 207.4 207.4 168 256 168C304.6 168 344 207.4 344 256C344 304.6 304.6 344 256 344C207.4 344 168 304.6 168 256z"/></svg>[www.bahmanrt.com](https://www.bahmanrt.com/)
+]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- Immunization supply chains
+
+- Forecasting problem
+
+- Forecasting experiment setup
+
+- Forecast accuracy evaluation
+
+- Conclusions &amp; next steps
+]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- .remember[Immunization supply chains]
+
+- .gray[Forecasting problem]
+
+- .gray[Forecasting experiment setup]
+
+- .gray[Forecast accuracy evaluation]
+
+- .gray[Conclusions &amp; next steps]
+
+]
+
+---
+class: center, middle
+.pull-left[
+&lt;img src="img/f4sg2022_vaccine/children_immunization.png" height="350px"&gt;
+]
+
+.left[
+.pull-right[
+- Approximately .remember[1 in 5] African children .remember[do not receive] all basic vaccines.
+- More than .remember[30 million children] under five still .remember[suffer from vaccine-preventable diseases (VPDs)] every year in Africa
+- Over .remember[half a million children die] from VPDs annually
+- Logistics and Operation Managements contributes to this pressing issue.
+]]
+
+.footnote[source: [**WHO**](https://www.afro.who.int/health-topics/immunization])
+
+---
+## What do we want to achieve?
+
+.pull-left[
+### High coverage
+&lt;img src="img/f4sg2022_vaccine/coverage.jpg" height="500px"&gt;
+]
+
+--
+
+.pull-right[
+
+✅  Reduce stock outs
+
+✅  Reduce missed opportunities 
+
+✅  Lower waste
+
+✅ Lower inventory costs
+
+✅  and better coordination
+]
+
+.footnote[source:[Allan etal.(2021)](https://www.medrxiv.org/content/10.1101/2021.02.14.21251721v1.full)
+]
+
+---
+class:inverse, center, middle
+
+.title[ Forecasting accurately the needs for vaccines is one of the key elements in achieving these goals]
+
+---
+## The immunization supply chain
+
+&lt;img src="img/f4sg2022_vaccine/vaccine_supply_chain.png" height="540px"&gt;
+
+.footnote[Source: Effective Vaccine Management Assessment (EVM), 2021]
+
+---
+
+## Vaccines
+
+.three-column[
+### Vial
+&lt;img src="img/f4sg2022_vaccine/vial.jpg" height="600px"&gt;
+]
+
+--
+
+.three-column[
+### Dose
+&lt;img src="img/f4sg2022_vaccine/dose.jpg" height="600px"&gt;
+]
+
+--
+
+.three-column[
+### Administrated
+&lt;iframe src="https://giphy.com/embed/xT5LMGfQrJPpmXKUEM" height="600px" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/season-16-the-simpsons-16x11-xT5LMGfQrJPpmXKUEM"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+]
+---
+.center[
+.pull-left[
+### Open wastage
+&lt;img src="img/f4sg2022_vaccine/open_waste.jpeg" height="600px" &gt;
+]
+
+.pull-right[
+### Close wastage
+&lt;img src="img/f4sg2022_vaccine/vaccine_wastage.jpeg" height="600px"&gt;
+]
+]
+
+---
+class: inverse, center, middle
+
+.title[Doses used (consumption/needs) &lt;br&gt; = &lt;br&gt;doses administrated + wastage]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- .gray[Immunization supply chains]
+
+- .remember[Forecasting problem]
+
+- .gray[Forecasting experiment setup]
+
+- .gray[Forecast accuracy evaluation]
+
+- .gray[Conclusions &amp; next steps]
+
+]
+
+---
+## Map of Kenya
+
+.center[
+&lt;img src="img/kenya.png" height="450px"&gt;
+]
+
+---
+## Hierarchical structure of vaccine data
+
+.center[
+&lt;img src="img/f4sg2022_vaccine/hierarchy.png" height="380px"&gt;
+]
+
+---
+## Classical approaches to forecast vaccine needs
+
+- Demographic methods (developed by WHO, one-size-fits-all model)
+      - expected target population
+      - coverage: is the expected coverage rate
+      - doses/target: is the number of doses per target, as per the national vaccination schedule
+      - wastage factor
+
+
+.alert-note[.remember[**Forecasts are annual and at the national level**]]
+
+---
+## Limitations of current forecasting method
+
+
+❌  Forecasts are yearly and at the national level(not useful to inform operational / tactical decisions.)
+
+❌  Forecasts are  often produced based on unrealistic assumptions.
+
+❌  Forecasts do not acknowledge uncertainty.
+
+❌  Do not capture the information available at multiple hierarchical levels.
+
+❌  Forecasts ignore the hierarchical nature of the problem, not coherent.
+
+❌  Lead to conflicting decisions &amp; lack of coordination.
+
+---
+## How to forecast hierarchical time series?
+
+.pull-left[
+- Base forecast (generated using any forecasting model)
+- Bottom-Up
+- Top Down
+- Middle-Out
+- .remember[Forecast reconciliation]
+]
+
+.pull-right[
+&lt;img src="img/f4sg2022_vaccine/pyramid.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- .gray[Immunization supply chains]
+
+- .gray[Forecasting problem]
+
+- .remember[Forecasting experiment setup]
+
+- .gray[Forecast accuracy evaluation]
+
+- .gray[Conclusions &amp; next steps]
+
+]
+
+---
+## Data
+
+- Vaccine consumption in Kenya from January 2013 until December 2021
+
+- Four type of vaccines
+    - Measles
+    - Bacillus Calmette–Guérin (BCG) - for tuberculosis
+    - DPT, a class of combination vaccines against three infectious diseases in humans: diphtheria-tetanus-pertussis
+    - OPV, Oral poliovirus vaccines, used in the fight to eradicate polio
+  
+- 306 sub-county, 47 county &amp; 9 regions
+- Total of 1452 time series
+
+---
+## Doses used (raw data): total and regions
+
+&lt;img src="img/f4sg2022_vaccine/dose_used.png" height="500px"&gt;
+
+
+---
+## Doses used: National &amp; regions
+
+.center[
+&lt;img src="img/f4sg2022_vaccine/p1.png" height="600px"&gt;
+]
+
+---
+## Doses used: trend and seasonality features
+
+.center[
+&lt;img src="img/f4sg2022_vaccine/admin_hts_feature_cat_plot.png" height="600px"&gt;
+]
+
+---
+## Forecasting setup
+
+- Forecasting method: Exponential Smoothing State Space models
+- Forecast horizon: 12 months
+- Point and probabilistic forecasts are generated and evaluated for the entire hierarchy
+- Forecast evaluation
+
+    - Time series cross-validation with re-estimation
+    - Used 36 months as test set
+---
+## Forecasting performance metrics- point forecast
+
+.pull-left[
+### Mean Absolute Scaled Error
+`$$\large \text{MASE} = \text{mean}(|q_{j}|),$$`
+
+where
+
+`$$q_{j} = \frac{ e_{j}}
+ {\displaystyle\frac{1}{T-m}\sum_{t=m+1}^T |y_{t}-y_{t-m}|},$$`
+]
+
+.pull-right[
+### Mean Squared Scaled Error 
+
+`$$\large \text{MSSE} = \text{mean}(q_{j}^2),$$` 
+
+where,
+
+`$$q^2_{j} = \frac{ e^2_{j}}
+ {\displaystyle\frac{1}{T-m}\sum_{t=m+1}^T (y_{t}-y_{t-m})^2},$$`
+]
+
+---
+## Forecasting performance metrics- probabilistic forecast
+
+.pull-left[
+
+`$$\large \text{CRPS} = \text{mean}(p_j),$$` 
+
+where
+
+`$$p_j = \int_{-\infty}^{\infty} \left(G_j(x) - F_j(x)\right)^2dx,$$`
+
+]
+
+.pull-right[
+&lt;img src="figs/crps.jpg" height="450px"&gt;
+]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- .gray[Immunization supply chains]
+
+- .gray[Forecasting problem]
+
+- .gray[Data of vaccine consumption &amp; forecasting setup]
+
+- .remember[Forecast accuracy evaluation]
+
+- .gray[Conclusions &amp; next steps]
+
+]
+
+---
+## Overall forecast accuracy
+
+.small[
+&lt;table class=" lightable-classic" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;MSSE&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Method &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Total &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Region &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; County &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sub County &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Base &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.526 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.594 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.656 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.651 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Bottom Up &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.509 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.594 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.645 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.649 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Top Down &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.526 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.807 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.739 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.717 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Reconciliation &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.428 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.510 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.600 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.609 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;table class=" lightable-classic" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;CRPS&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Method &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Total &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Region &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; County &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sub County &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Base &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 349.345 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 100.880 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 55.236 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30.256 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Bottom Up &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 320.343 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 89.345 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 45.223 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 29.341 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Top Down &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 374.431 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 105.123 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 66.345 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 51.340 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Reconciliation &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 256.345 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 74.345 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 36.234 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 23.654 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.footnote[Forecast accuracy improvement against the current approach in immunization programs is calculated but not included in the presentation]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- .gray[Immunization supply chains]
+
+- .gray[Forecasting problem]
+
+- .gray[Forecasting experiment setup]
+
+- .gray[Forecast accuracy evaluation]
+
+- .remember[Conclusions &amp; next steps]
+
+]
+
+---
+## Conclusions
+### Benefit of hierarchical forecasting
+
+✅  Plans at any level are based on .remember[coherent forecasts] and therefore can be aligned. 
+
+✅  Hierarchical forecasting framework can be used as a tool to .remember[improve coordination] between teams across the supply chain at the national, sub-national, regional and local levels.
+
+✅  Result can be .remember[more accurate than the independent (base) forecasts].
+
+✅  Hierarchical forecasting framework an be used to create coherent forecast, regardless of how base forecasts are created, even with judgmental forecasts.
+
+---
+## Next steps
+
+- Collect data on potential useful predictors such as child population, conflicts, strike, weather conditions, etc
+
+- Build new forecasting models incorporating strong driving factors of vaccine demand
+
+- Evaluate the implication of forecast accuracy on utilities such as cost, service level, coordination, etc by linking to replenishment policies.
+
+---
+
+## Acknowledgement
+
+- John and Snow Inc. (JSI) team
+
+- The representative of the National Vaccine Immunization Program in Kenya 
+
+- [Developers of Tidyverts](https://tidyverts.org/) and [Tidyverse](https://www.tidyverse.org/) packages
+
+---
+## References
+
+- Effective Vaccine Management (EVM 2.0) Assessment Report –  2021, WHO
+
+- Vaccine Logistics, WHO training manual
+
+- - [Probabilistic Forecast Reconciliation For Emergency Services Demand]([https://robjhyndman.com/seminars/fem.html], (Bahman Rostami-Tabar, Rob J Hyndman]
+
+- [Forecasting: Principles and Practice]([https://otexts.com/fpp3/hierarchical.html], (3rd ed, Rob J Hyndman and George Athanasopoulos]
+
+---
+.pull-left[
+## About me
+Bahman Rostami-Tabar &lt;br&gt;
+Associate Professor in Data and Management Science
+Cardiff University, UK
+&lt;br&gt;&lt;br&gt;
+
+Slides @ [www.bahmanrt.com](www.bahmanrt.com)
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#1da1f2;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>[@Bahman_R_T](https://twitter.com/Bahman_R_T)
+<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:blue;overflow:visible;position:relative;"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg> Connect: [Bahman ROSTAMI-TABAR](https://www.linkedin.com/in/bahman-rostami-tabar-1046171a/)
+]
+
+.pull-right[
+## Outline of my talk
+
+- Immunization supply chain
+
+- Forecasting problem
+
+- Forecasting experiment setup
+
+- Forecast accuracy evaluation
+
+- Conclusions &amp; next steps
+]
+
+
+---
+##  Linear reconciliation methods, Bottom-up and others
+
+Forecast reconciliation approaches combine and reconcile all the base forecasts in order to produce coherent forecasts. 
+
+--
+
+Linear reconciliation methods (Wickramasuriya, Athanasopoulos, and Hyndman 2019) can be written as
+
+`$$\large \tilde{{y}}_h = {S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h ={S}{G}\hat{{y}}_h = {M}\hat{{y}}_h,$$`
+
+where `\({W}\)` is an `\(n \times n\)` positive definite matrix, and `\(\hat{{y}}_h\)` contains the `\(h\)`-step forecasts of `\({y}_{T+h}\)` given data to time `\(T\)`. 
+
+--
+
+.small[
+- Different choices for `\({W}\)` lead to different solutions such as Ordinary Least Squares (OLS), Weighted Least Squares (WLS) and Minimum Trace (MinT). 
+- We use the implementation of these methods in the `hts` package in R in the experiment.
+]
+
+---
+## Producing probabilistic forecasts
+
+- We use bootstrapping to generate probabilistic forecasts:
+
+    - Suppose that `\((\hat{{y}}_h^{[1]},\dots,\hat{{y}}_h^{[B]})\)` are a set of `\(B\)` simulated sample paths, generated independently from the models used to produce the base forecasts. 
+    - Then `\(({S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h^{[1]},\dots,{S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h^{[B]})\)` provides a set of reconciled sample paths, from which percentiles can be calculated.
+
+---
+class: center
+## Probabilistic forecast
+
+.center[
+&lt;img src="figure/wast_hiararchy/daily_probabilistic_forecast.png" height="550px"&gt;
+]
+
+---
+ 
+## Reconciled forecasts
+ 
+- This approach involves first generating independent base forecast for each series in the hierarchy (i.e. Base)
+
+--
+
+- As these base forecasts are independently generated they will not be “aggregate consistent” (i.e., they will not add up according to the hierarchical structure). They are .remember[not coherent].
+
+--
+
+- The reconciliation approaches combine the independent base forecasts and generates a set of revised forecasts that are as close as possible to the univariate forecasts but also aggregate consistently with the hierarchical structure.
+
+--
+
+- Unlike any other existing method, this approach uses all the information available within a hierarchy.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="./libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLanguage": ["r", "markdown", "yaml"],
+"ratio": "16:9",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

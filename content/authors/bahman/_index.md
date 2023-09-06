@@ -58,7 +58,7 @@ social:
 superuser: true
 ---
 
-My life objective is to help the world becoming a better place by offering my skills and passion for research and education. To that end, I have created Forecasting for Social Good (F4SG) initiatives that put the society/people in the heart of my research, teaching and engagement activities, check out [www.f4sg.org](https://www.f4sg.org/) and [F4SG-IIF](https://forecasters.org/programs/communities/forecasting-for-social-good-f4sg/).
+My life objective is to help the world becoming a better place by offering my skills and passion for research and education. I am the founder and the current director of the [Data Lab for Social Good Research Group](https://www.cardiff.ac.uk/research/explore/research-units/data-lab-for-social-good) at Cardiff University and is also the inaugural Chair of the [Forecasting for Social Good committee](https://www.f4sg.org/) at the International Institute of Forecasters. My reseracg focus lies in leveraging analytical methodologies to provide informed insights for planning & decision-making in sectors contributing to social good, including healthcare operations, global health and humanitarian logistics \& supply chains, social sustainability, and governmental policy.
 
 <br>
 
