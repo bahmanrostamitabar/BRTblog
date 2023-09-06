@@ -58,7 +58,7 @@ social:
 superuser: true
 ---
 
-My life objective is to help the world becoming a better place by offering my skills and passion for research and education. I am the founder and the current director of the [Data Lab for Social Good Research Group](https://www.cardiff.ac.uk/research/explore/research-units/data-lab-for-social-good) at Cardiff University and is also the inaugural Chair of the [Forecasting for Social Good committee](https://www.f4sg.org/) at the International Institute of Forecasters. My reseracg focus lies in leveraging analytical methodologies to provide informed insights for planning & decision-making in sectors contributing to social good, including healthcare operations, global health and humanitarian logistics \& supply chains, social sustainability, and governmental policy.
+My life objective is to help the world becoming a better place by offering my skills and passion for research and education. I am the founder and the current Director of the [Data Lab for Social Good Research Group](https://www.cardiff.ac.uk/research/explore/research-units/data-lab-for-social-good) at Cardiff University and also the inaugural Chair of the [Forecasting for Social Good committee](https://www.f4sg.org/) at the International Institute of Forecasters. My research focus lies in leveraging analytical methodologies to provide informed insights for planning & decision-making in sectors contributing to social good, including healthcare operations, global health and humanitarian logistics \& supply chains, social sustainability, and governmental policy.
 
 <br>
 
