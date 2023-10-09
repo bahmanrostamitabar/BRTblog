@@ -1,22 +1,22 @@
 ---
 title: "Probabilistic Forecast Reconciliation in Global Health Supply Chain Operations"
 draft: no
-date: "2023-10-09T10:00:00Z"
+date: "2023-10-11T12:00:00Z"
 event_url: "https://www.klu.org/event/default-6f3f9c06ce3d055c6d051d6ea2a8bab0"
 url_slides: /slides/klu_recon.html
 location: Hamburg, Germany
 summary: ''
 event: Invited Research Seminar
-date_end: "2023-10-11T16:30:00Z"
+date_end: "2023-10-11T13:30:00Z"
 all_day: no
-publishdate: "2023-10-09T15:00:00"
+publishdate: "2023-10-09T10:00:00"
 categories: seminar
 tags:
 - reconciliation
 - forecasting
 - supply chain
 - Global health
-lastmod: "2023-10-11T16:30:00Z"
+lastmod: "2023-10-09T10:30:00Z"
 featured: no
 image:
   caption: ''
