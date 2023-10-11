@@ -402,7 +402,7 @@ A .remember[grouped time series] is a collection of time series that can be grou
 
 ---
  
-## Reconciled forecasts
+## Forecast reconciliation
  
 - This approach involves first generating independent base forecast for each series in the hierarchy (i.e. Base)
 
@@ -418,6 +418,26 @@ A .remember[grouped time series] is a collection of time series that can be grou
 
 - Unlike any other existing method, this approach uses all the information available within a hierarchy.
 
+
+---
+## Reconciled forecasts-notations
+
+- Let `\(\large {b}_t\)` be a vector of `\(\large n_b\)` _bottom-level_ time series at time `\(\large t\)`, and let `\(\large {a}_t\)` be a corresponding vector of `\(\large n_a = n-n_b\)` aggregated time series, where `\(\large a_t = {A}{b}_t,\)`
+
+--
+
+- `\(\large A\)` is the `\(\large n_a\times n_b\)` "aggregation" matrix specifying how the bottom-level series `\({b}_t\)` are to be aggregated to form `\(\large {a}_t\)`. 
+
+--
+
+- The full vector of time series is given by `\(\large y_t = \begin{bmatrix}{a}_t \\{b}_t\end{bmatrix}.\)`
+
+--
+
+- This leads to the `\(\large n\times n_b\)` "summing" or "structural" matrix given by
+`\(\large S = \begin{bmatrix}{A} \\ {I}_{n_b}\end{bmatrix}\)`, such that `\(\large {y}_t = {S}{b}_t\)`.
+
+- Similar approach can be used to create reconciled forecasts, `\(\large \tilde{{y}}_t = {SG}{\hat{y}}_t\)`.
 
 ---
 class: middle, center
@@ -448,22 +468,11 @@ class: middle, center
 .remember[Coherent forecast] satisfies these aggregation constraints.
 
 ---
-## Reconciled forecasts-notations
+## How does reconciliation work?
 
-- Let `\(\large {b}_t\)` be a vector of `\(\large n_b\)` _bottom-level_ time series at time `\(\large t\)`, and let `\(\large {a}_t\)` be a corresponding vector of `\(\large n_a = n-n_b\)` aggregated time series, where `\(\large a_t = {A}{b}_t,\)`
-
---
-
-- `\(\large A\)` is the `\(\large n_a\times n_b\)` "aggregation" matrix specifying how the bottom-level series `\({b}_t\)` are to be aggregated to form `\(\large {a}_t\)`. 
-
---
-
-- The full vector of time series is given by `\(\large y_t = \begin{bmatrix}{a}_t \\{b}_t\end{bmatrix}.\)`
-
---
-
-- This leads to the `\(\large n\times n_b\)` "summing" or "structural" matrix given by
-`\(\large S = \begin{bmatrix}{A} \\ {I}_{n_b}\end{bmatrix}\)`, such that `\(\large {y}_t = {S}{b}_t\)`.
+.center[
+&lt;img src="img/estimating_G.png" height="380px"&gt;
+]
 
 ---
 ##  Linear reconciliation methods, Bottom-up and others
@@ -476,15 +485,19 @@ Linear reconciliation methods (Wickramasuriya, Athanasopoulos, and Hyndman 2019)
 
 `$$\large \tilde{{y}}_h = {S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h ={S}{G}\hat{{y}}_h = {M}\hat{{y}}_h,$$`
 
-where `\({W}\)` is an `\(n \times n\)` positive definite matrix, and `\(\hat{{y}}_h\)` contains the `\(h\)`-step forecasts of `\({y}_{T+h}\)` given data to time `\(T\)`. 
+where `\({W}\)` is an `\(n \times n\)` positive definite matrix, and `\(\hat{{y}}_h\)` contains the `\(h\)`-step forecasts of `\({y}_{T+h}\)` given data to time `\(T\)`. `\({W}^{-1}\)` is the variance-covariance matrix of h-step ahead errors. 
 
---
+- W is the only unknown to get the reconciled forecast.
 
-.small[
+---
+## Choosing W
+
 - Different choices for `\({W}\)` lead to different solutions such as Ordinary Least Squares (OLS), Weighted Least Squares (WLS) and Minimum Trace (MinT). 
 - We use the implementation of these methods in the `hts` package in R in the experiment.
-]
 
+.center[
+&lt;img src="img/matrix_w.png" height="280px"&gt;
+]
 ---
 ## Producing probabilistic forecasts
 
