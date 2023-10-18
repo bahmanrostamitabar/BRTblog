@@ -20,8 +20,8 @@
 
 .sticker-left[![isf](resources/carbs_logo1.jpg)]
 
-.center[.title[Probabilistic Forecast Reconciliation For Emergency Services Demand]]
-
+.center[.title[Probabilistic Forecast Reconciliation For Health Services]]
+&lt;br&gt;
 .bottom[
 **_Presenter:_** Dr. Bahman Rostami-Tabar (<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#1da1f2;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>[@Bahman_R_T](https://twitter.com/Bahman_R_T)), Cardiff University, UK. &lt;br&gt;
 **_Co-author:_** Prof. Rob J Hyndman (<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#1da1f2;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>[@robjhyndman](https://twitter.com/robjhyndman)), Monash University, Australia.
@@ -72,6 +72,17 @@ class: middle
 ]
 
 ---
+## Hierarchical data structures are everywhere
+
+- Ambulance demand
+- Accident and Emergency admissions
+- Calls received in a call center
+- Length of Stay
+- Waiting time
+- pharmaceutical product
+- and many more
+
+---
 ## Verified incidents in Wales 
 
 .center[
@@ -90,13 +101,16 @@ A .remember[hierarchical time series] is a collection of several time series tha
 
 &lt;img src="figure/hierarchy1-repeat-1.png" width="70%" style="display: block; margin: auto;" /&gt;
 
+
 ---
 ## Grouped structure
+
 
 &lt;img src="figure/hierarchy2-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Grouped structure
+
 
 &lt;img src="figure/hierarchy3-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 
@@ -371,86 +385,51 @@ class: middle
 &lt;img src="figure/wast_hiararchy/pyramid.png" width="90%" style="display: block; margin: auto;" /&gt;
 ]
 
+
+---
+## Top-down forecasting
+
+.pull-left[
+### Advantages
+
+- Works well in presence of low counts.
+- Single forecasting model
+- Easy to build
+- Provides reliable forecasts for aggregate levels.
+
+]
+
+.pull-right[
+### Disadvantages
+
+- Loss of information, especially individual series dynamics.
+- Distribution of forecasts to lower levels can be difficult
+- No prediction intervals
+]
+
+---
+## Bottom-up forecasting
+
+.pull-left[
+### Advantages
+- No loss of information.
+- Better captures dynamics of individual series.
+
+]
+
+.pull-right[
+### Disadvantages
+- Large number of series to be forecast.
+- Constructing forecasting models is harder because of noisy data at bottom level.
+- No prediction intervals
+]
+
 ---
 ## Reconciled forecasts
-
---
 
 - This approach involves first generating independently  base forecast for each series in the hierarchy (they will not add up according to the hierarchical structure). 
 - Reconciliation is a post-forecasting process aimed at improving the accuracy of the base forecasts (however obtained) 
 - The Reconciliation approach combines the base forecasts and generates a set of revised forecasts that aggregate consistently with the hierarchical structure (they are coherent).
-
----
-## Reconciled forecasts-notations
-
-- Let `\(\large {b}_t\)` be a vector of `\(\large n_b\)` _bottom-level_ time series at time `\(\large t\)`, and let `\(\large {a}_t\)` be a corresponding vector of `\(\large n_a = n-n_b\)` aggregated time series, where `\(\large a_t = {A}{b}_t,\)`
-
---
-
-- `\(\large A\)` is the `\(\large n_a\times n_b\)` "aggregation" matrix specifying how the bottom-level series `\({b}_t\)` are to be aggregated to form `\(\large {a}_t\)`. 
-
---
-
-- The full vector of time series is given by `\(\large y_t = \begin{bmatrix}{a}_t \\{b}_t\end{bmatrix}.\)`
-
---
-
-- This leads to the `\(\large n\times n_b\)` "summing" or "structural" matrix given by
-`\(\large S = \begin{bmatrix}{A} \\ {I}_{n_b}\end{bmatrix}\)`, such that `\(\large {y}_t = {S}{b}_t\)`.
-
----
-class: middle, center
-
-.pull-left[
-&lt;img src="figure/simple-hierarchy1-1.png" width="120%" style="display: block; margin: auto;" /&gt;
-]
-
-.pull-right[
-&lt;img src="figure/wast_hiararchy/hierarchy_matrix.png" height="400px"&gt;
-]
-
----
-## Hierarchical, and linearly constrained time series
-.pull-left[
-&lt;img src="figure/hierarchy1-linear-1.png" width="100%" style="display: block; margin: auto;" /&gt;
-]
-
-.pull-right[
-- Total = Central &amp; West + North South &amp; East
-- Central &amp; West = HD + SB + PO
-- North = BC
-- South &amp; East = CV + CT + AB
-]
-
-.remember[Coherent forecast] satisfies these aggregation constraints.
-
----
-##  Linear reconciliation methods, Bottom-up and others
-
-Forecast reconciliation approaches combine and reconcile all the base forecasts in order to produce coherent forecasts. 
-
---
-
-Linear reconciliation methods (Wickramasuriya, Athanasopoulos, and Hyndman 2019) can be written as
-
-`$$\large \tilde{{y}}_h = {S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h ={S}{G}\hat{{y}}_h = {M}\hat{{y}}_h,$$`
-
-where `\({W}\)` is an `\(n \times n\)` positive definite matrix, and `\(\hat{{y}}_h\)` contains the `\(h\)`-step forecasts of `\({y}_{T+h}\)` given data to time `\(T\)`. 
-
---
-
-.small[
-- Different choices for `\({W}\)` lead to different solutions such as Ordinary Least Squares (OLS), Weighted Least Squares (WLS) and Minimum Trace (MinT). 
-- We use the implementation of these methods in the `hts` package in R in the experiment.
-]
-
----
-## Producing probabilistic forecasts
-
-- We use bootstrapping to generate probabilistic forecasts:
-
-    - Suppose that `\((\hat{{y}}_h^{[1]},\dots,\hat{{y}}_h^{[B]})\)` are a set of `\(B\)` simulated sample paths, generated independently from the models used to produce the base forecasts. 
-    - Then `\(({S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h^{[1]},\dots,{S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h^{[B]})\)` provides a set of reconciled sample paths, from which percentiles can be calculated.
 
 ---
 class: center
@@ -625,13 +604,13 @@ class: middle
 ---
 ## What if hierarchies are ignored
 
-❌  Forecasts are not consistent , no  coherency
+❌  Forecasts are not consistent  no  coherency.
 
 ❌  Base forecasts can result in lack of consistency and coordination, leading to less effective planning and decision making. 
 
 ❌  Teams operating in isolation leading to conflicts, duplication work, rework, or work that runs counter to the overall goal to improve the quality of delivery service.
 
-❌ Not using all information available at the other levels of hierarchy to improve your forecast
+❌ Not using all information available at the other levels of hierarchy to improve your forecast.
 
 ---
 ## Benefit of hierarchical/grouped time series forecasting
@@ -695,6 +674,95 @@ Co-author: Prof. Rob J Hyndman (<svg aria-hidden="true" role="img" viewBox="0 0 
 - Conclusion
 
 ]
+
+---
+## Reconciled forecasts-notations
+
+- Let `\(\large {b}_t\)` be a vector of `\(\large n_b\)` _bottom-level_ time series at time `\(\large t\)`, and let `\(\large {a}_t\)` be a corresponding vector of `\(\large n_a = n-n_b\)` aggregated time series, where `\(\large a_t = {A}{b}_t,\)`
+
+--
+
+- `\(\large A\)` is the `\(\large n_a\times n_b\)` "aggregation" matrix specifying how the bottom-level series `\({b}_t\)` are to be aggregated to form `\(\large {a}_t\)`. 
+
+--
+
+- The full vector of time series is given by `\(\large y_t = \begin{bmatrix}{a}_t \\{b}_t\end{bmatrix}.\)`
+
+--
+
+- This leads to the `\(\large n\times n_b\)` "summing" or "structural" matrix given by
+`\(\large S = \begin{bmatrix}{A} \\ {I}_{n_b}\end{bmatrix}\)`, such that `\(\large {y}_t = {S}{b}_t\)`.
+
+---
+class: middle, center
+
+.pull-left[
+&lt;img src="figure/simple-hierarchy1-1.png" width="120%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="figure/wast_hiararchy/hierarchy_matrix.png" height="400px"&gt;
+]
+
+---
+## Hierarchical, and linearly constrained time series
+.pull-left[
+&lt;img src="figure/hierarchy1-linear-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- Total = Central &amp; West + North South &amp; East
+- Central &amp; West = HD + SB + PO
+- North = BC
+- South &amp; East = CV + CT + AB
+]
+
+.remember[Coherent forecast] satisfies these aggregation constraints.
+
+
+---
+## How does reconciliation work?
+
+.center[
+&lt;img src="img/estimating_G.png" height="380px"&gt;
+]
+
+---
+##  Linear reconciliation methods, Bottom-up and others
+
+Forecast reconciliation approaches combine and reconcile all the base forecasts in order to produce coherent forecasts. 
+
+--
+
+Linear reconciliation methods (Wickramasuriya, Athanasopoulos, and Hyndman 2019) can be written as
+
+`$$\large \tilde{{y}}_h = {S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h ={S}{G}\hat{{y}}_h = {M}\hat{{y}}_h,$$`
+
+where `\({W}\)` is an `\(n \times n\)` positive definite matrix, and `\(\hat{{y}}_h\)` contains the `\(h\)`-step forecasts of `\({y}_{T+h}\)` given data to time `\(T\)`. 
+
+--
+
+.small[
+- Different choices for `\({W}\)` lead to different solutions such as Ordinary Least Squares (OLS), Weighted Least Squares (WLS) and Minimum Trace (MinT). 
+- We use the implementation of these methods in the `hts` package in R in the experiment.
+]
+
+---
+## Choosing W
+
+- Different choices for `\({W}\)` lead to different solutions such as Ordinary Least Squares (OLS), Weighted Least Squares (WLS) and Minimum Trace (MinT). 
+- We use the implementation of these methods in the `hts` package in R in the experiment.
+
+.center[
+&lt;img src="img/matrix_w.png" height="280px"&gt;
+]
+---
+## Producing probabilistic forecasts
+
+- We use bootstrapping to generate probabilistic forecasts:
+
+    - Suppose that `\((\hat{{y}}_h^{[1]},\dots,\hat{{y}}_h^{[B]})\)` are a set of `\(B\)` simulated sample paths, generated independently from the models used to produce the base forecasts. 
+    - Then `\(({S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h^{[1]},\dots,{S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h^{[B]})\)` provides a set of reconciled sample paths, from which percentiles can be calculated.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="./libs/remark-latest.min.js"></script>

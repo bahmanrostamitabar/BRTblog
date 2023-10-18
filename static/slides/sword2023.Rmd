@@ -57,8 +57,8 @@ incidents_tsbl <- read_rds("data/incidents_tsbl.rds") |>
 
 .sticker-left[![isf](resources/carbs_logo1.jpg)]
 
-.center[.title[Probabilistic Forecast Reconciliation For Emergency Services Demand]]
-
+.center[.title[Probabilistic Forecast Reconciliation For Health Services]]
+<br>
 .bottom[
 **_Presenter:_** Dr. Bahman Rostami-Tabar (`r fa("twitter", fill="#1da1f2")`[@Bahman_R_T](https://twitter.com/Bahman_R_T)), Cardiff University, UK. <br>
 **_Co-author:_** Prof. Rob J Hyndman (`r fa("twitter", fill="#1da1f2")`[@robjhyndman](https://twitter.com/robjhyndman)), Monash University, Australia.
@@ -107,6 +107,17 @@ class: middle
 - .gray[Conclusion]
 
 ]
+
+---
+## Hierarchical data structures are everywhere
+
+- Ambulance demand
+- Accident and Emergency admissions
+- Calls received in a call center
+- Length of Stay
+- Waiting time
+- pharmaceutical product
+- and many more
 
 ---
 ## Verified incidents in Wales 
@@ -193,8 +204,10 @@ ggraph::ggraph(mygraph, layout = "dendrogram", circular = FALSE) +
 
 ```
 
+
 ---
 ## Grouped structure
+
 
 ```{r hierarchy2, echo=FALSE, out.width="100%"}
 data <- data.frame(
@@ -232,6 +245,7 @@ ggraph::ggraph(mygraph, layout = "dendrogram", circular = FALSE) +
 
 ---
 ## Grouped structure
+
 
 ```{r hierarchy3, echo=FALSE, out.width="100%"}
 data <- data.frame(
@@ -529,143 +543,51 @@ knitr::include_graphics("figure/wast_hiararchy/pyramid.png")
 ```
 ]
 
+
+---
+## Top-down forecasting
+
+.pull-left[
+### Advantages
+
+- Works well in presence of low counts.
+- Single forecasting model
+- Easy to build
+- Provides reliable forecasts for aggregate levels.
+
+]
+
+.pull-right[
+### Disadvantages
+
+- Loss of information, especially individual series dynamics.
+- Distribution of forecasts to lower levels can be difficult
+- No prediction intervals
+]
+
+---
+## Bottom-up forecasting
+
+.pull-left[
+### Advantages
+- No loss of information.
+- Better captures dynamics of individual series.
+
+]
+
+.pull-right[
+### Disadvantages
+- Large number of series to be forecast.
+- Constructing forecasting models is harder because of noisy data at bottom level.
+- No prediction intervals
+]
+
 ---
 ## Reconciled forecasts
-
---
 
 - This approach involves first generating independently  base forecast for each series in the hierarchy (they will not add up according to the hierarchical structure). 
 - Reconciliation is a post-forecasting process aimed at improving the accuracy of the base forecasts (however obtained) 
 - The Reconciliation approach combines the base forecasts and generates a set of revised forecasts that aggregate consistently with the hierarchical structure (they are coherent).
-
----
-## Reconciled forecasts-notations
-
-- Let $\large {b}_t$ be a vector of $\large n_b$ _bottom-level_ time series at time $\large t$, and let $\large {a}_t$ be a corresponding vector of $\large n_a = n-n_b$ aggregated time series, where $\large a_t = {A}{b}_t,$
-
---
-
-- $\large A$ is the $\large n_a\times n_b$ "aggregation" matrix specifying how the bottom-level series ${b}_t$ are to be aggregated to form $\large {a}_t$. 
-
---
-
-- The full vector of time series is given by $\large y_t = \begin{bmatrix}{a}_t \\{b}_t\end{bmatrix}.$
-
---
-
-- This leads to the $\large n\times n_b$ "summing" or "structural" matrix given by
-$\large S = \begin{bmatrix}{A} \\ {I}_{n_b}\end{bmatrix}$, such that $\large {y}_t = {S}{b}_t$.
-
----
-class: middle, center
-
-.pull-left[
-```{r simple-hierarchy1, echo=FALSE, out.width="120%"}
-data <- data.frame(
-  level1 = "Total",
-  level2 = c("A", "B", "C")
-  )
-# transform it to a edge list!
-edges_level1_2 <- data %>%
-  select(level1, level2) %>%
-  unique() %>%
-  rename(from = level1, to = level2)
-
-edge_list <- edges_level1_2
-
-mygraph <- igraph::graph_from_data_frame(edge_list)
-ggraph::ggraph(mygraph, layout = "dendrogram", circular = FALSE) +
-  ggraph::geom_edge_diagonal() +
-  ggraph::geom_node_point(color = "#dddddd", size = 10) +
-  ggraph::geom_node_text(
-    aes(label = c(
-      "Total",
-      "A", "B", "C"
-    ))
-  ) +
-  theme_void()
-```
-]
-
-.pull-right[
-<img src="figure/wast_hiararchy/hierarchy_matrix.png" height="400px">
-]
-
----
-## Hierarchical, and linearly constrained time series
-.pull-left[
-```{r hierarchy1-linear, echo=FALSE, out.width="100%"}
-data <- data.frame(
-  level1 = "Total",
-  level2 = c(
-    "Central & West", "Central & West", "Central & West",
-    "North", "South & East", "South & East", "South & East"
-  ),
-  level3 = c("HD", "SB", "PO", "BC", "CV", "CT", "AB")
-)
-# transform it to a edge list!
-edges_level1_2 <- data %>%
-  select(level1, level2) %>%
-  unique() %>%
-  rename(from = level1, to = level2)
-edges_level2_3 <- data %>%
-  select(level2, level3) %>%
-  unique() %>%
-  rename(from = level2, to = level3)
-edge_list <- rbind(edges_level1_2, edges_level2_3)
-
-mygraph <- igraph::graph_from_data_frame(edge_list)
-ggraph::ggraph(mygraph, layout = "dendrogram", circular = FALSE) +
-  ggraph::geom_edge_diagonal() +
-  ggraph::geom_node_point(color = "#dddddd", size = 10) +
-  ggraph::geom_node_text(
-    aes(label = c(
-      "Total",
-      "Central & West", "North", "South & East",
-      "HD", "SB", "PO", "BC", "CV", "CT", "AB"
-    ))
-  ) +
-  theme_void()
-
-```
-]
-
-.pull-right[
-- Total = Central & West + North South & East
-- Central & West = HD + SB + PO
-- North = BC
-- South & East = CV + CT + AB
-]
-
-.remember[Coherent forecast] satisfies these aggregation constraints.
-
----
-##  Linear reconciliation methods, Bottom-up and others
-
-Forecast reconciliation approaches combine and reconcile all the base forecasts in order to produce coherent forecasts. 
-
---
-
-Linear reconciliation methods (Wickramasuriya, Athanasopoulos, and Hyndman 2019) can be written as
-
-$$\large \tilde{{y}}_h = {S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h ={S}{G}\hat{{y}}_h = {M}\hat{{y}}_h,$$
-
-where ${W}$ is an $n \times n$ positive definite matrix, and $\hat{{y}}_h$ contains the $h$-step forecasts of ${y}_{T+h}$ given data to time $T$. 
-
---
-
-.small[
-- Different choices for ${W}$ lead to different solutions such as Ordinary Least Squares (OLS), Weighted Least Squares (WLS) and Minimum Trace (MinT). 
-- We use the implementation of these methods in the `hts` package in R in the experiment.
-]
-
----
-## Producing probabilistic forecasts
-
-- We use bootstrapping to generate probabilistic forecasts:
-
-    - Suppose that $(\hat{{y}}_h^{[1]},\dots,\hat{{y}}_h^{[B]})$ are a set of $B$ simulated sample paths, generated independently from the models used to produce the base forecasts. 
-    - Then $({S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h^{[1]},\dots,{S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h^{[B]})$ provides a set of reconciled sample paths, from which percentiles can be calculated.
 
 ---
 class: center
@@ -840,13 +762,13 @@ class: middle
 ---
 ## What if hierarchies are ignored
 
-❌  Forecasts are not consistent , no  coherency
+❌  Forecasts are not consistent  no  coherency.
 
 ❌  Base forecasts can result in lack of consistency and coordination, leading to less effective planning and decision making. 
 
 ❌  Teams operating in isolation leading to conflicts, duplication work, rework, or work that runs counter to the overall goal to improve the quality of delivery service.
 
-❌ Not using all information available at the other levels of hierarchy to improve your forecast
+❌ Not using all information available at the other levels of hierarchy to improve your forecast.
 
 ---
 ## Benefit of hierarchical/grouped time series forecasting
@@ -910,3 +832,149 @@ Co-author: Prof. Rob J Hyndman (`r fa("twitter", fill="#1da1f2")`[@robjhyndman](
 - Conclusion
 
 ]
+
+---
+## Reconciled forecasts-notations
+
+- Let $\large {b}_t$ be a vector of $\large n_b$ _bottom-level_ time series at time $\large t$, and let $\large {a}_t$ be a corresponding vector of $\large n_a = n-n_b$ aggregated time series, where $\large a_t = {A}{b}_t,$
+
+--
+
+- $\large A$ is the $\large n_a\times n_b$ "aggregation" matrix specifying how the bottom-level series ${b}_t$ are to be aggregated to form $\large {a}_t$. 
+
+--
+
+- The full vector of time series is given by $\large y_t = \begin{bmatrix}{a}_t \\{b}_t\end{bmatrix}.$
+
+--
+
+- This leads to the $\large n\times n_b$ "summing" or "structural" matrix given by
+$\large S = \begin{bmatrix}{A} \\ {I}_{n_b}\end{bmatrix}$, such that $\large {y}_t = {S}{b}_t$.
+
+---
+class: middle, center
+
+.pull-left[
+```{r simple-hierarchy1, echo=FALSE, out.width="120%"}
+data <- data.frame(
+  level1 = "Total",
+  level2 = c("A", "B", "C")
+  )
+# transform it to a edge list!
+edges_level1_2 <- data %>%
+  select(level1, level2) %>%
+  unique() %>%
+  rename(from = level1, to = level2)
+
+edge_list <- edges_level1_2
+
+mygraph <- igraph::graph_from_data_frame(edge_list)
+ggraph::ggraph(mygraph, layout = "dendrogram", circular = FALSE) +
+  ggraph::geom_edge_diagonal() +
+  ggraph::geom_node_point(color = "#dddddd", size = 10) +
+  ggraph::geom_node_text(
+    aes(label = c(
+      "Total",
+      "A", "B", "C"
+    ))
+  ) +
+  theme_void()
+```
+]
+
+.pull-right[
+<img src="figure/wast_hiararchy/hierarchy_matrix.png" height="400px">
+]
+
+---
+## Hierarchical, and linearly constrained time series
+.pull-left[
+```{r hierarchy1-linear, echo=FALSE, out.width="100%"}
+data <- data.frame(
+  level1 = "Total",
+  level2 = c(
+    "Central & West", "Central & West", "Central & West",
+    "North", "South & East", "South & East", "South & East"
+  ),
+  level3 = c("HD", "SB", "PO", "BC", "CV", "CT", "AB")
+)
+# transform it to a edge list!
+edges_level1_2 <- data %>%
+  select(level1, level2) %>%
+  unique() %>%
+  rename(from = level1, to = level2)
+edges_level2_3 <- data %>%
+  select(level2, level3) %>%
+  unique() %>%
+  rename(from = level2, to = level3)
+edge_list <- rbind(edges_level1_2, edges_level2_3)
+
+mygraph <- igraph::graph_from_data_frame(edge_list)
+ggraph::ggraph(mygraph, layout = "dendrogram", circular = FALSE) +
+  ggraph::geom_edge_diagonal() +
+  ggraph::geom_node_point(color = "#dddddd", size = 10) +
+  ggraph::geom_node_text(
+    aes(label = c(
+      "Total",
+      "Central & West", "North", "South & East",
+      "HD", "SB", "PO", "BC", "CV", "CT", "AB"
+    ))
+  ) +
+  theme_void()
+
+```
+]
+
+.pull-right[
+- Total = Central & West + North South & East
+- Central & West = HD + SB + PO
+- North = BC
+- South & East = CV + CT + AB
+]
+
+.remember[Coherent forecast] satisfies these aggregation constraints.
+
+
+---
+## How does reconciliation work?
+
+.center[
+<img src="img/estimating_G.png" height="380px">
+]
+
+---
+##  Linear reconciliation methods, Bottom-up and others
+
+Forecast reconciliation approaches combine and reconcile all the base forecasts in order to produce coherent forecasts. 
+
+--
+
+Linear reconciliation methods (Wickramasuriya, Athanasopoulos, and Hyndman 2019) can be written as
+
+$$\large \tilde{{y}}_h = {S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h ={S}{G}\hat{{y}}_h = {M}\hat{{y}}_h,$$
+
+where ${W}$ is an $n \times n$ positive definite matrix, and $\hat{{y}}_h$ contains the $h$-step forecasts of ${y}_{T+h}$ given data to time $T$. 
+
+--
+
+.small[
+- Different choices for ${W}$ lead to different solutions such as Ordinary Least Squares (OLS), Weighted Least Squares (WLS) and Minimum Trace (MinT). 
+- We use the implementation of these methods in the `hts` package in R in the experiment.
+]
+
+---
+## Choosing W
+
+- Different choices for ${W}$ lead to different solutions such as Ordinary Least Squares (OLS), Weighted Least Squares (WLS) and Minimum Trace (MinT). 
+- We use the implementation of these methods in the `hts` package in R in the experiment.
+
+.center[
+<img src="img/matrix_w.png" height="280px">
+]
+---
+## Producing probabilistic forecasts
+
+- We use bootstrapping to generate probabilistic forecasts:
+
+    - Suppose that $(\hat{{y}}_h^{[1]},\dots,\hat{{y}}_h^{[B]})$ are a set of $B$ simulated sample paths, generated independently from the models used to produce the base forecasts. 
+    - Then $({S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h^{[1]},\dots,{S}({S}'{W}^{-1}{S})^{-1}{W}^{-1}\hat{{y}}_h^{[B]})$ provides a set of reconciled sample paths, from which percentiles can be calculated.
