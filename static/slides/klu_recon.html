@@ -362,43 +362,43 @@ A .remember[grouped time series] is a collection of time series that can be grou
 &lt;img src="img/f4sg2022_vaccine/pyramid.jpg" width="90%" style="display: block; margin: auto;" /&gt;
 ]
 
----
-## Top-down forecasting
+&lt;!-- --- --&gt;
+&lt;!-- ## Top-down forecasting --&gt;
 
-.pull-left[
-### Advantages
+&lt;!-- .pull-left[ --&gt;
+&lt;!-- ### Advantages --&gt;
 
-- Works well in presence of low counts.
-- Single forecasting model
-- Easy to build
-- Provides reliable forecasts for aggregate levels.
+&lt;!-- - Works well in presence of low counts. --&gt;
+&lt;!-- - Single forecasting model --&gt;
+&lt;!-- - Easy to build --&gt;
+&lt;!-- - Provides reliable forecasts for aggregate levels. --&gt;
 
-]
+&lt;!-- ] --&gt;
 
-.pull-right[
-### Disadvantages
+&lt;!-- .pull-right[ --&gt;
+&lt;!-- ### Disadvantages --&gt;
 
-- Loss of information, especially individual series dynamics.
-- Distribution of forecasts to lower levels can be difficult
-- No prediction intervals
-]
+&lt;!-- - Loss of information, especially individual series dynamics. --&gt;
+&lt;!-- - Distribution of forecasts to lower levels can be difficult --&gt;
+&lt;!-- - No prediction intervals --&gt;
+&lt;!-- ] --&gt;
 
----
-## Bottom-up forecasting
+&lt;!-- --- --&gt;
+&lt;!-- ## Bottom-up forecasting --&gt;
 
-.pull-left[
-### Advantages
-- No loss of information.
-- Better captures dynamics of individual series.
+&lt;!-- .pull-left[ --&gt;
+&lt;!-- ### Advantages --&gt;
+&lt;!-- - No loss of information. --&gt;
+&lt;!-- - Better captures dynamics of individual series. --&gt;
 
-]
+&lt;!-- ] --&gt;
 
-.pull-right[
-### Disadvantages
-- Large number of series to be forecast.
-- Constructing forecasting models is harder because of noisy data at bottom level.
-- No prediction intervals
-]
+&lt;!-- .pull-right[ --&gt;
+&lt;!-- ### Disadvantages --&gt;
+&lt;!-- - Large number of series to be forecast. --&gt;
+&lt;!-- - Constructing forecasting models is harder because of noisy data at bottom level. --&gt;
+&lt;!-- - No prediction intervals --&gt;
+&lt;!-- ] --&gt;
 
 ---
  
@@ -467,12 +467,12 @@ class: middle, center
 
 .remember[Coherent forecast] satisfies these aggregation constraints.
 
----
-## How does reconciliation work?
+&lt;!-- --- --&gt;
+&lt;!-- ## How does reconciliation work? --&gt;
 
-.center[
-&lt;img src="img/estimating_G.png" height="380px"&gt;
-]
+&lt;!-- .center[ --&gt;
+&lt;!-- &lt;img src="img/estimating_G.png" height="380px"&gt; --&gt;
+&lt;!-- ] --&gt;
 
 ---
 ##  Linear reconciliation methods, Bottom-up and others
@@ -489,15 +489,16 @@ where `\({W}\)` is an `\(n \times n\)` positive definite matrix, and `\(\hat{{y}
 
 - W is the only unknown to get the reconciled forecast.
 
----
-## Choosing W
+&lt;!-- --- --&gt;
+&lt;!-- ## Choosing W --&gt;
 
-- Different choices for `\({W}\)` lead to different solutions such as Ordinary Least Squares (OLS), Weighted Least Squares (WLS) and Minimum Trace (MinT). 
-- We use the implementation of these methods in the `hts` package in R in the experiment.
+&lt;!-- - Different choices for `\({W}\)` lead to different solutions such as Ordinary Least Squares (OLS), Weighted Least Squares (WLS) and Minimum Trace (MinT).  --&gt;
+&lt;!-- - We use the implementation of these methods in the `hts` package in R in the experiment. --&gt;
 
-.center[
-&lt;img src="img/matrix_w.png" height="280px"&gt;
-]
+&lt;!-- .center[ --&gt;
+&lt;!-- &lt;img src="img/matrix_w.png" height="280px"&gt; --&gt;
+&lt;!-- ] --&gt;
+
 ---
 ## Producing probabilistic forecasts
 

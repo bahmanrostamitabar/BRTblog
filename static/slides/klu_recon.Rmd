@@ -485,43 +485,43 @@ knitr::include_graphics("img/f4sg2022_vaccine/pyramid.jpg")
 ```
 ]
 
----
-## Top-down forecasting
+<!-- --- -->
+<!-- ## Top-down forecasting -->
 
-.pull-left[
-### Advantages
+<!-- .pull-left[ -->
+<!-- ### Advantages -->
 
-- Works well in presence of low counts.
-- Single forecasting model
-- Easy to build
-- Provides reliable forecasts for aggregate levels.
+<!-- - Works well in presence of low counts. -->
+<!-- - Single forecasting model -->
+<!-- - Easy to build -->
+<!-- - Provides reliable forecasts for aggregate levels. -->
 
-]
+<!-- ] -->
 
-.pull-right[
-### Disadvantages
+<!-- .pull-right[ -->
+<!-- ### Disadvantages -->
 
-- Loss of information, especially individual series dynamics.
-- Distribution of forecasts to lower levels can be difficult
-- No prediction intervals
-]
+<!-- - Loss of information, especially individual series dynamics. -->
+<!-- - Distribution of forecasts to lower levels can be difficult -->
+<!-- - No prediction intervals -->
+<!-- ] -->
 
----
-## Bottom-up forecasting
+<!-- --- -->
+<!-- ## Bottom-up forecasting -->
 
-.pull-left[
-### Advantages
-- No loss of information.
-- Better captures dynamics of individual series.
+<!-- .pull-left[ -->
+<!-- ### Advantages -->
+<!-- - No loss of information. -->
+<!-- - Better captures dynamics of individual series. -->
 
-]
+<!-- ] -->
 
-.pull-right[
-### Disadvantages
-- Large number of series to be forecast.
-- Constructing forecasting models is harder because of noisy data at bottom level.
-- No prediction intervals
-]
+<!-- .pull-right[ -->
+<!-- ### Disadvantages -->
+<!-- - Large number of series to be forecast. -->
+<!-- - Constructing forecasting models is harder because of noisy data at bottom level. -->
+<!-- - No prediction intervals -->
+<!-- ] -->
 
 ---
  
@@ -647,12 +647,12 @@ ggraph::ggraph(mygraph, layout = "dendrogram", circular = FALSE) +
 
 .remember[Coherent forecast] satisfies these aggregation constraints.
 
----
-## How does reconciliation work?
+<!-- --- -->
+<!-- ## How does reconciliation work? -->
 
-.center[
-<img src="img/estimating_G.png" height="380px">
-]
+<!-- .center[ -->
+<!-- <img src="img/estimating_G.png" height="380px"> -->
+<!-- ] -->
 
 ---
 ##  Linear reconciliation methods, Bottom-up and others
@@ -669,15 +669,16 @@ where ${W}$ is an $n \times n$ positive definite matrix, and $\hat{{y}}_h$ conta
 
 - W is the only unknown to get the reconciled forecast.
 
----
-## Choosing W
+<!-- --- -->
+<!-- ## Choosing W -->
 
-- Different choices for ${W}$ lead to different solutions such as Ordinary Least Squares (OLS), Weighted Least Squares (WLS) and Minimum Trace (MinT). 
-- We use the implementation of these methods in the `hts` package in R in the experiment.
+<!-- - Different choices for ${W}$ lead to different solutions such as Ordinary Least Squares (OLS), Weighted Least Squares (WLS) and Minimum Trace (MinT).  -->
+<!-- - We use the implementation of these methods in the `hts` package in R in the experiment. -->
 
-.center[
-<img src="img/matrix_w.png" height="280px">
-]
+<!-- .center[ -->
+<!-- <img src="img/matrix_w.png" height="280px"> -->
+<!-- ] -->
+
 ---
 ## Producing probabilistic forecasts
 
