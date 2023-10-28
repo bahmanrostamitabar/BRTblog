@@ -29,7 +29,7 @@ name: Bahman Rostami-Tabar
 organizations:
 - name: Cardiff University
   url: https://www.cardiff.ac.uk/people/view/598316-rostami-tabar-bahman
-role: Reader (Associate Professor) in Data-Driven Decision Science
+role: Professor of Data-Driven Decision Science
 social:
 - icon: paper-plane
   icon_pack: fas
@@ -56,7 +56,7 @@ social:
 superuser: true
 ---
 
-My life objective is to help the world becoming a better place by offering my skills and passion for research and education. I am the founder and the current Director of the [Data Lab for Social Good Research Group](https://www.cardiff.ac.uk/research/explore/research-units/data-lab-for-social-good) at Cardiff University and also the inaugural Chair of the [Forecasting for Social Good committee](https://www.f4sg.org/) at the International Institute of Forecasters. My research focus lies in leveraging analytical methodologies to provide informed insights for planning & decision-making in sectors contributing to social good, including healthcare operations, global health and humanitarian logistics \& supply chains, social sustainability, and governmental policy.
+I am Professor of Data-Driven Decision Science at Cardiff Business School, Cardiff University in the United Kingdom. I am the founder and the Director of the [Data Lab for Social Good Research Group](https://www.cardiff.ac.uk/research/explore/research-units/data-lab-for-social-good) at Cardiff University and also the inaugural Chair of the [Forecasting for Social Good committee](https://www.f4sg.org/) at the International Institute of Forecasters. My research focus lies in leveraging analytical methodologies to provide informed insights from data for planning & decision-making processes in sectors contributing to social good, including healthcare operations, global health and humanitarian logistics \& supply chains, social sustainability, and policy.
 
 <br>
 
