@@ -1237,6 +1237,18 @@ Examples:
 .large[Who can lead this?]
 
 ---
+## DL4SG activities - Retreat
+
+<br>
+.pull-left[
+<img src="figure/phdworkshop/exterior.jpg" width ="550px" >
+]
+
+.pull-right[
+<img src="figure/phdworkshop/river-autumn.jpg" width ="550px" >
+]
+
+---
 ## DL4SG activities - LinkedIn page and mailing list
 
 - An active Linkedin page
