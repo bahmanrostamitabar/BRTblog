@@ -210,12 +210,12 @@ plugins_js  = []
   engine = 0
 
   # Which page types are commentable?
-  commentable = {page = true, post = true, docs = true, project = true, publication = true, talk = true}
+#  commentable = {page = true, post = true, docs = true, project = true, publication = true, talk = true}
 
   # Configuration of Disqus.
   [comments.disqus]
-    shortname = ""  # Paste the shortname from your Disqus dashboard.
-    show_count = true  # Show comment count in page header? (true/false)
+#    shortname = ""  # Paste the shortname from your Disqus dashboard.
+#    show_count = true  # Show comment count in page header? (true/false)
 
   # Configuration of Commento.
   [comments.commento]
@@ -266,6 +266,6 @@ plugins_js  = []
 ## Marketing
 ############################
 [marketing]
-  google_analytics = "UA-122837305-1"
-  google_tag_manager = ""
+#  google_analytics = "UA-122837305-1"
+#  google_tag_manager = ""
   
