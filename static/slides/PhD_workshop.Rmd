@@ -627,7 +627,7 @@ class: middle
 
 - Understanding the PhD Journey
 
-- .Effective organisation & admin
+- Effective organisation & admin
 
 - .remember[Developing good research habits]
 
@@ -865,7 +865,7 @@ class: middle
 
 - Understanding the PhD Journey
 
-- .Effective organisation & admin
+- Effective organisation & admin
 
 - Developing good research habits
 
@@ -998,7 +998,7 @@ class: middle
 
 - Understanding the PhD Journey
 
-- .Effective organisation & admin
+- Effective organisation & admin
 
 - Developing good research habits
 
@@ -1137,7 +1137,7 @@ class: middle
 
 - Understanding the PhD Journey
 
-- .Effective organisation & admin
+- Effective organisation & admin
 
 - Developing good research habits
 
