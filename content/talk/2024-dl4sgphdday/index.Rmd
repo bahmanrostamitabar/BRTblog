@@ -1,0 +1,23 @@
+---
+title: "Data Lab for Social Good - PhD workshop"
+draft: no
+date: "2024-10-17T09:00:00Z"
+url_slides: /slides/PhD_workshop.html
+location: Cardiff, UK
+summary: ''
+event: DL4SG phD day
+date_end: "2024-10-17T17:00:00Z"
+all_day: no
+publishdate: "2024-10-16T21:00:00Z"
+categories: workshop
+tags:
+- PhD
+- reserach
+lastmod: "2024-10-16T21:30:00Z"
+featured: no
+image:
+  caption: ''
+  focal_point: center
+  preview_only: no
+projects: []
+---
