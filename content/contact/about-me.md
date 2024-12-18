@@ -56,11 +56,12 @@ After high school, I moved to Tehran and studied Industrial Engineering, receivi
 I then decided to continue my studies and recieved my MSc in Industrial Engineering from [Tarabiat Modares University](https://www.modares.ac.ir/en)(2008). After working in the project managemt filed for two years, I decided to pursue my PhD in France. I moved to France in 2009 and recieved my PhD from the [University of Bordeuax](https://www.u-bordeaux.com/), France in 2014.
 Following that, I have spent two years at [Ecole Central-Supelec](https://www.centralesupelec.fr/) for my post doctoral reserach.
 
-I am now an Associate Professor in Data-Driven Decision Science at [Cardiff University](https://www.cardiff.ac.uk/people/view/598316-rostami-tabar-bahman). Prior to that, I was an Assistant Professor at [Coventry University](https://www.coventry.ac.uk/).
+I am now a Professor in Data-Driven Decision Science at [Cardiff University](https://www.cardiff.ac.uk/people/view/598316-rostami-tabar-bahman).
 
-I am very passionate about forecasting, analytics, modeling and knowledge sharing. I have created [Democratising forecasting](https://www.bahmanrt.com/#dforecasting) initiative sponsored by the [International Institute of forecasters](https://forecasters.org/events/iif-workshops/) that aims at training students, academics and professionals in developing countries and share the latest knowledge and best practices on forecasting using R. Moreover, I've deliver three workshops per year for NHS in collaboration with [NHS-R Community](https://nhsrcommunity.com/blog/forecasting-r/).
+I am very passionate about forecasting, analytics, modeling and knowledge sharing. I have created [Forecasting for Social Good](https://www.f4sg.org/) initiative sponsored by the [International Institute of forecasters](https://forecasters.org/events/iif-workshops/).
 
+I am the founder and the [Director of the Data Lab for Social Good Research Group](https://www.cardiff.ac.uk/research/explore/research-units/data-lab-for-social-good) at Cardiff University. 
 
-I am the founder and the current [Director of the Data Lab for Social Good Research Group](https://www.cardiff.ac.uk/research/explore/research-units/data-lab-for-social-good) at Cardiff University. I am also also the inaugural Chair of the [Forecasting for Social Good committee](https://www.f4sg.org/) within the International Institute of Forecasters. I specialise in the development and application of forecasting and management science tools and techniques. His focus lies in leveraging these methodologies to provide informed insights for planning & decision-making in sectors contributing to social good, including healthcare operations, global health and humanitarian supply chains, social sustainability, and governmental policy
+I specialise in the development and application of forecasting and management science tools and techniques. My focus lies in leveraging these methodologies to provide informed insights for planning & decision-making in sectors contributing to social good, including healthcare operations, global health and humanitarian supply chains, social sustainability, and governmental policy
 
 
