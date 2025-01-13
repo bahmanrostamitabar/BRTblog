@@ -29,7 +29,7 @@ name: Bahman Rostami-Tabar
 organizations:
 - name: Cardiff University
   url: https://www.cardiff.ac.uk/people/view/598316-rostami-tabar-bahman
-role: Professor of Data-Driven Decision Science
+role: Professor of Analytics and Decision Sciences
 social:
 - icon: paper-plane
   icon_pack: fas
