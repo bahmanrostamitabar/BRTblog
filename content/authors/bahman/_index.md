@@ -56,9 +56,10 @@ social:
 superuser: true
 ---
 
-I am Professor of Data-Driven Decision Science at Cardiff Business School, Cardiff University in the United Kingdom. I am the founder and the Director of the [Data Lab for Social Good Research Group](https://www.cardiff.ac.uk/research/explore/research-units/data-lab-for-social-good) at Cardiff University and also the inaugural Chair of the [Forecasting for Social Good committee](https://www.f4sg.org/) at the International Institute of Forecasters. My research focus lies in leveraging analytical methodologies to provide informed insights from data for planning & decision-making processes in sectors contributing to social good, including healthcare operations, global health and humanitarian logistics \& supply chains, social sustainability, and policy. <br>
-
-I am open to new job opportunities in both academia and industry, in the UK and internationally.
+I am Professor of Analytics & Decision Sciences at Cardiff Business School, Cardiff University in the United Kingdom. I am the founder and the Director of the [Data Lab for Social Good Research Group](https://www.cardiff.ac.uk/research/explore/research-units/data-lab-for-social-good) at Cardiff University and also the founder of the [Forecasting for Social Good committee](https://www.f4sg.org/) at the International Institute of Forecasters. My research focus lies in leveraging analytics to provide informed insights from data for planning & decision-making processes in sectors contributing to social good, such as healthcare operations, and global health and humanitarian logistics \& supply chains. <br>
+I have recieved the Goodeve Medal in 2024 from [the Operational Research Society](https://www.theorsociety.com/) for outstanding contributions to Operational Research.
+<br>
+I am currently open to new job opportunities in both academia and industry, in the UK and internationally.
 <br>
 
 Download my [resumé](/pdf/bahmanrostamitabarCV.pdf).
