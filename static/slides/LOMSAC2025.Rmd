@@ -53,11 +53,11 @@ ggplot2::theme_set(ggthemes::theme_few())
 
 <br><br><br>
 .center[.title[.large[Data Lab for Social Good <br> Research ~~Group~~ Team]]]
-.sticker-float[![fable](resources/carbs-white-background.jpg)]
-.sticker-left[![isf](resources/DLSG.png)]
+.sticker-float[![isf](resources/DLSG.png)]
 
 .bottom[
 ## Bahman Rostami-Tabar
+Slides: https://www.bahmanrt.com/talk/2025-lomsac/
 ]
 
 ---
