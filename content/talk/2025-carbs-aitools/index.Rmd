@@ -1,0 +1,23 @@
+---
+title: "AI Tools for Research: A Practical Guide"
+draft: false
+date: "2025-02-11T11:00:00Z"
+url_slides: /slides/AItoolresearch.html
+location: Cardiff, UK
+summary: ''
+event: DL4SG reserach seminar
+date_end: "2025-02-11T13:00:00Z"
+all_day: false
+publishdate: "2025-02-10T22:00:00Z"
+categories: seminar
+tags:
+- seminar
+- CARBS
+lastmod: "2025-02-10T23:00:00Z"
+featured: false
+image:
+  caption: ''
+  focal_point: center
+  preview_only: false
+projects: []
+---

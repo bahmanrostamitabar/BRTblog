@@ -1,0 +1,560 @@
+---
+title: "AI Tools for Research: A Practical Guide"
+subtitle: ""
+author: "Bahman Rostami Tabar"
+#date: '25/11/2020'xaringan::inf_mr()
+output:
+  xaringan::moon_reader:
+    chakra: ./libs/remark-latest.min.js
+    css: ["default","././libs/slides.css"]
+    lib_dir: ./libs
+    seal: false
+    anchor_sections: false
+    nature:
+      highlightStyle: github
+      highlightLanguage: ["r","markdown","yaml"]
+      ratio: '16:9'
+      highlightLines: true
+      countIncrementalSlides: false
+      navigation:
+        scroll: false 
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE, width = 120)
+
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(flair)
+library(DT)
+library(gapminder)
+library(ggthemes)
+library(countdown)
+library(fpp3)
+library(patchwork)
+library(ggridges)
+library(magick)
+opts_chunk$set(
+  echo = FALSE, warning = FALSE, message = FALSE, comment = "#>",
+  fig.path = 'figure/', cache.path = 'cache/', fig.align = 'center',
+  fig.width = 11, fig.height = 5, fig.show = 'hold',
+  cache = TRUE, external = TRUE, dev = 'svglite', dev.args = list(bg = "transparent")
+)
+
+#fig.width = 12, fig.height = 4
+
+# Few theme
+ggplot2::theme_set(ggthemes::theme_few())
+
+```
+
+
+<br><br><br>
+.center[.title[.large[AI Tools for Research <br>A Practical Guide]]]
+.center[.large[Because Ctrl+C, Ctrl+V is still called plagiarism]]
+.sticker-float[![fable](resources/carbs-white-background.jpg)]
+.sticker-left[![isf](resources/DLSG.png)]
+
+.bottom[
+## Bahman Rostami-Tabar <br>
+]
+
+---
+## Our focus at Data Lab for Social Good
+
+.center[
+<img src="figure/lomsac2025/DL4SG.png" width ="650px" >
+]
+
+---
+## Join the mailing list
+
+.center[
+<img src="figure/lomsac2025/mailinglist.png" width ="600px" >
+]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- Using AI - developing the right mindset
+- AI models, and AI-powered tools
+- Some use cases and demos
+- Conclusion and discussion
+
+]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- .remember[Developing the right mindset]
+- AI models, and AI-powered tools
+- Some use cases and demos
+- Conclusion and discussion
+
+]
+
+---
+## Do you use any AI tools for research or academic work?
+
+.center[
+<img src="figure/AItoolsresearch/ai_qr_code.png" width ="500px" >
+]
+
+---
+## Which AI tools do you use?
+
+.center[
+<img src="figure/AItoolsresearch/ai_qr_code.png" width ="500px" >
+]
+
+---
+## Doing research before 2000
+
+
+- Skim through card catalogues
+- Read indexes, bibliographies, and citations manually to trace sources
+- Writing codes in punch cards (1960s–1970s)
+- Writing manual code in low-level languages like Assembly, Fortran, COBOL, or C (1980s–1990s)
+- Compilation and execution were separate processes;
+
+.three-column[
+<img src="figure/AItoolsresearch/cardcatalog.jpg" width ="500px" >
+]
+
+.three-column[
+<img src="figure/AItoolsresearch/librairy.jpg" width ="500px" >
+]
+
+.three-column[
+<img src="figure/AItoolsresearch/punchcard.jpg" width ="500px" >
+]
+
+---
+## How we do it now
+
+- Software (Open source & free like R, Python)  (~2000-present)
+- Graphical interfaces (Windows, macOS, GUIs for coding like VS Code, RStudio)
+- Search engines (2000 - present)
+- Online databases—knowing where to look such as Google Scholar, Scopus, JSTOR (~2000-present)
+
+.three-column[
+<img src="figure/AItoolsresearch/googlescholar.png" width ="500px" >
+]
+
+.three-column[
+<img src="figure/AItoolsresearch/scopus.png" width ="500px" >
+]
+
+.three-column[
+<img src="figure/AItoolsresearch/rpython.jpeg" width ="500px" >
+]
+
+---
+class: middle center
+## The right Mindset for using AI tools
+
+- Using AI tools for research and academic work is like the shift from physical libraries and manual coding to digital databases, and high-level ope-source coding with friendly interfaces—it requires us to .remember[build new intuitions]
+
+- If we approach AI with the .remember[right mindset]—using it critically, verifying its outputs, and understanding its role—we can make it a powerful asset without compromising research integrity
+
+---
+class: inverse middle center
+## The right .remember[Mindset] for using AI tools
+
+---
+## Use AI as a tool, not a replacement for thinking, understanding and learning
+
+.pull-left[
+- Sometime the whole idea is to struggle, that may lead to something original
+- Asking for a summary is not the same as reading for yourself
+- Asking AI to solve a problem for you is not an effective way to learn
+- AI should enhance, not replace, your intellectual effort
+- Outsource academic labour to AI, but not critical thinking
+]
+
+.pull-right[
+<img src="figure/AItoolsresearch/workout.png" width ="500px" >
+]
+
+
+---
+## Use AI for the structure and framework, but keep the content yours
+
+.remember[Structure]: the way information is arranged and presented
+  - Outlines for journal articles, or grant proposals
+  - Formatting and logical organisation
+  - Sentence structure, clarity, and tone
+  - Summarising or rephrasing
+  - Converting structures (e.g., from text to table, etc)
+
+.remember[Content] = The intellectual substance
+- The original ideas, novel contribution,etc
+
+---
+## AI is a tool, not an authority! Don't over-rely on AI
+
+.pull-left[
+❌   Asking an AI something and simply accepting the answer, despite evidence pointing into a different direction.
+
+- the errors are going to be very plausible
+- plagiarism, data fabrication, and misrepresentation
+- determine whether the AI is providing valuable outputs
+
+✅ Always cross-check outputs with your expertise or external sources
+]
+
+.pull-right[
+.center[
+<img src="figure/AItoolsresearch/llmevidence.png" width ="300px" >
+]
+]
+
+---
+## Use AI as an Assistant, Not a Researcher
+
+.pull-left[
+- Assist you in what you want to do, not to tell you what to do.
+  - brainstorm
+  - structure and refine questions
+  - speed up literature review
+  - reading and learning
+  - coding and data analysis
+  - editing, reformatting
+  - Summarising
+  * more
+]
+
+.pull-right[
+.center[
+<img src="figure/AItoolsresearch/aiassistant.png" width ="500px" >
+]
+]
+
+---
+## Accountability lies with you, not AI
+
+.pull-left[
+- AI gives you outputs but you must .remember[take responsibility] for what you do with it
+- You must adhere to .remember[research integrity] principles, including transparency in methodology 
+- Citations and attribution remain your responsibility 
+- You must ensure that your practice of using AI aligns with ethical standards,
+]
+
+.pull-right[
+.center[
+<img src="figure/AItoolsresearch/ai-accountability.png" width ="500px" >
+]
+]
+
+---
+## Adapt and experiment to build new intuitions over time
+
+- Engage in active experimentation with AI tools
+- Cross-check AI outputs
+- Adapt your workflow as AI evolves
+- By actively experimenting, verifying, and adapting AI into your workflow, you develop a natural intuition for using it—making AI an asset.
+- **Always ask yourself**: .remember[How can AI enhance my research and learning workflow without replacing essential practices?]
+
+.center[
+<img src="figure/AItoolsresearch/adapt.jpg" width ="700px" >
+]
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- Developing the right mindset
+- .remember[AI models, and AI-powered tools]
+- Some use cases and demos
+- Conclusion and discussion
+
+]
+
+---
+## AI models
+.tiny[
+| Service               | Best Model        | Open-Source? | Live Mode         | "Reasoning" | Web Access | Generates Images | Executes Code | Data Analysis | Sees Images | Sees Video | Reads Docs  | Personality                                      | Superpower                                      |
+|-----------------------|------------------|--------------|-------------------|-------------|------------|------------------|---------------|---------------|-------------|------------|-------------|------------------------------------------------|------------------------------------------------|
+| **OpenAI ChatGPT**    | GPT-4o           | ❌           | ✅ Full multimodal | ❌           | ✅         | ✅ DALL·E-3       | ✅             | ✅             | ✅           | In Live Mode | ✅           | Polished and efficient in text. Expressive in live mode. | Live mode, most versatile set of features and capabilities |
+| **o1/o3 family**      | o1/o3 family     | ❌           | ❌                 | ✅           | ❌         | ❌                | ✅             | ✅             | ❌           | ❌         | ❌           | Methodical and analytical                        | Very powerful model for complex reasoning, science, and coding |
+| **Microsoft Copilot** | "Copilot"        | ❌           | Voice only        | ❌           | ❌         | ✅ DALL·E-3       | Limited        | ❌             | ❌           | ❌         | ❌           | Uses different models behind the scenes, slightly inconsistent | Works well with Microsoft products and services |
+| **Anthropic Claude**  | Claude 3.5       | ❌           | ❌                 | ❌           | ❌         | ❌                | ✅             | Limited        | ❌           | ❌         | ❌           | Clever and friendly                              | Often the most creative and socially engaging model |
+| **Google Gemini**     | Gemini family    | ❌           | Voice only        | ❌           | ✅         | ✅ Imogen-3       | Limited        | Limited        | ❌           | ❌         | ❌           | Helpful and a bit bland                          | Wide variety of features, good connections with search |
+| **X.ai Grok**        | Grok-2           | ❌           | ❌                 | ❌           | ✅ Mostly X | ✅ Aurora         | ❌             | ❌             | ❌           | ❌         | ❌           | Sarcastic and "fun" (but can be toned down)      | Powerful model integrated tightly with X (Twitter) |
+| **DeepSeek**         | DeepSeek v3      | ✅           | ❌                 | ❌           | ❌         | ❌                | ✅             | ❌             | ❌           | ❌         | Limited       | Neurotically helpful, warm                      | Remarkably cheap and powerful model out of China |
+| **Mistral AI**       | Mixtral (MoE)    | ✅           | ❌                 | ✅           | ❌         | ❌                | ✅             | ❌             | ❌           | ❌         | ❌           | Efficient, open-source, highly capable for coding & reasoning | Lightweight, open-source, and powerful mixture-of-experts model |
+
+]
+
+---
+## AI-powered tools for research
+### I have identified over 70 tools: check [Google spreadsheet](https://docs.google.com/spreadsheets/d/1Zv6rrRDGcw6Q5_4zfbra3JArRr4kwlacQoQA-v1RifA/edit?usp=sharing)
+
+.pull-left[
+.small[
+- Brainstorming and refining questions: AI models
+- Literature review and discovery:
+  - Paper search: Semantic search, SciSpace, Perplexity
+  - Literature review & discovery: ResearchRabbit, Connected Papers, SciSpace, Elicit, Litmap, many more
+  - Reading and learning assistants: NotebookLM, SciSpace, OpenRead
+  - Summarisation: NotebookLM, QuillBot, OpenRead, Scholarcy
+- Writing & editing: QuillBot, Jenni, AI models
+]
+]
+.pull-right[
+.small[
+- Data analysis and method: 
+  - Brainstorm research design: AI models
+  - Qualitative data analysis : MyRA, AI models
+  - Coding and data analysis: AI models
+  - Speech-to-Text & Presentation: Speechmatics, AudioPen
+- Citation & reference management: VOSviewer, Scite, Zotero
+
+- Dissemination:
+  - Presentation: Gamma, SciSpace
+  - Podcast: NotebookLM
+  - Video presentation: SciSpace
+]
+]
+
+---
+## AI models vs AI-powered tools
+
+.tiny[
+| Feature                                | General AI Models                                                                                                                                          | AI-powered Research Tools                                                                                                                          |
+| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Primary Focus**                      | Broad: General conversation, content creation, code generation, information retrieval.                                                                     | Narrow: Supporting research workflows, finding relevant research, summarising findings.                                                            |
+| **Data Sources**                       | Massive text and code datasets, web data.                                                                                                                  | Primarily scientific literature (peer-reviewed papers, preprints, such as Semantic Scholar database, Open Alex, etc.).                              |
+| **Output Format & Style**              | Conversational text, code, summaries. Often lacks formal citations.                                                                                        | Summaries, lists of key findings, and extracted data, often with citations and links to sources. Evidence-based.                                   |
+| **Interaction Style**                  | Natural language prompts, open-ended questions.                                                                                                            | More structured queries, often focused on specific research questions.                                                                             |
+| **Search Functionality & Filtering**   | Basic keyword search, often limited filtering options.                                                                                                     | Advanced search with filters for date, author, journal, keywords, etc.                                                                             |
+| **Transparency & Explainability**      | Often a "black box." Difficult to understand how the tool arrived at a particular output.                                                                  | Aims for greater transparency by showing the source of information and the reasoning process.                                                      |
+| **Integration with Research Tools**    | Limited or no direct integration with citation managers, reference databases.                                                                              | Often integrates with platforms like Zotero, Mendeley, Google Scholar, and others to facilitate research workflows.                                |
+| **Use in Academic Writing**            | Can assist in drafting text, explaining concepts, and brainstorming ideas but lacks built-in citation management.                                          | Designed to support academic writing by providing structured summaries, reference links, and citation-ready information.                           |
+| **Reading & Understanding Assistance** | Limited—may provide general explanations but lacks direct support for deep reading.                                                                        | Some AI research assistants offer summarisation but do not focus on in-depth explanations of figures or equations.                                 |
+| **Multimodal Capabilities**            | Some models support images, code, and other formats alongside text. However, interpretation of scientific figures, tables, and equations is often limited. | Focused primarily on text-based research, but some tools can process and extract information from PDFs, graphs, and tables within academic papers. |
+| **Customisability & Personalisation**  | Can be fine-tuned to some extent using custom instructions but lacks deep personalisation for research workflows.                                          | Often allows users to refine searches, track specific topics, and receive personalised research recommendations.                                   |
+]
+
+---
+## Prompting
+
+.pull-left[
+Prompt: give AI tools instructions to give you the result you want
+
+Different models  may require different writing style, length, structure, etc 
+  - Zero-shot prompting
+  - Chain-of-Thought prompting
+  - Follow-Up prompting
+]
+
+.pull-right[
+- Style and Tone
+- Contextual Information
+- Clarity and Specificity
+- Role Assignment
+- Output Formatting
+
+]
+
+???
+Reflect on why context is crucial for generative AI from a technical perspective.
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- Developing the right mindset
+- AI models, and AI-powered tools
+- .remember[Some use cases and demos]
+- Conclusion and discussion
+
+]
+
+---
+## Brainstorming ideas and formulating reserach questions
+
+Examples for brainstorming:
+
+- Assist in brainstorming creative ideas on how the society can  adapt to AGI by providing innovative perspectives and potential solutions.
+
+- I want to better understand how to enhance the management of hospital discharge processes in Wales. Please generate 5 in-depth research questions and ensure the questions explore novel or unresolved issues and are suitable for academic investigation.
+
+- Create a hypothesis on the effect of communicating forecast uncertainty on decision-making.
+
+---
+## Literature review
+
+.pull-left[
+- SciSpace
+  - What are the key factors that contribute to the translation of forecast accuracy into tangible business outcomes, such as increased revenue or reduced costs?
+
+- ResearchRabbit: uncertainty communication
+]
+
+
+.pull-right[
+### NotebookLM
+.small[I have uploaded research papers on the topic of communicating forecast uncertainty. I want to analyze these papers to extract key insights on the various ways to communicate forecast uncertainty.
+
+- Please identify and describe the different ways used to communicate forecast uncertainty.
+- Explain in detail how each approach works and in what contexts it is typically used.
+- Provide the pros and cons of each method 
+
+what are the main authors discussing communicating forecast uncertainty as forecast distribution? discuss the main idea and quotes from each author
+]
+]
+
+???
+https://youtu.be/9N5RlQxu8ng?si=Fch3NGaWrteSK98S
+
+---
+## Reading and learning 
+
+$$CRPS(F, y) = \int \left( F(\hat{y}) - 1_{\{\hat{y} \geq y\}} \right)^2 d\hat{y}$$
+
+Here is a formula in LaTeX: ...
+The formula is about Continuous Ranked Probability score used to assess the performance of the forecast density.
+
+Could you please break it down, and explain its components?
+
+Could you derive the analytical expression for CRPS assuming the forecast follows a normal distribution?
+
+could you provide a graphical representation of CDF versus the actual to better understand the concept?
+
+---
+## Dta analysis and coding in R & Python
+
+>create an interactive tool in a  single page that visually shows me how correlation works, and why correlation alone is not a great descriptor of how the underlying data works in many cases. make it accessible to nonmath people and highly interactive and engaging.
+
+.small[
+- The interactive tool should also includes sections on correlation for non-linear data and simpson's paradox
+- the interactive tools will also include two visualisations to demonstrate how correlation estimates vary with different sample sizes. You calculate correlation between two independent randon variable, and the you repeat for 10000 times for sample size 20 versus sample size 1000. then create visualisatiuons, X-axis shows the iteration number and y-xis the correlation.
+]
+
+---
+## Interview script analysis with Claude
+
+.pull-left[
+<img src="figure/AItoolsresearch/flowchart_harm_llm.png" width ="700px" >
+]
+
+.pull-right[
+<img src="figure/AItoolsresearch/harm_llm1.png" width ="700px" >
+]
+
+---
+## Reviewing
+
+Upload your report or paper, and use the following prompt in an AI model:
+
+>Imagine three different readers engaging with my paper: a hostile critic, a friendly supporter, and a naive reader unfamiliar with the subject. Each of them reads my work and reacts accordingly. Summarize how each would respond, highlighting their key concerns, praises, or confusions
+
+---
+background-image: url("resources/hierarchy-left.jpeg")
+background-size: contain
+background-position: left
+class: middle
+
+.pull-right2[
+## Outline
+
+- Developing the right mindset
+- AI models, and AI-powered tools
+- Some use cases and demos
+- .remember[Conclusion and discussion]
+
+]
+
+---
+
+.pull-left[
+.small[
+### Use AI
+✅ Work that contains some elements that you can understand but need help on the context or details.
+
+✅ Work that research shows that AI is almost certainly helpful in - many kinds of coding, for example.
+
+✅ Work where you need a first pass view .
+
+✅ Work that is mere translation between frames or perspectives. 
+
+✅ Work where you are an expert and can assess quickly whether AI is good or bad.
+
+✅ Work that requires quantity like brainstorming. 
+]
+]
+
+.pull-left[
+.small[
+### Do not use AI
+❌ When starting learning something new 
+
+❌  When the effort is the point
+
+❌  When you do not understand the failure modes of AI
+
+❌  When very high accuracy is required
+]
+]
+
+---
+## What AI skills should we learn and teach?
+
+- Nobody knows what "AI skills" are as of today, let alone for the future. 
+
+- We can learn a bit about how LLMs work, and give some advice on prompting, but, beyond that, what are we supposed to learn to make us "AI ready"?
+
+- As per today, good skills seems to be- delegation, clear explanations, getting a sense of strengths & weaknesses, division of labor, project management, clear feedback...
+
+---
+## Final remark
+<br><br>
+.large[While using Chatbots, and prompting is a useful skill, the real impact of AI comes from customising AI tools, and integrating them into research, learning & teaching workflows.]
+
+
+---
+class: middle
+## Discussion
+
+
+1. How should AI be integrated into the research, teaching, and learning workflows at CARBS, and to what extent should its use be encouraged or regulated?
+
+2. What strategies should CARBS adopt to equip faculty with the necessary skills and guidelines for AI use?
+
+3. How can we ensure that AI tools complement, rather than replace, critical thinking, creativity, and human expertise in research and learning?
+
+---
+## References
+
+- Venkatesh, V. (2022). [Adoption and use of AI tools: a research agenda grounded in UTAUT](https://link.springer.com/article/10.1007/s10479-020-03918-9). Annals of Operations Research, 308(1), 641-652.
+- Lee Boonstra, 2024, [Prompt Engineering](https://drive.google.com/file/d/1jkQ_s8z4TQy85cVKwymhs4w3fP9PZ4xm/view)
+
+- Bien, J., & Mukherjee, G. (2024). [Generative AI for Data Science 101: Coding Without Learning To Code](https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2432397). Journal of Statistics and Data Science Education, (just-accepted), 1-12.
+- Ethan Mollick, Which AI to Use Now: An Updated Opinionated Guide, accessed , Jan 26 2025
+- [Learn AI Gen course](https://teachgenai.au.dk/learn-genai/learn-genai-course)
+- Website of all AI model and AI-Powered tools
