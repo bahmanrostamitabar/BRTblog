@@ -292,16 +292,16 @@ class: middle
 ---
 ## AI models
 .tiny[
-| Service               | Best Model        | Open-Source? | Live Mode         | "Reasoning" | Web Access | Generates Images | Executes Code | Data Analysis | Sees Images | Sees Video | Reads Docs  | Personality                                      | Superpower                                      |
-|-----------------------|------------------|--------------|-------------------|-------------|------------|------------------|---------------|---------------|-------------|------------|-------------|------------------------------------------------|------------------------------------------------|
-| **OpenAI ChatGPT**    | GPT-4o           | ❌           | ✅ Full multimodal | ❌           | ✅         | ✅ DALL·E-3       | ✅             | ✅             | ✅           | In Live Mode | ✅           | Polished and efficient in text. Expressive in live mode. | Live mode, most versatile set of features and capabilities |
-| **o1/o3 family**      | o1/o3 family     | ❌           | ❌                 | ✅           | ❌         | ❌                | ✅             | ✅             | ❌           | ❌         | ❌           | Methodical and analytical                        | Very powerful model for complex reasoning, science, and coding |
-| **Microsoft Copilot** | "Copilot"        | ❌           | Voice only        | ❌           | ❌         | ✅ DALL·E-3       | Limited        | ❌             | ❌           | ❌         | ❌           | Uses different models behind the scenes, slightly inconsistent | Works well with Microsoft products and services |
-| **Anthropic Claude**  | Claude 3.5       | ❌           | ❌                 | ❌           | ❌         | ❌                | ✅             | Limited        | ❌           | ❌         | ❌           | Clever and friendly                              | Often the most creative and socially engaging model |
-| **Google Gemini**     | Gemini family    | ❌           | Voice only        | ❌           | ✅         | ✅ Imogen-3       | Limited        | Limited        | ❌           | ❌         | ❌           | Helpful and a bit bland                          | Wide variety of features, good connections with search |
-| **X.ai Grok**        | Grok-2           | ❌           | ❌                 | ❌           | ✅ Mostly X | ✅ Aurora         | ❌             | ❌             | ❌           | ❌         | ❌           | Sarcastic and "fun" (but can be toned down)      | Powerful model integrated tightly with X (Twitter) |
-| **DeepSeek**         | DeepSeek v3      | ✅           | ❌                 | ❌           | ❌         | ❌                | ✅             | ❌             | ❌           | ❌         | Limited       | Neurotically helpful, warm                      | Remarkably cheap and powerful model out of China |
-| **Mistral AI**       | Mixtral (MoE)    | ✅           | ❌                 | ✅           | ❌         | ❌                | ✅             | ❌             | ❌           | ❌         | ❌           | Efficient, open-source, highly capable for coding & reasoning | Lightweight, open-source, and powerful mixture-of-experts model |
+| Service               | Best Model        | Open-Source? | Deep Research | Live Mode         | "Reasoning" | Web Access | Generates Images | Executes Code | Data Analysis | Sees Images | Sees Video | Reads Docs  | Personality                                      | Superpower                                      |
+|-----------------------|------------------|--------------|---------------|-------------------|-------------|------------|------------------|---------------|---------------|-------------|------------|-------------|------------------------------------------------|------------------------------------------------|
+| **OpenAI ChatGPT**    | GPT-4o           | ❌           | ✅             | ✅ Full multimodal | ❌           | ✅         | ✅ DALL·E-3       | ✅             | ✅             | ✅           | In Live Mode | ✅           | Polished and efficient in text. Expressive in live mode. | Live mode, most versatile set of features and capabilities |
+| **o1/o3 family**      | o1/o3 family     | ❌           | ✅             | ❌                 | ✅           | ❌         | ❌                | ✅             | ✅             | ❌           | ❌         | ❌           | Methodical and analytical                        | Very powerful model for complex reasoning, science, and coding |
+| **Microsoft Copilot** | "Copilot"        | ❌           | ❌             | Voice only        | ❌           | ❌         | ✅ DALL·E-3       | Limited        | ❌             | ❌           | ❌         | ❌           | Uses different models behind the scenes, slightly inconsistent | Works well with Microsoft products and services |
+| **Anthropic Claude**  | Claude 3.5       | ❌           | ❌             | ❌                 | ❌           | ❌         | ❌                | ✅             | Limited        | ❌           | ❌         | ❌           | Clever and friendly                              | Often the most creative and socially engaging model |
+| **Google Gemini**     | Gemini family    | ❌           | ✅             | Voice only        | ❌           | ✅         | ✅ Imogen-3       | Limited        | Limited        | ❌           | ❌         | ❌           | Helpful and a bit bland                          | Wide variety of features, good connections with search |
+| **X.ai Grok**        | Grok-2           | ❌           | ❌             | ❌                 | ❌           | ✅ Mostly X | ✅ Aurora         | ❌             | ❌             | ❌           | ❌         | ❌           | Sarcastic and "fun" (but can be toned down)      | Powerful model integrated tightly with X (Twitter) |
+| **DeepSeek**         | DeepSeek v3      | ✅           | ❌             | ❌                 | ❌           | ❌         | ❌                | ✅             | ❌             | ❌           | ❌         | Limited       | Neurotically helpful, warm                      | Remarkably cheap and powerful model out of China |
+| **Mistral AI**       | Mixtral (MoE)    | ✅           | ❌             | ❌                 | ✅           | ❌         | ❌                | ✅             | ❌             | ❌           | ❌         | ❌           | Efficient, open-source, highly capable for coding & reasoning | Lightweight, open-source, and powerful mixture-of-experts model |
 
 ]
 
@@ -411,9 +411,9 @@ Examples for brainstorming:
 
 .pull-left[
 - SciSpace
-  - What are the key factors that contribute to the translation of forecast accuracy into tangible business outcomes, such as increased revenue or reduced costs?
+  - How might forecast reconciliation enhance decision-making utilities, such as staff costs and patient waiting times, in emergency departments?
 
-- ResearchRabbit: uncertainty communication
+- ResearchRabbit: forecast uncertainty communication
 ]
 
 
