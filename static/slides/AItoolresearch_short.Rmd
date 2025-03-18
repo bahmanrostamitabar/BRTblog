@@ -1,42 +1,103 @@
-<!DOCTYPE html>
-<html lang="" xml:lang="">
-  <head>
-    <title>AI Tools for Research: A Practical Guide</title>
-    <meta charset="utf-8" />
-    <meta name="author" content="Bahman Rostami Tabar" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
-    <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./libs/slides.css" type="text/css" />
-  </head>
-  <body>
-    <textarea id="source">
+---
+title: "AI Tools for Research: A Practical Guide"
+subtitle: ""
+author: "Bahman Rostami Tabar"
+#date: '25/11/2020'xaringan::inf_mr()
+output:
+  xaringan::moon_reader:
+    chakra: ./libs/remark-latest.min.js
+    css: ["default","././libs/slides.css"]
+    lib_dir: ./libs
+    seal: false
+    anchor_sections: false
+    nature:
+      highlightStyle: github
+      highlightLanguage: ["r","markdown","yaml"]
+      ratio: '16:9'
+      highlightLines: true
+      countIncrementalSlides: false
+      navigation:
+        scroll: false 
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE, width = 120)
+
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(flair)
+library(DT)
+library(gapminder)
+library(ggthemes)
+library(countdown)
+library(fpp3)
+library(patchwork)
+library(ggridges)
+library(magick)
+opts_chunk$set(
+  echo = FALSE, warning = FALSE, message = FALSE, comment = "#>",
+  fig.path = 'figure/', cache.path = 'cache/', fig.align = 'center',
+  fig.width = 11, fig.height = 5, fig.show = 'hold',
+  cache = TRUE, external = TRUE, dev = 'svglite', dev.args = list(bg = "transparent")
+)
+
+#fig.width = 12, fig.height = 4
+
+# Few theme
+ggplot2::theme_set(ggthemes::theme_few())
+
+```
 
 
-
-
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
-.center[.title[.large[AI Tools for Research &lt;br&gt;A Practical Guide]]]
-.center[.large[Because Ctrl+C, Ctrl+V is still called plagiarism]]
+<br><br><br>
+.center[.title[.large[AI Tools for Research <br>A Practical Guide]]]
 .sticker-float[![fable](resources/carbs-white-background.jpg)]
 .sticker-left[![isf](resources/DLSG.png)]
 
 .bottom[
-## Bahman Rostami-Tabar &lt;br&gt;
+### Bahman Rostami-Tabar, Prof. of Analytics and Decision Sciences
+### Foundign Director, Data Lab for Social Good Research Group
+### .remember[Slides]: https://www.bahmanrt.com/talks/
+
 ]
 
 ---
 ## Our focus at Data Lab for Social Good
 
 .center[
-&lt;img src="figure/lomsac2025/DL4SG.png" width ="650px" &gt;
+<img src="figure/lomsac2025/DL4SG.png" width ="650px" >
+]
+
+---
+## 4 staff, 14 PhD students
+
+.pull-left[
+.small[
+- Forecasting & staffing in unscheduled care
+- Global immunisation (vaccines) supply chain
+- Discharge coordination in health & care
+- Generative AI in online health
+- Reproductive health and family planning operations
+- Climate change and health service delivery 
+- Early warning systems for drought response supply chain
+- Data driven solutions in fragile settings
+- Modelling consumer purchasing behaviour in modern slavery supply chains
+- Digital Twins in Healthcare
+- Stimulating a shift to sustainable lifestyles in circular economy
+]
+]
+
+.pull-right[
+<img src="figure/lomsac2025/partners.png" width ="1000px" >
 ]
 
 ---
 ## Join the mailing list
 
 .center[
-&lt;img src="figure/lomsac2025/mailinglist.png" width ="600px" &gt;
+<img src="figure/lomsac2025/mailinglist.png" width ="600px" >
 ]
 
 ---
@@ -48,7 +109,7 @@ class: middle
 .pull-right2[
 ## Outline
 
-- Using AI - developing the right mindset
+- Using AI models- developing the right mindset
 - AI models, and AI-powered tools
 - Some use cases and demos
 - Conclusion and discussion
@@ -75,14 +136,14 @@ class: middle
 ## Do you use any AI tools for research or academic work?
 
 .center[
-&lt;img src="figure/AItoolsresearch/ai_qr_code.png" width ="500px" &gt;
+<img src="figure/AItoolsresearch/ai_qr_code.png" width ="500px" >
 ]
 
 ---
 ## Which AI tools do you use?
 
 .center[
-&lt;img src="figure/AItoolsresearch/ai_qr_code.png" width ="500px" &gt;
+<img src="figure/AItoolsresearch/ai_qr_code.png" width ="500px" >
 ]
 
 ---
@@ -96,42 +157,42 @@ class: middle
 - Compilation and execution were separate processes;
 
 .three-column[
-&lt;img src="figure/AItoolsresearch/cardcatalog.jpg" width ="500px" &gt;
+<img src="figure/AItoolsresearch/cardcatalog.jpg" width ="500px" >
 ]
 
 .three-column[
-&lt;img src="figure/AItoolsresearch/librairy.jpg" width ="500px" &gt;
+<img src="figure/AItoolsresearch/librairy.jpg" width ="500px" >
 ]
 
 .three-column[
-&lt;img src="figure/AItoolsresearch/punchcard.jpg" width ="500px" &gt;
+<img src="figure/AItoolsresearch/punchcard.jpg" width ="500px" >
 ]
 
 ---
 ## How we do it now
 
-- Software (Open source &amp; free like R, Python)  (~2000-present)
+- Software (Open source & free like R, Python)  (~2000-present)
 - Graphical interfaces (Windows, macOS, GUIs for coding like VS Code, RStudio)
 - Search engines (2000 - present)
 - Online databases—knowing where to look such as Google Scholar, Scopus, JSTOR (~2000-present)
 
 .three-column[
-&lt;img src="figure/AItoolsresearch/googlescholar.png" width ="500px" &gt;
+<img src="figure/AItoolsresearch/googlescholar.png" width ="500px" >
 ]
 
 .three-column[
-&lt;img src="figure/AItoolsresearch/scopus.png" width ="500px" &gt;
+<img src="figure/AItoolsresearch/scopus.png" width ="500px" >
 ]
 
 .three-column[
-&lt;img src="figure/AItoolsresearch/rpython.jpeg" width ="500px" &gt;
+<img src="figure/AItoolsresearch/rpython.jpeg" width ="500px" >
 ]
 
 ---
 class: middle center
 ## The right Mindset for using AI tools
 
-- Using AI tools for research and academic work is like the shift from physical libraries and manual coding to digital databases, and high-level ope-source coding with friendly interfaces—it requires us to .remember[build new intuitions]
+- Using AI tools for research and academic work is like the shift from physical libraries and manual coding to digital databases, and high-level ope-source coding with friendly interfaces—it requires us to .remember[build new intuitions],  approaching AI with the right mindset
 
 - If we approach AI with the .remember[right mindset]—using it critically, verifying its outputs, and understanding its role—we can make it a powerful asset without compromising research integrity
 
@@ -151,7 +212,7 @@ class: inverse middle center
 ]
 
 .pull-right[
-&lt;img src="figure/AItoolsresearch/workout.png" width ="500px" &gt;
+<img src="figure/AItoolsresearch/workout.png" width ="500px" >
 ]
 
 
@@ -183,7 +244,7 @@ class: inverse middle center
 
 .pull-right[
 .center[
-&lt;img src="figure/AItoolsresearch/llmevidence.png" width ="300px" &gt;
+<img src="figure/AItoolsresearch/llmevidence.png" width ="300px" >
 ]
 ]
 
@@ -204,7 +265,7 @@ class: inverse middle center
 
 .pull-right[
 .center[
-&lt;img src="figure/AItoolsresearch/aiassistant.png" width ="500px" &gt;
+<img src="figure/AItoolsresearch/aiassistant.png" width ="500px" >
 ]
 ]
 
@@ -220,7 +281,7 @@ class: inverse middle center
 
 .pull-right[
 .center[
-&lt;img src="figure/AItoolsresearch/ai-accountability.png" width ="500px" &gt;
+<img src="figure/AItoolsresearch/ai-accountability.png" width ="500px" >
 ]
 ]
 
@@ -234,7 +295,7 @@ class: inverse middle center
 - **Always ask yourself**: .remember[How can AI enhance my research and learning workflow without replacing essential practices?]
 
 .center[
-&lt;img src="figure/AItoolsresearch/adapt.jpg" width ="700px" &gt;
+<img src="figure/AItoolsresearch/adapt.jpg" width ="700px" >
 ]
 
 ---
@@ -265,7 +326,7 @@ class: middle
 | **Google Gemini**     | Gemini family    | ❌           | ✅             | Voice only     |      ✅     | ✅         | ✅ Imogen-3       | Limited        | Limited        | ❌           | ❌         | ❌           | Helpful and a bit bland                          | Wide variety of features, good connections with search |
 | **X.ai Grok**        | Grok-2           | ❌           | ❌             | ❌                 | ❌           | ✅ Mostly X | ✅ Aurora         | ❌             | ❌             | ❌           | ❌         | ❌           | Sarcastic and "fun" (but can be toned down)      | Powerful model integrated tightly with X (Twitter) |
 | **DeepSeek**         | DeepSeek v3      | ✅           | ❌             | ❌             |    ✅    | ❌         | ❌                | ✅             | ❌             | ❌           | ❌         | Limited       | Neurotically helpful, warm                      | Remarkably cheap and powerful model out of China |
-| **Mistral AI**       | Mixtral (MoE)    | ✅           | ❌             | ❌                 | ✅           | ❌         | ❌                | ✅             | ❌             | ❌           | ❌         | ❌           | Efficient, open-source, highly capable for coding &amp; reasoning | Lightweight, open-source, and powerful mixture-of-experts model |
+| **Mistral AI**       | Mixtral (MoE)    | ✅           | ❌             | ❌                 | ✅           | ❌         | ❌                | ✅             | ❌             | ❌           | ❌         | ❌           | Efficient, open-source, highly capable for coding & reasoning | Lightweight, open-source, and powerful mixture-of-experts model |
 
 ]
 
@@ -278,10 +339,10 @@ class: middle
 - Brainstorming and refining questions: AI models
 - Literature review and discovery:
   - Paper search: Semantic search, SciSpace, Perplexity
-  - Literature review &amp; discovery: ResearchRabbit, Connected Papers, SciSpace, Elicit, Litmap, many more
+  - Literature review & discovery: ResearchRabbit, Connected Papers, SciSpace, Elicit, Litmap, many more
   - Reading and learning assistants: NotebookLM, SciSpace, OpenRead
   - Summarisation: NotebookLM, QuillBot, OpenRead, Scholarcy
-- Writing &amp; editing: QuillBot, Jenni, AI models
+- Writing & editing: QuillBot, Jenni, AI models
 ]
 ]
 .pull-right[
@@ -290,8 +351,8 @@ class: middle
   - Brainstorm research design: AI models
   - Qualitative data analysis : MyRA, AI models
   - Coding and data analysis: AI models
-  - Speech-to-Text &amp; Presentation: Speechmatics, AudioPen
-- Citation &amp; reference management: VOSviewer, Scite, Zotero
+  - Speech-to-Text & Presentation: Speechmatics, AudioPen
+- Citation & reference management: VOSviewer, Scite, Zotero
 
 - Dissemination:
   - Presentation: Gamma, SciSpace
@@ -308,15 +369,15 @@ class: middle
 | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Primary Focus**                      | Broad: General conversation, content creation, code generation, information retrieval.                                                                     | Narrow: Supporting research workflows, finding relevant research, summarising findings.                                                            |
 | **Data Sources**                       | Massive text and code datasets, web data.                                                                                                                  | Primarily scientific literature (peer-reviewed papers, preprints, such as Semantic Scholar database, Open Alex, etc.).                              |
-| **Output Format &amp; Style**              | Conversational text, code, summaries. Often lacks formal citations.                                                                                        | Summaries, lists of key findings, and extracted data, often with citations and links to sources. Evidence-based.                                   |
+| **Output Format & Style**              | Conversational text, code, summaries. Often lacks formal citations.                                                                                        | Summaries, lists of key findings, and extracted data, often with citations and links to sources. Evidence-based.                                   |
 | **Interaction Style**                  | Natural language prompts, open-ended questions.                                                                                                            | More structured queries, often focused on specific research questions.                                                                             |
-| **Search Functionality &amp; Filtering**   | Basic keyword search, often limited filtering options.                                                                                                     | Advanced search with filters for date, author, journal, keywords, etc.                                                                             |
-| **Transparency &amp; Explainability**      | Often a "black box." Difficult to understand how the tool arrived at a particular output.                                                                  | Aims for greater transparency by showing the source of information and the reasoning process.                                                      |
+| **Search Functionality & Filtering**   | Basic keyword search, often limited filtering options.                                                                                                     | Advanced search with filters for date, author, journal, keywords, etc.                                                                             |
+| **Transparency & Explainability**      | Often a "black box." Difficult to understand how the tool arrived at a particular output.                                                                  | Aims for greater transparency by showing the source of information and the reasoning process.                                                      |
 | **Integration with Research Tools**    | Limited or no direct integration with citation managers, reference databases.                                                                              | Often integrates with platforms like Zotero, Mendeley, Google Scholar, and others to facilitate research workflows.                                |
 | **Use in Academic Writing**            | Can assist in drafting text, explaining concepts, and brainstorming ideas but lacks built-in citation management.                                          | Designed to support academic writing by providing structured summaries, reference links, and citation-ready information.                           |
-| **Reading &amp; Understanding Assistance** | Limited—may provide general explanations but lacks direct support for deep reading.                                                                        | Some AI research assistants offer summarisation but do not focus on in-depth explanations of figures or equations.                                 |
+| **Reading & Understanding Assistance** | Limited—may provide general explanations but lacks direct support for deep reading.                                                                        | Some AI research assistants offer summarisation but do not focus on in-depth explanations of figures or equations.                                 |
 | **Multimodal Capabilities**            | Some models support images, code, and other formats alongside text. However, interpretation of scientific figures, tables, and equations is often limited. | Focused primarily on text-based research, but some tools can process and extract information from PDFs, graphs, and tables within academic papers. |
-| **Customisability &amp; Personalisation**  | Can be fine-tuned to some extent using custom instructions but lacks deep personalisation for research workflows.                                          | Often allows users to refine searches, track specific topics, and receive personalised research recommendations.                                   |
+| **Customisability & Personalisation**  | Can be fine-tuned to some extent using custom instructions but lacks deep personalisation for research workflows.                                          | Often allows users to refine searches, track specific topics, and receive personalised research recommendations.                                   |
 ]
 
 ---
@@ -399,7 +460,7 @@ https://youtu.be/9N5RlQxu8ng?si=Fch3NGaWrteSK98S
 ---
 ## Reading and learning 
 
-`$$CRPS(F, y) = \int \left( F(\hat{y}) - 1_{\{\hat{y} \geq y\}} \right)^2 d\hat{y}$$`
+$$CRPS(F, y) = \int \left( F(\hat{y}) - 1_{\{\hat{y} \geq y\}} \right)^2 d\hat{y}$$
 
 Here is a formula in LaTeX: ...
 The formula is about Continuous Ranked Probability score used to assess the performance of the forecast density.
@@ -411,9 +472,9 @@ Could you derive the analytical expression for CRPS assuming the forecast follow
 could you provide a graphical representation of CDF versus the actual to better understand the concept?
 
 ---
-## Dta analysis and coding in R &amp; Python
+## Dta analysis and coding in R & Python
 
-&gt;create an interactive tool in a  single page that visually shows me how correlation works, and why correlation alone is not a great descriptor of how the underlying data works in many cases. make it accessible to nonmath people and highly interactive and engaging.
+>create an interactive tool in a  single page that visually shows me how correlation works, and why correlation alone is not a great descriptor of how the underlying data works in many cases. make it accessible to nonmath people and highly interactive and engaging.
 
 .small[
 - The interactive tool should also includes sections on correlation for non-linear data and simpson's paradox
@@ -424,11 +485,11 @@ could you provide a graphical representation of CDF versus the actual to better 
 ## Interview script analysis with Claude
 
 .pull-left[
-&lt;img src="figure/AItoolsresearch/flowchart_harm_llm.png" width ="700px" &gt;
+<img src="figure/AItoolsresearch/flowchart_harm_llm.png" width ="700px" >
 ]
 
 .pull-right[
-&lt;img src="figure/AItoolsresearch/harm_llm1.png" width ="700px" &gt;
+<img src="figure/AItoolsresearch/harm_llm1.png" width ="700px" >
 ]
 
 ---
@@ -436,7 +497,7 @@ could you provide a graphical representation of CDF versus the actual to better 
 
 Upload your report or paper, and use the following prompt in an AI model:
 
-&gt;Imagine three different readers engaging with my paper: a hostile critic, a friendly supporter, and a naive reader unfamiliar with the subject. Each of them reads my work and reacts accordingly. Summarize how each would respond, highlighting their key concerns, praises, or confusions
+>Imagine three different readers engaging with my paper: a hostile critic, a friendly supporter, and a naive reader unfamiliar with the subject. Each of them reads my work and reacts accordingly. Summarize how each would respond, highlighting their key concerns, praises, or confusions
 
 ---
 background-image: url("resources/hierarchy-left.jpeg")
@@ -463,7 +524,7 @@ class: middle
 
 ✅ Work that research shows that AI is almost certainly helpful in - many kinds of coding, for example.
 
-✅ Work where you need a first pass view .
+✅ Work where you need a first pass view 
 
 ✅ Work that is mere translation between frames or perspectives. 
 
@@ -493,13 +554,7 @@ class: middle
 
 - We can learn a bit about how LLMs work, and give some advice on prompting, but, beyond that, what are we supposed to learn to make us "AI ready"?
 
-- As per today, good skills seems to be- delegation, clear explanations, getting a sense of strengths &amp; weaknesses, division of labor, project management, clear feedback...
-
----
-## Final remark
-&lt;br&gt;&lt;br&gt;
-.large[While using Chatbots, and prompting is a useful skill, the real impact of AI comes from customising AI tools, and integrating them into research, learning &amp; teaching workflows.]
-
+- We may develop course to teach principles and develop the right mindset to use AI tools
 
 ---
 class: middle
@@ -508,7 +563,7 @@ class: middle
 
 1. How should AI be integrated into the research, teaching, and learning workflows at CARBS, and to what extent should its use be encouraged or regulated?
 
-2. What strategies should CARBS adopt to equip faculty with the necessary skills and guidelines for AI use?
+2. What strategies should CARBS adopt to equip faculty and students with the necessary skills and guidelines for AI use?
 
 3. How can we ensure that AI tools complement, rather than replace, critical thinking, creativity, and human expertise in research and learning?
 
@@ -518,148 +573,7 @@ class: middle
 - Venkatesh, V. (2022). [Adoption and use of AI tools: a research agenda grounded in UTAUT](https://link.springer.com/article/10.1007/s10479-020-03918-9). Annals of Operations Research, 308(1), 641-652.
 - Lee Boonstra, 2024, [Prompt Engineering](https://drive.google.com/file/d/1jkQ_s8z4TQy85cVKwymhs4w3fP9PZ4xm/view)
 
-- Bien, J., &amp; Mukherjee, G. (2024). [Generative AI for Data Science 101: Coding Without Learning To Code](https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2432397). Journal of Statistics and Data Science Education, (just-accepted), 1-12.
+- Bien, J., & Mukherjee, G. (2024). [Generative AI for Data Science 101: Coding Without Learning To Code](https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2432397). Journal of Statistics and Data Science Education, (just-accepted), 1-12.
 - Ethan Mollick, Which AI to Use Now: An Updated Opinionated Guide, accessed , Jan 26 2025
 - [Learn AI Gen course](https://teachgenai.au.dk/learn-genai/learn-genai-course)
 - Website of all AI model and AI-Powered tools
-    </textarea>
-<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
-<script src="./libs/remark-latest.min.js"></script>
-<script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLanguage": ["r", "markdown", "yaml"],
-"ratio": "16:9",
-"highlightLines": true,
-"countIncrementalSlides": false,
-"navigation": {
-"scroll": false
-}
-});
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
-  window.dispatchEvent(new Event('resize'));
-});
-(function(d) {
-  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
-  if (!r) return;
-  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
-  d.head.appendChild(s);
-})(document);
-
-(function(d) {
-  var el = d.getElementsByClassName("remark-slides-area");
-  if (!el) return;
-  var slide, slides = slideshow.getSlides(), els = el[0].children;
-  for (var i = 1; i < slides.length; i++) {
-    slide = slides[i];
-    if (slide.properties.continued === "true" || slide.properties.count === "false") {
-      els[i - 1].className += ' has-continuation';
-    }
-  }
-  var s = d.createElement("style");
-  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
-  d.head.appendChild(s);
-})(document);
-// delete the temporary CSS (for displaying all slides initially) when the user
-// starts to view slides
-(function() {
-  var deleted = false;
-  slideshow.on('beforeShowSlide', function(slide) {
-    if (deleted) return;
-    var sheets = document.styleSheets, node;
-    for (var i = 0; i < sheets.length; i++) {
-      node = sheets[i].ownerNode;
-      if (node.dataset["target"] !== "print-only") continue;
-      node.parentNode.removeChild(node);
-    }
-    deleted = true;
-  });
-})();
-// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
-// screen reader (see PR #262)
-(function(d) {
-  let res = {};
-  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
-    const t = tr.querySelector('td:nth-child(2)').innerText;
-    tr.querySelectorAll('td:first-child .key').forEach(key => {
-      const k = key.innerText;
-      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
-    });
-  });
-  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
-})(document);
-(function() {
-  "use strict"
-  // Replace <script> tags in slides area to make them executable
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    var scriptAttrs = scripts[i].attributes;
-    for (var j = 0; j < scriptAttrs.length; j++) {
-      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
-    }
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-// adds .remark-code-has-line-highlighted class to <pre> parent elements
-// of code chunks containing highlighted lines with class .remark-code-line-highlighted
-(function(d) {
-  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
-  const preParents = [];
-  const findPreParent = function(line, p = 0) {
-    if (p > 1) return null; // traverse up no further than grandparent
-    const el = line.parentElement;
-    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
-  };
-
-  for (let line of hlines) {
-    let pre = findPreParent(line);
-    if (pre && !preParents.includes(pre)) preParents.push(pre);
-  }
-  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
-})(document);</script>
-
-<script>
-slideshow._releaseMath = function(el) {
-  var i, text, code, codes = el.getElementsByTagName('code');
-  for (i = 0; i < codes.length;) {
-    code = codes[i];
-    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
-      text = code.textContent;
-      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
-          /^\$\$(.|\s)+\$\$$/.test(text) ||
-          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
-        code.outerHTML = code.innerHTML;  // remove <code></code>
-        continue;
-      }
-    }
-    i++;
-  }
-};
-slideshow._releaseMath(document);
-</script>
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-(function () {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
-  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
-    script.src  = script.src.replace(/^https?:/, '');
-  document.getElementsByTagName('head')[0].appendChild(script);
-})();
-</script>
-  </body>
-</html>

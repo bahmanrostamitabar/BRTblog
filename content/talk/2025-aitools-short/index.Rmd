@@ -1,0 +1,23 @@
+---
+title: "AI Tools for Research: A Practical Guide"
+draft: false
+date: "2025-03-18T12:30:00Z"
+url_slides: /slides/AItoolresearch_short.html
+location: Executive Suite, Cardiff, UK
+summary: 'This seminar provides practical skills for incorporating AI tools into the research process empowering researchers  to save time and improve their research workflow. It is designed to benefit researchers at all levels and addresses  key stages of the research workflow. The session features live demonstrations of essential tools, showcasing  workflows that span from problem definition to dissemination.'
+event: CARBS All School Meeting
+date_end: "2025-03-18T14:00:00Z"
+all_day: false
+publishdate: "2025-03-17T22:00:00Z"
+categories: seminar
+tags:
+- seminar
+- CARBS
+lastmod: "2025-03-18T11:00:00Z"
+featured: false
+image:
+  caption: ''
+  focal_point: center
+  preview_only: false
+projects: []
+---
