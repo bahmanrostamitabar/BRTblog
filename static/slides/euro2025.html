@@ -15,7 +15,7 @@
 
 
 
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 .center[.title[.small[Towards Socially Responsible Forecasting:
 Identifying and Typifying Forecasting Harms]]]
 .sticker-float[![fable](resources/carbs-white-background.jpg)]
@@ -23,9 +23,10 @@ Identifying and Typifying Forecasting Harms]]]
 
 .bottom[
 ### Bahman Rostami-Tabar, Professor of Analytics and Decision Sciences
-### Director of Data Lab fro Social Good Reserach Group, Cardiff University
+### Director of Data Lab for Social Good Reserach Group, Cardiff University
 ### Co-authors: Travis Greene, Galit Shmueli, Rob J. Hyndman &lt;br&gt;
-### EURO 2025, Leeds
+
+### Slides: https://www.bahmanrt.com/slides/euro2025
 ]
 
 ---
@@ -39,9 +40,9 @@ class: middle
 
 - Problem and motivation
 
-- Methodology
+- Data collection, and analysis
 
-- Findings
+- Findings &amp; discussion
 
 - Conclusion and research agenda
 ]
@@ -57,9 +58,9 @@ class: middle
 
 - .remember[Problem and motivation]
 
-- Methodology
+- Data collection, and analysis
 
-- Findings
+- Findings &amp; discussion
 
 - Conclusion and research agenda
 ]
@@ -67,6 +68,7 @@ class: middle
 ---
 ## Is forecasting beneficial?
 
+.pull-left[
 .center[
 &lt;img src="figure/euro2025/nassim.png" width ="1000px" &gt;
 ]
@@ -75,7 +77,20 @@ class: middle
 .center[
 &lt;img src="figure/euro2025/consensus.png" width ="1000px" &gt;
 ]
+]
 
+.pull-right[
+
+Benefits are widely accepted, the potential harms are far less examined. And yet, ignoring those harms doesn’t make them disappear
+
+In this talk, I want to make the case that forecasting is not inherently good or bad—it is a powerful tool. 
+
+And like all powerful tools, it requires responsibility, reflection, and care. This is the foundation of what I call .remember[socially responsible forecasting].
+
+]
+
+???
+I began thinking seriously about this research nearly five years ago, after reading The Black Swan by Nassim Taleb. One line in particular stayed with me: 'Anyone who causes harm by forecasting should be treated as either a fool or a liar. Some forecasters cause more damage to society than criminals.' At first, it felt extreme—but the more I sat with it, the more it raised a question I hadn’t seen discussed in our field: is forecasting truly beneficial? To explore this, I recently posed the question on the expert research platform Consensus. The responses were far from unanimous: about 50% said yes, 33% said no, and 17% gave mixed or conditional answers. What this tells us is that while the benefits of forecasting—improved planning, efficiency, and foresight—are widely accepted, the potential harms are far less examined. And yet, ignoring those harms doesn’t make them disappear. In this talk, I want to make the case that forecasting is not inherently good or bad—it is powerful. And like all powerful tools, it requires responsibility, reflection, and care. This is the foundation of what I call socially responsible forecasting."
 
 ---
 ## Motovation
@@ -87,59 +102,57 @@ class: middle
 - Responsible AI research is growing, but its application to forecasting has received little attention.
     - There is only [one paper](https://academic.oup.com/icesjms/article/76/5/1244/5303214) in the context of marine ecology, and proposes ten guiding principles for ethical forecasting.
 
+???
+Beyond a curiosity fueled by a striking statement from Nassim Taleb, the motivation for this work emerged from candid conversations I’ve had with forecasting experts—both in academia and industry. When I began raising questions about the potential harms of forecasting in professional settings, a clear pattern emerged: these concerns were almost never part of the conversation. One editor-in-chief even remarked, “I hadn’t heard this question posed like this before, but just bringing awareness makes a difference.” While responsible AI has become a well-established area of research, its application to forecasting remains largely overlooked. Aside from a single paper in the context of marine ecology, the academic literature is nearly silent on this topic.
+
 ---
 ## What might explain these gaps in our understanding of forecasting harms? 
 
+- Forecasting often takes place behind closed doors
 
-- forecasting often takes place behind closed doors
+- Forecasting generally focuses on predicting the behavior of aggregates variables, rather than individuals 
 
-- forecasting generally focuses on predicting the behavior of aggregates 
+- Because it doesn’t always rely on personal data, it hasn’t faced the same level of legal or media attention as other AI tools like facial recognition or credit scoring. 
 
-- the focus on aggregates also means that personal data generally plays a smaller role in forecasting, which may contribute to less legal and regulatory scrutiny
+- And since it doesn’t usually cause public controversy, there’s been little pressure to examine its ethical risks. 
 
-- Third, unlike some applications of AI that have provoked major media and journalism reporting (e.g., facial recognition, and criminal risk predictions), applications of forecasting have tended to receive much less popular coverage
+- All of this means that the potential harms of forecasting often stay hidden or ignored.
+
+???
+There are several reasons why we don’t talk much about the harms of forecasting. First, forecasting usually happens behind the scenes, inside organizations, so its effects aren’t always visible to the public. Second, it often deals with aggregate variables, large groups or systems—like demand or population trends—so we don’t see how it might affect individuals differently. Also, because forecasting doesn’t always rely on personal data, it hasn’t faced the same level of legal or media attention as other AI tools like facial recognition or credit scoring. And since it doesn’t usually cause public controversy, there’s been little pressure to examine its ethical risks. All of this means that the potential harms of forecasting often stay hidden or ignored.
 
 ---
 ## Why is this important?
 
-- There is a pressing need for such work given the scale of forecasting’s influence on human behavior and social systems
+.remember[This topic matters because forecasting plays a powerful role in shaping decisions across society], these decisions can have real, lasting consequences 
 
-- Forecasting can involve system-wide scales with catastrophic stakes, as when forecasting events such as financial crises, terrorist attacks, earthquakes, floods, health service,  etc
+-  Rapid growth in the number of sensors and devices that capture individual-level and/or real-time data, and AI progress, plus more applications involving aspects of automated decision-making
 
--  Societies around the world are witnessing rapid growth in the number of sensors and devices that capture and analyse individual-level time series data
+- So, their influence is growing—yet we rarely ask who might be harmed when a forecast is wrong, biased, or misused.
 
-- Many forecasting applications involve aspects of automated decision-making, usually subject automated systems to greater regulatory scrutiny than systems where humans are “in the loop”
+--
 
----
-## Distinguish forecasting from other similar terms, such as “predictive AI” 
+- Creating awareness is the first step toward responsible forecasting.
+  - Without it, we risk building systems that may reinforce inequality, reduce transparency, or cause preventable harm—often without anyone noticing until it's too late.
 
-- Forecasting is forward-looking, providing estimations of the variable of interest’s value at one or more future time periods; 
-
-- Forecasting is based on historical observations of the variable of interest (i.e., time series); 
-
-- The forecasting models can include past and future values of other exogenous variables 
+???
+this topic matters because forecasting plays a powerful role in shaping decisions across society—whether it's allocating healthcare resources, managing humanitarian aid, or responding to financial or environmental crises. These decisions can have real, lasting consequences on people’s lives, especially in high-stakes or vulnerable settings. As more forecasting systems become automated and rely on real-time data, their influence is growing—yet we rarely ask who might be harmed when a forecast is wrong, biased, or misused. Creating awareness is the first step toward responsible forecasting. Without it, we risk building systems that unintentionally reinforce inequality, reduce transparency, or cause preventable harm—often without anyone noticing until it's too late.
 
 ---
-## What we mean by harm?
+## What do we want to acheive in this work?
 
-The concept of harm is interrelated with contested notions of wrongs, justice, duties, rights, responsibility, interests, intentions, causality, care, liability, and consent, to name just a few
+Our aim is to take the first steps toward building a foundation for socially responsible forecasting. We’re guided by three main questions: 
 
-- Our goal is not to articulate a novel theory of harm specific to forecasting, but to leverage the pre-existing harm-related concepts and frameworks
-
-- We treat the concept of harm as a cluster concept, and provisionally define harm as unjustly or wrongly setting back an interest of an individual or collective of individuals (e.g., a community, an organization)
-
----
-## What do we want to acheive in this study?
-
-Three questions motivate this study:
-
-  1.What are the harms specific to forecasting?; 
+  1.What are the harms specific to forecasting?
 
   2.How might such harms be mitigated? 
 
   3.What should a research agenda for responsible forecasting entail? 
 
 &gt;Our focus is primairly on publishing a forecast rater than the entire forecasting workflow.
+
+???
+In this work, our aim is to take the first steps toward building a foundation for socially responsible forecasting. We’re guided by three main questions: What kinds of harm are specific to forecasting? How might we recognize and reduce those harms? And what should a future research agenda look like to support more ethical forecasting practices? Our focus is not on the entire forecasting pipeline, but specifically on what happens when a forecast is produced and shared—how it’s interpreted, acted upon, and the consequences that follow. By identifying forecasting-specific harms and proposing ways to think critically about them, we hope to spark a broader conversation within the forecasting community about responsibility, and etgics in forecasting.
 
 ---
 background-image: url("resources/hierarchy-left.jpeg")
@@ -152,9 +165,9 @@ class: middle
 
 - Problem and motivation
 
-- .remember[Methodology]
+- .remember[Data collection, and analysis]
 
-- Findings
+- Findings &amp; discussion
 
 - Conclusion and research agenda
 ]
@@ -166,15 +179,36 @@ class: middle
 
 - Recruited people from academia and diverse organizations with extensive expertise and experience in forecasting
 
-- 21 interviews, each lasting 40 to 65 minutes, all of which were completed online. This produced about 1121 minutes
+- 21 interviews transcribed, each lasting 40 to 65 minutes, all of which were completed online. This produced about 1121 minutes
 
-- Variety of disciplines, including supply chain, business, public health, healthcare operations, humanitarian and
-development operations, government bodies, and software development
+- Variety of disciplines, including supply chain, business, public health, healthcare operations, humanitarian and development operations, government bodies, and software development
 
 - Ethical approval for this study was obtained from the Cardiff Business School Research Ethics Committee
 
 ---
-## Framework - Microsoft Azure harm model 
+## Interview questions
+
+.small[
+
+**Publish forecasts:**
+
+Based on your experience, do you believe that forecasting can potentially cause harm? 
+
+What types of harms do you think are associated with publishing a forecast?
+
+Can you share with us some examples of how published forecasts have caused harm in the past?
+
+Are there certain domains (e.g. healthcare, climate change) where publishing a forecast is particularly prone to generating harm?
+
+What role do forecasters play in identifying and mitigating potential harms associated with publishing forecasts?
+
+How can forecasting systems be improved to minimize harm resulting from published forecasts?
+
+In your experience, what are some common types of harm in the forecasting workflow before publishing a forecast, such as data collection, model selection, accuracy evaluation?
+]
+
+---
+## [Framework - Microsoft Azure](https://learn.microsoft.com/en-us/azure/architecture/guide/responsible-innovation/harms-modeling/)
 ### harm that technology users might encounter
 
 .pull-left[
@@ -210,7 +244,7 @@ development operations, government bodies, and software development
 ]
 
 ---
-## Analysis with Claude
+## Analysis with AI-Claude
 
 .pull-left[
 &lt;img src="figure/AItoolsresearch/flowchart_harm_llm.png" width ="700px" &gt;
@@ -241,9 +275,9 @@ class: middle
 
 - Problem and motivation
 
-- Methodology
+- Data collection, and analysis
 
-- .remember[Findings]
+- .remember[Findings &amp; discussion]
 
 - Conclusion and research agenda
 ]
@@ -264,12 +298,10 @@ class: middle
   - Inadequate fail-safes
   - Exposure to unhealthy agents
 - Emotional or psychological injury
-  - Over-reliance on automation
   - Distortion of reality
   - Reputation damage
   - Attention hijacking
   - Emotional distress
-
 ]
 
 .pull-right[
@@ -356,9 +388,9 @@ class: middle
 
 - Problem and motivation
 
-- Methodology
+- Data collection, and analysis
 
-- Findings
+- Findings &amp; discussion
 
 - .remember[Conclusions and research agenda]
 ]
@@ -366,39 +398,50 @@ class: middle
 ---
 ## Future research 
 
-- Compensation for forecasting harms
+- .remember[Compensation for forecasting harms], building the ethical and institutional groundwork for accountability in forecasting
 
-- Developing “fair” forecasting metrics
+--
 
-- Explainability, transparency, and contestability of forecasts
+- .remember[Developing “fair” forecasting metrics]: 1) design meaningful fairness metrics; 2) ensure those metrics are grounded in the real-world social and ethical contexts where forecasting is applied
 
-- Addressing forecasting inconsistency
+--
 
-- Managerial override of forecasts
+- .remember[Explainability, transparency, and contestability of forecasts]: making forecasts more understandable, transparent, and open to challenge
 
-- Statistical education and training for managers
+--
+
+- .remember[Addressing forecasting inconsistency]: addressing inconsistency is not just a technical challenge—it’s also about building trust, credibility, and accountability in forecasting as a decision-support tool
+
+--
+
+- .remember[Managerial override of forecasts]: explore the conditions under which managerial corrections ultimately help or hurt forecasting process
+
+--
+
+- .rememberStatistical education and training for managers]: a need for greater education in probability and statistics for managers
 
 
 ---
 ##  Conclusions
 
-- Forecasting-specific harms are underexplored compared to broader AI/ML harms.
+- Forecasting-specific harms are underexplored compared to broader AI/ML harms
 
 --
 
-- Harm in forecasting often arises not from prediction itself, but from how forecasts are published, interpreted, and acted upon in social systems.
+- .remember[Harm in forecasting] often .remember[arises] not from prediction itself, but .remember[from how forecasts are published, interpreted, and acted upon]
+
 
 --
 
-- Forecasting is not inherently harmful, but needs safeguards—abandoning it would increase uncertainty and inefficiency.
-
---
-
-- Ethical responsibility and professional standards should be developed, especially in high-stakes domains, to mitigate risk.
+- .remember[Ethical responsibility and professional standards] should be developed, especially in high-stakes domains, to mitigate risk.
 
 --
 
 - Responsible forecasting demands reflexivity, transparency, and a willingness to confront difficult questions about impact and accountability.
+
+--
+
+- Forecasting is not inherently harmful, but needs safeguards—abandoning it would increase uncertainty and inefficiency.
 
 ---
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
@@ -409,9 +452,10 @@ Identifying and Typifying Forecasting Harms]]]
 
 .bottom[
 ### Bahman Rostami-Tabar, Professor of Analytics and Decision Sciences
-### Director of Data Lab fro Social Good Reserach Group, CARBS, Cardiff University
+### Director of Data Lab for Social Good Reserach Group, Cardiff University
 ### Co-authors: Travis Greene, Galit Shmueli, Rob J. Hyndman &lt;br&gt;
-### EURO 2025, Leeds
+
+### Slides: https://www.bahmanrt.com/slides/euro2025
 ]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
