@@ -115,6 +115,8 @@ class: middle
 ]
 ]
 
+--
+
 .pull-right[
 
 Benefits are widely accepted, the potential harms are far less examined. And yet, ignoring those harms doesn’t make them disappear
