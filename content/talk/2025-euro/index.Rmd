@@ -1,6 +1,5 @@
 ---
-title: "Towards Socially Responsible Forecasting-Identifying and Typifying Forecasting
-  Harms"
+title: "Towards Socially Responsible Forecasting-Identifying and Typifying Forecasting Harms"
 draft: false
 date: "2025-06-25T12:30:00Z"
 url_slides: /slides/euro2025.html
