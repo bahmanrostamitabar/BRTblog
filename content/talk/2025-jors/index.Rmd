@@ -14,7 +14,7 @@ categories: webinar
 tags:
 - seminar
 - aggregation
-lastmod: "2025-07-23T23:00:00Z"
+lastmod: "2025-07-25T10:00:00Z"
 featured: false
 image:
   caption: ''

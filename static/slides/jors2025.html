@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>To aggregate or not to aggregate: Forecasting of finiteautocorrelated demand</title>
+    <title>To aggregate or not to aggregate: Forecasting of finiteautocorrelated series</title>
     <meta charset="utf-8" />
     <meta name="author" content="Bahman Rostami Tabar" />
     <script src="libs/header-attrs/header-attrs.js"></script>
@@ -16,7 +16,7 @@
 
 
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
-.center[.title[.small[To aggregate or not to aggregate: Forecasting of finiteautocorrelated demand]]]
+.center[.title[.small[To aggregate or not to aggregate: Forecasting of finiteautocorrelated series]]]
 .sticker-float[![fable](resources/carbs-white-background.jpg)]
 .sticker-left[![isf](resources/DLSG.png)]
 
@@ -79,7 +79,7 @@ class: middle
 ## Should we forecast at hourly or weekly frequency?
 
 .pull-left[
-### Motivating Example: Hospital Admissions
+### Motivating example: hospital admissions
 
 - Hourly data on patient admissions is available.
 
@@ -93,7 +93,7 @@ class: middle
 .pull-right[
 ### Common across domains and time granulrity
 
-Data is often collected at higher frequency (e.g., Minutes, hours) than the forecasting target frequency (e.g., day, week, month, quarter).
+Data is often collected at higher frequency (e.g., Minutes, hours) than the forecasting target frequency (e.g., day, week, month, quarter). 
 
 - Retail
 - Energy
@@ -104,16 +104,6 @@ Data is often collected at higher frequency (e.g., Minutes, hours) than the fore
 - and more
 
 ]
-
-???
-for example, assume you are the planenr in a hopital, data are colelted for each hour showing how many patiens youa dmitted, but you are interested in the weekly number of patients admitted to the hospital to plan your resourced for the nxt 6 weeks. in this case, you need to forecast for the next 6 weeks, but the data is collected at a higher frequency (hourly). So, you have a choice to use data at a higher frequency (hourly) or aggregate it to a lower frequency (weekly) and then forecast. but which one gi
-ves you better forecast accuracy?
-
-you can generalie this to any other situation where data is collected at a higher frequency than the frequency of interest, such as:
-- sales data collected at daily frequency, but you are interested in forecasting weekly sales
-- energy consumption data collected at hourly frequency, but you are interested in forecasting daily or weekly consumption
-- weather data collected at hourly frequency, but you are interested in forecasting daily or weekly weather patterns
-- 
 
 ---
 ## Temporal aggregation
@@ -137,7 +127,7 @@ you can generalie this to any other situation where data is collected at a highe
 - Model complexity
 ]
 
-.footnote[Kourentzes, Nikolaos, Bahman Rostami-Tabar, and Devon K. Barrow. "Demand forecasting by temporal aggregation: Using optimal or multiple aggregation levels?." Journal of Business Research 78 (2017): 1-9.]
+.footnote[Kourentzes, Nikolaos, Bahman Rostami-Tabar, and Devon K. Barrow. "series forecasting by temporal aggregation: Using optimal or multiple aggregation levels?." Journal of Business Research 78 (2017): 1-9.]
 
 ---
 ## How TA affects time series features
@@ -198,20 +188,12 @@ The term became particularly important in studies on:
  Wei, W.W.S. (1979). Some consequences of temporal aggregation in seasonal time series models. In Seasonal Analysis of Economic Time Series, Ed. A. Zellner, pp. 433-444. Washington, D.C.; U.S. Department of
  Commerce, Bureau of the Census]
  
-
-???
- Autoregressive moving average (ARMA) processes, where it was shown that temporal aggregation can change the order and structure of the process.
-
-Macroeconomic modeling, where data are often available at different temporal resolutions (e.g., GDP quarterly, inflation monthly), requiring aggregation or disaggregation.
-
-- Forecasting, where aggregation affects forecast accuracy and the horizon of predictability.
-
 ---
 class: 
-## Two Distinct Approaches to Forecasting with Temporal Aggregation
+## Two distinct approaches to forecasting with temporal aggregation
 
 .pull-left[
-### Approach 1: Understanding and Optimizing 
+### Approach 1: understanding and optimizing 
 
 - Investigates how and when TA improves forecast accuracy.
 
@@ -223,7 +205,7 @@ class:
 --
 
 .pull-right[
-### Approach 2: Combining Information Across Temporal Resolutions
+### Approach 2: Combining information across temporal levels
 
 - Leverages data from multiple levels of aggregation simultaneously (e.g., hourly + daily + weekly).
 
@@ -242,8 +224,8 @@ class:
 
 - Rostami‐Tabar, Bahman, et al. Naval Research Logistics (NRL) 60.6 (2013): 479-498.
   - Assuming autocorrelated series, AR processes, and SES
-  - Analytical MSE expressions for non-aggregated and non-overlappin aggregated series
-  - There is an optimal aggregation level depending the autocorrelation of the series
+  - Analytical MSE expressions for non-aggregated and non-overlapping aggregated series
+  - We also provided an analytical proof showing when the non-overlapping TA approach outperforms the non-aggregated alternative.
 
 ---
 ## Combining information from different levels
@@ -252,14 +234,14 @@ class:
 - Kourentzes, Nikolaos, et al. International Journal of Forecasting 30.2 (2014): 291-302.
   - Multiple temporal aggregation levels
   
-    &lt;img src="figure/jors2025/mapa.png" width ="450px" &gt;
+    &lt;img src="figure/jors2025/mapa.png" width ="500px" &gt;
 ]
 
 .pull-right[
 - Athanasopoulos, George, et al. EJOR 262.1 (2017): 60-74.
   - Temporal Hierarchies
   
-  &lt;img src="figure/jors2025/ta-hierarchy.png" width ="450px" &gt;
+  &lt;img src="figure/jors2025/ta-hierarchy.png" width ="500px" &gt;
 ]
 
 ---
@@ -276,7 +258,7 @@ class:
 --
 
 .pull-right[
-### Contributions
+### Objectives
 
 [1.] We derive analytical MSE expressions under the three approaches when a finite history length is used.
 
@@ -335,12 +317,14 @@ with a constant `\(C\)`, autoregressive coefficient `\(\phi\)`, and moving avera
 ## Forecast 
 
 - Simple Exponential Smoothing (SES) is used
-- We aim to forecast the cumulative (aggregated) demand, written as follows:
+- We aim to forecast the cumulative (aggregated) series, written as follows:
+
+`$$D_T = d_t + d_{t+1} + \cdots + d_{t+m-1}.$$`
 
 
 `$$f_t = \sum_{k=1}^{N} \alpha (1 - \alpha)^{k-1} d_{t-k} + (1 - \alpha)^N f_0$$`
 
-`$$F^{1}_{T, \text{OA}} = \sum_{k=1}^{N - m + 1} \beta_0 (1 - \beta_0)^{k-1} D_{T-k, \text{OA}} + (1 - \beta_0)^{N - m + 1} F_{0, \text{OA}}$$`
+`$$F_{T,\text{NOA}} = \sum_{k=1}^{\left\lceil \frac{N}{m} \right\rceil} \beta_N (1 - \beta_N)^{k-1} D_{T-k,\text{NOA}} + \left(1 - \beta_N\right)^{\left\lceil \frac{N}{m} \right\rceil} F_{0,\text{NOA}}$$`
 
 `$$F^{1}_{T,\text{OA}} = \sum_{k=1}^{N - m + 1} \beta_0 (1 - \beta_0)^{k - 1} D_{T - k,\text{OA}} + (1 - \beta_0)^{N - m + 1} F_{0,\text{OA}}$$`
 
@@ -351,17 +335,6 @@ with a constant `\(C\)`, autoregressive coefficient `\(\phi\)`, and moving avera
 
 &lt;img src="figure/jors2025/ta2.png" width ="1000px" &gt;
 
----
-## Evaluation Criteria
-
-- We analyse the performance of three approaches to produce the cumulative forecast over horizon `\(m\)` for periods `\(t, t+1, \dots, t+m-1\)`. 
-
-`$$D_T = d_t + d_{t+1} + \cdots + d_{t+m-1}.$$`
-
-- The effectiveness of these approaches on forecast accuracy improvement is evaluated using the MSE measure.
-
-
-`$$Var(D_{T})=\gamma_0' = m \gamma_0 + \gamma_1 \left( \sum_{k=1}^{m-1} 2(m - k) \phi^{k-1} \right).$$`
 
 ---
 ## MSE for three approaches
@@ -430,6 +403,7 @@ class: middle
 .center[&lt;img src="figure/jors2025/M4.jpg" width ="600px" &gt;]
 ]
 
+--
 
 .pull-right[
 .center[&lt;img src="figure/jors2025/RESULT-M4.jpg" width ="600px" &gt;]
@@ -459,10 +433,10 @@ class: middle
 
 ---
 ## Conclusion
-
+The question we address is fundamental— .remember[persisting over time] and .remember[remaining relevant] across diverse domains and temporal granularities.
 
 - .remember[High positive autocorrelation:] Non-aggregated data yields lower MSEs.
-- .remember[Negative autocorrelation]: Temporal aggregation (TA) outperforms non-aggregated forecasts.
+- .remember[Negative autocorrelation]: TA outperforms non-aggregated forecasts.
 - .remember[Alternating autocorrelation signs]: TA performs better than non-aggregated approaches.
 - .remember[Longer forecast horizons:] Both overlapping and non-overlapping TA show improved accuracy.
 - .remember[Short time series:] Overlapping TA is superior; differences diminish as history length increases.
@@ -472,12 +446,13 @@ class: middle
 ## Limitations
 
 
-- Data generation process: We assume that the disaggregated (non-aggregated) time series follows a stationary ARMA(1,1) process.
+- .remember[Data generation process]: We assume that the disaggregated (non-aggregated) time series follows a stationary ARMA(1,1) process.
 
-- Forecasting model: We rely exclusively on Simple Exponential Smoothing (SES) as the forecasting method. 
+- .remember[Forecasting model]: We rely exclusively on Simple Exponential Smoothing (SES) as the forecasting method. 
 
-- Forecasting horizon: The current framework focuses on generating a cumulative forecast over a fixed horizon `\(M\)`, effectively making it a one-step-ahead forecast in the aggregated setting.
+- .remember[Forecasting horizon]: The current framework focuses on generating a cumulative forecast over a fixed horizon `\(M\)`, effectively making it a one-step-ahead forecast in the aggregated setting.
 
+- .remember[Empirical data]: The empirical evaluation is limited to the M4 competition data, which primarily consists of positive autocorrelated series.
 
 ---
 ## Future Work
@@ -485,7 +460,7 @@ class: middle
 
 &gt;There is still no .remember[general analytical framework] that explains when and how temporal aggregation affects forecast accuracy. 
 
-While specific cases (e.g., ARMA processes with SES) can be studied in isolation, a global understanding—one that applies across models, aggregation schemes, and forecasting horizons—remains elusive.
+&gt;While specific cases (e.g., ARMA processes with SES) can be studied in isolation, a global understanding—one that applies across models, aggregation schemes, and forecasting horizons—remains elusive.
 
 
 ---
